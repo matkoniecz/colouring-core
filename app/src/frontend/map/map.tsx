@@ -42,6 +42,9 @@ import { HousingSwitcher } from './housing-switcher';
 import { BuildingMapTileset } from '../config/tileserver-config';
 import { useDisplayPreferences } from '../displayPreferences-context';
 import { CategoryMapDefinition } from '../config/category-maps-config';
+import {
+    useLocation
+  } from "react-router"
 
 interface ColouringMapProps {
     selectedBuildingId: number;
@@ -51,6 +54,22 @@ interface ColouringMapProps {
     mapColourScale: BuildingMapTileset;
     onMapColourScale: (x: BuildingMapTileset) => void;
     categoryMapDefinitions: CategoryMapDefinition[]
+}
+
+function ObtainLocation() {
+    const location = useLocation()
+    const queryParams = new URLSearchParams(location.search);
+    const token = queryParams.get('location');
+    if(token == undefined) {
+        console.error("no token");
+    } else {
+        console.warn("token " + token);
+    }
+    if(token == "Loughborough" || token == "loughborough") {
+        const returned : [number, number] = [52.7723859, -1.2077985];
+        return [52.7723859, -1.2077985] as [number, number];
+    }
+    return initialMapViewport.position;
 }
 
 export const ColouringMap : FC<ColouringMapProps> = ({
@@ -64,7 +83,7 @@ export const ColouringMap : FC<ColouringMapProps> = ({
     children
 }) => {
     const { darkLightTheme, darkLightThemeSwitch, showLayerSelection } = useDisplayPreferences();
-    const [position, setPosition] = useState(initialMapViewport.position);
+    const [position, setPosition] = useState(ObtainLocation());
     const [zoom, setZoom] = useState(initialMapViewport.zoom);
 
 
