@@ -57,6 +57,14 @@ interface ColouringMapProps {
 }
 
 function ObtainLocation() {
+    console.error("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+    console.error("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+    console.error("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+    console.error("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+    console.error("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+    console.error("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+    console.error("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+    console.error("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
     const location = useLocation()
     const queryParams = new URLSearchParams(location.search);
     const token = queryParams.get('location');
@@ -66,8 +74,17 @@ function ObtainLocation() {
         console.warn("token " + token);
     }
     if(token == "Loughborough" || token == "loughborough") {
+        console.error("Loughborough");
+        console.error("Loughborough");
+        console.error("Loughborough");
+        console.error("Loughborough");
+        console.error("Loughborough");
+        console.error("Loughborough");
+        console.error("Loughborough");
+        console.error("Loughborough");
         const returned : [number, number] = [52.7723859, -1.2077985];
         return [52.7723859, -1.2077985] as [number, number];
+        //return returned;
     }
     return initialMapViewport.position;
 }
