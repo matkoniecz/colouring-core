@@ -28,6 +28,8 @@ import { BuildingDataLayer } from './layers/building-data-layer';
 import { BuildingNumbersLayer } from './layers/building-numbers-layer';
 import { BuildingHighlightLayer } from './layers/building-highlight-layer';
 import { HistoricalFootprintsLayer } from './layers/historical-footprints-layer';
+import { TreesLayer } from './layers/trees-layer';
+import { TreesFullLayer } from './layers/trees-full-layer';
 
 import { Legend } from './legend';
 import SearchBox from './search-box';
@@ -45,6 +47,8 @@ import { OpenStreetMapSwitcher } from './openstreetmap-switcher';
 import { VistaSwitcher } from './vista-switcher';
 import { CreativeSwitcher } from './creative-switcher';
 import { HousingSwitcher } from './housing-switcher';
+import { TreesSwitcher } from './trees-switcher';
+import { TreesFullSwitcher } from './trees-full-switcher';
 import { BuildingMapTileset } from '../config/tileserver-config';
 import { useDisplayPreferences } from '../displayPreferences-context';
 import { CategoryMapDefinition } from '../config/category-maps-config';
@@ -148,6 +152,8 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                     <AerialPhotosMapLayer revisionId={revisionId} />
                     <BoroughBoundaryLayer/>
                     <ParcelBoundaryLayer/>
+                    <TreesLayer/>
+                    <TreesFullLayer/>
                     <FloodBoundaryLayer/>
                     <VistaBoundaryLayer/>
                     <HousingBoundaryLayer/>
@@ -182,6 +188,8 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                         {
                             (showLayerSelection == "enabled") ?
                             <>
+                                <TreesSwitcher/>
+                                <TreesFullSwitcher/>
                                 <BoroughSwitcher/>
                                 <ParcelSwitcher/>
                                 <FloodSwitcher/>
