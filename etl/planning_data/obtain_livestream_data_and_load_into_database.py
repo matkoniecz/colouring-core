@@ -70,7 +70,7 @@ def load_data_into_database(cursor, data, unexpected_status_statistics):
         try:
             description = None
             if entry["_source"]["description"] is not None:
-                description = entry["_source"]["description"].strip()
+                description = entry["_source"]["description"].strip()[:260]
             application_id = entry["_source"]["lpa_app_no"]
             application_id_with_borough_identifier = entry["_source"]["id"]
             decision_date = parse_date_string_into_date_object(
