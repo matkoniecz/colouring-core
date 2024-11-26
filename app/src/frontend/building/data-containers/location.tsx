@@ -11,12 +11,41 @@ import { DataEntryGroup } from '../data-components/data-entry-group';
 import SelectDataEntry from '../data-components/select-data-entry';
 import { MultiDataEntry } from '../data-components/multi-data-entry/multi-data-entry';
 import { LogicalDataEntry } from '../data-components/logical-data-entry/logical-data-entry';
+import { MapTileset } from '../../config/tileserver-config';
+import { useDisplayPreferences } from '../../displayPreferences-context';
 
 const locationNumberPattern = "[1-9]\\d*[a-z]?(-([1-9]\\d*))?"; ///[1-9]\d*[a-z]?(-([1-9]\d*))?/;
 const postcodeCharacterPattern = "^[A-Z]{1,2}[0-9]{1,2}[A-Z]?(\\s*[0-9][A-Z]{1,2})?$";
 const osmIdentifierPattern = "[0-9]{1,9}";
 
 const LocationView: React.FunctionComponent<CategoryViewProps> = (props) => {
+    const switchToFootprintIssuesStyle = (e) => {
+        switchToMapStyleHideHistoricMaps(e, 'building_footprint_issues')
+    }
+    
+    const switchToMapStyleHideHistoricMaps = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, map_style: MapTileset) => {
+        event.preventDefault();
+        if (historicData === 'enabled') {
+            historicDataSwitchOnClick(event);
+        }
+        if (historicMap === 'enabled') {
+            historicMapSwitchOnClick(event);
+        }
+        if (historicalMapAndFootprintsWithoutFill === 'enabled') {
+            historicalMapAndFootprintsWithoutFillSwitchOnClick(event);
+        }
+        if (historicMapLeicestershire === 'enabled') {
+            historicMapLeicestershireSwitchOnClick(event);
+        }
+        props.onMapColourScale(map_style);
+    }
+    
+    const { historicData, historicDataSwitchOnClick, darkLightTheme } = useDisplayPreferences();
+    const { historicMap, historicMapSwitchOnClick,
+            historicMapLeicestershire, historicMapLeicestershireSwitchOnClick,
+            historicalMapAndFootprintsWithoutFill, historicalMapAndFootprintsWithoutFillSwitchOnClick,
+         } = useDisplayPreferences();
+
     const osm_url = "www.openstreetmap.org/way/"+props.building.ref_osm_id;
     
     const queryParameters = new URLSearchParams(window.location.search);
@@ -417,6 +446,37 @@ const LocationView: React.FunctionComponent<CategoryViewProps> = (props) => {
                         />
                     </>
                 }
+            </DataEntryGroup>
+            <DataEntryGroup name="Building Footprint Issues" collapsed={subcat==null || subcat!="4"}>
+                {(props.mapColourScale != "building_footprint_issues") ? 
+                        <button className={`map-switcher-inline enabled-state btn btn-outline btn-outline-dark key-button`} onClick={switchToFootprintIssuesStyle}>
+                            Click to show footprint issues.
+                        </button>
+                :
+                    <></>
+                }
+                <MultiDataEntry
+                    title={dataFields.building_footprint_issues.title}
+                    slug="building_footprint_issues"
+                    value={props.building.building_footprint_issues}
+                    mode={props.mode}
+                    copy={props.copy}
+                    onChange={props.onChange}
+                    confirmOnEnter={true}
+                    tooltip={dataFields.building_footprint_issues.tooltip}
+                    placeholder="Select what is wrong with building footprint"
+                    copyable={true}
+                    autofill={true}
+                    showAllOptionsOnEmpty={true}
+                />
+                <Verification
+                    slug="building_footprint_issues"
+                    allow_verify={props.user !== undefined && props.building.building_footprint_issues !== null && !props.edited}
+                    onVerify={props.onVerify}
+                    user_verified={props.user_verified.hasOwnProperty("building_footprint_issues")}
+                    user_verified_as={props.user_verified.building_footprint_issues}
+                    verified_count={props.building.verified.building_footprint_issues}
+                />
             </DataEntryGroup>
         </Fragment>
     );
