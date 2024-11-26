@@ -190,7 +190,7 @@ const AgeHistoryView: React.FunctionComponent<CategoryViewProps> = (props) => {
                             tooltip={dataFields.typology_style_period_source_links.tooltip}
                             placeholder="https://..."
                             editableEntries={true}
-                            isUrl={true}
+                            isUrl={false}
                         />
                     </>
                 }
@@ -317,7 +317,7 @@ const AgeHistoryView: React.FunctionComponent<CategoryViewProps> = (props) => {
                             tooltip={dataFields.date_source_links.tooltip}
                             placeholder="https://..."
                             editableEntries={true}
-                            isUrl={true}
+                            isUrl={false}
                         />
                     </>
                 }
@@ -375,7 +375,7 @@ const AgeHistoryView: React.FunctionComponent<CategoryViewProps> = (props) => {
                             tooltip={dataFields.age_cladding_date_source_links.tooltip}
                             placeholder="https://..."
                             editableEntries={true}
-                            isUrl={true}
+                            isUrl={false}
                         />
                     </>
                 }
@@ -432,7 +432,7 @@ const AgeHistoryView: React.FunctionComponent<CategoryViewProps> = (props) => {
                             tooltip={dataFields.age_extension_date_source_links.tooltip}
                             placeholder="https://..."
                             editableEntries={true}
-                            isUrl={true}
+                            isUrl={false}
                         />
                     </>
                 }
@@ -489,7 +489,7 @@ const AgeHistoryView: React.FunctionComponent<CategoryViewProps> = (props) => {
                             tooltip={dataFields.age_retrofit_date_source_links.tooltip}
                             placeholder="https://..."
                             editableEntries={true}
-                            isUrl={true}
+                            isUrl={false}
                         />
                     </>
                 }
@@ -645,7 +645,7 @@ const AgeHistoryView: React.FunctionComponent<CategoryViewProps> = (props) => {
                         tooltip={dataFields.survival_source_links.tooltip}
                         placeholder="https://..."
                         editableEntries={true}
-                        isUrl={true}
+                        isUrl={false}
                         />
                     </>
                 }
@@ -669,7 +669,7 @@ const AgeHistoryView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     tooltip={dataFields.age_historical_raster_map_links.tooltip}
                     placeholder="https://..."
                     editableEntries={true}
-                    isUrl={true}
+                    isUrl={false}
                 />
                 <MultiDataEntry
                     title={dataFields.age_historical_vectorised_footprint_links.title}
@@ -681,7 +681,7 @@ const AgeHistoryView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     tooltip={dataFields.age_historical_vectorised_footprint_links.tooltip}
                     placeholder="https://..."
                     editableEntries={true}
-                    isUrl={true}
+                    isUrl={false}
                 />
             </DataEntryGroup>
             <DataEntryGroup name="Building Footprint Issues" collapsed={subcat==null || subcat!="4"}>
