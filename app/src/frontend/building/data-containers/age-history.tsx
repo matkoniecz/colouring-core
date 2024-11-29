@@ -85,10 +85,6 @@ const AgeHistoryView: React.FunctionComponent<CategoryViewProps> = (props) => {
         }
     }
 
-    const switchToFootprintIssuesStyle = (e) => {
-        switchToMapStyleHideHistoricMaps(e, 'building_footprint_issues')
-    }
-
     const switchToStylePeriodMapStyle = (e) => {
         e.preventDefault();
         switchToMapStyleHideHistoricMaps(e, 'typology_style_period')
@@ -682,37 +678,6 @@ const AgeHistoryView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     placeholder="https://..."
                     editableEntries={true}
                     isUrl={false}
-                />
-            </DataEntryGroup>
-            <DataEntryGroup name="Building Footprint Issues" collapsed={subcat==null || subcat!="4"}>
-                {(props.mapColourScale != "building_footprint_issues") ? 
-                        <button className={`map-switcher-inline enabled-state btn btn-outline btn-outline-dark key-button`} onClick={switchToFootprintIssuesStyle}>
-                            Click to show footprint issues.
-                        </button>
-                :
-                    <></>
-                }
-                <MultiDataEntry
-                    title={dataFields.building_footprint_issues.title}
-                    slug="building_footprint_issues"
-                    value={props.building.building_footprint_issues}
-                    mode={props.mode}
-                    copy={props.copy}
-                    onChange={props.onChange}
-                    confirmOnEnter={true}
-                    tooltip={dataFields.building_footprint_issues.tooltip}
-                    placeholder="Select what is wrong with building footprint"
-                    copyable={true}
-                    autofill={true}
-                    showAllOptionsOnEmpty={true}
-                />
-                <Verification
-                    slug="building_footprint_issues"
-                    allow_verify={props.user !== undefined && props.building.building_footprint_issues !== null && !props.edited}
-                    onVerify={props.onVerify}
-                    user_verified={props.user_verified.hasOwnProperty("building_footprint_issues")}
-                    user_verified_as={props.user_verified.building_footprint_issues}
-                    verified_count={props.building.verified.building_footprint_issues}
                 />
             </DataEntryGroup>
         </Fragment>
