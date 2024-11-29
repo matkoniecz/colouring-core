@@ -14,8 +14,6 @@ import NumericDataEntry from '../data-components/numeric-data-entry';
 import { useDisplayPreferences } from '../../displayPreferences-context';
 import { DynamicsBuildingPane, DynamicsDataEntry } from './dynamics/dynamics-data-entry';
 import { FieldRow } from '../data-components/field-row';
-import { HistoricMapLayerWithoutFill } from '../../map/layers/historic-map-without-fill-layer';
-import { MapTheme } from '../../config/map-config';
 import { MapTileset } from '../../config/tileserver-config';
 
 /**
