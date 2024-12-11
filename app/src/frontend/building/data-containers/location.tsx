@@ -12,7 +12,6 @@ import SelectDataEntry from '../data-components/select-data-entry';
 import { MultiDataEntry } from '../data-components/multi-data-entry/multi-data-entry';
 import { LogicalDataEntry } from '../data-components/logical-data-entry/logical-data-entry';
 import { MapTileset } from '../../config/tileserver-config';
-import { useDisplayPreferences } from '../../displayPreferences-context';
 
 const locationNumberPattern = "[1-9]\\d*[a-z]?(-([1-9]\\d*))?"; ///[1-9]\d*[a-z]?(-([1-9]\d*))?/;
 const postcodeCharacterPattern = "^[A-Z]{1,2}[0-9]{1,2}[A-Z]?(\\s*[0-9][A-Z]{1,2})?$";
@@ -20,31 +19,13 @@ const osmIdentifierPattern = "[0-9]{1,9}";
 
 const LocationView: React.FunctionComponent<CategoryViewProps> = (props) => {
     const switchToFootprintIssuesStyle = (e) => {
-        switchToMapStyleHideHistoricMaps(e, 'building_footprint_issues')
+        switchToMapStyle(e, 'building_footprint_issues')
     }
-    
-    const switchToMapStyleHideHistoricMaps = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, map_style: MapTileset) => {
+
+    const switchToMapStyle = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, map_style: MapTileset) => {
         event.preventDefault();
-        if (historicData === 'enabled') {
-            historicDataSwitchOnClick(event);
-        }
-        if (historicMap === 'enabled') {
-            historicMapSwitchOnClick(event);
-        }
-        if (historicalMapAndFootprintsWithoutFill === 'enabled') {
-            historicalMapAndFootprintsWithoutFillSwitchOnClick(event);
-        }
-        if (historicMapLeicestershire === 'enabled') {
-            historicMapLeicestershireSwitchOnClick(event);
-        }
         props.onMapColourScale(map_style);
     }
-    
-    const { historicData, historicDataSwitchOnClick, darkLightTheme } = useDisplayPreferences();
-    const { historicMap, historicMapSwitchOnClick,
-            historicMapLeicestershire, historicMapLeicestershireSwitchOnClick,
-            historicalMapAndFootprintsWithoutFill, historicalMapAndFootprintsWithoutFillSwitchOnClick,
-         } = useDisplayPreferences();
 
     const osm_url = "www.openstreetmap.org/way/"+props.building.ref_osm_id;
     
