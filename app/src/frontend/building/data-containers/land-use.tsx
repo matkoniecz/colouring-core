@@ -11,6 +11,7 @@ import { DataEntryGroup } from '../data-components/data-entry-group';
 import { DataTitleCopyable } from '../data-components/data-title';
 import InfoBox from '../../components/info-box';
 import Tooltip from '../../components/tooltip';
+import './land-use.css';
 
 /**
  * Use view/edit section
@@ -1829,6 +1830,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     onChange={props.onChange}
                 />
                 <hr />
+                <div className="info-box-container">
                 {props.building.current_landuse_group.map((item, index) => (
                     item in landuseCodesData ?                  
                     <>
@@ -1855,23 +1857,37 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     disabled={false}
                 /> 
 
-                    <InfoBox type='success'>
+                <div className="info-box-container">
+                <InfoBox type='success'>
                     <Tooltip text={ "[NACE: The Statistical Classification of Economic Activities in the European Community]( https://ec.europa.eu/eurostat/web/nace)" } />
-                    NACE: {landuseCodesData[item].NACE.code} {landuseCodesData[item].NACE.description}
-                    </InfoBox>
-                    <InfoBox type='success'>
+                    <div className="label">NACE:</div>
+                    <div className="info-details">
+                    <div className="code">{landuseCodesData[item].NACE.code}</div>
+                    <div className="description">{landuseCodesData[item].NACE.description}</div>
+                    </div>
+                </InfoBox>
+                <InfoBox type='success'>
                     <Tooltip text={ "[ISIC: The International Standard Industrial Classification of All Economic Activities]( https://unstats.un.org/unsd/classifications/Econ/isic)" } />
-                    ISIC: {landuseCodesData[item].ISIC.code} {landuseCodesData[item].ISIC.description}
-                    </InfoBox>
-                    <InfoBox type='success'>
+                    <div className="label">ISIC:</div>
+                    <div className="info-details">
+                    <div className="code">{landuseCodesData[item].ISIC.code}</div>
+                    <div className="description">{landuseCodesData[item].ISIC.description}</div>
+                    </div>
+                </InfoBox>
+                <InfoBox type='success'>
                     <Tooltip text={ "[CPA: The Statistical Classification of Products by Activity](https://ec.europa.eu/eurostat/web/cpa)" } />
-                    CPA: {landuseCodesData[item].CPA.code} {landuseCodesData[item].CPA.description}
-                    </InfoBox>
-                    </>
+                    <div className="label">CPA:</div>
+                    <div className="info-details">
+                    <div className="code">{landuseCodesData[item].CPA.code}</div>
+                    <div className="description">{landuseCodesData[item].CPA.description}</div>
+                    </div>
+                </InfoBox>
+                </div>
                    : ""
                                      
                  ))
                  }
+                 </div>
             </DataEntryGroup>
             <DataEntryGroup name="General Land Use" collapsed={subcat==null || subcat!="2"}>
                 {(props.mapColourScale != "is_domestic") ? 
