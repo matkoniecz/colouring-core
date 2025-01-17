@@ -10,6 +10,7 @@ import { useDisplayPreferences } from '../../displayPreferences-context';
 import { DataEntryGroup } from '../data-components/data-entry-group';
 import { DataTitleCopyable } from '../data-components/data-title';
 import InfoBox from '../../components/info-box';
+import Tooltip from '../../components/tooltip';
 
 /**
  * Use view/edit section
@@ -1839,9 +1840,11 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     disabled={false}
                 /> 
                     <InfoBox type='success'>
+                        <Tooltip text={ "tooltip" } />
                     NNDA/VOI SCAT code ??????
                     </InfoBox>
                     <InfoBox type='success'>
+                    <Tooltip text={ "[UK SIC: The UK Standard Industrial Classification of economic activities](https://www.ons.gov.uk/methodology/classificationsandstandards/ukstandardindustrialclassificationofeconomicactivities)" } />
                     UK SIC: {landuseCodesData[item].UK_SIC.code} {landuseCodesData[item].UK_SIC.description}
                     </InfoBox>
                 <DataTitleCopyable
@@ -1853,12 +1856,15 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                 /> 
 
                     <InfoBox type='success'>
+                    <Tooltip text={ "[NACE: The Statistical Classification of Economic Activities in the European Community]( https://ec.europa.eu/eurostat/web/nace)" } />
                     NACE: {landuseCodesData[item].NACE.code} {landuseCodesData[item].NACE.description}
                     </InfoBox>
                     <InfoBox type='success'>
+                    <Tooltip text={ "[ISIC: The International Standard Industrial Classification of All Economic Activities]( https://unstats.un.org/unsd/classifications/Econ/isic)" } />
                     ISIC: {landuseCodesData[item].ISIC.code} {landuseCodesData[item].ISIC.description}
                     </InfoBox>
                     <InfoBox type='success'>
+                    <Tooltip text={ "[CPA: The Statistical Classification of Products by Activity](https://ec.europa.eu/eurostat/web/cpa)" } />
                     CPA: {landuseCodesData[item].CPA.code} {landuseCodesData[item].CPA.description}
                     </InfoBox>
                     </>
