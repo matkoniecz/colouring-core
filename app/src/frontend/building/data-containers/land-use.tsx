@@ -8,6 +8,7 @@ import { CategoryViewProps } from './category-view-props';
 import Verification from '../data-components/verification';
 import { useDisplayPreferences } from '../../displayPreferences-context';
 import { DataEntryGroup } from '../data-components/data-entry-group';
+import InfoBox from '../../components/info-box';
 
 /**
  * Use view/edit section
@@ -54,6 +55,29 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     autofill={true}
                     showAllOptionsOnEmpty={true}
                 />
+                {/*Current land use(s) (NACE level 3 classification)*/}
+                {/*Relevant international landuse codes */}
+                {/*one box for classification schema*/}
+                {props.building.current_landuse_group.map((item, index) => (
+                  
+                  {item=="Retail sale of automotive fuel" ? 
+                    <>
+                    <InfoBox type='success'>
+                    <br />
+                    NACE: 47.30 Retail sale of automotive fuel
+                    <br />
+                    UK SIC: 47.30 Retail sale of automotive fuel in specialised stores
+                    <br />
+                    ISIC: 4730 Retail sale of automotive fuel
+                    <br />
+                    CPA: 47.30 Retail sale services of automotive fuel
+                    </InfoBox>
+                    </>
+                   : ""
+                   }
+                  
+                 ))
+                 }
                 <Verification
                     slug="current_landuse_group"
                     allow_verify={props.user !== undefined && props.building.current_landuse_group !== null && !props.edited}

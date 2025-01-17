@@ -41,9 +41,11 @@ function getLanduseGroupOptions(value: string, all: boolean = false) {
 }
 
 function buildPartialMatchQuery(value: string) {
+    console.error(tokenizeValue(value).map(x => `${x}:*`).join(' & '));
     return tokenizeValue(value).map(x => `${x}:*`).join(' & ');
 }
 function tokenizeValue(value: string) {
+    console.warn(value.split(/[^\w]+/).filter(x => x !== ''));
     return value.split(/[^\w]+/).filter(x => x !== '');
 }
 
