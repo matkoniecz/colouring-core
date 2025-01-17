@@ -8,6 +8,7 @@ import { CategoryViewProps } from './category-view-props';
 import Verification from '../data-components/verification';
 import { useDisplayPreferences } from '../../displayPreferences-context';
 import { DataEntryGroup } from '../data-components/data-entry-group';
+import { DataTitleCopyable } from '../data-components/data-title';
 import InfoBox from '../../components/info-box';
 
 /**
@@ -42,7 +43,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     <></>
                 }
                 <MultiDataEntry
-                    title={dataFields.current_landuse_group.title}
+                    title={"Current land use(s) (NACE level 3 classification)"}
                     slug="current_landuse_group"
                     value={props.building.current_landuse_group}
                     mode={props.mode}
@@ -55,29 +56,6 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     autofill={true}
                     showAllOptionsOnEmpty={true}
                 />
-                {/*Current land use(s) (NACE level 3 classification)*/}
-                {/*Relevant international landuse codes */}
-                {/*one box for classification schema*/}
-                {props.building.current_landuse_group.map((item, index) => (
-                  
-                  {item=="Retail sale of automotive fuel" ? 
-                    <>
-                    <InfoBox type='success'>
-                    <br />
-                    NACE: 47.30 Retail sale of automotive fuel
-                    <br />
-                    UK SIC: 47.30 Retail sale of automotive fuel in specialised stores
-                    <br />
-                    ISIC: 4730 Retail sale of automotive fuel
-                    <br />
-                    CPA: 47.30 Retail sale services of automotive fuel
-                    </InfoBox>
-                    </>
-                   : ""
-                   }
-                  
-                 ))
-                 }
                 <Verification
                     slug="current_landuse_group"
                     allow_verify={props.user !== undefined && props.building.current_landuse_group !== null && !props.edited}
@@ -124,6 +102,47 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     copy={props.copy}
                     onChange={props.onChange}
                 />
+                <hr />
+                <DataTitleCopyable
+                    slug={"props.slug"}
+                    slugModifier={"props.slugModifier"}
+                    title={"Relevant UK landuse codes"}
+                    tooltip={"props.tooltip"}
+                    disabled={false}
+                /> 
+                {props.building.current_landuse_group.map((item, index) => (
+                  
+                  item=="Retail sale of automotive fuel" ? 
+                    <>
+
+                    <InfoBox type='success'>
+                    NNDA/VOI SCAT code
+                    </InfoBox>
+                    <InfoBox type='success'>
+                    UK SIC: 47.30 Retail sale of automotive fuel in specialised stores
+                    </InfoBox>
+                <DataTitleCopyable
+                    slug={"props.slug"}
+                    slugModifier={"props.slugModifier"}
+                    title={"Relevant international landuse codes"}
+                    tooltip={"props.tooltip"}
+                    disabled={false}
+                /> 
+
+                    <InfoBox type='success'>
+                    NACE: 47.30 Retail sale of automotive fuel
+                    </InfoBox>
+                    <InfoBox type='success'>
+                    ISIC: 4730 Retail sale of automotive fuel
+                    </InfoBox>
+                    <InfoBox type='success'>
+                    CPA: 47.30 Retail sale services of automotive fuel
+                    </InfoBox>
+                    </>
+                   : ""
+                                     
+                 ))
+                 }
             </DataEntryGroup>
             <DataEntryGroup name="General Land Use" collapsed={subcat==null || subcat!="2"}>
                 {(props.mapColourScale != "is_domestic") ? 
