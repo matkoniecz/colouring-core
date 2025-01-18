@@ -1838,7 +1838,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     slug={"props.slug"}
                     slugModifier={"props.slugModifier"}
                     title={"Relevant UK landuse codes"}
-                    tooltip={"props.tooltip"}
+                    tooltip={null}
                     disabled={false}
                 /> 
                     <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
@@ -1848,7 +1848,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     <div className="code">?</div>
                     <div className="description">?????</div>
                     </div>
-                    </div>
+                </div>
                 <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
                     <Tooltip text={ "[UK SIC: The UK Standard Industrial Classification of economic activities](https://www.ons.gov.uk/methodology/classificationsandstandards/ukstandardindustrialclassificationofeconomicactivities)" } />
                     <div className="label">UK SIC:</div>
@@ -1861,33 +1861,33 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     slug={"props.slug"}
                     slugModifier={"props.slugModifier"}
                     title={"Relevant international landuse codes"}
-                    tooltip={"props.tooltip"}
+                    tooltip={null}
                     disabled={false}
                 /> 
-                <InfoBox type='success'>
+                <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
                     <Tooltip text={ "[NACE: The Statistical Classification of Economic Activities in the European Community]( https://ec.europa.eu/eurostat/web/nace)" } />
                     <div className="label">NACE:</div>
                     <div className="info-details">
                     <div className="code">{landuseCodesData[item].NACE.code}</div>
                     <div className="description">{landuseCodesData[item].NACE.description}</div>
                     </div>
-                </InfoBox>
-                <InfoBox type='success'>
+                </div>
+                <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
                     <Tooltip text={ "[ISIC: The International Standard Industrial Classification of All Economic Activities]( https://unstats.un.org/unsd/classifications/Econ/isic)" } />
                     <div className="label">ISIC:</div>
                     <div className="info-details">
                     <div className="code">{landuseCodesData[item].ISIC.code}</div>
                     <div className="description">{landuseCodesData[item].ISIC.description}</div>
                     </div>
-                </InfoBox>
-                <InfoBox type='success'>
+                </div>
+                <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
                     <Tooltip text={ "[CPA: The Statistical Classification of Products by Activity](https://ec.europa.eu/eurostat/web/cpa)" } />
                     <div className="label">CPA:</div>
                     <div className="info-details">
                     <div className="code">{landuseCodesData[item].CPA.code}</div>
                     <div className="description">{landuseCodesData[item].CPA.description}</div>
                     </div>
-                </InfoBox>
+                </div>
                 </div>
                 </>
                    : ""
