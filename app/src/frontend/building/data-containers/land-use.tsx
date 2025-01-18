@@ -1830,10 +1830,10 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     onChange={props.onChange}
                 />
                 <hr />
-                <div className="info-box-container">
                 {props.building.current_landuse_group.map((item, index) => (
                     item in landuseCodesData ?                  
                     <>
+                <div className="info-box-container">
                 <DataTitleCopyable
                     slug={"props.slug"}
                     slugModifier={"props.slugModifier"}
@@ -1841,14 +1841,22 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     tooltip={"props.tooltip"}
                     disabled={false}
                 /> 
-                    <InfoBox type='success'>
-                        <Tooltip text={ "tooltip" } />
-                    NNDA/VOI SCAT code ??????
-                    </InfoBox>
-                    <InfoBox type='success'>
+                    <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
+                <Tooltip text={ "tooltip" } />
+                    <div className="label">NNDA/VOI SCAT:</div>
+                    <div className="info-details">
+                    <div className="code">?</div>
+                    <div className="description">?????</div>
+                    </div>
+                    </div>
+                <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
                     <Tooltip text={ "[UK SIC: The UK Standard Industrial Classification of economic activities](https://www.ons.gov.uk/methodology/classificationsandstandards/ukstandardindustrialclassificationofeconomicactivities)" } />
-                    UK SIC: {landuseCodesData[item].UK_SIC.code} {landuseCodesData[item].UK_SIC.description}
-                    </InfoBox>
+                    <div className="label">UK SIC:</div>
+                    <div className="info-details">
+                    <div className="code">{landuseCodesData[item].UK_SIC.code}</div>
+                    <div className="description">{landuseCodesData[item].UK_SIC.description}</div>
+                    </div>
+                </div>
                 <DataTitleCopyable
                     slug={"props.slug"}
                     slugModifier={"props.slugModifier"}
@@ -1856,8 +1864,6 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     tooltip={"props.tooltip"}
                     disabled={false}
                 /> 
-
-                <div className="info-box-container">
                 <InfoBox type='success'>
                     <Tooltip text={ "[NACE: The Statistical Classification of Economic Activities in the European Community]( https://ec.europa.eu/eurostat/web/nace)" } />
                     <div className="label">NACE:</div>
@@ -1883,11 +1889,10 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     </div>
                 </InfoBox>
                 </div>
+                </>
                    : ""
-                                     
                  ))
                  }
-                 </div>
             </DataEntryGroup>
             <DataEntryGroup name="General Land Use" collapsed={subcat==null || subcat!="2"}>
                 {(props.mapColourScale != "is_domestic") ? 

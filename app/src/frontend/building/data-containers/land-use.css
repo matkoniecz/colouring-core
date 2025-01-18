@@ -1,24 +1,24 @@
 .info-box-container {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* space between InfoBox components */
+    gap: 5px; /* space between InfoBox components */
   }
   
   .info-box-container .label {
     font-weight: bold;
-    width: 80px; /* Fixed width for the label */
+    width: 70px; /* Fixed width for the label */
     display: inline-block;
   }
   
   .info-box-container .info-details {
     display: grid;
-    grid-template-columns: 100px 1fr; /* First column for .code, second for .description */
-    gap: 10px; /* space between the columns */
+    grid-template-columns: 80px 1fr; /* First column for .code, second for .description */
+    gap: 5px; /* space between the columns */
     align-items: baseline; /* Align text in both columns */
   }
   
   .info-box-container .code {
-    font-weight: bold; /* Optional: To emphasize the code */
+    font-weight: bold;
   }
   
   .info-box-container .description {
