@@ -6,7 +6,6 @@
   
   .info-box-container .label {
     font-weight: bold;
-    width: 70px; /* Fixed width for the label */
     display: inline-block;
   }
   
