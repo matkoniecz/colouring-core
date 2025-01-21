@@ -1370,13 +1370,14 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
 
     is_domestic: {
         category: Category.EnergyPerformance,
-        title: "Is the building residential, non-residential or mixed? (automatically generated from Specific Land Use/s)",
+        title: "Is the building residential, non-residential or mixed?",
         tooltip: null,
-        example: "mixed domestic/non-domestic",
+        example: "Mixed residential/non-residential",
+        placeholder: "click here to select use type",
         items: [
-            "Yes",
-            "No",
-            "Mixed domestic/non-domestic"
+            "Residential",
+            "Non-residential",
+            "Mixed residential/non-residential"
         ]
     },
     is_domestic_source: {
