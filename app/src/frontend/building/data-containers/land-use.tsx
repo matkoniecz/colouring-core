@@ -4575,7 +4575,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     <></>
                 }
                 <MultiDataEntry
-                    title={"Current land use(s) (NACE level 3 classification)"}
+                    title={"Current land use(s) (NACE level 4 classification)"}
                     slug="current_landuse_group"
                     value={props.building.current_landuse_group}
                     mode={props.mode}
@@ -4650,8 +4650,8 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                 <Tooltip text={ "tooltip" } />
                     <div className="label">UK NNDA (VOA SCAT)::</div>
                     <div className="info-details">
-                    <div className="code">?</div>
-                    <div className="description">?????</div>
+                    <div className="code">{landuseCodesData[item].SCAT.code}</div>
+                    <div className="description">{landuseCodesData[item].SCAT.description}</div>
                     </div>
                 </div>
                 <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
