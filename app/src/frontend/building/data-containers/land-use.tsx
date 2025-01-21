@@ -4559,6 +4559,34 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
     const queryParameters = new URLSearchParams(window.location.search);
     const subcat = queryParameters.get("sc");
 
+    const ScatInfoBox = ({ item, landuseCodesData }) => {
+        const codeLines = landuseCodesData[item].SCAT.code.split("\n");
+        const descriptionLines = landuseCodesData[item].SCAT.description.split("\n");
+      
+        return (
+          <div className="info-box-container">
+            <div
+              className={`alert alert-dark`}
+              role="alert"
+              style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}
+            >
+              <Tooltip text={"tooltip"} />
+              <div className="label">UK NNDA (VOA SCAT):</div>
+              <div className="info-details">
+                {codeLines.map((line, index) => (
+                  <React.Fragment key={index}>
+                    <div className="code">{line}</div>
+                    <div className="description">
+                      {descriptionLines[index] || ""}
+                    </div>
+                  </React.Fragment>
+                ))}
+              </div>
+            </div>
+          </div>
+        );
+      };
+
     return (
         <Fragment>
             <DataEntryGroup name="General Land Use" collapsed={subcat==null || subcat!="2"}>
@@ -4730,7 +4758,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                 */}
                 <hr />
                 {props.building.current_landuse_group != null ? <> {
-                props.building.current_landuse_group.map((item, index) => (
+                  props.building.current_landuse_group.map((item, index) => (
                     item in landuseCodesData ?                  
                     <>
                 <div className="info-box-container">
@@ -4741,14 +4769,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     tooltip={null}
                     disabled={false}
                 /> 
-                <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
-                    <Tooltip text={ "tooltip" } />
-                    <div className="label">UK NNDA (VOA SCAT):</div>
-                    <div className="info-details">
-                    <div className="code">{landuseCodesData[item].SCAT.code}</div>
-                    <div className="description">{landuseCodesData[item].SCAT.description}</div>
-                    </div>
-                </div>
+                <ScatInfoBox item={item} landuseCodesData={landuseCodesData} />
                 <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
                     <Tooltip text={ "[UK SIC: The UK Standard Industrial Classification of economic activities](https://www.ons.gov.uk/methodology/classificationsandstandards/ukstandardindustrialclassificationofeconomicactivities)" } />
                     <div className="label">UK SIC:</div>
