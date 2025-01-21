@@ -4648,7 +4648,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                 /> 
                     <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
                 <Tooltip text={ "tooltip" } />
-                    <div className="label">UK NNDA (VOA SCAT)::</div>
+                    <div className="label">UK NNDA (VOA SCAT):</div>
                     <div className="info-details">
                     <div className="code">{landuseCodesData[item].SCAT.code}</div>
                     <div className="description">{landuseCodesData[item].SCAT.description}</div>
