@@ -1371,7 +1371,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
     is_domestic: {
         category: Category.EnergyPerformance,
         title: "Is the building residential, non-residential or mixed?",
-        tooltip: null,
+        tooltip: "The vast majority of properties are residential (93% in the UK), so we have set 'residential' as the default value. Can you help us identify non-residential and mixed use buildings (and verify residential buildings too)?",
         example: "Mixed residential/non-residential",
         placeholder: "click here to select use type",
         items: [

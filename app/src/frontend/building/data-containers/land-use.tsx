@@ -4624,11 +4624,6 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             */}
             {props.building.is_domestic == "Non-residential" || props.building.is_domestic == "Mixed residential/non-residential" ? 
             <DataEntryGroup name="Specific Land Use/s" collapsed={subcat==null || subcat!="1"}>
-                <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
-                    <i>
-                        The vast majority of properties are residential (93% in the UK), so we have set 'residential' as the default value. Can you help us identify non-residential and mixed use buildings (and verify residential buildings too)?
-                    </i>
-                </div>
                 {(props.mapColourScale != "landuse") ? 
                     <button className={`map-switcher-inline disabled-state btn btn-outline btn-outline-dark key-button`} onClick={switchToLandUseMapStyle}>
                         {"Click to see specific land use."}
