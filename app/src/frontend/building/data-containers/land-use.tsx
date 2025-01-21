@@ -4615,11 +4615,14 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     </>
                 }
             </DataEntryGroup>
+            {/*
             <DataEntryGroup name="AAAAAA" collapsed={subcat==null || subcat!="1"}>
             {"aaaaaaaaaaaaaaaa"}
             {props.building.is_domestic ? "props.building.is_domestic is true" : "props.building.is_domestic is false"}
             {props.building.is_domestic != null ? "props.building.is_domestic is not null" : "props.building.is_domestic is null"}
             </DataEntryGroup>
+            */}
+            {props.building.is_domestic == "Non-residential" || props.building.is_domestic == "Mixed residential/non-residential" ? 
             <DataEntryGroup name="Specific Land Use/s" collapsed={subcat==null || subcat!="1"}>
                 <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
                     <i>
@@ -4758,6 +4761,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                  ))
                  }
             </DataEntryGroup>
+            : <></>}
         </Fragment>
     );
 };
