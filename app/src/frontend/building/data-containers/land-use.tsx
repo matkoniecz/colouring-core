@@ -4577,6 +4577,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     mode={props.mode}
                     copy={props.copy}
                     onChange={props.onChange}
+                    placeholder={dataFields.is_domestic.placeholder}
                     tooltip={dataFields.is_domestic.tooltip}
                 />
                 <Verification
@@ -4692,7 +4693,8 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     onChange={props.onChange}
                 />
                 <hr />
-                {props.building.current_landuse_group.map((item, index) => (
+                {props.building.current_landuse_group != null ? <> {
+                props.building.current_landuse_group.map((item, index) => (
                     item in landuseCodesData ?                  
                     <>
                 <div className="info-box-container">
@@ -4754,7 +4756,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                 </>
                    : ""
                  ))
-                 }
+                }</>: ""}
             </DataEntryGroup>
             : <></>}
         </Fragment>
