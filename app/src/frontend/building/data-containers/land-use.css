@@ -18,9 +18,11 @@
   
   .info-box-container .code {
     font-weight: bold;
+    white-space: pre-line;
   }
   
   .info-box-container .description {
-    word-wrap: break-word; /* Ensures long descriptions break to the next line */
+    white-space: pre-line;
+    /* word-wrap: break-word;*/ /* Ensures long descriptions break to the next line */
   }
   

@@ -4692,6 +4692,42 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     copy={props.copy}
                     onChange={props.onChange}
                 />
+                <input className="form-control" type={"text"}
+                placeholder={"If no correct description found, add tag here"}
+                />
+                {
+                /*
+                id={idAttr}
+                name={nameAttr}
+                value={props.value || ''}
+                maxLength={props.maxLength}
+                required={props.required}
+                disabled={props.disabled}
+                onKeyDown={e => {
+                    if(e.keyCode === 13) {
+                        if(props.confirmOnEnter) {
+                            handleConfirm();
+                        }
+                    }
+                }                onChange={e => handleChange(e.target.value)}
+                onInput={e => setEditing(true)}
+                onFocus={e => setEditing(true)}
+                onBlur={e => setEditing(false)}
+                     */
+
+                }
+                {/*
+                <DataEntry
+                    title={null}
+                    tooltip={null}
+                    slug={null}
+                    value={null}
+                    mode={props.mode}
+                    copy={props.copy}
+                    placeholder="If no correct description found, add tag here"
+                    onChange={props.onChange}
+                />
+                */}
                 <hr />
                 {props.building.current_landuse_group != null ? <> {
                 props.building.current_landuse_group.map((item, index) => (
@@ -4705,8 +4741,8 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     tooltip={null}
                     disabled={false}
                 /> 
-                    <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
-                <Tooltip text={ "tooltip" } />
+                <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
+                    <Tooltip text={ "tooltip" } />
                     <div className="label">UK NNDA (VOA SCAT):</div>
                     <div className="info-details">
                     <div className="code">{landuseCodesData[item].SCAT.code}</div>
