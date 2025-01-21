@@ -471,7 +471,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         category: Category.LandUse,
         title: "Source type",
         tooltip: "Source for the current land use",
-        example: "",
+        example: "click here to select source type",
         items: commonSourceTypes
     },
     current_landuse_source_detail: {
