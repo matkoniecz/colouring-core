@@ -639,20 +639,19 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
                     { color: '#ff8c00', text: 'Retail' },
                     { color: '#f5f58f', text: 'Industry & Business' },
                     { color: '#898944', text: 'Public Admin, Defence & Security' },
-                    { color: '#fa667d', text: 'UNUSED Community Services' },
+                    /*{ color: '#fa667d', text: 'UNUSED Community Services' },*/
                     { color: '#ffbfbf', text: 'Arts, Sport & Recreation' },
                     { color: '#b3de69', text: 'Transport & Storage' },
                     { color: '#cccccc', text: 'Utilities' },
                     { color: '#73ccd1', text: 'Agriculture, Forestry & Fishing' },
                     { color: '#45cce3', text: 'Mining & Quarrying' },
-                    { color: '#ffffff', text: 'UNUSED Vacant & Derelict' },
-                    { color: '#6c6f8e', text: 'UNUSED Unclassified, presumed non-residential' },
+                    /*{ color: '#ffffff', text: 'UNUSED Vacant & Derelict' },*/
+                    /*{ color: '#6c6f8e', text: 'UNUSED Unclassified, presumed non-residential' },*/
                     { color: '#2d5a27', text: 'Accommodation & Food' },
                     { color: '#8b1c62', text: 'Telecoms., Computing, Broadcasting & Publishing' },
                     { color: '#008080', text: 'Health' },
                     { color: '#cd7f32', text: 'Education' },
-                    { color: '#4b0082', text: 'Professional, Scientific & Technical activities' },
-                    { color: '#b7410e', text: 'UNUSED' }
+                    { color: '#b7410e', text: 'Professional, Scientific & Technical activities' },
                 ]
             },
         },
@@ -742,20 +741,19 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
                     { color: '#ff8c00', text: 'Retail' },
                     { color: '#f5f58f', text: 'Industry & Business' },
                     { color: '#898944', text: 'Public Admin, Defence & Security' },
-                    { color: '#fa667d', text: 'UNUSED Community Services' },
+                   /* { color: '#fa667d', text: 'UNUSED Community Services' },*/
                     { color: '#ffbfbf', text: 'Arts, Sport & Recreation' },
                     { color: '#b3de69', text: 'Transport & Storage' },
                     { color: '#cccccc', text: 'Utilities' },
                     { color: '#73ccd1', text: 'Agriculture, Forestry & Fishing' },
                     { color: '#45cce3', text: 'Mining & Quarrying' },
-                    { color: '#ffffff', text: 'UNUSED Vacant & Derelict' },
-                    { color: '#6c6f8e', text: 'UNUSED Unclassified, presumed non-residential' },
+                    /*{ color: '#ffffff', text: 'UNUSED Vacant & Derelict' },*/
+                    /*{ color: '#6c6f8e', text: 'UNUSED Unclassified, presumed non-residential' },*/
                     { color: '#2d5a27', text: 'Accommodation & Food' },
                     { color: '#8b1c62', text: 'Telecoms., Computing, Broadcasting & Publishing' },
                     { color: '#008080', text: 'Health' },
                     { color: '#cd7f32', text: 'Education' },
-                    { color: '#4b0082', text: 'Professional, Scientific & Technical activities' },
-                    { color: '#b7410e', text: 'UNUSED' }
+                    { color: '#b7410e', text: 'Professional, Scientific & Technical activities' },
                 ]
             },
         },
