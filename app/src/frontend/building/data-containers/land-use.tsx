@@ -3017,7 +3017,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
               style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}
             >
               <Tooltip text={"tooltip"} />
-              <div className="label">UK NNDA (VOA SCAT):</div>
+              <div className="label">UK National Non-Domestic Rate (VOA SCat):</div>
               <div className="info-details">
                 {codeLines.map((line, index) => (
                   <React.Fragment key={index}>
