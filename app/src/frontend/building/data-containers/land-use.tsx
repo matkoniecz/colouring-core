@@ -3017,7 +3017,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
               style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}
             >
               <Tooltip text={"tooltip"} />
-              <div className="label">UK National Non-Domestic Rate (VOA SCat):</div>
+              <div className="label">UK National Non-Domestic Rates (VOA SCat):</div>
               <div className="info-details">
                 {codeLines.map((line, index) => (
                   <React.Fragment key={index}>
@@ -3107,7 +3107,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     <></>
                 }
                 <MultiDataEntry
-                    title={"Current land use(s) (SCAT)"}
+                    title={"Current land use(s) (SCat)"}
                     slug="current_landuse_group"
                     value={props.building.current_landuse_group}
                     mode={props.mode}
@@ -3218,7 +3218,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                 <ScatInfoBox item={item} landuseCodesData={landuseCodesData} />
                 <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
                     <Tooltip text={ "[UK SIC: The UK Standard Industrial Classification of economic activities](https://www.ons.gov.uk/methodology/classificationsandstandards/ukstandardindustrialclassificationofeconomicactivities)" } />
-                    <div className="label">UK SIC:</div>
+                    <div className="label">UK Standard Industrial Classification (SIC):</div>
                     <div className="info-details">
                     <div className="code">{landuseCodesData[item].UK_SIC.code}</div>
                     <div className="description">{landuseCodesData[item].UK_SIC.description}</div>
