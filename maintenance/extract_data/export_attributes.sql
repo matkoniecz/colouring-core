@@ -17,6 +17,7 @@ COPY (SELECT
     location_alternative_footprint_links
     current_landuse_group,
     current_landuse_order,
+    landcover,
     building_attachment_form,
     date_change_building_use,
     date_year,

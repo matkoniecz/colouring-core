@@ -1773,6 +1773,194 @@
             <LineSymbolizer stroke="#888" stroke-width="3.0"/>
         </Rule>
     </Style>
+    <Style name="landcover">
+        <Rule>
+            <Filter>[landcover] = "Continuous urban fabric"</Filter>
+            <PolygonSymbolizer fill="#e6004d" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Discontinuous urban fabric"</Filter>
+            <PolygonSymbolizer fill="#ff0000" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Industrial or commercial units"</Filter>
+            <PolygonSymbolizer fill="#cc4df2" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Road and rail networks and associated land"</Filter>
+            <PolygonSymbolizer fill="#cc0000" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Port areas"</Filter>
+            <PolygonSymbolizer fill="#e6cccc" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Airports"</Filter>
+            <PolygonSymbolizer fill="#e6cce6" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Mineral extraction sites"</Filter>
+            <PolygonSymbolizer fill="#a600cc" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Dump sites"</Filter>
+            <PolygonSymbolizer fill="#a64d00" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Construction sites"</Filter>
+            <PolygonSymbolizer fill="#ff4dff" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Green urban areas"</Filter>
+            <PolygonSymbolizer fill="#ffa6ff" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Sport and leisure facilities"</Filter>
+            <PolygonSymbolizer fill="#ffe6ff" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Non-irrigated arable land"</Filter>
+            <PolygonSymbolizer fill="#ffffa8" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Permanently irrigated land"</Filter>
+            <PolygonSymbolizer fill="#ffff00" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Rice fields"</Filter>
+            <PolygonSymbolizer fill="#e6e600" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Vineyards"</Filter>
+            <PolygonSymbolizer fill="#e68000" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Fruit trees and berry plantations"</Filter>
+            <PolygonSymbolizer fill="#f2a64d" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Olive groves"</Filter>
+            <PolygonSymbolizer fill="#e6a600" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Pastures"</Filter>
+            <PolygonSymbolizer fill="#e6e64d" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Annual crops associated with permanent crops"</Filter>
+            <PolygonSymbolizer fill="#ffe6a6" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Complex cultivation patterns"</Filter>
+            <PolygonSymbolizer fill="#ffe64d" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Land principally occupied by agriculture with significant areas of natural vegetation"</Filter>
+            <PolygonSymbolizer fill="#e6cc4d" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Agro-forestry areas"</Filter>
+            <PolygonSymbolizer fill="#f2cca6" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Broad-leaved forest"</Filter>
+            <PolygonSymbolizer fill="#80ff00" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Coniferous forest"</Filter>
+            <PolygonSymbolizer fill="#00a600" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Mixed forest"</Filter>
+            <PolygonSymbolizer fill="#4dff00" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Natural grasslands"</Filter>
+            <PolygonSymbolizer fill="#ccf24d" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Moors and heathland"</Filter>
+            <PolygonSymbolizer fill="#a6ff80" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Sclerophyllous vegetation"</Filter>
+            <PolygonSymbolizer fill="#a6e64d" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Transitional woodland-shrub"</Filter>
+            <PolygonSymbolizer fill="#a6f200" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Beaches - dunes - sands"</Filter>
+            <PolygonSymbolizer fill="#e6e6e6" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Bare rocks"</Filter>
+            <PolygonSymbolizer fill="#cccccc" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Sparsely vegetated areas"</Filter>
+            <PolygonSymbolizer fill="#ccffcc" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Burnt areas"</Filter>
+            <PolygonSymbolizer fill="#000000" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Glaciers and perpetual snow"</Filter>
+            <PolygonSymbolizer fill="#a6e6cc" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Inland marshes"</Filter>
+            <PolygonSymbolizer fill="#a6a6ff" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Peat bogs"</Filter>
+            <PolygonSymbolizer fill="#4d4dff" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Salt marshes"</Filter>
+            <PolygonSymbolizer fill="#ccccff" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Salines"</Filter>
+            <PolygonSymbolizer fill="#e6e6ff" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Intertidal flats"</Filter>
+            <PolygonSymbolizer fill="#a6a6e6" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Water courses"</Filter>
+            <PolygonSymbolizer fill="#00ccf2" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Water bodies"</Filter>
+            <PolygonSymbolizer fill="#80f2e6" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Coastal lagoons"</Filter>
+            <PolygonSymbolizer fill="#00ffa6" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Estuaries"</Filter>
+            <PolygonSymbolizer fill="#a6ffe6" />
+        </Rule>
+        <Rule>
+            <Filter>[landcover] = "Sea and ocean"</Filter>        
+            <PolygonSymbolizer fill="#e6f2ff" />
+        </Rule>
+        <Rule>
+            <MaxScaleDenominator>17061</MaxScaleDenominator>
+            <MinScaleDenominator>4264</MinScaleDenominator>
+            <LineSymbolizer stroke="#888" stroke-width="1.0"/>
+        </Rule>
+        <Rule>
+            <MaxScaleDenominator>4264</MaxScaleDenominator>
+            <MinScaleDenominator>0</MinScaleDenominator>
+            <LineSymbolizer stroke="#888" stroke-width="3.0"/>
+        </Rule>
+    </Style>
     <Style name="disaster_severity">
         <Rule>
             <Filter>[disaster_severity] = "Building destroyed"</Filter>

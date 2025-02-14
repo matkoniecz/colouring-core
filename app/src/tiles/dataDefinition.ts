@@ -518,6 +518,14 @@ const LAYER_QUERIES = {
         FROM
             buildings
         WHERE typology_original_use IS NOT NULL`,
+    landcover: `
+        SELECT
+            geometry_id,
+            landcover::text as landcover
+        FROM
+            buildings
+        WHERE
+            landcover IS NOT NULL`,
     disaster_severity: `
         SELECT
             geometry_id,

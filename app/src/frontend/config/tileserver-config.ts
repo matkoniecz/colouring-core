@@ -40,6 +40,7 @@ export type BuildingMapTileset =
     'building_attachment_form' |
     'landuse' |
     'original_landuse' |
+    'landcover' |
     'dynamics_demolished_count' |
     'disaster_severity' |
     'team' |

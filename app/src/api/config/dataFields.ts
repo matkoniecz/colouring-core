@@ -627,6 +627,10 @@ export const buildingAttributesConfig = valueType<DataFieldConfig>()({ /* eslint
     current_landuse_verified: {
         edit: true,
     },
+    landcover: {
+        edit: true,
+        verify: true,
+    },
     dynamics_has_demolished_buildings: {
         edit: true,
         verify: true

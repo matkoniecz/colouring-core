@@ -24,6 +24,52 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
 
     const queryParameters = new URLSearchParams(window.location.search);
     const subcat = queryParameters.get("sc");
+    const LandcoverOptions = [
+        'Continuous urban fabric',
+        'Discontinuous urban fabric',
+        'Industrial or commercial units',
+        'Road and rail networks and associated land',
+        'Port areas',
+        'Airports',
+        'Mineral extraction sites',
+        'Dump sites',
+        'Construction sites',
+        'Green urban areas',
+        'Sport and leisure facilities',
+        'Non-irrigated arable land',
+        'Permanently irrigated land',
+        'Rice fields',
+        'Vineyards',
+        'Fruit trees and berry plantations',
+        'Olive groves',
+        'Pastures',
+        'Annual crops associated with permanent crops',
+        'Complex cultivation patterns',
+        /*'Land principally occupied by agriculture with significant areas of natural vegetation',*/
+        'Agro-forestry areas',
+        'Broad-leaved forest',
+        'Coniferous forest',
+        'Mixed forest',
+        'Natural grasslands',
+        'Moors and heathland',
+        'Sclerophyllous vegetation',
+        'Transitional woodland-shrub',
+        'Beaches - dunes - sands',
+        'Bare rocks',
+        'Sparsely vegetated areas',
+        'Burnt areas',
+        'Glaciers and perpetual snow',
+        'Inland marshes',
+        'Peat bogs',
+        'Salt marshes',
+        'Salines',
+        'Intertidal flats',
+        'Water courses',
+        'Water bodies',
+        'Coastal lagoons',
+        'Estuaries',
+        'Sea and ocean',
+    ];
 
     return (
         <Fragment>
@@ -156,6 +202,26 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     </>
                 }
                 */}
+            </DataEntryGroup>
+            <DataEntryGroup name="Land Cover" collapsed={subcat==null || subcat!="2"}>
+            <SelectDataEntry
+                        title={dataFields.landcover.title}
+                        slug="landcover"
+                        value={props.building.landcover}
+                        tooltip={dataFields.landcover.tooltip}
+                        options={LandcoverOptions}
+                        mode={props.mode}
+                        copy={props.copy}
+                        onChange={props.onChange}
+                    />
+                    <Verification
+                        slug="landcover"
+                        allow_verify={props.user !== undefined && props.building.landcover !== null && !props.edited}
+                        onVerify={props.onVerify}
+                        user_verified={props.user_verified.hasOwnProperty("landcover")}
+                        user_verified_as={props.user_verified.landcover}
+                        verified_count={props.building.verified.landcover}
+                    />
             </DataEntryGroup>
         </Fragment>
     );

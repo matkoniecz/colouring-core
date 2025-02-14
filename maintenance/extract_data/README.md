@@ -47,6 +47,7 @@ This is the main table, containing almost all data collected by Colouring London
 - `location_coordinates_links`: source links for coordinate data
 - `current_landuse_group`: current land use group
 - `current_landuse_order`: current land use order
+- `landcover`
 - `building_attachment_form`: building attachment form
 - `date_change_building_use`: year of last building use change
 - `date_year`: year built

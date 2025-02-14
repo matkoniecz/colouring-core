@@ -1,0 +1,2 @@
+ALTER TABLE buildings DROP COLUMN IF EXISTS landcover;
+DROP TYPE IF EXISTS landcover;

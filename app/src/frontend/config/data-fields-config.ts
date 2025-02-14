@@ -1069,6 +1069,12 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         tooltip: "Display Energy Certificate (DEC) Any public building should have (and display) a DEC. Showing how the energy use for that building compares to other buildings with same use",
         example: "G",
     },
+    landcover: {
+        category: Category.LandUse,
+        title: "Land cover",
+        tooltip: null,
+        example: "Pastures",
+    },
     sust_aggregate_estimate_epc: {
         category: Category.WaterGreenInfrastructure,
         title: "Residential Building Energy Rating",
