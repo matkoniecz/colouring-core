@@ -471,7 +471,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         category: Category.LandUse,
         title: "Source type",
         tooltip: "Source for the current land use",
-        example: "",
+        example: "click here to select source type",
         items: commonSourceTypes
     },
     current_landuse_source_detail: {
@@ -1376,13 +1376,14 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
 
     is_domestic: {
         category: Category.EnergyPerformance,
-        title: "Is the building residential, non-residential or mixed? (automatically generated from Specific Land Use/s)",
-        tooltip: null,
-        example: "mixed domestic/non-domestic",
+        title: "Is the building residential, non-residential or mixed?",
+        tooltip: "The vast majority of properties are residential (93% in the UK), so we have set 'residential' as the default value. Can you help us identify non-residential and mixed use buildings (and verify residential buildings too)?",
+        example: "Mixed residential/non-residential",
+        placeholder: "click here to select use type",
         items: [
-            "Yes",
-            "No",
-            "Mixed domestic/non-domestic"
+            "Residential",
+            "Non-residential",
+            "Mixed residential/non-residential"
         ]
     },
     is_domestic_source: {

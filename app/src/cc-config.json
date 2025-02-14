@@ -16,5 +16,5 @@
     "bbox": [-1227219, 6390006, 232268, 8640082],
 
     "basemapTileUrl": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-    "baseAttribution": "Building attribute data is © Colouring Cities contributors. Basemap © <a href=https://www.openstreetmap.org/copyright>OpenStreetMap contributors</a>. Building © MODIFY TO PROVIDE RELEVANT INFO"
+    "baseAttribution": "Building attribute data is © Colouring Cities contributors. Basemap © <a href=https://www.openstreetmap.org/copyright>OpenStreetMap contributors</a>. Building geometries - OS data © Crown copyright"
 }

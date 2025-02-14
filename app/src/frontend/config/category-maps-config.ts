@@ -638,15 +638,20 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
                     { color: '#7025a6', text: 'Residential (verified)' },
                     { color: '#ff8c00', text: 'Retail' },
                     { color: '#f5f58f', text: 'Industry & Business' },
-                    { color: '#fa667d', text: 'Community Services' },
-                    { color: '#ffbfbf', text: 'Recreation & Leisure' },
-                    { color: '#b3de69', text: 'Transport' },
-                    { color: '#cccccc', text: 'Utilities & Infrastructure' },
-                    { color: '#898944', text: 'Defence' },
-                    { color: '#73ccd1', text: 'Agriculture' },
-                    { color: '#45cce3', text: 'Minerals' },
-                    { color: '#ffffff', text: 'Vacant & Derelict' },
-                    { color: '#6c6f8e', text: 'Unclassified, presumed non-residential' }
+                    { color: '#898944', text: 'Public Admin, Defence & Security' },
+                    /*{ color: '#fa667d', text: 'UNUSED Community Services' },*/
+                    { color: '#ffbfbf', text: 'Arts, Sport & Recreation' },
+                    { color: '#b3de69', text: 'Transport & Storage' },
+                    { color: '#cccccc', text: 'Utilities' },
+                    { color: '#73ccd1', text: 'Agriculture, Forestry & Fishing' },
+                    { color: '#45cce3', text: 'Mining & Quarrying' },
+                    /*{ color: '#ffffff', text: 'UNUSED Vacant & Derelict' },*/
+                    /*{ color: '#6c6f8e', text: 'UNUSED Unclassified, presumed non-residential' },*/
+                    { color: '#2d5a27', text: 'Accommodation & Food' },
+                    { color: '#8b1c62', text: 'Telecoms., Computing, Broadcasting & Publishing' },
+                    { color: '#008080', text: 'Health' },
+                    { color: '#cd7f32', text: 'Education' },
+                    { color: '#b7410e', text: 'Professional, Scientific & Technical activities' },
                 ]
             },
         },
@@ -735,15 +740,20 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
                     { color: '#7025a6', text: 'Residential (verified)' },
                     { color: '#ff8c00', text: 'Retail' },
                     { color: '#f5f58f', text: 'Industry & Business' },
-                    { color: '#fa667d', text: 'Community Services' },
-                    { color: '#ffbfbf', text: 'Recreation & Leisure' },
-                    { color: '#b3de69', text: 'Transport' },
-                    { color: '#cccccc', text: 'Utilities & Infrastructure' },
-                    { color: '#898944', text: 'Defence' },
-                    { color: '#73ccd1', text: 'Agriculture' },
-                    { color: '#45cce3', text: 'Minerals' },
-                    { color: '#ffffff', text: 'Vacant & Derelict' },
-                    { color: '#6c6f8e', text: 'Unclassified, presumed non-residential' }
+                    { color: '#898944', text: 'Public Admin, Defence & Security' },
+                   /* { color: '#fa667d', text: 'UNUSED Community Services' },*/
+                    { color: '#ffbfbf', text: 'Arts, Sport & Recreation' },
+                    { color: '#b3de69', text: 'Transport & Storage' },
+                    { color: '#cccccc', text: 'Utilities' },
+                    { color: '#73ccd1', text: 'Agriculture, Forestry & Fishing' },
+                    { color: '#45cce3', text: 'Mining & Quarrying' },
+                    /*{ color: '#ffffff', text: 'UNUSED Vacant & Derelict' },*/
+                    /*{ color: '#6c6f8e', text: 'UNUSED Unclassified, presumed non-residential' },*/
+                    { color: '#2d5a27', text: 'Accommodation & Food' },
+                    { color: '#8b1c62', text: 'Telecoms., Computing, Broadcasting & Publishing' },
+                    { color: '#008080', text: 'Health' },
+                    { color: '#cd7f32', text: 'Education' },
+                    { color: '#b7410e', text: 'Professional, Scientific & Technical activities' },
                 ]
             },
         },
