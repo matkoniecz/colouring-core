@@ -252,7 +252,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                 */}
             </DataEntryGroup>
             <DataEntryGroup name="Land Cover" collapsed={subcat==null || subcat!="2"}>
-            <SelectDataEntry
+                    <SelectDataEntry
                         title={dataFields.landcover.title}
                         slug="landcover"
                         value={props.building.landcover}
