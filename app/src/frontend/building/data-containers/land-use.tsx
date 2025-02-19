@@ -3869,21 +3869,22 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
         'Green urban areas',
         'Sport and leisure facilities',
         'Non-irrigated arable land',
-        'Permanently irrigated land',
-        'Rice fields',
-        'Vineyards',
         'Fruit trees and berry plantations',
-        'Olive groves',
         'Pastures',
-        'Annual crops associated with permanent crops',
         'Complex cultivation patterns',
         /*'Land principally occupied by agriculture with significant areas of natural vegetation',*/
         'Agro-forestry areas',
         'Broad-leaved forest',
+
+        'Permanently irrigated land',
+        'Rice fields',
+        'Vineyards',
+        'Olive groves',
+        'Annual crops associated with permanent crops',
         'Coniferous forest',
         'Mixed forest',
         'Natural grasslands',
-        'Moors and heathland',
+        'Moors and heathland', /* ??? */
         'Sclerophyllous vegetation',
         'Transitional woodland-shrub',
         'Beaches - dunes - sands',
@@ -3892,7 +3893,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
         'Burnt areas',
         'Glaciers and perpetual snow',
         'Inland marshes',
-        'Peat bogs',
+        'Peat bogs', /* ??? */
         'Salt marshes',
         'Salines',
         'Intertidal flats',
@@ -3902,6 +3903,53 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
         'Estuaries',
         'Sea and ocean',
     ];
+
+    const LandcoverNameToCode = {
+        "Continuous urban fabric": 111,
+        "Discontinuous urban fabric": 112,
+        "Industrial or commercial units": 121,
+        "Road and rail networks and associated land": 122,
+        "Port areas": 123,
+        "Airports": 124,
+        "Mineral extraction sites": 131,
+        "Dump sites": 132,
+        "Construction sites": 133,
+        "Green urban areas": 141,
+        "Sport and leisure facilities": 142,
+        "Non-irrigated arable land": 211,
+        "Fruit trees and berry plantations": 222,
+        "Pastures": 231,
+        "Complex cultivation patterns": 242,
+        "Land principally occupied by agriculture with significant areas of natural vegetation": 243,
+        "Agro-forestry areas": 244,
+        "Broad-leaved forest": 311,
+        "Permanently irrigated land": 212,
+        "Rice fields": 213,
+        "Vineyards": 221,
+        "Olive groves": 223,
+        "Annual crops associated with permanent crops": 241,
+        "Coniferous forest": 312,
+        "Mixed forest": 313,
+        "Natural grasslands": 321,
+        "Moors and heathland": 322,
+        "Sclerophyllous vegetation": 323,
+        "Transitional woodland-shrub": 324,
+        "Beaches - dunes - sands": 331,
+        "Bare rocks": 332,
+        "Sparsely vegetated areas": 333,
+        "Burnt areas": 334,
+        "Glaciers and perpetual snow": 335,
+        "Inland marshes": 411,
+        "Peat bogs": 412,
+        "Salt marshes": 421,
+        "Salines": 422,
+        "Intertidal flats": 423,
+        "Water courses": 511,
+        "Water bodies": 512,
+        "Coastal lagoons": 521,
+        "Estuaries": 522,
+        "Sea and ocean": 523,
+    }
 
     const ScatInfoBox = ({ item, landuseCodesData }) => {
         const codeLines = landuseCodesData[item].SCAT.code.split("\n");
@@ -4171,26 +4219,45 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                 }</>: ""}
             </DataEntryGroup>
             : <></>}
-        <DataEntryGroup name="Land Cover" collapsed={subcat==null || subcat!="2"}>
-            <SelectDataEntry
-                    title={dataFields.landcover.title}
-                    slug="landcover"
-                    value={props.building.landcover}
-                    tooltip={dataFields.landcover.tooltip}
-                    options={LandcoverOptions}
-                    mode={props.mode}
-                    copy={props.copy}
-                    onChange={props.onChange}
-                />
-                <Verification
-                    slug="landcover"
-                    allow_verify={props.user !== undefined && props.building.landcover !== null && !props.edited}
-                    onVerify={props.onVerify}
-                    user_verified={props.user_verified.hasOwnProperty("landcover")}
-                    user_verified_as={props.user_verified.landcover}
-                    verified_count={props.building.verified.landcover}
-                />
-        </DataEntryGroup>
+                {/*
+                {(props.building.is_domestic_source == commonSourceTypes[0] ||
+                    props.building.is_domestic_source == commonSourceTypes[1] ||
+                    props.building.is_domestic_source == null) ? <></> :
+                    <><MultiDataEntry
+                        title={dataFields.is_domestic_links.title}
+                        slug="is_domestic_links"
+                        value={props.building.is_domestic_links}
+                        mode={props.mode}
+                        copy={props.copy}
+                        onChange={props.onChange}
+                        tooltip={dataFields.is_domestic_links.tooltip}
+                        placeholder="https://..."
+                        editableEntries={true}
+                        isUrl={true}
+                        />
+                    </>
+                }
+                */}
+            <DataEntryGroup name="Land Cover" collapsed={subcat==null || subcat!="2"}>
+                    <SelectDataEntry
+                        title={dataFields.landcover.title}
+                        slug="landcover"
+                        value={props.building.landcover}
+                        tooltip={dataFields.landcover.tooltip}
+                        options={LandcoverOptions}
+                        mode={props.mode}
+                        copy={props.copy}
+                        onChange={props.onChange}
+                    />
+                    <Verification
+                        slug="landcover"
+                        allow_verify={props.user !== undefined && props.building.landcover !== null && !props.edited}
+                        onVerify={props.onVerify}
+                        user_verified={props.user_verified.hasOwnProperty("landcover")}
+                        user_verified_as={props.user_verified.landcover}
+                        verified_count={props.building.verified.landcover}
+                    />
+            </DataEntryGroup>
         </Fragment>
     );
 };
