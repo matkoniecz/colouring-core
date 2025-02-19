@@ -270,6 +270,16 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                         user_verified_as={props.user_verified.landcover}
                         verified_count={props.building.verified.landcover}
                     />
+                {props.building.landcover !== null ? 
+                <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
+                    <Tooltip text={ "[CORINE](https://collections.sentinel-hub.com/corine-land-cover/readme.html)" } />
+                    <div className="label">CORINE code:</div>
+                    <div className="info-details">
+                    <div className="code">{LandcoverNameToCode[props.building.landcover]}</div>
+                    {/*<div className="description">{description}</div>*/}
+                    </div>
+                </div>
+                : <></>}
             </DataEntryGroup>
         </Fragment>
     );
