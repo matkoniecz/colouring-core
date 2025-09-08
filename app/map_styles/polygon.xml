@@ -2120,6 +2120,11 @@
             <PolygonSymbolizer fill="#e31d23" />
             <LineSymbolizer stroke="#e31d23" stroke-width="2.0"/>
         </Rule>
+        <Rule>
+            <Filter>[sust_aggregate_estimate_epc] is null</Filter>
+            <PolygonSymbolizer fill="#c0c0c0" />
+            <LineSymbolizer stroke="#c0c0c0" stroke-width="2.0"/>
+        </Rule>
 
         <Rule>
             <MaxScaleDenominator>4264</MaxScaleDenominator>
