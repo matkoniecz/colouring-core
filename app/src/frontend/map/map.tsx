@@ -200,7 +200,6 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                 {
                     (showLayerSelection == "enabled") ?
                     <>
-                        <BoroughSwitcher/>
                         <ParcelSwitcher/>
                         <FloodSwitcher/>
                         <ConservationAreaSwitcher/>
@@ -211,6 +210,7 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                         <HousingSwitcher />
                         <CreativeSwitcher />
                         <RegionsSwitcher />
+                        <BoroughSwitcher/>
                         <CeremonialCountiesSwitcher />
                         <GreenbeltSwitcher />
                         <MotorwaysSwitcher />
