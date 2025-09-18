@@ -10,7 +10,6 @@ import { initialMapViewport, mapBackgroundColor, MapTheme, LayerEnablementState 
 import { Building } from '../models/building';
 
 import { CityBaseMapLayer } from './layers/city-base-map-layer';
-import { CityBoundaryLayer } from './layers/city-boundary-layer';
 import { BoroughBoundaryLayer } from './layers/borough-boundary-layer';
 import { BoroughLabelLayer } from './layers/borough-label-layer';
 import { ParcelBoundaryLayer } from './layers/parcel-boundary-layer';
@@ -154,7 +153,6 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                     style={{zIndex: 300}}
                 >
                     <ConservationAreaBoundaryLayer/>
-                    <CityBoundaryLayer/>
                     <HistoricDataLayer revisionId={revisionId} />
                     <HistoricMapLayer />
                     <HistoricMapLayerWithoutFill mapColourScale={mapColourScale}/>
