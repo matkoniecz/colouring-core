@@ -210,8 +210,8 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                         <HousingSwitcher />
                         <CreativeSwitcher />
                         <RegionsSwitcher />
-                        <BoroughSwitcher/>
                         <CeremonialCountiesSwitcher />
+                        <BoroughSwitcher/>
                         <GreenbeltSwitcher />
                         <MotorwaysSwitcher />
                         <AerialPhotosMapSwitcher/>
