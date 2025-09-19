@@ -200,7 +200,7 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
     const defaultaerialPhotosMap = 'disabled'
     const defaultHistoricalFootprints = 'disabled'
     const defaultHistoricalMapAndFootprintsWithoutFill = 'disabled'
-    const defaultRegions = 'disabled'
+    const defaultRegions = 'enabled'
     const defaultCeremonialCounties = 'disabled'
     const defaultGreenbelt = 'disabled'
     const defaultMotorways = 'disabled'
