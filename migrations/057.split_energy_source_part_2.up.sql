@@ -6,11 +6,10 @@ BEGIN
         WHERE table_schema = 'public'
           AND table_name = 'buildings'
           AND column_name = 'sust_energy_rating_source_type'
-    ) AND THEN
+    ) THEN
         IF EXISTS (
             SELECT 1 FROM buildings 
             WHERE sust_energy_rating_source_type IS NOT NULL 
-            LIMIT 1
         ) THEN
             RAISE EXCEPTION 'Stopping execution: Column "sust_energy_rating_source_type" exists and contains data - migrate it to the new columns before deleting the column';
         END IF;
@@ -22,11 +21,10 @@ BEGIN
         WHERE table_schema = 'public'
           AND table_name = 'buildings'
           AND column_name = 'sust_energy_rating_source_link'
-    ) AND THEN
+    ) THEN
         IF EXISTS (
             SELECT 1 FROM buildings 
             WHERE sust_energy_rating_source_link IS NOT NULL 
-            LIMIT 1
         ) THEN
             RAISE EXCEPTION 'Stopping execution: Column "sust_energy_rating_source_link" exists and contains data - migrate it to the new columns before deleting the column';
         END IF;
