@@ -11,7 +11,7 @@ export function RegionsLayer() {
     const { darkLightTheme } = useDisplayPreferences();
 
     useEffect(() => {
-        apiGet('/geometries/regions_simplified_by_5_m.geojson')
+        apiGet('/geometries/regions_simplified_by_20_m.geojson')
             .then(data => setRegionsGeojson(data as GeoJsonObject));
     }, []);
 
