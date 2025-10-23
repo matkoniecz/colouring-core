@@ -6,10 +6,45 @@ import { BaseBuilding, BuildingAttributes, BuildingUpdate } from '../../models/b
 import { getBuildingData } from '../../dataAccess/building';
 import { ArgumentError } from '../../errors/general';
 
-import { updateLandUse } from './landUse';
+import { updateLandUse, updateLandUseScat } from './landUse';
 
 /**
  * Process current land use classifications - derive land use order from land use groups
+ * for new classification
+ */
+async function processCurrentLandUseClassificationsScat(
+    buildingId: number,
+    buildingUpdate: Partial<BuildingAttributes>,
+    t?: ITask<any>
+): Promise<any> {
+    const currentBuildingData = await getBuildingData(buildingId);
+
+    try {
+        const currentLandUseUpdate = await updateLandUseScat(
+            {
+                landUseGroup: currentBuildingData.current_landuse_group_scat,
+                landUseOrder: currentBuildingData.current_landuse_order_scat
+            }, {
+                landUseGroup: buildingUpdate.current_landuse_group_scat
+            }
+        );
+
+        return Object.assign({}, buildingUpdate, {
+            current_landuse_group_scat: currentLandUseUpdate.landUseGroup,
+            current_landuse_order_scat: currentLandUseUpdate.landUseOrder,
+        });
+    } catch (error) {
+        if(error instanceof ArgumentError && error.argumentName === 'landUseUpdate') {
+            error.argumentName = 'buildingUpdate';
+        }
+        throw error;
+    }
+}
+
+
+/**
+ * Process current land use classifications - derive land use order from land use groups
+ * for old classification
  */
 async function processCurrentLandUseClassifications(
     buildingId: number,
@@ -111,6 +146,9 @@ async function processDynamicsDemolishedBuildings(
 export async function processBuildingUpdate(buildingId: number, {attributes, userAttributes}: BuildingUpdate, t?: ITask<any>): Promise<BuildingUpdate> {
     if(hasAnyOwnProperty(attributes, ['current_landuse_group'])) {
         attributes = await processCurrentLandUseClassifications(buildingId, attributes, t);
+    }
+    if(hasAnyOwnProperty(attributes, ['current_landuse_group_scat'])) {
+        attributes = await processCurrentLandUseClassificationsScat(buildingId, attributes, t);
     }
     if(hasAnyOwnProperty(attributes, ['typology_original_use'])) {
         attributes = await processOriginalLandUseClassifications(buildingId, attributes, t);

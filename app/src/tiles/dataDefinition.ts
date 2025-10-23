@@ -522,6 +522,17 @@ const LAYER_QUERIES = {
             buildings
         WHERE
             current_landuse_order IS NOT NULL`,
+    landuse_scat: `
+    SELECT
+        geometry_id,
+        current_landuse_order_scat,
+        current_landuse_group_scat[1] AS current_landuse_group_scat,
+        current_landuse_scat_verified,
+        (current_landuse_order_scat IS NULL AND current_landuse_order IS NOT NULL) AS missing_data
+    FROM
+        buildings
+    WHERE
+        current_landuse_order_scat IS NOT NULL OR current_landuse_order IS NOT NULL`,
     original_landuse: `
         SELECT
             geometry_id,

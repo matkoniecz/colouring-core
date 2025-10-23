@@ -461,6 +461,43 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         tooltip: null,
         example: ["", "", ""],
     },
+    current_landuse_group_scat: {
+        category: Category.LandUse,
+        title: "Current land use(s)",
+        tooltip: "TODO",
+        example: ["", ""],
+    },
+    current_landuse_order_scat: {
+        category: Category.LandUse,
+        title: "This land use is shown on the map as:",
+        tooltip: "TODO",
+        example: "",
+    },
+    current_landuse_scat_source: {
+        category: Category.LandUse,
+        title: "Source type",
+        tooltip: null,
+        example: "",
+        items: commonSourceTypes
+    },
+    current_landuse_scat_source_detail: {
+        category: Category.LandUse,
+        title: "Source details",
+        tooltip: "References for current land use source (max 500 characters)",
+        example: "",
+    },
+    current_landuse_scat_link: {
+        category: Category.LandUse,
+        title: "Source link(s)",
+        tooltip: null,
+        example: ["", "", ""],
+    },
+    current_landuse_scat_verified: {
+        category: Category.LandUse,
+        title: 'Has this land use been manually verified?',
+        example: true,
+    },
+
     current_landuse_group: {
         category: Category.LandUse,
         title: "Current land use(s)",
