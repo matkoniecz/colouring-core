@@ -9,6 +9,7 @@ interface AutofillOption {
 type GetAutofillOptionsFn = (value: string, all?: boolean) => Promise<AutofillOption[]>;
 
 const autofillFunctionMap : { [fieldName: string] : GetAutofillOptionsFn } = {
+    current_landuse_group_scat: getLanduseGroupOptionsScat,
     current_landuse_group: getLanduseGroupOptions,
     typology_original_use: getLanduseGroupOptions,
     building_footprint_issues: getBuildingFootprintIssues,
@@ -22,6 +23,32 @@ function getBuildingFootprintIssues(value: string, all: boolean = false) {
         {id: "adjacent", value: "Adjacent building is missing.", similarity: 1},
         {id: "merge", value: "Two or more buildings merged in one polygon.", similarity: 1},
     ]
+}
+
+function getLanduseGroupOptionsScat(value: string, all: boolean = false) {
+    if(all) {
+        return db.manyOrNone(`
+            SELECT
+                landuse_id AS id,
+                description AS value
+            FROM reference_tables.buildings_landuse_group_scat
+            ORDER BY description
+            `
+        );
+    }
+
+    let query = buildPartialMatchQuery(value);
+
+    return db.manyOrNone(`
+        SELECT
+            landuse_id AS id,
+            description AS value,
+            ts_rank(to_tsvector('simple', description), to_tsquery('simple', $1)) AS similarity
+        FROM reference_tables.buildings_landuse_group_scat
+        WHERE to_tsvector('simple', description) @@ to_tsquery('simple', $1)
+        ORDER BY similarity DESC, description
+        `, [query]
+    );
 }
 
 function getLanduseGroupOptions(value: string, all: boolean = false) {
