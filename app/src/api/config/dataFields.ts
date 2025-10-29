@@ -664,6 +664,15 @@ export const buildingAttributesConfig = valueType<DataFieldConfig>()({ /* eslint
         derivedEdit: true,
         verify: false,
     },
+    current_landuse_group_scat: {
+        edit: true,
+        verify: true,
+    },
+    current_landuse_order_scat: {
+        edit: false,
+        derivedEdit: true,
+        verify: false,
+    },
     current_landuse_source: {
         edit: true,
         verify: true,

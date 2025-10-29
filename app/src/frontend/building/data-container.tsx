@@ -95,6 +95,8 @@ const withCopyEdit: (wc: React.ComponentType<CategoryViewProps>) => DataContaine
             const categoryKeys = {};
             const blackListedKeys = ['current_landuse_order',
                                      'current_landuse_verified',
+                                     'current_landuse_scat_order',
+                                     'current_landuse_scat_verified',
                                      'planning_list_grade',
                                      'likes_total',
                                      'community_type_worth_keeping_total',

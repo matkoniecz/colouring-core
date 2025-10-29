@@ -730,9 +730,36 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
     ],
     [Category.LandUse]: [
         {
-            mapStyle: 'landuse',
+            mapStyle: 'landuse_scat',
             legend: {
                 title: 'Land Use',
+                elements: [
+                    { color: '#e5050d', text: 'Mixed Use' },
+                    { subtitle: 'Single use:'},
+                    { color: '#7025a6', text: 'Residential' },
+                    { color: '#ff8c00', text: 'Retail' },
+                    { color: '#f5f58f', text: 'Industry & Business' },
+                    { color: '#fa667d', text: 'Arts, Sport & Recreation' },
+                    { color: '#ffbfbf', text: 'Accommodation & Food' },
+                    { color: '#b3de69', text: 'Transport & Storage' },
+                    { color: '#cccccc', text: 'Utilities' },
+                    { color: '#898944', text: 'Public Admin, Defence & Security' },
+                    { color: '#73ccd1', text: 'Agriculture, Forestry & Fishing' },
+                    { color: '#45cce3', text: 'Mining & Quarrying' },
+                    { color: '#ffffff', text: 'Education' },
+                    { color: '#ffffff', text: 'Health' },
+                    { color: '#ffffff', text: 'Professional, Scientific & Technical activities' },
+                    { color: '#ffffff', text: 'Places of Worship' },
+                    { color: '#fa667d', text: 'Telecoms., Computing, Broadcasting & Publishing' },
+                    { subtitle: 'Metadata:'},
+                    { color: '#ff00ff', text: 'Missing data, old landuse classification has data' },
+                ]
+            },
+        },
+        {
+            mapStyle: 'landuse',
+            legend: {
+                title: 'Land Use (Old Classification)',
                 elements: [
                     { color: '#e5050d', text: 'Mixed Use' },
                     { subtitle: 'Single use:'},

@@ -47,3 +47,36 @@ export async function isLandUseGroupAllowed(group: string): Promise<boolean> {
 
     return (groupResult != undefined);
 }
+
+export async function getLandUseScatOrderFromGroup(groups: string[]): Promise<string> {
+    if(groups.length === 0) return null;
+
+    const orders = (await db.many(
+        `
+        SELECT DISTINCT parent.description
+        FROM reference_tables.buildings_landuse_order_scat AS parent
+        JOIN reference_tables.buildings_landuse_group_scat AS child
+        ON child.parent_order_id = parent.landuse_id
+        WHERE child.description IN ($1:csv)
+        ORDER BY parent.description
+        `,
+        [groups]
+    )).map(x => x.description);
+
+    if(orders.length === 1) {
+        return orders[0];
+    } else if (orders.length > 1) {
+        return 'Mixed Use';
+    } else return null;
+}
+
+export async function isLandUseScatGroupAllowed(group: string): Promise<boolean> {
+    let groupResult = await db.oneOrNone(`
+        SELECT landuse_id
+        FROM reference_tables.buildings_landuse_group_scat
+        WHERE description = $1
+        `, [group]
+    );
+
+    return (groupResult != undefined);
+}

@@ -20,6 +20,10 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
     }
     const switchToLandUseMapStyle = (e) => {
         e.preventDefault();
+        props.onMapColourScale('landuse_scat')
+    }
+    const switchToOldLandUseMapStyle = (e) => {
+        e.preventDefault();
         props.onMapColourScale('landuse')
     }
 
@@ -36,8 +40,82 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                         The vast majority of properties are residential (93% in the UK), so we have set 'residential' as the default value. Can you help us identify non-residential and mixed use buildings (and verify residential buildings too)?
                     </i>
                 </div>
-                {(props.mapColourScale != "landuse") ? 
+                {(props.mapColourScale != "landuse_scat") ? 
                     <button className={`map-switcher-inline disabled-state btn btn-outline btn-outline-dark key-button`} onClick={switchToLandUseMapStyle}>
+                        {"Click to see specific land use."}
+                    </button>
+                    :
+                    <></>
+                }
+                <MultiDataEntry
+                    title={dataFields.current_landuse_group_scat.title}
+                    slug="current_landuse_group_scat"
+                    value={props.building.current_landuse_group_scat}
+                    mode={props.mode}
+                    copy={props.copy}
+                    onChange={props.onChange}
+                    confirmOnEnter={true}
+                    tooltip={dataFields.current_landuse_group_scat.tooltip}
+                    placeholder="Enter new land use group here"
+                    copyable={true}
+                    autofill={true}
+                    showAllOptionsOnEmpty={true}
+                />
+                <Verification
+                    slug="current_landuse_group_scat"
+                    allow_verify={props.user !== undefined && props.building.current_landuse_group_scat !== null && !props.edited}
+                    onVerify={props.onVerify}
+                    user_verified={props.user_verified.hasOwnProperty("current_landuse_group_scat")}
+                    user_verified_as={props.user_verified.current_landuse_group_scat && props.user_verified.current_landuse_group_scat.join(", ")}
+                    verified_count={props.building.verified.current_landuse_group_scat}
+                    />
+                <SelectDataEntry
+                    title={dataFields.current_landuse_scat_source.title}
+                    slug="current_landuse_scat_source"
+                    value={props.building.current_landuse_scat_source}
+                    mode={props.mode}
+                    copy={props.copy}
+                    onChange={props.onChange}
+                    tooltip={dataFields.current_landuse_scat_source.tooltip}
+                    placeholder={dataFields.current_landuse_scat_source.example}
+                    options={dataFields.current_landuse_scat_source.items}
+                    />
+                {(props.building.current_landuse_scat_source == commonSourceTypes[0] ||
+                    props.building.current_landuse_scat_source == commonSourceTypes[1] ||
+                    props.building.current_landuse_scat_source == null) ? <></> :
+                    <><MultiDataEntry
+                        title={dataFields.current_landuse_scat_link.title}
+                        slug="current_landuse_scat_link"
+                        value={props.building.current_landuse_scat_link}
+                        mode={props.mode}
+                        copy={props.copy}
+                        onChange={props.onChange}
+                        tooltip={dataFields.current_landuse_scat_link.tooltip}
+                        placeholder="https://..."
+                        editableEntries={true}
+                        isUrl={true}
+                        />
+                    </>
+                }
+                <DataEntry
+                    title={dataFields.current_landuse_order_scat.title}
+                    tooltip={dataFields.current_landuse_order_scat.tooltip}
+                    slug="current_landuse_order_scat"
+                    value={props.building.current_landuse_order_scat}
+                    mode={props.mode}
+                    disabled={true}
+                    copy={props.copy}
+                    onChange={props.onChange}
+                />
+            </DataEntryGroup>
+            <DataEntryGroup name="Specific Land Use/s (old classification)" collapsed={subcat==null || subcat!="1"}>
+                <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
+                    <i>
+                        The vast majority of properties are residential (93% in the UK), so we have set 'residential' as the default value. Can you help us identify non-residential and mixed use buildings (and verify residential buildings too)?
+                    </i>
+                </div>
+                {(props.mapColourScale != "landuse") ? 
+                    <button className={`map-switcher-inline disabled-state btn btn-outline btn-outline-dark key-button`} onClick={switchToOldLandUseMapStyle}>
                         {"Click to see specific land use."}
                     </button>
                     :
@@ -228,7 +306,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             </DataEntryGroup>
             <DataEntryGroup name="Original Use" collapsed={subcat==null || subcat!="4"}>
                 {(props.mapColourScale != "original_landuse") ? 
-                    <button className={`map-switcher-inline disabled-state btn btn-outline btn-outline-dark key-button`} onClick={switchToLandUseMapStyle}>
+                    <button className={`map-switcher-inline disabled-state btn btn-outline btn-outline-dark key-button`} onClick={switchToOldLandUseMapStyle}>
                         {"Click here to see original land use."}
                     </button>
                 :
