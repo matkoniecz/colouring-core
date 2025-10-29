@@ -10,5 +10,3 @@ ALTER TABLE buildings DROP COLUMN IF EXISTS current_landuse_scat_source;
 ALTER TABLE buildings DROP COLUMN IF EXISTS current_landuse_scat_source_detail;
 
 ALTER TABLE buildings DROP COLUMN IF EXISTS current_landuse_scat_link;
-
-ALTER TABLE buildings DROP COLUMN IF EXISTS current_landuse_scat_verified;
