@@ -516,5 +516,3 @@ ALTER TABLE buildings ADD COLUMN IF NOT EXISTS current_landuse_scat_source_detai
 ALTER TABLE buildings ADD CONSTRAINT current_landuse_scat_source_detail_len CHECK (length(current_landuse_scat_source_detail) < 500);
 
 ALTER TABLE buildings ADD COLUMN IF NOT EXISTS current_landuse_scat_link text[];
-
-ALTER TABLE buildings ADD COLUMN IF NOT EXISTS current_landuse_scat_verified BOOLEAN NOT NULL DEFAULT FALSE;

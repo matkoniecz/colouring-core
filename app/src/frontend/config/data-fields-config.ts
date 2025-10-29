@@ -492,11 +492,6 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         tooltip: null,
         example: ["", "", ""],
     },
-    current_landuse_scat_verified: {
-        category: Category.LandUse,
-        title: 'Has this land use been manually verified?',
-        example: true,
-    },
 
     current_landuse_group: {
         category: Category.LandUse,
