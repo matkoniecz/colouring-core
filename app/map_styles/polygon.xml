@@ -1972,6 +1972,10 @@
             <PolygonSymbolizer fill="#ffffff" />
         </Rule>
         <Rule>
+            <Filter>[current_landuse_order_scat] = "Other"</Filter>
+            <PolygonSymbolizer fill="#ffffff" />
+        </Rule>
+        <Rule>
             <Filter>[current_landuse_order_scat] = "Mixed Use"</Filter>
             <PolygonSymbolizer fill="#e5050d" />
         </Rule>
