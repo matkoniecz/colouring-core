@@ -751,6 +751,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
                     { color: '#ffffff', text: 'Professional, Scientific & Technical activities' },
                     { color: '#ffffff', text: 'Places of Worship' },
                     { color: '#fa667d', text: 'Telecoms., Computing, Broadcasting & Publishing' },
+                    { color: '#ffffff', text: 'Other' },
                     { subtitle: 'Metadata:'},
                     { color: '#ff00ff', text: 'Missing data, old landuse classification has data' },
                 ]
