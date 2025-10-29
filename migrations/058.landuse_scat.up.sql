@@ -506,9 +506,7 @@ ALTER TABLE buildings
 
 -- Land use groups, array. Derived from classes.
 ALTER TABLE buildings
-  ADD COLUMN IF NOT EXISTS current_landuse_group_scat text ARRAY[41],
-  ADD FOREIGN KEY (current_landuse_group_scat)
-  REFERENCES reference_tables.buildings_landuse_group_scat (description);
+  ADD COLUMN IF NOT EXISTS current_landuse_group_scat text ARRAY[41];
 
 -- verification for landuse
 ALTER TABLE buildings ADD COLUMN IF NOT EXISTS current_landuse_scat_source varchar;
