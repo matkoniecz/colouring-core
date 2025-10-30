@@ -1953,23 +1953,23 @@
         </Rule>
         <Rule>
             <Filter>[current_landuse_order_scat] = "Telecoms., Computing, Broadcasting & Publishing"</Filter>
-            <PolygonSymbolizer fill="#ffffff" />
+            <PolygonSymbolizer fill="#c77b81" />
         </Rule>
         <Rule>
             <Filter>[current_landuse_order_scat] = "Education"</Filter>
-            <PolygonSymbolizer fill="#ffffff" />
+            <PolygonSymbolizer fill="#2277ea" />
         </Rule>
         <Rule>
             <Filter>[current_landuse_order_scat] = "Health"</Filter>
-            <PolygonSymbolizer fill="#ffffff" />
+            <PolygonSymbolizer fill="#20b04d" />
         </Rule>
         <Rule>
             <Filter>[current_landuse_order_scat] = "Professional, Scientific & Technical activities"</Filter>
-            <PolygonSymbolizer fill="#ffffff" />
+            <PolygonSymbolizer fill="#baadff" />
         </Rule>
         <Rule>
             <Filter>[current_landuse_order_scat] = "Places of Worship"</Filter>
-            <PolygonSymbolizer fill="#ffffff" />
+            <PolygonSymbolizer fill="#c78c4f" />
         </Rule>
         <Rule>
             <Filter>[current_landuse_order_scat] = "Other"</Filter>
