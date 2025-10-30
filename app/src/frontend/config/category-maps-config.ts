@@ -746,11 +746,19 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
                     { color: '#898944', text: 'Public Admin, Defence & Security' },
                     { color: '#73ccd1', text: 'Agriculture, Forestry & Fishing' },
                     { color: '#45cce3', text: 'Mining & Quarrying' },
+<<<<<<< HEAD
                     { color: '#ffffff', text: 'Education' },
                     { color: '#ffffff', text: 'Health' },
                     { color: '#ffffff', text: 'Professional, Scientific & Technical activities' },
                     { color: '#ffffff', text: 'Places of Worship' },
                     { color: '#fa667d', text: 'Telecoms., Computing, Broadcasting & Publishing' },
+=======
+                    { color: '#2277ea', text: 'Education' },
+                    { color: '#20b04d', text: 'Health' },
+                    { color: '#baadff', text: 'Professional, Scientific & Technical activities' },
+                    { color: '#c78c4f', text: 'Places of Worship' },
+                    { color: '#c77b81', text: 'Telecoms., Computing, Broadcasting & Publishing' },
+>>>>>>> landuse-new
                     { color: '#ffffff', text: 'Other' },
                     { subtitle: 'Metadata:'},
                     { color: '#ff00ff', text: 'Missing data, old landuse classification has data' },
