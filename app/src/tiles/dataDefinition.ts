@@ -541,7 +541,6 @@ const LAYER_QUERIES = {
         geometry_id,
         current_landuse_order_scat,
         current_landuse_group_scat[1] AS current_landuse_group_scat,
-        current_landuse_scat,
         (current_landuse_order_scat IS NULL AND current_landuse_order IS NOT NULL AND current_landuse_group[1] <> 'Vacant') AS missing_data
     FROM
         buildings
