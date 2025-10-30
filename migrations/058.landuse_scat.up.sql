@@ -28,6 +28,7 @@ VALUES
 ('CCRP_15', 'Residential', 'order',NULL, True),
 ('CCRP_16','Places of Worship', 'order',NULL, True),
 ('???', 'unknown', 'order',NULL, True), -- for not yet classified ones
+('CCRP_17', 'Mixed Use', 'order',NULL, True),
 
 ('1', 'AA/RAC Service Centres and Boxes', 'group','CCRP_8', True),
 ('3', 'Advertising Right', 'group','CCRP_9', True),
