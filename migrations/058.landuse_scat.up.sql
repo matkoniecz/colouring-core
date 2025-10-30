@@ -7,7 +7,6 @@ CREATE TABLE IF NOT EXISTS reference_tables.landuse_classifications_scat (
         is_used BOOLEAN DEFAULT True
 );
 
--- using top_crp_to_generated_codes
 INSERT INTO reference_tables.landuse_classifications_scat
 (landuse_id, description, level, parent_id, is_used)
 VALUES
