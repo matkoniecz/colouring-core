@@ -751,6 +751,15 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
             },
         },
         {
+            mapStyle: 'landuse_scat_residential',
+            legend: {
+                title: 'Land Use',
+                elements: [
+                    { color: '#7025a6', text: 'Residential' },
+                ]
+            },
+        },
+        {
             mapStyle: 'landuse',
             legend: {
                 title: 'Land Use (Old Classification)',
