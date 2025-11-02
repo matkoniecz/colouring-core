@@ -753,9 +753,153 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         {
             mapStyle: 'landuse_scat_residential',
             legend: {
-                title: 'Land Use',
+                title: 'Residential Land Use',
                 elements: [
                     { color: '#7025a6', text: 'Residential' },
+                ]
+            },
+        },
+        {
+            mapStyle: 'landuse_scat_agriculture_forestry_and_fishing',
+            legend: {
+                title: 'Agriculture, Forestry & Fishing Land Use',
+                elements: [
+                    { color: '#73ccd1', text: 'Agriculture, Forestry & Fishing' },
+                ]
+            },
+        },
+        {
+            mapStyle: 'landuse_scat_mining_and_quarrying',
+            legend: {
+                title: 'Mining & Quarrying Land Use',
+                elements: [
+                    { color: '#45cce3', text: 'Mining & Quarrying' },
+                ]
+            },
+        },
+        {
+            mapStyle: 'landuse_scat_accomodation_and_food',
+            legend: {
+                title: 'Accommodation & Food Land Use',
+                elements: [
+                    { color: '#ffbfbf', text: 'Accommodation & Food' },
+                ]
+            },
+        },
+        {
+            mapStyle: 'landuse_scat_transport_and_storage',
+            legend: {
+                title: 'Transport & Storage Land Use',
+                elements: [
+                    { color: '#b3de69', text: 'Transport & Storage' },
+                ]
+            },
+        },
+        {
+            mapStyle: 'landuse_scat_utilities',
+            legend: {
+                title: 'Utilities Land Use',
+                elements: [
+                    { color: '#cccccc', text: 'Utilities' },
+                ]
+            },
+        },
+        {
+            mapStyle: 'landuse_scat_public_administration_defence_and_security',
+            legend: {
+                title: 'Public Admin, Defence & Security Land Use',
+                elements: [
+                    { color: '#898944', text: 'Public Admin, Defence & Security' },
+                ]
+            },
+        },
+        {
+            mapStyle: 'landuse_scat_retail',
+            legend: {
+                title: 'Retail Land Use',
+                elements: [
+                    { color: '#ff8c00', text: 'Retail' },
+                ]
+            },
+        },
+        {
+            mapStyle: 'landuse_scat_industry_and_business',
+            legend: {
+                title: 'Industry & Business Land Use',
+                elements: [
+                    { color: '#f5f58f', text: 'Industry & Business' },
+                ]
+            },
+        },
+        {
+            mapStyle: 'landuse_scat_arts_sport_and_recreation',
+            legend: {
+                title: 'Arts, Sport & Recreation Land Use',
+                elements: [
+                    { color: '#fa667d', text: 'Arts, Sport & Recreation' },
+                ]
+            },
+        },
+        {
+            mapStyle: 'landuse_scat_telecommunication_computing_broadcasting_and_publishing',
+            legend: {
+                title: 'Telecoms., Computing, Broadcasting & Publishing Land Use',
+                elements: [
+                    { color: '#c77b81', text: 'Telecoms., Computing, Broadcasting & Publishing' },
+                ]
+            },
+        },
+        {
+            mapStyle: 'landuse_scat_education',
+            legend: {
+                title: 'Education Land Use',
+                elements: [
+                    { color: '#2277ea', text: 'Education' },
+                ]
+            },
+        },
+        {
+            mapStyle: 'landuse_scat_health',
+            legend: {
+                title: 'Health Land Use',
+                elements: [
+                    { color: '#20b04d', text: 'Health' },
+                ]
+            },
+        },
+        {
+            mapStyle: 'landuse_scat_professional_scientific_and_technical_activities',
+            legend: {
+                title: 'Professional, Scientific & Technical activities Land Use',
+                elements: [
+                    { color: '#baadff', text: 'Professional, Scientific & Technical activities' },
+                ]
+            },
+        },
+        {
+            mapStyle: 'landuse_scat_places_of_worship',
+            legend: {
+                title: 'Places of Worship Land Use',
+                elements: [
+                    { color: '#c78c4f', text: 'Places of Worship' },
+                ]
+            },
+        },
+        {
+            mapStyle: 'landuse_scat_other',
+            legend: {
+                title: 'Other Land Use',
+                elements: [
+                    { color: '#ffffff', text: 'Other' },
+                ]
+            },
+        },
+        {
+            mapStyle: 'landuse_scat_mixed_use',
+            legend: {
+                title: 'Mixed Land Use',
+                elements: [
+                    { color: '#e5050d', text: 'Mixed Use' },
                 ]
             },
         },

@@ -535,11 +535,26 @@ const LAYER_QUERIES = {
     landuse_scat_residential: `
     SELECT
         geometry_id,
-        'Residential' AS current_landuse_group_scat,
+        'Residential' AS current_landuse_order_scat
     FROM
         buildings
     WHERE
-        'Residential' = ANY(current_landuse_group_scat)`,
+        'Dwelling/Single-family home' = ANY(current_landuse_group_scat)
+        OR
+        'Dwelling/Building with multiple flats' = ANY(current_landuse_group_scat)
+        OR
+        'Residential Institutions' = ANY(current_landuse_group_scat)
+        OR
+        'Residential Garden Buildings' = ANY(current_landuse_group_scat)
+        `,
+    landuse_scat_mixed_use: `
+    SELECT
+        geometry_id,
+        'Mixed Use' AS current_landuse_order_scat
+    FROM
+        buildings
+    WHERE
+        'Mixed Use' = current_landuse_order_scat`,
     original_landuse: `
         SELECT
             geometry_id,
