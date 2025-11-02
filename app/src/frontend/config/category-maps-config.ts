@@ -51,6 +51,13 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
             },
         },
         {
+            mapStyle: 'age_epc_estimated',
+            legend: {
+                title: 'EPC Age Estimate',
+                elements: ageLegend,
+            },
+        },
+        {
             mapStyle: 'typology_style_period',
             legend: {
                 title: 'Historical Period',
@@ -101,13 +108,6 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
                     { color: '#CF26DF', text: 'Current Building on Previous Green Space' },
                 ]
             }
-        },
-        {
-            mapStyle: 'age_epc_estimated',
-            legend: {
-                title: 'EPC Age Estimate',
-                elements: ageLegend,
-            },
         },
     ],
     [Category.ConstructionDesign]: [
