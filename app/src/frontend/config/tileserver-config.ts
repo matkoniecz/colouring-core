@@ -42,6 +42,23 @@ export type BuildingMapTileset =
     'building_attachment_form' |
     'landuse' |
     'landuse_scat' |
+    'landuse_scat_residential' |
+    'landuse_scat_agriculture_forestry_and_fishing' |
+    'landuse_scat_mining_and_quarrying' |
+    'landuse_scat_accomodation_and_food' |
+    'landuse_scat_transport_and_storage' |
+    'landuse_scat_utilities' |
+    'landuse_scat_public_administration_defence_and_security' |
+    'landuse_scat_retail' |
+    'landuse_scat_industry_and_business' |
+    'landuse_scat_arts_sport_and_recreation' |
+    'landuse_scat_telecommunication_computing_broadcasting_and_publishing' |
+    'landuse_scat_education' |
+    'landuse_scat_health' |
+    'landuse_scat_professional_scientific_and_technical_activities' |
+    'landuse_scat_places_of_worship' |
+    'landuse_scat_other' |
+    'landuse_scat_mixed_use' |
     'original_landuse' |
     'dynamics_demolished_count' |
     'disaster_severity' |
