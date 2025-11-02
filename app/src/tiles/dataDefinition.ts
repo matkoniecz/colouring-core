@@ -125,7 +125,7 @@ const LAYER_QUERIES = {
         WHERE
             size_storeys_basement IS NOT NULL
             AND
-            size_storeys_basement != 0`,  
+            size_storeys_basement != 0`,
     size_floor_area_ground: `
         SELECT
             geometry_id,
@@ -135,7 +135,7 @@ const LAYER_QUERIES = {
         WHERE
             size_floor_area_ground IS NOT NULL
             AND
-            size_floor_area_ground != 0`,           
+            size_floor_area_ground != 0`,
     construction_core_material: `
         SELECT
             geometry_id,
@@ -1644,7 +1644,7 @@ function getDataConfig(tileset: string): DataConfig {
     if(table == undefined) {
         throw new Error('Invalid tileset requested');
     }
-    
+
     if(tileset == 'base_boroughs') {
         const query = `(
             SELECT
@@ -1661,11 +1661,11 @@ function getDataConfig(tileset: string): DataConfig {
         ON d.geometry_id = b.geometry_id
     ) AS data
         `;
-    
+
         return {
             geometry_field: GEOMETRY_FIELD,
             table: query
-        };    
+        };
     }
 
     if(tileset == 'base_region_labels') {
