@@ -582,7 +582,7 @@ const LAYER_QUERIES = {
         'Temples' = ANY(current_landuse_group_scat)
         OR
         'Other Spiritual Sites' = ANY(current_landuse_group_scat)`,
-    landuse_scat_accommodation_and_food: `
+    landuse_scat_accomodation_and_food: `
     SELECT
         geometry_id,
         'Accommodation & Food' AS current_landuse_order_scat
@@ -1174,7 +1174,7 @@ const LAYER_QUERIES = {
         'Advertising Displays From Agricultural Land' = ANY(current_landuse_group_scat)
         OR
         'Equestrian Hospitals' = ANY(current_landuse_group_scat)`,
-    landuse_scat_public_admin_defence_and_security: `
+    landuse_scat_public_administration_defence_and_security: `
     SELECT
         geometry_id,
         'Public Admin, Defence & Security' AS current_landuse_order_scat
