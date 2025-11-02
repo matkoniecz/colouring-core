@@ -2307,11 +2307,6 @@
             <PolygonSymbolizer fill="#e5050d" />
             <LineSymbolizer stroke="#e5050d" stroke-width="2.0"/>
         </Rule>
-        <Rule>
-            <Filter>[missing_data] = true</Filter>
-            <PolygonSymbolizer fill="#ff00ff" />
-            <LineSymbolizer stroke="#ff00ff" stroke-width="2.0"/>
-        </Rule>
 
         <Rule>
             <MaxScaleDenominator>8530</MaxScaleDenominator>
