@@ -1,5 +1,5 @@
 ALTER TABLE buildings DROP COLUMN IF EXISTS current_landuse_order_scat;
-ALTER TABLE buildings DROP COLUMN IF EXISTS current_landuse_order_scat;
+ALTER TABLE buildings DROP COLUMN IF EXISTS current_landuse_group_scat;
 
 DROP TABLE IF EXISTS reference_tables.landuse_classifications_scat;
 DROP TABLE IF EXISTS reference_tables.buildings_landuse_order_scat;
