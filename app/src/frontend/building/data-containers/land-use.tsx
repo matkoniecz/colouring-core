@@ -4113,7 +4113,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                 />
             </DataEntryGroup>
             */}
-            <DataEntryGroup name="General Land Use" collapsed={subcat==null || subcat!="2"}>
+            { /* <DataEntryGroup name="General Land Use" collapsed={subcat==null || subcat!="2"}>
                 {(props.mapColourScale != "is_domestic") ? 
                     <button className={`map-switcher-inline disabled-state btn btn-outline btn-outline-dark key-button`} onClick={switchToIsDomesticMapStyle}>
                         {"Click to see residential, non-residential and mixed-use buildings."}
@@ -4167,8 +4167,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                         />
                     </>
                 }
-                */}
-            </DataEntryGroup>
+            </DataEntryGroup> */}
             <DataEntryGroup name="Land Ownership Type" collapsed={subcat==null || subcat!="3"}>
                     <InfoBox>
                         This section is designed to provide information on land parcels and their ownership type. Can you help us collect this information?
