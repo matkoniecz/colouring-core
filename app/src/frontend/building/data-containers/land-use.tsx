@@ -4375,7 +4375,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     </div>
                 </div>
                 <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
-                    <Tooltip text={ "Planning classes" } />
+                    <Tooltip text={ "[Use classes](https://www.planningportal.co.uk/permission/common-projects/change-of-use/use-classes)" } />
                     <div className="label">UK Planning Use Classes:</div>
                     <div className="info-details">
                     <div className="code">{landuseCodesData[item].planning_classes.code}</div>
