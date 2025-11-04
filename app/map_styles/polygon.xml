@@ -2041,38 +2041,38 @@
         </Rule>
         <Rule>
             <Filter>[current_landuse_order_scat] = "Agriculture, Forestry & Fishing"</Filter>
-            <PolygonSymbolizer fill="#73ccd1" />
-            <LineSymbolizer stroke="#73ccd1" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#2ec54f" />
+            <LineSymbolizer stroke="#2ec54f" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_order_scat] = "Mining & Quarrying"</Filter>
-            <PolygonSymbolizer fill="#45cce3" />
-            <LineSymbolizer stroke="#45cce3" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_order_scat] = "Accommodation & Food"</Filter>
-            <PolygonSymbolizer fill="#ffbfbf" />
-            <LineSymbolizer stroke="#ffbfbf" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff9fbc" />
+            <LineSymbolizer stroke="#ff9fbc" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_order_scat] = "Transport & Storage"</Filter>
-            <PolygonSymbolizer fill="#b3de69" />
-            <LineSymbolizer stroke="#b3de69" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#9aff00" />
+            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_order_scat] = "Utilities"</Filter>
-            <PolygonSymbolizer fill="#cccccc" />
-            <LineSymbolizer stroke="#cccccc" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#d4d4d4" />
+            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_order_scat] = "Public Admin, Defence & Security"</Filter>
-            <PolygonSymbolizer fill="#898944" />
-            <LineSymbolizer stroke="#898944" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#4bffe8" />
+            <LineSymbolizer stroke="#4bffe8" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_order_scat] = "Retail"</Filter>
-            <PolygonSymbolizer fill="#ff8c00" />
-            <LineSymbolizer stroke="#ff8c00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff5b00" />
+            <LineSymbolizer stroke="#ff5b00" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_order_scat] = "Industry & Business"</Filter>
@@ -2081,38 +2081,38 @@
         </Rule>
         <Rule>
             <Filter>[current_landuse_order_scat] = "Arts, Sport & Recreation"</Filter>
-            <PolygonSymbolizer fill="#fa667d" />
-            <LineSymbolizer stroke="#fa667d" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_order_scat] = "Telecoms., Computing, Broadcasting & Publishing"</Filter>
-            <PolygonSymbolizer fill="#c77b81" />
-            <LineSymbolizer stroke="#c77b81" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ffee00" />
+            <LineSymbolizer stroke="#ffee00" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_order_scat] = "Education"</Filter>
-            <PolygonSymbolizer fill="#2277ea" />
-            <LineSymbolizer stroke="#2277ea" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#a7cdfe" />
+            <LineSymbolizer stroke="#a7cdfe" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_order_scat] = "Health"</Filter>
-            <PolygonSymbolizer fill="#20b04d" />
-            <LineSymbolizer stroke="#20b04d" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#00b5ff" />
+            <LineSymbolizer stroke="#00b5ff" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_order_scat] = "Professional, Scientific & Technical activities"</Filter>
-            <PolygonSymbolizer fill="#baadff" />
-            <LineSymbolizer stroke="#baadff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_order_scat] = "Places of Worship"</Filter>
-            <PolygonSymbolizer fill="#c78c4f" />
-            <LineSymbolizer stroke="#c78c4f" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#cb73ff" />
+            <LineSymbolizer stroke="#cb73ff" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_order_scat] = "Other"</Filter>
-            <PolygonSymbolizer fill="#ffffff" />
-            <LineSymbolizer stroke="#ffffff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#808080" />
+            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_order_scat] = "Mixed Use"</Filter>
@@ -2157,8 +2157,8 @@
     <Style name="landuse_scat_agriculture_forestry_and_fishing">
         <Rule>
             <Filter>[current_landuse_order_scat] = "Agriculture, Forestry & Fishing"</Filter>
-            <PolygonSymbolizer fill="#73ccd1" />
-            <LineSymbolizer stroke="#73ccd1" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#2ec54f" />
+            <LineSymbolizer stroke="#2ec54f" stroke-width="2.0"/>
         </Rule>
 
         <Rule>
@@ -2175,8 +2175,8 @@
     <Style name="landuse_scat_mining_and_quarrying">
         <Rule>
             <Filter>[current_landuse_order_scat] = "Mining & Quarrying"</Filter>
-            <PolygonSymbolizer fill="#45cce3" />
-            <LineSymbolizer stroke="#45cce3" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
         </Rule>
 
         <Rule>
@@ -2193,8 +2193,8 @@
     <Style name="landuse_scat_accomodation_and_food">
         <Rule>
             <Filter>[current_landuse_order_scat] = "Accommodation & Food"</Filter>
-            <PolygonSymbolizer fill="#ffbfbf" />
-            <LineSymbolizer stroke="#ffbfbf" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff9fbc" />
+            <LineSymbolizer stroke="#ff9fbc" stroke-width="2.0"/>
         </Rule>
 
         <Rule>
@@ -2211,8 +2211,8 @@
     <Style name="landuse_scat_transport_and_storage">
         <Rule>
             <Filter>[current_landuse_order_scat] = "Transport & Storage"</Filter>
-            <PolygonSymbolizer fill="#b3de69" />
-            <LineSymbolizer stroke="#b3de69" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#9aff00" />
+            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
         </Rule>
 
         <Rule>
@@ -2229,8 +2229,8 @@
     <Style name="landuse_scat_utilities">
         <Rule>
             <Filter>[current_landuse_order_scat] = "Utilities"</Filter>
-            <PolygonSymbolizer fill="#cccccc" />
-            <LineSymbolizer stroke="#cccccc" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#d4d4d4" />
+            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
         </Rule>
 
         <Rule>
@@ -2247,8 +2247,8 @@
     <Style name="landuse_scat_public_administration_defence_and_security">
         <Rule>
             <Filter>[current_landuse_order_scat] = "Public Admin, Defence & Security"</Filter>
-            <PolygonSymbolizer fill="#898944" />
-            <LineSymbolizer stroke="#898944" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#4bffe8" />
+            <LineSymbolizer stroke="#4bffe8" stroke-width="2.0"/>
         </Rule>
 
         <Rule>
@@ -2265,8 +2265,8 @@
     <Style name="landuse_scat_retail">
         <Rule>
             <Filter>[current_landuse_order_scat] = "Retail"</Filter>
-            <PolygonSymbolizer fill="#ff8c00" />
-            <LineSymbolizer stroke="#ff8c00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff5b00" />
+            <LineSymbolizer stroke="#ff5b00" stroke-width="2.0"/>
         </Rule>
 
         <Rule>
@@ -2301,8 +2301,8 @@
     <Style name="landuse_scat_arts_sport_and_recreation">
         <Rule>
             <Filter>[current_landuse_order_scat] = "Arts, Sport & Recreation"</Filter>
-            <PolygonSymbolizer fill="#fa667d" />
-            <LineSymbolizer stroke="#fa667d" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
 
         <Rule>
@@ -2319,8 +2319,8 @@
     <Style name="landuse_scat_telecommunication_computing_broadcasting_and_publishing">
         <Rule>
             <Filter>[current_landuse_order_scat] = "Telecoms., Computing, Broadcasting & Publishing"</Filter>
-            <PolygonSymbolizer fill="#c77b81" />
-            <LineSymbolizer stroke="#c77b81" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ffee00" />
+            <LineSymbolizer stroke="#ffee00" stroke-width="2.0"/>
         </Rule>
 
         <Rule>
@@ -2337,8 +2337,8 @@
     <Style name="landuse_scat_education">
         <Rule>
             <Filter>[current_landuse_order_scat] = "Education"</Filter>
-            <PolygonSymbolizer fill="#2277ea" />
-            <LineSymbolizer stroke="#2277ea" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#a7cdfe" />
+            <LineSymbolizer stroke="#a7cdfe" stroke-width="2.0"/>
         </Rule>
 
         <Rule>
@@ -2355,8 +2355,8 @@
     <Style name="landuse_scat_health">
         <Rule>
             <Filter>[current_landuse_order_scat] = "Health"</Filter>
-            <PolygonSymbolizer fill="#20b04d" />
-            <LineSymbolizer stroke="#20b04d" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#00b5ff" />
+            <LineSymbolizer stroke="#00b5ff" stroke-width="2.0"/>
         </Rule>
 
         <Rule>
@@ -2373,8 +2373,8 @@
     <Style name="landuse_scat_professional_scientific_and_technical_activities">
         <Rule>
             <Filter>[current_landuse_order_scat] = "Professional, Scientific & Technical activities"</Filter>
-            <PolygonSymbolizer fill="#baadff" />
-            <LineSymbolizer stroke="#baadff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
         </Rule>
 
         <Rule>
@@ -2391,8 +2391,8 @@
     <Style name="landuse_scat_places_of_worship">
         <Rule>
             <Filter>[current_landuse_order_scat] = "Places of Worship"</Filter>
-            <PolygonSymbolizer fill="#c78c4f" />
-            <LineSymbolizer stroke="#c78c4f" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#cb73ff" />
+            <LineSymbolizer stroke="#cb73ff" stroke-width="2.0"/>
         </Rule>
 
         <Rule>
@@ -2409,8 +2409,8 @@
     <Style name="landuse_scat_other">
         <Rule>
             <Filter>[current_landuse_order_scat] = "Other"</Filter>
-            <PolygonSymbolizer fill="#ffffff" />
-            <LineSymbolizer stroke="#ffffff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#808080" />
+            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
         </Rule>
 
         <Rule>
@@ -2445,13 +2445,13 @@
     <Style name="landuse">
         <Rule>
             <Filter>[current_landuse_order] = "Agriculture And Fisheries"</Filter>
-            <PolygonSymbolizer fill="#73ccd1" />
-            <LineSymbolizer stroke="#73ccd1" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#2ec54f" />
+            <LineSymbolizer stroke="#2ec54f" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_order] = "Minerals"</Filter>
-            <PolygonSymbolizer fill="#45cce3" />
-            <LineSymbolizer stroke="#45cce3" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_order] = "Unclassified, presumed non-residential"</Filter>
@@ -2465,13 +2465,13 @@
         </Rule>
         <Rule>
             <Filter>[current_landuse_order] = "Transport"</Filter>
-            <PolygonSymbolizer fill="#b3de69" />
-            <LineSymbolizer stroke="#b3de69" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#9aff00" />
+            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_order] = "Utilities And Infrastructure"</Filter>
-            <PolygonSymbolizer fill="#cccccc" />
-            <LineSymbolizer stroke="#cccccc" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#d4d4d4" />
+            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_order] = "Residential" and not ([current_landuse_group] = "Garden buildings") and not ([current_landuse_group] = "Hotels, boarding and guest houses") and not ([current_landuse_verified])</Filter>
@@ -2500,8 +2500,8 @@
         </Rule>
         <Rule>
             <Filter>[current_landuse_order] = "Retail"</Filter>
-            <PolygonSymbolizer fill="#ff8c00" />
-            <LineSymbolizer stroke="#ff8c00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff5b00" />
+            <LineSymbolizer stroke="#ff5b00" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_order] = "Industry And Business"</Filter>
@@ -2538,13 +2538,13 @@
     <Style name="original_landuse">
         <Rule>
             <Filter>[typology_original_use_order] = "Agriculture And Fisheries"</Filter>
-            <PolygonSymbolizer fill="#73ccd1" />
-            <LineSymbolizer stroke="#73ccd1" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#2ec54f" />
+            <LineSymbolizer stroke="#2ec54f" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[typology_original_use_order] = "Minerals"</Filter>
-            <PolygonSymbolizer fill="#45cce3" />
-            <LineSymbolizer stroke="#45cce3" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[typology_original_use_order] = "Unclassified, presumed non-residential"</Filter>
@@ -2558,13 +2558,13 @@
         </Rule>
         <Rule>
             <Filter>[typology_original_use_order] = "Transport"</Filter>
-            <PolygonSymbolizer fill="#b3de69" />
-            <LineSymbolizer stroke="#b3de69" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#9aff00" />
+            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[typology_original_use_order] = "Utilities And Infrastructure"</Filter>
-            <PolygonSymbolizer fill="#cccccc" />
-            <LineSymbolizer stroke="#cccccc" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#d4d4d4" />
+            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[typology_original_use_order] = "Residential" and not ([typology_original_use_order] = "Garden buildings") and not ([typology_original_use_order] = "Hotels, boarding and guest houses") and not ([typology_original_use_verified])</Filter>
@@ -2593,8 +2593,8 @@
         </Rule>
         <Rule>
             <Filter>[typology_original_use_order] = "Retail"</Filter>
-            <PolygonSymbolizer fill="#ff8c00" />
-            <LineSymbolizer stroke="#ff8c00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff5b00" />
+            <LineSymbolizer stroke="#ff5b00" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[typology_original_use_order] = "Industry And Business"</Filter>

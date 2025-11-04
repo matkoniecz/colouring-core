@@ -642,15 +642,15 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
                     { subtitle: 'Single use:'},
                     { color: '#252aa6', text: 'Residential (unverified)' },
                     { color: '#7025a6', text: 'Residential (verified)' },
-                    { color: '#ff8c00', text: 'Retail' },
+                    { color: '#ff5b00', text: 'Retail' },
                     { color: '#f5f58f', text: 'Industry & Business' },
                     { color: '#fa667d', text: 'Community Services' },
                     { color: '#ffbfbf', text: 'Recreation & Leisure' },
-                    { color: '#b3de69', text: 'Transport' },
+                    { color: '#9aff00', text: 'Transport' },
                     { color: '#cccccc', text: 'Utilities & Infrastructure' },
                     { color: '#898944', text: 'Defence' },
-                    { color: '#73ccd1', text: 'Agriculture' },
-                    { color: '#45cce3', text: 'Minerals' },
+                    { color: '#2ec54f', text: 'Agriculture' },
+                    { color: '#a44603', text: 'Minerals' },
                     { color: '#ffffff', text: 'Vacant & Derelict' },
                     { color: '#6c6f8e', text: 'Unclassified, presumed non-residential' }
                 ]
@@ -735,26 +735,26 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
             legend: {
                 title: 'Land Use',
                 elements: [
-                    { color: '#e5050d', text: 'Mixed Use' },
+                    { color: '#e31a1c', text: 'Mixed Use' },
                     { subtitle: 'Single use:'},
                     { color: '#7025a6', text: 'Residential' },
-                    { color: '#ff8c00', text: 'Retail' },
-                    { color: '#f5f58f', text: 'Industry & Business' },
-                    { color: '#fa667d', text: 'Arts, Sport & Recreation' },
-                    { color: '#ffbfbf', text: 'Accommodation & Food' },
-                    { color: '#b3de69', text: 'Transport & Storage' },
-                    { color: '#cccccc', text: 'Utilities' },
-                    { color: '#898944', text: 'Public Admin, Defence & Security' },
-                    { color: '#73ccd1', text: 'Agriculture, Forestry & Fishing' },
-                    { color: '#45cce3', text: 'Mining & Quarrying' },
-                    { color: '#2277ea', text: 'Education' },
-                    { color: '#20b04d', text: 'Health' },
-                    { color: '#baadff', text: 'Professional, Scientific & Technical activities' },
-                    { color: '#c78c4f', text: 'Places of Worship' },
-                    { color: '#c77b81', text: 'Telecoms., Computing, Broadcasting & Publishing' },
-                    { color: '#ffffff', text: 'Other' },
+                    { color: '#ff5b00', text: 'Retail' },
+                    { color: '#ff9fbc', text: 'Accommodation & Food' },
+                    { color: '#a7cdfe', text: 'Education' },
+                    { color: '#00b5ff', text: 'Health' },
+                    { color: '#fd00cf', text: 'Arts, Sport & Recreation' },
+                    { color: '#cb73ff', text: 'Places of Worship' },
+                    { color: '#4bffe8', text: 'Public Admin, Defence & Security' },
+                    { color: '#fffd81', text: 'Industry & Business' },
+                    { color: '#9aff00', text: 'Transport & Storage' },
+                    { color: '#d4d4d4', text: 'Utilities' },
+                    { color: '#ffc800', text: 'Professional, Scientific & Technical activities' },
+                    { color: '#ffee00', text: 'Telecoms., Computing, Broadcasting & Publishing' },
+                    { color: '#2ec54f', text: 'Agriculture, Forestry & Fishing' },
+                    { color: '#a44603', text: 'Mining & Quarrying' },
+                    { color: '#808080', text: 'Other' },
                     { subtitle: 'Metadata:'},
-                    { color: '#ff00ff', text: 'Missing data, old landuse classification has data' },
+                    { color: '#ffffff', text: 'Being processed' },
                 ]
             },
         },
@@ -768,20 +768,11 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
             },
         },
         {
-            mapStyle: 'landuse_scat_agriculture_forestry_and_fishing',
+            mapStyle: 'landuse_scat_retail',
             legend: {
-                title: 'Agriculture, Forestry & Fishing Land Use',
+                title: 'Retail Land Use',
                 elements: [
-                    { color: '#73ccd1', text: 'Agriculture, Forestry & Fishing' },
-                ]
-            },
-        },
-        {
-            mapStyle: 'landuse_scat_mining_and_quarrying',
-            legend: {
-                title: 'Mining & Quarrying Land Use',
-                elements: [
-                    { color: '#45cce3', text: 'Mining & Quarrying' },
+                    { color: '#ff5b00', text: 'Retail' },
                 ]
             },
         },
@@ -790,70 +781,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
             legend: {
                 title: 'Accommodation & Food Land Use',
                 elements: [
-                    { color: '#ffbfbf', text: 'Accommodation & Food' },
-                ]
-            },
-        },
-        {
-            mapStyle: 'landuse_scat_transport_and_storage',
-            legend: {
-                title: 'Transport & Storage Land Use',
-                elements: [
-                    { color: '#b3de69', text: 'Transport & Storage' },
-                ]
-            },
-        },
-        {
-            mapStyle: 'landuse_scat_utilities',
-            legend: {
-                title: 'Utilities Land Use',
-                elements: [
-                    { color: '#cccccc', text: 'Utilities' },
-                ]
-            },
-        },
-        {
-            mapStyle: 'landuse_scat_public_administration_defence_and_security',
-            legend: {
-                title: 'Public Admin, Defence & Security Land Use',
-                elements: [
-                    { color: '#898944', text: 'Public Admin, Defence & Security' },
-                ]
-            },
-        },
-        {
-            mapStyle: 'landuse_scat_retail',
-            legend: {
-                title: 'Retail Land Use',
-                elements: [
-                    { color: '#ff8c00', text: 'Retail' },
-                ]
-            },
-        },
-        {
-            mapStyle: 'landuse_scat_industry_and_business',
-            legend: {
-                title: 'Industry & Business Land Use',
-                elements: [
-                    { color: '#f5f58f', text: 'Industry & Business' },
-                ]
-            },
-        },
-        {
-            mapStyle: 'landuse_scat_arts_sport_and_recreation',
-            legend: {
-                title: 'Arts, Sport & Recreation Land Use',
-                elements: [
-                    { color: '#fa667d', text: 'Arts, Sport & Recreation' },
-                ]
-            },
-        },
-        {
-            mapStyle: 'landuse_scat_telecommunication_computing_broadcasting_and_publishing',
-            legend: {
-                title: 'Telecoms., Computing, Broadcasting & Publishing Land Use',
-                elements: [
-                    { color: '#c77b81', text: 'Telecoms., Computing, Broadcasting & Publishing' },
+                    { color: '#ff9fbc', text: 'Accommodation & Food' },
                 ]
             },
         },
@@ -862,7 +790,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
             legend: {
                 title: 'Education Land Use',
                 elements: [
-                    { color: '#2277ea', text: 'Education' },
+                    { color: '#a7cdfe', text: 'Education' },
                 ]
             },
         },
@@ -871,16 +799,16 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
             legend: {
                 title: 'Health Land Use',
                 elements: [
-                    { color: '#20b04d', text: 'Health' },
+                    { color: '#00b5ff', text: 'Health' },
                 ]
             },
         },
         {
-            mapStyle: 'landuse_scat_professional_scientific_and_technical_activities',
+            mapStyle: 'landuse_scat_arts_sport_and_recreation',
             legend: {
-                title: 'Professional, Scientific & Technical activities Land Use',
+                title: 'Arts, Sport & Recreation Land Use',
                 elements: [
-                    { color: '#baadff', text: 'Professional, Scientific & Technical activities' },
+                    { color: '#fd00cf', text: 'Arts, Sport & Recreation' },
                 ]
             },
         },
@@ -889,7 +817,79 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
             legend: {
                 title: 'Places of Worship Land Use',
                 elements: [
-                    { color: '#c78c4f', text: 'Places of Worship' },
+                    { color: '#cb73ff', text: 'Places of Worship' },
+                ]
+            },
+        },
+        {
+            mapStyle: 'landuse_scat_public_administration_defence_and_security',
+            legend: {
+                title: 'Public Admin, Defence & Security Land Use',
+                elements: [
+                    { color: '#4bffe8', text: 'Public Admin, Defence & Security' },
+                ]
+            },
+        },
+        {
+            mapStyle: 'landuse_scat_industry_and_business',
+            legend: {
+                title: 'Industry & Business Land Use',
+                elements: [
+                    { color: '#fffd81', text: 'Industry & Business' },
+                ]
+            },
+        },
+        {
+            mapStyle: 'landuse_scat_transport_and_storage',
+            legend: {
+                title: 'Transport & Storage Land Use',
+                elements: [
+                    { color: '#9aff00', text: 'Transport & Storage' },
+                ]
+            },
+        },
+        {
+            mapStyle: 'landuse_scat_utilities',
+            legend: {
+                title: 'Utilities Land Use',
+                elements: [
+                    { color: '#d4d4d4', text: 'Utilities' },
+                ]
+            },
+        },
+        {
+            mapStyle: 'landuse_scat_professional_scientific_and_technical_activities',
+            legend: {
+                title: 'Professional, Scientific & Technical activities Land Use',
+                elements: [
+                    { color: '#ffc800', text: 'Professional, Scientific & Technical activities' },
+                ]
+            },
+        },
+        {
+            mapStyle: 'landuse_scat_telecommunication_computing_broadcasting_and_publishing',
+            legend: {
+                title: 'Telecoms., Computing, Broadcasting & Publishing Land Use',
+                elements: [
+                    { color: '#ffee00', text: 'Telecoms., Computing, Broadcasting & Publishing' },
+                ]
+            },
+        },
+        {
+            mapStyle: 'landuse_scat_agriculture_forestry_and_fishing',
+            legend: {
+                title: 'Agriculture, Forestry & Fishing Land Use',
+                elements: [
+                    { color: '#2ec54f', text: 'Agriculture, Forestry & Fishing' },
+                ]
+            },
+        },
+        {
+            mapStyle: 'landuse_scat_mining_and_quarrying',
+            legend: {
+                title: 'Mining & Quarrying Land Use',
+                elements: [
+                    { color: '#a44603', text: 'Mining & Quarrying' },
                 ]
             },
         },
@@ -898,7 +898,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
             legend: {
                 title: 'Other Land Use',
                 elements: [
-                    { color: '#ffffff', text: 'Other' },
+                    { color: '#808080', text: 'Other' },
                 ]
             },
         },
@@ -907,7 +907,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
             legend: {
                 title: 'Mixed Land Use',
                 elements: [
-                    { color: '#e5050d', text: 'Mixed Use' },
+                    { color: '#e31a1c', text: 'Mixed Use' },
                 ]
             },
         },
@@ -920,15 +920,15 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
                     { subtitle: 'Single use:'},
                     { color: '#252aa6', text: 'Residential (unverified)' },
                     { color: '#7025a6', text: 'Residential (verified)' },
-                    { color: '#ff8c00', text: 'Retail' },
+                    { color: '#ff5b00', text: 'Retail' },
                     { color: '#f5f58f', text: 'Industry & Business' },
                     { color: '#fa667d', text: 'Community Services' },
                     { color: '#ffbfbf', text: 'Recreation & Leisure' },
-                    { color: '#b3de69', text: 'Transport' },
+                    { color: '#9aff00', text: 'Transport' },
                     { color: '#cccccc', text: 'Utilities & Infrastructure' },
                     { color: '#898944', text: 'Defence' },
-                    { color: '#73ccd1', text: 'Agriculture' },
-                    { color: '#45cce3', text: 'Minerals' },
+                    { color: '#2ec54f', text: 'Agriculture' },
+                    { color: '#a44603', text: 'Minerals' },
                     { color: '#ffffff', text: 'Vacant & Derelict' },
                     { color: '#6c6f8e', text: 'Unclassified, presumed non-residential' }
                 ]
