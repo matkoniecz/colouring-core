@@ -38,6 +38,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Advertising Right": {
             SCAT: {code: "3", description: "Advertising Right"},
@@ -47,6 +48,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "N/A", description: ""},
         },
         "Agricultural Showgrounds (National Scheme)": {
             SCAT: {code: "4", description: "Agricultural Showgrounds (National Scheme)"},
@@ -56,6 +58,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "", description: ""},
         },
         "Air Ports (Minor) (National Scheme)": {
             SCAT: {code: "5", description: "Air Ports (Minor) (National Scheme)"},
@@ -65,6 +68,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Air Strips (National Scheme)": {
             SCAT: {code: "6", description: "Air Strips (National Scheme)"},
@@ -74,6 +78,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Aircraft Works With Airfields": {
             SCAT: {code: "7", description: "Aircraft Works With Airfields"},
@@ -83,6 +88,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Airport Let Outs": {
             SCAT: {code: "8", description: "Airport Let Outs"},
@@ -92,6 +98,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Aluminum Smelting Works": {
             SCAT: {code: "9", description: "Aluminum Smelting Works"},
@@ -101,6 +108,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Ambulance Stations": {
             SCAT: {code: "10", description: "Ambulance Stations"},
@@ -110,6 +118,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Amusement Arcades": {
             SCAT: {code: "11", description: "Amusement Arcades"},
@@ -119,6 +128,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "94.1", description: "Activities of business, employers and professional membership organisations"},
             NACE_level_1: {code: "S", description: "Arts, sports and recreation"},
             UK_SIC: {code: "93.29", description: "Other amusement and recreation activities"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Amusement Parks": {
             SCAT: {code: "12", description: "Amusement Parks"},
@@ -128,6 +138,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Animal Boarding": {
             SCAT: {code: "13", description: "Animal Boarding"},
@@ -137,6 +148,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "77.1", description: "Rental and leasing of motor vehicles"},
             NACE_level_1: {code: "N", description: "Professional, scientific and technical activities"},
             UK_SIC: {code: "75.00", description: "Veterinary activities"},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Arenas": {
             SCAT: {code: "14", description: "Arenas"},
@@ -146,6 +158,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Army Hereditaments": {
             SCAT: {code: "15", description: "Army Hereditaments"},
@@ -155,6 +168,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Artificial Fibre Works": {
             SCAT: {code: "16", description: "Artificial Fibre Works"},
@@ -164,6 +178,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "21.1", description: "Manufacture of basic pharmaceutical products"},
             NACE_level_1: {code: "C", description: "Manufacturing"},
             UK_SIC: {code: "20.60", description: "Manufacture of man-made fibres"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Asphalt Plants": {
             SCAT: {code: "17", description: "Asphalt Plants"},
@@ -173,6 +188,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "ATMs": {
             SCAT: {code: "18", description: "ATMs"},
@@ -182,6 +198,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "64.2", description: "Activities of holding companies and financing conduits"},
             NACE_level_1: {code: "L", description: "Financial and Insurance activities"},
             UK_SIC: {code: "64.19", description: "Other monetary intermediation"},
+            planning_classes: {code: "N/A", description: ""},
         },
         "Auction Rooms": {
             SCAT: {code: "19", description: "Auction Rooms"},
@@ -191,6 +208,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "47.8", description: "Retail sale of motor vehicles, motorcycles and related parts and accessories"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
             UK_SIC: {code: "47.79", description: "Retail sale of second-hand goods in stores"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Baling Plants": {
             SCAT: {code: "20", description: "Baling Plants"},
@@ -200,6 +218,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "01.4", description: "Animal production"},
             NACE_level_1: {code: "A", description: "Agriculture, forestry and fishing"},
             UK_SIC: {code: "01.30", description: "Plant propagation"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Banks/Insurance/Building Society Offices & Other A2 Uses": {
             SCAT: {code: "21", description: "Banks/Insurance/Building Society Offices & Other A2 Uses"},
@@ -209,6 +228,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(c)(i)", description: ""},
         },
         "Beach Huts": {
             SCAT: {code: "22", description: "Beach Huts"},
@@ -218,6 +238,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "55.3", description: "Camping grounds and recreational vehicle parks"},
             NACE_level_1: {code: "I", description: "Accommodation and food service activities"},
             UK_SIC: {code: "55.20", description: "Holiday and other short-stay accommodation"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Beet Sugar Factories": {
             SCAT: {code: "23", description: "Beet Sugar Factories"},
@@ -227,6 +248,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Betting Offices": {
             SCAT: {code: "24", description: "Betting Offices"},
@@ -236,6 +258,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "93.1", description: "Sports activities"},
             NACE_level_1: {code: "S", description: "Arts, sports and recreation"},
             UK_SIC: {code: "92.00", description: "Gambling and betting activities"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Bingo Halls (National Scheme)": {
             SCAT: {code: "25", description: "Bingo Halls (National Scheme)"},
@@ -245,6 +268,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "94.1", description: "Activities of business, employers and professional membership organisations"},
             NACE_level_1: {code: "S", description: "Arts, sports and recreation"},
             UK_SIC: {code: "93.29", description: "Other amusement and recreation activities"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Bird Sanctuaries": {
             SCAT: {code: "26", description: "Bird Sanctuaries"},
@@ -254,6 +278,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "92.0", description: "Gambling and betting activities"},
             NACE_level_1: {code: "S", description: "Arts, sports and recreation"},
             UK_SIC: {code: "91.04", description: "Botanical and zoological gardens and nature reserve activities"},
+            planning_classes: {code: "E(g)(ii)", description: ""},
         },
         "Boat Yards": {
             SCAT: {code: "27", description: "Boat Yards"},
@@ -263,6 +288,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Bowling Alleys": {
             SCAT: {code: "28", description: "Bowling Alleys"},
@@ -272,6 +298,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(d)", description: ""},
         },
         "Bowling Centres (Indoor)": {
             SCAT: {code: "29", description: "Bowling Centres (Indoor)"},
@@ -281,6 +308,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(d)", description: ""},
         },
         "Bowling Greens (Outdoor)": {
             SCAT: {code: "30", description: "Bowling Greens (Outdoor)"},
@@ -290,6 +318,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F2(c)", description: ""},
         },
         "Breweries (National Scheme)": {
             SCAT: {code: "31", description: "Breweries (National Scheme)"},
@@ -299,6 +328,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Brickworks (Traditional), Clay Tile/Pipe Works": {
             SCAT: {code: "32", description: "Brickworks (Traditional), Clay Tile/Pipe Works"},
@@ -308,6 +338,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "23.4", description: "Manufacture of other porcelain and ceramic products"},
             NACE_level_1: {code: "C", description: "Manufacturing"},
             UK_SIC: {code: "23.32", description: "Manufacture of bricks, tiles and construction products, in baked clay"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Bulk Cement Storage Depots": {
             SCAT: {code: "33", description: "Bulk Cement Storage Depots"},
@@ -317,6 +348,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "52.2", description: "Support activities for transportation"},
             NACE_level_1: {code: "H", description: "Transportation and storage"},
             UK_SIC: {code: "52.10", description: "Warehousing and storage"},
+            planning_classes: {code: "B8", description: ""},
         },
         "Bullion/Money Stores (National Scheme)": {
             SCAT: {code: "34", description: "Bullion/Money Stores (National Scheme)"},
@@ -326,6 +358,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "64.2", description: "Activities of holding companies and financing conduits"},
             NACE_level_1: {code: "L", description: "Financial and Insurance activities"},
             UK_SIC: {code: "64.19", description: "Other monetary intermediation"},
+            planning_classes: {code: "E(c)(i)", description: ""},
         },
         "Bus Garages": {
             SCAT: {code: "35", description: "Bus Garages"},
@@ -335,6 +368,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "B8", description: ""},
         },
         "Bus Stations": {
             SCAT: {code: "36", description: "Bus Stations"},
@@ -344,6 +378,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Cable Head End Buildings": {
             SCAT: {code: "37", description: "Cable Head End Buildings"},
@@ -353,6 +388,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "61.2", description: "Telecommunication reselling activities and intermediation service activities for telecommunication"},
             NACE_level_1: {code: "K", description: "Telecommunication, computer programming, consulting, computing infrastructure and other information service activities"},
             UK_SIC: {code: "61.10", description: "Wired telecommunications activities"},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Car Auction Buildings/Sites": {
             SCAT: {code: "38", description: "Car Auction Buildings/Sites"},
@@ -362,6 +398,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "68.2", description: "Rental and operating of own or leased real estate"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
             UK_SIC: {code: "47.81", description: "Retail sale via stalls and markets of food, beverages and tobacco products"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Car Parks (Multi-Storey)": {
             SCAT: {code: "39", description: "Car Parks (Multi-Storey)"},
@@ -371,6 +408,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Car Parks (Surfaced Open)": {
             SCAT: {code: "40", description: "Car Parks (Surfaced Open)"},
@@ -380,6 +418,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Car Parks (Unsurfaced Open)": {
             SCAT: {code: "41", description: "Car Parks (Unsurfaced Open)"},
@@ -389,6 +428,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Car Showrooms": {
             SCAT: {code: "42", description: "Car Showrooms"},
@@ -398,6 +438,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Car Spaces": {
             SCAT: {code: "43", description: "Car Spaces"},
@@ -407,6 +448,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Car Supermarkets": {
             SCAT: {code: "44", description: "Car Supermarkets"},
@@ -416,6 +458,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Car Washes (Stand Alone)": {
             SCAT: {code: "45", description: "Car Washes (Stand Alone)"},
@@ -425,6 +468,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Car/Caravan Sales/Display/Hiring Sites": {
             SCAT: {code: "46", description: "Car/Caravan Sales/Display/Hiring Sites"},
@@ -434,6 +478,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Caravan Parks (Leisure) (National Scheme)": {
             SCAT: {code: "47", description: "Caravan Parks (Leisure) (National Scheme)"},
@@ -443,6 +488,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "55.4", description: "Intermediation service activities for accommodation"},
             NACE_level_1: {code: "I", description: "Accommodation and food service activities"},
             UK_SIC: {code: "55.30", description: "Camping grounds, recreational vehicle parks and trailer parks"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Caravan Sites and Pitches (National Scheme)": {
             SCAT: {code: "48", description: "Caravan Sites and Pitches (National Scheme)"},
@@ -452,6 +498,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "55.4", description: "Intermediation service activities for accommodation"},
             NACE_level_1: {code: "I", description: "Accommodation and food service activities"},
             UK_SIC: {code: "55.30", description: "Camping grounds, recreational vehicle parks and trailer parks"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Casinos and Gambling Clubs": {
             SCAT: {code: "49", description: "Casinos and Gambling Clubs"},
@@ -461,6 +508,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "93.1", description: "Sports activities"},
             NACE_level_1: {code: "S", description: "Arts, sports and recreation"},
             UK_SIC: {code: "92.00", description: "Gambling and betting activities"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Cattle Breeding Centres": {
             SCAT: {code: "50", description: "Cattle Breeding Centres"},
@@ -470,6 +518,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "", description: ""},
         },
         "Cement Tile Works": {
             SCAT: {code: "51", description: "Cement Tile Works"},
@@ -479,6 +528,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Cement Works": {
             SCAT: {code: "52", description: "Cement Works"},
@@ -488,6 +538,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Cemeteries (National Scheme)": {
             SCAT: {code: "53", description: "Cemeteries (National Scheme)"},
@@ -497,6 +548,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "96.4", description: "Intermediation service activities for personal services"},
             NACE_level_1: {code: "T", description: "Other services activities"},
             UK_SIC: {code: "96.03", description: "Funeral and related activities"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Chalet Parks (National Scheme)": {
             SCAT: {code: "54", description: "Chalet Parks (National Scheme)"},
@@ -506,6 +558,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "55.3", description: "Camping grounds and recreational vehicle parks"},
             NACE_level_1: {code: "I", description: "Accommodation and food service activities"},
             UK_SIC: {code: "55.20", description: "Holiday and other short-stay accommodation"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Chemical Works": {
             SCAT: {code: "55", description: "Chemical Works"},
@@ -515,6 +568,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Cinemas (National Scheme)": {
             SCAT: {code: "56", description: "Cinemas (National Scheme)"},
@@ -524,6 +578,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "59.2", description: "Sound recording and music publishing activities"},
             NACE_level_1: {code: "J", description: "Publishing, broadcasting, and content production and distribution activities"},
             UK_SIC: {code: "59.14", description: "Motion picture projection activities"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Civic and Public Buildings (Local Authority Occupations)": {
             SCAT: {code: "57", description: "Civic and Public Buildings (Local Authority Occupations)"},
@@ -533,6 +588,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F2(b) ", description: ""},
         },
         "Civic Amenity Sites": {
             SCAT: {code: "58", description: "Civic Amenity Sites"},
@@ -542,6 +598,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F2(b) ", description: ""},
         },
         "Civil Airports": {
             SCAT: {code: "59", description: "Civil Airports"},
@@ -551,6 +608,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Clubhouses": {
             SCAT: {code: "60", description: "Clubhouses"},
@@ -560,6 +618,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Licensed Sports, Social & Private Members Clubs": {
             SCAT: {code: "61", description: "Licensed Sports, Social & Private Members Clubs"},
@@ -569,6 +628,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(d)", description: ""},
         },
         "Inns": {
             SCAT: {code: "62", description: "Inns"},
@@ -578,6 +638,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "55.2", description: "Holiday and other short-stay accommodation"},
             NACE_level_1: {code: "I", description: "Accommodation and food service activities"},
             UK_SIC: {code: "55.10", description: "Hotels and similar accommodation"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Coking and Carbonising Plants": {
             SCAT: {code: "63", description: "Coking and Carbonising Plants"},
@@ -587,6 +648,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "19.2", description: "Manufacture of refined petroleum products and fossil fuel products"},
             NACE_level_1: {code: "C", description: "Manufacturing"},
             UK_SIC: {code: "19.10", description: "Manufacture of coke oven products"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Cold Stores": {
             SCAT: {code: "64", description: "Cold Stores"},
@@ -596,6 +658,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "52.2", description: "Support activities for transportation"},
             NACE_level_1: {code: "H", description: "Transportation and storage"},
             UK_SIC: {code: "52.10", description: "Warehousing and storage"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Colleges of Further Education (National Scheme)": {
             SCAT: {code: "65", description: "Colleges of Further Education (National Scheme)"},
@@ -605,6 +668,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F1(a)", description: ""},
         },
         "Communication Stations (National Scheme)": {
             SCAT: {code: "66", description: "Communication Stations (National Scheme)"},
@@ -614,6 +678,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "61.2", description: "Telecommunication reselling activities and intermediation service activities for telecommunication"},
             NACE_level_1: {code: "K", description: "Telecommunication, computer programming, consulting, computing infrastructure and other information service activities"},
             UK_SIC: {code: "61.10", description: "Wired telecommunications activities"},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Community Day Centres": {
             SCAT: {code: "67", description: "Community Day Centres"},
@@ -623,6 +688,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "88.9", description: "Other social work activities without accommodation"},
             NACE_level_1: {code: "R", description: "Human health and social work activities"},
             UK_SIC: {code: "88.10", description: "Social work activities without accommodation for the elderly and disabled"},
+            planning_classes: {code: "E(f)", description: ""},
         },
         "Computer Centres (Non-Purpose Built)": {
             SCAT: {code: "68", description: "Computer Centres (Non-Purpose Built)"},
@@ -632,6 +698,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Computer Centres (Purpose Built)": {
             SCAT: {code: "69", description: "Computer Centres (Purpose Built)"},
@@ -641,6 +708,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Concert Halls (National Scheme)": {
             SCAT: {code: "70", description: "Concert Halls (National Scheme)"},
@@ -650,6 +718,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Concrete Batching Plants": {
             SCAT: {code: "71", description: "Concrete Batching Plants"},
@@ -659,6 +728,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Concrete Block Works": {
             SCAT: {code: "72", description: "Concrete Block Works"},
@@ -668,6 +738,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Concrete Product Works": {
             SCAT: {code: "73", description: "Concrete Product Works"},
@@ -677,6 +748,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Conference & Exhibition Centres": {
             SCAT: {code: "74", description: "Conference & Exhibition Centres"},
@@ -686,6 +758,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "82.4", description: "Intermediation service activities for business support service activities not elsewhere classified"},
             NACE_level_1: {code: "O", description: "Administrative and support service activities"},
             UK_SIC: {code: "82.30", description: "Organisation of conventions and trade shows"},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Wedding & Function Venues": {
             SCAT: {code: "75", description: "Wedding & Function Venues"},
@@ -695,6 +768,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "97.0", description: "Activities of households as employers of domestic personnel"},
             NACE_level_1: {code: "T", description: "Other services activities"},
             UK_SIC: {code: "96.09", description: "Other personal service activities n.e.c."},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Contractors Huts & Compounds": {
             SCAT: {code: "76", description: "Contractors Huts & Compounds"},
@@ -704,6 +778,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Country House Hotels": {
             SCAT: {code: "77", description: "Country House Hotels"},
@@ -713,6 +788,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "55.2", description: "Holiday and other short-stay accommodation"},
             NACE_level_1: {code: "I", description: "Accommodation and food service activities"},
             UK_SIC: {code: "55.10", description: "Hotels and similar accommodation"},
+            planning_classes: {code: "C1", description: ""},
         },
         "Creameries": {
             SCAT: {code: "79", description: "Creameries"},
@@ -722,6 +798,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Crematoria (With & Without Cemeteries) (National Scheme)": {
             SCAT: {code: "80", description: "Crematoria (With & Without Cemeteries) (National Scheme)"},
@@ -731,6 +808,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "96.4", description: "Intermediation service activities for personal services"},
             NACE_level_1: {code: "T", description: "Other services activities"},
             UK_SIC: {code: "96.03", description: "Funeral and related activities"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Cricket Centres": {
             SCAT: {code: "81", description: "Cricket Centres"},
@@ -740,6 +818,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(d)", description: ""},
         },
         "Cricket Grounds (County)": {
             SCAT: {code: "82", description: "Cricket Grounds (County)"},
@@ -749,6 +828,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F2(c)", description: ""},
         },
         "Cricket Grounds/Pitches (Non- County)": {
             SCAT: {code: "83", description: "Cricket Grounds/Pitches (Non- County)"},
@@ -758,6 +838,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F2(c)", description: ""},
         },
         "Dance Schools & Centres": {
             SCAT: {code: "84", description: "Dance Schools & Centres"},
@@ -767,6 +848,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F1(a)", description: ""},
         },
         "Day Nurseries/Play Schools": {
             SCAT: {code: "85", description: "Day Nurseries/Play Schools"},
@@ -776,6 +858,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "85.2", description: "Primary education"},
             NACE_level_1: {code: "Q", description: "Education"},
             UK_SIC: {code: "85.10", description: "Pre-primary education"},
+            planning_classes: {code: "F1(a)", description: ""},
         },
         "Departmental and Walk Round Stores (Large)": {
             SCAT: {code: "86", description: "Departmental and Walk Round Stores (Large)"},
@@ -785,6 +868,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(a)", description: ""},
         },
         "Distilleries": {
             SCAT: {code: "87", description: "Distilleries"},
@@ -794,6 +878,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "District Heating Undertakings & Networks": {
             SCAT: {code: "88", description: "District Heating Undertakings & Networks"},
@@ -803,6 +888,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "35.4", description: "Activities of brokers and agents for electric power and natural gas"},
             NACE_level_1: {code: "D", description: "Electricity, gas, steam and air conditioning supply"},
             UK_SIC: {code: "35.30", description: "Steam and air conditioning supply"},
+            planning_classes: {code: "E(g)(iii) ", description: ""},
         },
         "Docks and Harbours (Non-Statutory)": {
             SCAT: {code: "89", description: "Docks and Harbours (Non-Statutory)"},
@@ -812,6 +898,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Domestic Fuel Installations": {
             SCAT: {code: "90", description: "Domestic Fuel Installations"},
@@ -821,6 +908,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii) ", description: ""},
         },
         "Drive-In Restaurants": {
             SCAT: {code: "91", description: "Drive-In Restaurants"},
@@ -830,6 +918,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(b)", description: ""},
         },
         "Drive-Thru Restaurants": {
             SCAT: {code: "92", description: "Drive-Thru Restaurants"},
@@ -839,6 +928,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(b)", description: ""},
         },
         "Mine Water Treatment Plant and Premises": {
             SCAT: {code: "93", description: "Mine Water Treatment Plant and Premises"},
@@ -848,6 +938,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "37.0", description: "Sewerage"},
             NACE_level_1: {code: "E", description: "Water supply; sewerage; waste managment and remediation activities"},
             UK_SIC: {code: "36.00", description: "Water collection, treatment and supply"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Electricity Undertakings (Non- Statutory)": {
             SCAT: {code: "94", description: "Electricity Undertakings (Non- Statutory)"},
@@ -857,6 +948,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii) ", description: ""},
         },
         "Exhaust and Tyre Centres": {
             SCAT: {code: "95", description: "Exhaust and Tyre Centres"},
@@ -866,6 +958,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Factories, Workshops and Warehouses (Incl Bakeries & Dairies)": {
             SCAT: {code: "96", description: "Factories, Workshops and Warehouses (Incl Bakeries & Dairies)"},
@@ -875,6 +968,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Factory Shops": {
             SCAT: {code: "97", description: "Factory Shops"},
@@ -884,6 +978,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(a)", description: ""},
         },
         "Farm Shops": {
             SCAT: {code: "98", description: "Farm Shops"},
@@ -893,6 +988,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(a)", description: ""},
         },
         "Field Study, Activity and Adventure Centres": {
             SCAT: {code: "99", description: "Field Study, Activity and Adventure Centres"},
@@ -902,6 +998,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "85.6", description: "Educational support activities"},
             NACE_level_1: {code: "Q", description: "Education"},
             UK_SIC: {code: "85.59", description: "Other education n.e.c."},
+            planning_classes: {code: "F1(a)", description: ""},
         },
         "Film and TV Studios": {
             SCAT: {code: "100", description: "Film and TV Studios"},
@@ -911,6 +1008,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Fire Stations": {
             SCAT: {code: "101", description: "Fire Stations"},
@@ -920,6 +1018,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "84.3", description: "Compulsory social security activities"},
             NACE_level_1: {code: "P", description: "Public administration and defence; compulsory social security"},
             UK_SIC: {code: "84.25", description: "Fire service activities"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Fish Farms": {
             SCAT: {code: "102", description: "Fish Farms"},
@@ -929,6 +1028,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "03.3", description: "Support activities for fishing and aquaculture"},
             NACE_level_1: {code: "A", description: "Agriculture, forestry and fishing"},
             UK_SIC: {code: "03.22", description: "Freshwater aquaculture"},
+            planning_classes: {code: "", description: ""},
         },
         "Flour Mills (National Scheme)": {
             SCAT: {code: "103", description: "Flour Mills (National Scheme)"},
@@ -938,6 +1038,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Food Courts": {
             SCAT: {code: "104", description: "Food Courts"},
@@ -947,6 +1048,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(b)", description: ""},
         },
         "Food Processing Centres": {
             SCAT: {code: "105", description: "Food Processing Centres"},
@@ -956,6 +1058,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "10.9", description: "Manufacture of prepared animal feeds"},
             NACE_level_1: {code: "C", description: "Manufacturing"},
             UK_SIC: {code: "10.89", description: "Manufacture of other food products n.e.c."},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Convenience Store": {
             SCAT: {code: "106", description: "Convenience Store"},
@@ -965,6 +1068,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(a)", description: ""},
         },
         "Football Grounds": {
             SCAT: {code: "107", description: "Football Grounds"},
@@ -974,6 +1078,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F2(c)", description: ""},
         },
         "Football Pitches": {
             SCAT: {code: "108", description: "Football Pitches"},
@@ -983,6 +1088,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F2(c)", description: ""},
         },
         "Football Stadia": {
             SCAT: {code: "109", description: "Football Stadia"},
@@ -992,6 +1098,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F2(c)", description: ""},
         },
         "Foundries": {
             SCAT: {code: "110", description: "Foundries"},
@@ -1001,6 +1108,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Funeral Parlours/Chapels Of Rest": {
             SCAT: {code: "111", description: "Funeral Parlours/Chapels Of Rest"},
@@ -1010,6 +1118,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "96.4", description: "Intermediation service activities for personal services"},
             NACE_level_1: {code: "T", description: "Other services activities"},
             UK_SIC: {code: "96.03", description: "Funeral and related activities"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Game Farms": {
             SCAT: {code: "112", description: "Game Farms"},
@@ -1019,6 +1128,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "01.5", description: "Mixed farming"},
             NACE_level_1: {code: "A", description: "Agriculture, forestry and fishing"},
             UK_SIC: {code: "01.49", description: "Raising of other animals"},
+            planning_classes: {code: "", description: ""},
         },
         "Garages (Transport and Commercial)": {
             SCAT: {code: "113", description: "Garages (Transport and Commercial)"},
@@ -1028,6 +1138,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "B8", description: ""},
         },
         "Garden Centres": {
             SCAT: {code: "114", description: "Garden Centres"},
@@ -1037,6 +1148,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(a)", description: ""},
         },
         "Gas Processing Plants": {
             SCAT: {code: "115", description: "Gas Processing Plants"},
@@ -1046,6 +1158,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Go Kart Rinks": {
             SCAT: {code: "116", description: "Go Kart Rinks"},
@@ -1055,6 +1168,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "94.1", description: "Activities of business, employers and professional membership organisations"},
             NACE_level_1: {code: "S", description: "Arts, sports and recreation"},
             UK_SIC: {code: "93.29", description: "Other amusement and recreation activities"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Golf Courses": {
             SCAT: {code: "117", description: "Golf Courses"},
@@ -1064,6 +1178,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F2(c)", description: ""},
         },
         "Golf Driving Ranges": {
             SCAT: {code: "118", description: "Golf Driving Ranges"},
@@ -1073,6 +1188,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F2(c)", description: ""},
         },
         "Grain Silos": {
             SCAT: {code: "119", description: "Grain Silos"},
@@ -1082,6 +1198,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "52.2", description: "Support activities for transportation"},
             NACE_level_1: {code: "H", description: "Transportation and storage"},
             UK_SIC: {code: "52.10", description: "Warehousing and storage"},
+            planning_classes: {code: "B8", description: ""},
         },
         "Granaries and Intervention Stores": {
             SCAT: {code: "120", description: "Granaries and Intervention Stores"},
@@ -1091,6 +1208,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "52.2", description: "Support activities for transportation"},
             NACE_level_1: {code: "H", description: "Transportation and storage"},
             UK_SIC: {code: "52.10", description: "Warehousing and storage"},
+            planning_classes: {code: "B8", description: ""},
         },
         "Greyhound Racetracks": {
             SCAT: {code: "121", description: "Greyhound Racetracks"},
@@ -1100,6 +1218,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F2(c)", description: ""},
         },
         "Guest & Boarding Houses": {
             SCAT: {code: "122", description: "Guest & Boarding Houses"},
@@ -1109,6 +1228,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "55.3", description: "Camping grounds and recreational vehicle parks"},
             NACE_level_1: {code: "I", description: "Accommodation and food service activities"},
             UK_SIC: {code: "55.20", description: "Holiday and other short-stay accommodation"},
+            planning_classes: {code: "C1", description: ""},
         },
         "Traveller Sites": {
             SCAT: {code: "123", description: "Traveller Sites"},
@@ -1118,6 +1238,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "55.4", description: "Intermediation service activities for accommodation"},
             NACE_level_1: {code: "I", description: "Accommodation and food service activities"},
             UK_SIC: {code: "55.30", description: "Camping grounds, recreational vehicle parks and trailer parks"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Hatcheries/Poultry Farms": {
             SCAT: {code: "124", description: "Hatcheries/Poultry Farms"},
@@ -1127,6 +1248,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "", description: ""},
         },
         "Health Farms": {
             SCAT: {code: "125", description: "Health Farms"},
@@ -1136,6 +1258,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "87.1", description: "Residential nursing care activities"},
             NACE_level_1: {code: "R", description: "Human health and social work activities"},
             UK_SIC: {code: "86.90", description: "Other human health activities"},
+            planning_classes: {code: "E(e)", description: ""},
         },
         "Heliports": {
             SCAT: {code: "126", description: "Heliports"},
@@ -1145,6 +1268,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Heredits Used For Primary Treatment/Processing Of Minerals": {
             SCAT: {code: "127", description: "Heredits Used For Primary Treatment/Processing Of Minerals"},
@@ -1154,6 +1278,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Heritage Railways": {
             SCAT: {code: "128", description: "Heritage Railways"},
@@ -1163,6 +1288,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "High Tech Warehouses": {
             SCAT: {code: "129", description: "High Tech Warehouses"},
@@ -1172,6 +1298,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "52.2", description: "Support activities for transportation"},
             NACE_level_1: {code: "H", description: "Transportation and storage"},
             UK_SIC: {code: "52.10", description: "Warehousing and storage"},
+            planning_classes: {code: "B8", description: ""},
         },
         "Holiday Centres": {
             SCAT: {code: "130", description: "Holiday Centres"},
@@ -1181,6 +1308,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "55.3", description: "Camping grounds and recreational vehicle parks"},
             NACE_level_1: {code: "I", description: "Accommodation and food service activities"},
             UK_SIC: {code: "55.20", description: "Holiday and other short-stay accommodation"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Holiday Homes (Self Catering)": {
             SCAT: {code: "131", description: "Holiday Homes (Self Catering)"},
@@ -1190,6 +1318,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "55.3", description: "Camping grounds and recreational vehicle parks"},
             NACE_level_1: {code: "I", description: "Accommodation and food service activities"},
             UK_SIC: {code: "55.20", description: "Holiday and other short-stay accommodation"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Horse Racecourses": {
             SCAT: {code: "132", description: "Horse Racecourses"},
@@ -1199,6 +1328,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F2(c)", description: ""},
         },
         "Hospital Let Outs": {
             SCAT: {code: "133", description: "Hospital Let Outs"},
@@ -1208,6 +1338,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "68.3", description: "Real estate activities on a fee or contract basis"},
             NACE_level_1: {code: "M", description: "Real estate activities"},
             UK_SIC: {code: "68.20", description: "Renting and operating of own or leased real estate"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Hospitals & Clinics NHS (National Scheme)": {
             SCAT: {code: "134", description: "Hospitals & Clinics NHS (National Scheme)"},
@@ -1217,6 +1348,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "86.2", description: "Medical and dental practice activities"},
             NACE_level_1: {code: "R", description: "Human health and social work activities"},
             UK_SIC: {code: "86.10", description: "Hospital activities"},
+            planning_classes: {code: "E(e)", description: ""},
         },
         "Hospitals & Clinics (Private) (National Scheme)": {
             SCAT: {code: "135", description: "Hospitals & Clinics (Private) (National Scheme)"},
@@ -1226,6 +1358,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "86.2", description: "Medical and dental practice activities"},
             NACE_level_1: {code: "R", description: "Human health and social work activities"},
             UK_SIC: {code: "86.10", description: "Hospital activities"},
+            planning_classes: {code: "E(e)", description: ""},
         },
         "Hostels": {
             SCAT: {code: "136", description: "Hostels"},
@@ -1235,6 +1368,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "55.3", description: "Camping grounds and recreational vehicle parks"},
             NACE_level_1: {code: "I", description: "Accommodation and food service activities"},
             UK_SIC: {code: "55.20", description: "Holiday and other short-stay accommodation"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Hotels (3 Star And Under)": {
             SCAT: {code: "137", description: "Hotels (3 Star And Under)"},
@@ -1244,6 +1378,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "55.2", description: "Holiday and other short-stay accommodation"},
             NACE_level_1: {code: "I", description: "Accommodation and food service activities"},
             UK_SIC: {code: "55.10", description: "Hotels and similar accommodation"},
+            planning_classes: {code: "C1", description: ""},
         },
         "Hotels (4 Star & Above) & Major Chain Operated ( includes 3* & above consortium hotels)": {
             SCAT: {code: "138", description: "Hotels (4 Star & Above) & Major Chain Operated ( includes 3* & above consortium hotels)"},
@@ -1253,6 +1388,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "55.2", description: "Holiday and other short-stay accommodation"},
             NACE_level_1: {code: "I", description: "Accommodation and food service activities"},
             UK_SIC: {code: "55.10", description: "Hotels and similar accommodation"},
+            planning_classes: {code: "C1", description: ""},
         },
         "Hypermarkets/Superstores (over 2500m²)": {
             SCAT: {code: "139", description: "Hypermarkets/Superstores (over 2500m²)"},
@@ -1262,6 +1398,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(a)", description: ""},
         },
         "Ice Rinks": {
             SCAT: {code: "140", description: "Ice Rinks"},
@@ -1271,6 +1408,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F2(d)", description: ""},
         },
         "Interactive Telephone Kiosks": {
             SCAT: {code: "141", description: "Interactive Telephone Kiosks"},
@@ -1280,6 +1418,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "62.1", description: "Computer programming activities"},
             NACE_level_1: {code: "K", description: "Telecommunication, computer programming, consulting, computing infrastructure and other information service activities"},
             UK_SIC: {code: "61.90", description: "Other telecommunications activities"},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Iron and/or Steel Works": {
             SCAT: {code: "142", description: "Iron and/or Steel Works"},
@@ -1289,6 +1428,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "24.2", description: "Manufacture of tubes, pipes, hollow profiles and related fittings, of steel"},
             NACE_level_1: {code: "C", description: "Manufacturing"},
             UK_SIC: {code: "24.10", description: "Manufacture of basic iron and steel and of ferro-alloys"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Kennels and Catteries": {
             SCAT: {code: "143", description: "Kennels and Catteries"},
@@ -1298,6 +1438,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "77.1", description: "Rental and leasing of motor vehicles"},
             NACE_level_1: {code: "N", description: "Professional, scientific and technical activities"},
             UK_SIC: {code: "75.00", description: "Veterinary activities"},
+            planning_classes: {code: "E(c)(iii) ", description: ""},
         },
         "Laboratories": {
             SCAT: {code: "144", description: "Laboratories"},
@@ -1307,6 +1448,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "72.2", description: "Research and experimental development on social sciences and humanities"},
             NACE_level_1: {code: "N", description: "Professional, scientific and technical activities"},
             UK_SIC: {code: "72.19", description: "Other research and experimental development on natural sciences and engineering"},
+            planning_classes: {code: "E(g)(ii)", description: ""},
         },
         "Lakes With Water Sport Facilities": {
             SCAT: {code: "145", description: "Lakes With Water Sport Facilities"},
@@ -1316,6 +1458,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F2(c)", description: ""},
         },
         "Land Used For Advertising": {
             SCAT: {code: "146", description: "Land Used For Advertising"},
@@ -1325,6 +1468,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(c)(iii) ", description: ""},
         },
         "Land Used For Car Boot Sales": {
             SCAT: {code: "147", description: "Land Used For Car Boot Sales"},
@@ -1334,6 +1478,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Land Used For Storage": {
             SCAT: {code: "148", description: "Land Used For Storage"},
@@ -1343,6 +1488,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "52.2", description: "Support activities for transportation"},
             NACE_level_1: {code: "H", description: "Transportation and storage"},
             UK_SIC: {code: "52.10", description: "Warehousing and storage"},
+            planning_classes: {code: "B8", description: ""},
         },
         "Landfill Gas Generator Sites": {
             SCAT: {code: "149", description: "Landfill Gas Generator Sites"},
@@ -1352,6 +1498,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Land used for Waste Composting": {
             SCAT: {code: "150", description: "Land used for Waste Composting"},
@@ -1361,6 +1508,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "38.3", description: "Waste disposal without recovery"},
             NACE_level_1: {code: "E", description: "Water supply; sewerage; waste managment and remediation activities"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "B2", description: ""},
         },
         "Large Distribution Warehouses": {
             SCAT: {code: "151", description: "Large Distribution Warehouses"},
@@ -1370,6 +1518,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "52.2", description: "Support activities for transportation"},
             NACE_level_1: {code: "H", description: "Transportation and storage"},
             UK_SIC: {code: "52.10", description: "Warehousing and storage"},
+            planning_classes: {code: "B8", description: ""},
         },
         "Large Food Stores (750 - 2500m²)": {
             SCAT: {code: "152", description: "Large Food Stores (750 - 2500m²)"},
@@ -1379,6 +1528,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(b)", description: ""},
         },
         "Large Industrials (Over 20,000m²)": {
             SCAT: {code: "153", description: "Large Industrials (Over 20,000m²)"},
@@ -1388,6 +1538,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Large Shops (750 - 1850m²)": {
             SCAT: {code: "154", description: "Large Shops (750 - 1850m²)"},
@@ -1397,6 +1548,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(a)", description: ""},
         },
         "Large Shops (Over 1850m²)": {
             SCAT: {code: "155", description: "Large Shops (Over 1850m²)"},
@@ -1406,6 +1558,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(a)", description: ""},
         },
         "Libraries": {
             SCAT: {code: "156", description: "Libraries"},
@@ -1415,6 +1568,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F1(d)", description: ""},
         },
         "Liquid Bulk Storage (Incl Petrol & Oil) (National Scheme)": {
             SCAT: {code: "157", description: "Liquid Bulk Storage (Incl Petrol & Oil) (National Scheme)"},
@@ -1424,6 +1578,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "52.2", description: "Support activities for transportation"},
             NACE_level_1: {code: "H", description: "Transportation and storage"},
             UK_SIC: {code: "52.10", description: "Warehousing and storage"},
+            planning_classes: {code: "B8", description: ""},
         },
         "Livestock Markets (National Scheme)": {
             SCAT: {code: "158", description: "Livestock Markets (National Scheme)"},
@@ -1433,6 +1588,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(b)", description: ""},
         },
         "Local Authority Schools (National Scheme)": {
             SCAT: {code: "159", description: "Local Authority Schools (National Scheme)"},
@@ -1442,6 +1598,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "85.6", description: "Educational support activities"},
             NACE_level_1: {code: "Q", description: "Education"},
             UK_SIC: {code: "85.59", description: "Other education n.e.c."},
+            planning_classes: {code: "F1(a)", description: ""},
         },
         "Lodges (National Scheme)": {
             SCAT: {code: "160", description: "Lodges (National Scheme)"},
@@ -1451,6 +1608,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "55.2", description: "Holiday and other short-stay accommodation"},
             NACE_level_1: {code: "I", description: "Accommodation and food service activities"},
             UK_SIC: {code: "55.10", description: "Hotels and similar accommodation"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Lorry Parks": {
             SCAT: {code: "161", description: "Lorry Parks"},
@@ -1460,6 +1618,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Maltings - Non Trad": {
             SCAT: {code: "162", description: "Maltings - Non Trad"},
@@ -1469,6 +1628,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Maltings - Trad": {
             SCAT: {code: "163", description: "Maltings - Trad"},
@@ -1478,6 +1638,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Marinas (National Scheme)": {
             SCAT: {code: "164", description: "Marinas (National Scheme)"},
@@ -1487,6 +1648,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Markets (Other Than Livestock)": {
             SCAT: {code: "165", description: "Markets (Other Than Livestock)"},
@@ -1496,6 +1658,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(a)", description: ""},
         },
         "Mineral Depot and Premises": {
             SCAT: {code: "166", description: "Mineral Depot and Premises"},
@@ -1505,6 +1668,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "09.1", description: "Support activities for petroleum and natural gas extraction"},
             NACE_level_1: {code: "B", description: "Mining and quarrying"},
             UK_SIC: {code: "08.99", description: "Other mining and quarrying n.e.c."},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Mineral Producing Hereditament - Blockstone": {
             SCAT: {code: "167", description: "Mineral Producing Hereditament - Blockstone"},
@@ -1514,6 +1678,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Mineral Producing Hereditament - Brine": {
             SCAT: {code: "168", description: "Mineral Producing Hereditament - Brine"},
@@ -1523,6 +1688,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Mineral Producing Hereditament - Chalk": {
             SCAT: {code: "169", description: "Mineral Producing Hereditament - Chalk"},
@@ -1532,6 +1698,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Mineral Producing Hereditament - China Clay": {
             SCAT: {code: "170", description: "Mineral Producing Hereditament - China Clay"},
@@ -1541,6 +1708,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "08.9", description: "Mining and quarrying not elsewhere classified"},
             NACE_level_1: {code: "B", description: "Mining and quarrying"},
             UK_SIC: {code: "08.12", description: "Operation of gravel and sand pits; mining of clays and kaolin"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Mineral Producing Hereditament - Clay": {
             SCAT: {code: "171", description: "Mineral Producing Hereditament - Clay"},
@@ -1550,6 +1718,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "08.9", description: "Mining and quarrying not elsewhere classified"},
             NACE_level_1: {code: "B", description: "Mining and quarrying"},
             UK_SIC: {code: "08.12", description: "Operation of gravel and sand pits; mining of clays and kaolin"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Mineral Producing Hereditament - Coal": {
             SCAT: {code: "172", description: "Mineral Producing Hereditament - Coal"},
@@ -1559,6 +1728,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "05.2", description: "Mining of lignite"},
             NACE_level_1: {code: "B", description: "Mining and quarrying"},
             UK_SIC: {code: "05.10", description: "Mining of hard coal"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Mineral Producing Hereditament - Fluorspar": {
             SCAT: {code: "173", description: "Mineral Producing Hereditament - Fluorspar"},
@@ -1568,6 +1738,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "09.1", description: "Support activities for petroleum and natural gas extraction"},
             NACE_level_1: {code: "B", description: "Mining and quarrying"},
             UK_SIC: {code: "08.99", description: "Other mining and quarrying n.e.c."},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Mineral Producing Hereditament - Gas": {
             SCAT: {code: "174", description: "Mineral Producing Hereditament - Gas"},
@@ -1577,6 +1748,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "07.1", description: "Mining of iron ores"},
             NACE_level_1: {code: "B", description: "Mining and quarrying"},
             UK_SIC: {code: "06.20", description: "Extraction of natural gas"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Mineral Producing Hereditament - Hardrock": {
             SCAT: {code: "175", description: "Mineral Producing Hereditament - Hardrock"},
@@ -1586,6 +1758,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Mineral Producing Hereditament - Inert": {
             SCAT: {code: "176", description: "Mineral Producing Hereditament - Inert"},
@@ -1595,6 +1768,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "08.9", description: "Mining and quarrying not elsewhere classified"},
             NACE_level_1: {code: "B", description: "Mining and quarrying"},
             UK_SIC: {code: "08.12", description: "Operation of gravel and sand pits; mining of clays and kaolin"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Mineral Producing Hereditament - Oil": {
             SCAT: {code: "177", description: "Mineral Producing Hereditament - Oil"},
@@ -1604,6 +1778,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "06.2", description: "Extraction of natural gas"},
             NACE_level_1: {code: "B", description: "Mining and quarrying"},
             UK_SIC: {code: "06.10", description: "Extraction of crude petroleum"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Mineral Producing Hereditament - Other Mineral Category": {
             SCAT: {code: "178", description: "Mineral Producing Hereditament - Other Mineral Category"},
@@ -1613,6 +1788,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "09.1", description: "Support activities for petroleum and natural gas extraction"},
             NACE_level_1: {code: "B", description: "Mining and quarrying"},
             UK_SIC: {code: "08.99", description: "Other mining and quarrying n.e.c."},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Mineral Producing Hereditament - Putrescible": {
             SCAT: {code: "179", description: "Mineral Producing Hereditament - Putrescible"},
@@ -1622,6 +1798,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "09.1", description: "Support activities for petroleum and natural gas extraction"},
             NACE_level_1: {code: "B", description: "Mining and quarrying"},
             UK_SIC: {code: "08.99", description: "Other mining and quarrying n.e.c."},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Mineral Producing Hereditament - Sand and Gravel": {
             SCAT: {code: "180", description: "Mineral Producing Hereditament - Sand and Gravel"},
@@ -1631,6 +1808,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "08.9", description: "Mining and quarrying not elsewhere classified"},
             NACE_level_1: {code: "B", description: "Mining and quarrying"},
             UK_SIC: {code: "08.12", description: "Operation of gravel and sand pits; mining of clays and kaolin"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Mineral Producing Hereditament - Sand": {
             SCAT: {code: "181", description: "Mineral Producing Hereditament - Sand"},
@@ -1640,6 +1818,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "08.9", description: "Mining and quarrying not elsewhere classified"},
             NACE_level_1: {code: "B", description: "Mining and quarrying"},
             UK_SIC: {code: "08.12", description: "Operation of gravel and sand pits; mining of clays and kaolin"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Mineral Producing Hereditament - Shale Unburnt": {
             SCAT: {code: "182", description: "Mineral Producing Hereditament - Shale Unburnt"},
@@ -1649,6 +1828,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "09.1", description: "Support activities for petroleum and natural gas extraction"},
             NACE_level_1: {code: "B", description: "Mining and quarrying"},
             UK_SIC: {code: "08.99", description: "Other mining and quarrying n.e.c."},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Mineral Producing Hereditament - Slate": {
             SCAT: {code: "183", description: "Mineral Producing Hereditament - Slate"},
@@ -1658,6 +1838,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Mineral Producing Hereditament With Batching Plant": {
             SCAT: {code: "184", description: "Mineral Producing Hereditament With Batching Plant"},
@@ -1667,6 +1848,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "09.1", description: "Support activities for petroleum and natural gas extraction"},
             NACE_level_1: {code: "B", description: "Mining and quarrying"},
             UK_SIC: {code: "08.99", description: "Other mining and quarrying n.e.c."},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Mineral Producing Hereditament With Coating Plant": {
             SCAT: {code: "185", description: "Mineral Producing Hereditament With Coating Plant"},
@@ -1676,6 +1858,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Mineral Producing Heredtament With Tunnel Kiln": {
             SCAT: {code: "186", description: "Mineral Producing Heredtament With Tunnel Kiln"},
@@ -1685,6 +1868,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "23.4", description: "Manufacture of other porcelain and ceramic products"},
             NACE_level_1: {code: "C", description: "Manufacturing"},
             UK_SIC: {code: "23.32", description: "Manufacture of bricks, tiles and construction products, in baked clay"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "MOD Hereditaments": {
             SCAT: {code: "187", description: "MOD Hereditaments"},
@@ -1694,6 +1878,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Model Villages": {
             SCAT: {code: "188", description: "Model Villages"},
@@ -1703,6 +1888,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "94.1", description: "Activities of business, employers and professional membership organisations"},
             NACE_level_1: {code: "S", description: "Arts, sports and recreation"},
             UK_SIC: {code: "93.29", description: "Other amusement and recreation activities"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Moorings (Floating Hereditaments)": {
             SCAT: {code: "189", description: "Moorings (Floating Hereditaments)"},
@@ -1712,6 +1898,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Mortuaries": {
             SCAT: {code: "190", description: "Mortuaries"},
@@ -1721,6 +1908,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "96.4", description: "Intermediation service activities for personal services"},
             NACE_level_1: {code: "T", description: "Other services activities"},
             UK_SIC: {code: "96.03", description: "Funeral and related activities"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Motor Racetracks": {
             SCAT: {code: "191", description: "Motor Racetracks"},
@@ -1730,6 +1918,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Motor Vehicle Works": {
             SCAT: {code: "192", description: "Motor Vehicle Works"},
@@ -1739,6 +1928,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "29.2", description: "Manufacture of bodies and coachwork for motor vehicles; manufacture of trailers and semi-trailers"},
             NACE_level_1: {code: "C", description: "Manufacturing"},
             UK_SIC: {code: "29.10", description: "Manufacture of motor vehicles"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Motorway Service Area Let Outs": {
             SCAT: {code: "193", description: "Motorway Service Area Let Outs"},
@@ -1748,6 +1938,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Motorway and Major Road Service Areas": {
             SCAT: {code: "194", description: "Motorway and Major Road Service Areas"},
@@ -1757,6 +1948,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Museums and Art Galleries (Contractors)": {
             SCAT: {code: "195", description: "Museums and Art Galleries (Contractors)"},
@@ -1766,6 +1958,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F1(c)", description: ""},
         },
         "Museums and Art Galleries (NonContractors)": {
             SCAT: {code: "196", description: "Museums and Art Galleries (NonContractors)"},
@@ -1775,6 +1968,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F1(c)", description: ""},
         },
         "Navy Hereditaments": {
             SCAT: {code: "197", description: "Navy Hereditaments"},
@@ -1784,6 +1978,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Newspaper Printing Works (National Scheme)": {
             SCAT: {code: "198", description: "Newspaper Printing Works (National Scheme)"},
@@ -1793,6 +1988,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Night Clubs & Discotheques": {
             SCAT: {code: "199", description: "Night Clubs & Discotheques"},
@@ -1802,6 +1998,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "94.1", description: "Activities of business, employers and professional membership organisations"},
             NACE_level_1: {code: "S", description: "Arts, sports and recreation"},
             UK_SIC: {code: "93.29", description: "Other amusement and recreation activities"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Nuclear Establishments": {
             SCAT: {code: "200", description: "Nuclear Establishments"},
@@ -1811,6 +2008,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "24.5", description: "Casting of metals"},
             NACE_level_1: {code: "C", description: "Manufacturing"},
             UK_SIC: {code: "24.46", description: "Processing of nuclear fuel"},
+            planning_classes: {code: "E(g)(iii) ", description: ""},
         },
         "Nursing Homes (Inc. Old Peoples Homes)": {
             SCAT: {code: "201", description: "Nursing Homes (Inc. Old Peoples Homes)"},
@@ -1820,6 +2018,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "87.2", description: "Residential care activities for persons living with or having a diagnosis of a mental illness or substance abuse"},
             NACE_level_1: {code: "R", description: "Human health and social work activities"},
             UK_SIC: {code: "87.10", description: "Residential nursing care activities"},
+            planning_classes: {code: "E(e)", description: ""},
         },
         "Observatories": {
             SCAT: {code: "202", description: "Observatories"},
@@ -1829,6 +2028,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "72.2", description: "Research and experimental development on social sciences and humanities"},
             NACE_level_1: {code: "N", description: "Professional, scientific and technical activities"},
             UK_SIC: {code: "72.19", description: "Other research and experimental development on natural sciences and engineering"},
+            planning_classes: {code: "E(g)(ii) ", description: ""},
         },
         "Offices (Inc Computer Centres)": {
             SCAT: {code: "203", description: "Offices (Inc Computer Centres)"},
@@ -1838,6 +2038,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "71.1", description: "Architectural and engineering activities and related technical consultancy"},
             NACE_level_1: {code: "N", description: "Professional, scientific and technical activities"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(i)", description: ""},
         },
         "Offices (Headquarters/Institutional)": {
             SCAT: {code: "204", description: "Offices (Headquarters/Institutional)"},
@@ -1847,6 +2048,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "70.2", description: "Business and other management consultancy activities"},
             NACE_level_1: {code: "N", description: "Professional, scientific and technical activities"},
             UK_SIC: {code: "70.10", description: "Activities of head offices"},
+            planning_classes: {code: "E(g)(i)", description: ""},
         },
         "Oil Refineries": {
             SCAT: {code: "205", description: "Oil Refineries"},
@@ -1856,6 +2058,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "20.1", description: "Manufacture of basic chemicals, fertilisers and nitrogen compounds, plastics and synthetic rubber in primary forms"},
             NACE_level_1: {code: "C", description: "Manufacturing"},
             UK_SIC: {code: "19.20", description: "Manufacture of refined petroleum products"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Oxbridge Colleges": {
             SCAT: {code: "206", description: "Oxbridge Colleges"},
@@ -1865,6 +2068,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "85.5", description: "Other education"},
             NACE_level_1: {code: "Q", description: "Education"},
             UK_SIC: {code: "85.42", description: "Tertiary education"},
+            planning_classes: {code: "F1(a)", description: ""},
         },
         "Paper Mills": {
             SCAT: {code: "207", description: "Paper Mills"},
@@ -1874,6 +2078,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "17.2", description: "Manufacture of articles of paper and paperboard"},
             NACE_level_1: {code: "C", description: "Manufacturing"},
             UK_SIC: {code: "17.12", description: "Manufacture of paper and paperboard"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Pavilions": {
             SCAT: {code: "208", description: "Pavilions"},
@@ -1883,6 +2088,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "94.1", description: "Activities of business, employers and professional membership organisations"},
             NACE_level_1: {code: "S", description: "Arts, sports and recreation"},
             UK_SIC: {code: "93.29", description: "Other amusement and recreation activities"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Petrol Filling Stations (National Scheme)": {
             SCAT: {code: "209", description: "Petrol Filling Stations (National Scheme)"},
@@ -1892,6 +2098,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "47.4", description: "Retail sale of information and communication equipment"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
             UK_SIC: {code: "47.30", description: "Retail sale of automotive fuel in specialised stores"},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Pharmacies": {
             SCAT: {code: "210", description: "Pharmacies"},
@@ -1901,6 +2108,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Photographic Booths": {
             SCAT: {code: "211", description: "Photographic Booths"},
@@ -1910,6 +2118,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "74.3", description: "Translation and interpretation activities"},
             NACE_level_1: {code: "N", description: "Professional, scientific and technical activities"},
             UK_SIC: {code: "74.20", description: "Photographic activities"},
+            planning_classes: {code: "E(c)(iii) ", description: ""},
         },
         "Pipelines": {
             SCAT: {code: "212", description: "Pipelines"},
@@ -1919,6 +2128,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "50.1", description: "Sea and coastal passenger water transport"},
             NACE_level_1: {code: "H", description: "Transportation and storage"},
             UK_SIC: {code: "49.50", description: "Transport via pipeline"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Pleasure Piers": {
             SCAT: {code: "213", description: "Pleasure Piers"},
@@ -1928,6 +2138,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "94.1", description: "Activities of business, employers and professional membership organisations"},
             NACE_level_1: {code: "S", description: "Arts, sports and recreation"},
             UK_SIC: {code: "93.29", description: "Other amusement and recreation activities"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Point to Point and Eventing Courses": {
             SCAT: {code: "214", description: "Point to Point and Eventing Courses"},
@@ -1937,6 +2148,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Police Stations": {
             SCAT: {code: "215", description: "Police Stations"},
@@ -1946,6 +2158,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Polo Grounds": {
             SCAT: {code: "216", description: "Polo Grounds"},
@@ -1955,6 +2168,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F2(c)", description: ""},
         },
         "Post Office Sorting Centres": {
             SCAT: {code: "217", description: "Post Office Sorting Centres"},
@@ -1964,6 +2178,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "53.3", description: "Intermediation service activities for postal and courier activities"},
             NACE_level_1: {code: "H", description: "Transportation and storage"},
             UK_SIC: {code: "53.20", description: "Other postal and courier activities"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Potteries": {
             SCAT: {code: "218", description: "Potteries"},
@@ -1973,6 +2188,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "23.5", description: "Manufacture of cement, lime and plaster"},
             NACE_level_1: {code: "C", description: "Manufacturing"},
             UK_SIC: {code: "23.49", description: "Manufacture of other ceramic products"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Power Generators": {
             SCAT: {code: "219", description: "Power Generators"},
@@ -1982,6 +2198,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii) ", description: ""},
         },
         "Prison Service Hereditaments": {
             SCAT: {code: "220", description: "Prison Service Hereditaments"},
@@ -1991,6 +2208,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Property used for Secondary Aggregate Processing": {
             SCAT: {code: "221", description: "Property used for Secondary Aggregate Processing"},
@@ -2000,6 +2218,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Provender Mills (National Scheme)": {
             SCAT: {code: "222", description: "Provender Mills (National Scheme)"},
@@ -2009,6 +2228,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Public and Independent Schools (National Scheme)": {
             SCAT: {code: "223", description: "Public and Independent Schools (National Scheme)"},
@@ -2018,6 +2238,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "85.6", description: "Educational support activities"},
             NACE_level_1: {code: "Q", description: "Education"},
             UK_SIC: {code: "85.59", description: "Other education n.e.c."},
+            planning_classes: {code: "F1(a)", description: ""},
         },
         "Public Conveniences (National Scheme)": {
             SCAT: {code: "224", description: "Public Conveniences (National Scheme)"},
@@ -2027,6 +2248,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "94.1", description: "Activities of business, employers and professional membership organisations"},
             NACE_level_1: {code: "S", description: "Arts, sports and recreation"},
             UK_SIC: {code: "93.29", description: "Other amusement and recreation activities"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Public Halls": {
             SCAT: {code: "225", description: "Public Halls"},
@@ -2036,6 +2258,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "94.1", description: "Activities of business, employers and professional membership organisations"},
             NACE_level_1: {code: "S", description: "Arts, sports and recreation"},
             UK_SIC: {code: "93.29", description: "Other amusement and recreation activities"},
+            planning_classes: {code: "F1(e)", description: ""},
         },
         "Public Houses/Pub Restaurants (National Scheme)": {
             SCAT: {code: "226", description: "Public Houses/Pub Restaurants (National Scheme)"},
@@ -2045,6 +2268,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "56.4", description: "Intermediation service activities for food and beverage services activities"},
             NACE_level_1: {code: "I", description: "Accommodation and food service activities"},
             UK_SIC: {code: "56.30", description: "Beverage serving activities"},
+            planning_classes: {code: "E(b)", description: ""},
         },
         "Public Houses/Pub Restaurants (Inc. Lodge) (National Scheme)": {
             SCAT: {code: "227", description: "Public Houses/Pub Restaurants (Inc. Lodge) (National Scheme)"},
@@ -2054,6 +2278,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "56.4", description: "Intermediation service activities for food and beverage services activities"},
             NACE_level_1: {code: "I", description: "Accommodation and food service activities"},
             UK_SIC: {code: "56.30", description: "Beverage serving activities"},
+            planning_classes: {code: "E(b)", description: ""},
         },
         "Public Telephone Kiosks (National Scheme)": {
             SCAT: {code: "228", description: "Public Telephone Kiosks (National Scheme)"},
@@ -2063,6 +2288,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "62.1", description: "Computer programming activities"},
             NACE_level_1: {code: "K", description: "Telecommunication, computer programming, consulting, computing infrastructure and other information service activities"},
             UK_SIC: {code: "61.90", description: "Other telecommunications activities"},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Racing Stables (National Scheme)": {
             SCAT: {code: "229", description: "Racing Stables (National Scheme)"},
@@ -2072,6 +2298,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F2(c)", description: ""},
         },
         "RAF Hereditaments": {
             SCAT: {code: "230", description: "RAF Hereditaments"},
@@ -2081,6 +2308,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Railways & Tramways (Non Leisure)": {
             SCAT: {code: "231", description: "Railways & Tramways (Non Leisure)"},
@@ -2090,6 +2318,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Recording Studios": {
             SCAT: {code: "232", description: "Recording Studios"},
@@ -2099,6 +2328,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "60.1", description: "Radio broadcasting and audio distribution activities"},
             NACE_level_1: {code: "J", description: "Publishing, broadcasting, and content production and distribution activities"},
             UK_SIC: {code: "59.20", description: "Sound recording and music publishing activities"},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Refuse Destructor Plants/Disposal Sites": {
             SCAT: {code: "233", description: "Refuse Destructor Plants/Disposal Sites"},
@@ -2108,6 +2338,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "39.0", description: "Remediation activities and other waste management service activities"},
             NACE_level_1: {code: "E", description: "Water supply; sewerage; waste managment and remediation activities"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "B2", description: ""},
         },
         "Restaurants": {
             SCAT: {code: "234", description: "Restaurants"},
@@ -2117,6 +2348,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(b)", description: ""},
         },
         "Retail Warehouses and Foodstores": {
             SCAT: {code: "235", description: "Retail Warehouses and Foodstores"},
@@ -2126,6 +2358,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(a)", description: ""},
         },
         "Riding Schools & Livery Stables (National Scheme)": {
             SCAT: {code: "236", description: "Riding Schools & Livery Stables (National Scheme)"},
@@ -2135,6 +2368,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F2(c)", description: ""},
         },
         "Rifle and Weapons Ranges": {
             SCAT: {code: "237", description: "Rifle and Weapons Ranges"},
@@ -2144,6 +2378,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(d)", description: ""},
         },
         "Roadside Restaurants (National Scheme)": {
             SCAT: {code: "238", description: "Roadside Restaurants (National Scheme)"},
@@ -2153,6 +2388,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(b)", description: ""},
         },
         "Roller Skating Rinks": {
             SCAT: {code: "239", description: "Roller Skating Rinks"},
@@ -2162,6 +2398,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(d)", description: ""},
         },
         "Royal Palaces": {
             SCAT: {code: "240", description: "Royal Palaces"},
@@ -2171,6 +2408,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "91.3", description: "Conservation, restoration and other support activities for cultural heritage"},
             NACE_level_1: {code: "S", description: "Arts, sports and recreation"},
             UK_SIC: {code: "91.03", description: "Operation of historical sites and buildings and similar visitor attractions"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Rugby League Grounds": {
             SCAT: {code: "241", description: "Rugby League Grounds"},
@@ -2180,6 +2418,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F2(c)", description: ""},
         },
         "Rugby Union Grounds": {
             SCAT: {code: "242", description: "Rugby Union Grounds"},
@@ -2189,6 +2428,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F2(c)", description: ""},
         },
         "Sales Kiosks": {
             SCAT: {code: "243", description: "Sales Kiosks"},
@@ -2198,6 +2438,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(a)", description: ""},
         },
         "Scrap Metal/Breakers Yard": {
             SCAT: {code: "244", description: "Scrap Metal/Breakers Yard"},
@@ -2207,6 +2448,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "33.1", description: "Repair and maintenance of fabricated metal products, machinery and equipment"},
             NACE_level_1: {code: "C", description: "Manufacturing"},
             UK_SIC: {code: "32.99", description: "Other manufacturing n.e.c."},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Sea Dredged Aggregate Processing Plants & Depots": {
             SCAT: {code: "245", description: "Sea Dredged Aggregate Processing Plants & Depots"},
@@ -2216,6 +2458,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Sewage Works (National Scheme)": {
             SCAT: {code: "246", description: "Sewage Works (National Scheme)"},
@@ -2225,6 +2468,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "38.1", description: "Waste collection"},
             NACE_level_1: {code: "E", description: "Water supply; sewerage; waste managment and remediation activities"},
             UK_SIC: {code: "37.00", description: "Sewerage"},
+            planning_classes: {code: "B2", description: ""},
         },
         "Ship Building Yards": {
             SCAT: {code: "247", description: "Ship Building Yards"},
@@ -2234,6 +2478,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Ship Repair Yards": {
             SCAT: {code: "248", description: "Ship Repair Yards"},
@@ -2243,6 +2488,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Shops": {
             SCAT: {code: "249", description: "Shops"},
@@ -2252,6 +2498,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(a)", description: ""},
         },
         "Showhouses (National Scheme)": {
             SCAT: {code: "250", description: "Showhouses (National Scheme)"},
@@ -2261,6 +2508,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Showrooms": {
             SCAT: {code: "251", description: "Showrooms"},
@@ -2270,6 +2518,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(a)", description: ""},
         },
         "Ski Centres": {
             SCAT: {code: "252", description: "Ski Centres"},
@@ -2279,6 +2528,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F2(c)", description: ""},
         },
         "Snooker Halls/Clubs": {
             SCAT: {code: "253", description: "Snooker Halls/Clubs"},
@@ -2288,6 +2538,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(d)", description: ""},
         },
         "Speedway Racetracks": {
             SCAT: {code: "254", description: "Speedway Racetracks"},
@@ -2297,6 +2548,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Spoil Heap Workings": {
             SCAT: {code: "255", description: "Spoil Heap Workings"},
@@ -2306,6 +2558,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "09.1", description: "Support activities for petroleum and natural gas extraction"},
             NACE_level_1: {code: "B", description: "Mining and quarrying"},
             UK_SIC: {code: "08.99", description: "Other mining and quarrying n.e.c."},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Sporting Rights": {
             SCAT: {code: "256", description: "Sporting Rights"},
@@ -2315,6 +2568,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "N/A", description: ""},
         },
         "Sports & Leisure Centres (LA) (Dry Only) (National Scheme)": {
             SCAT: {code: "257", description: "Sports & Leisure Centres (LA) (Dry Only) (National Scheme)"},
@@ -2324,6 +2578,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(d)", description: ""},
         },
         "Sports & Leisure Centres (LA) (Wet & Dry) (National Scheme)": {
             SCAT: {code: "258", description: "Sports & Leisure Centres (LA) (Wet & Dry) (National Scheme)"},
@@ -2333,6 +2588,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(d)", description: ""},
         },
         "Sports & Leisure Centres (Private)(Dry Only)": {
             SCAT: {code: "259", description: "Sports & Leisure Centres (Private)(Dry Only)"},
@@ -2342,6 +2598,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(d)", description: ""},
         },
         "Sports & Leisure Centres (Private)(Wet & Dry)": {
             SCAT: {code: "260", description: "Sports & Leisure Centres (Private)(Wet & Dry)"},
@@ -2351,6 +2608,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(d)", description: ""},
         },
         "Sports Grounds": {
             SCAT: {code: "261", description: "Sports Grounds"},
@@ -2360,6 +2618,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F2(c)", description: ""},
         },
         "Sports Stadia": {
             SCAT: {code: "262", description: "Sports Stadia"},
@@ -2369,6 +2628,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F2(c)", description: ""},
         },
         "Squash Courts": {
             SCAT: {code: "263", description: "Squash Courts"},
@@ -2378,6 +2638,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(d)", description: ""},
         },
         "Stables and Loose Boxes": {
             SCAT: {code: "264", description: "Stables and Loose Boxes"},
@@ -2387,6 +2648,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "", description: ""},
         },
         "Stately Homes & Historic Houses (National Scheme)": {
             SCAT: {code: "265", description: "Stately Homes & Historic Houses (National Scheme)"},
@@ -2396,6 +2658,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "91.3", description: "Conservation, restoration and other support activities for cultural heritage"},
             NACE_level_1: {code: "S", description: "Arts, sports and recreation"},
             UK_SIC: {code: "91.03", description: "Operation of historical sites and buildings and similar visitor attractions"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Station Let Outs": {
             SCAT: {code: "266", description: "Station Let Outs"},
@@ -2405,6 +2668,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "68.3", description: "Real estate activities on a fee or contract basis"},
             NACE_level_1: {code: "M", description: "Real estate activities"},
             UK_SIC: {code: "68.20", description: "Renting and operating of own or leased real estate"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Storage Depots": {
             SCAT: {code: "267", description: "Storage Depots"},
@@ -2414,6 +2678,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "52.2", description: "Support activities for transportation"},
             NACE_level_1: {code: "H", description: "Transportation and storage"},
             UK_SIC: {code: "52.10", description: "Warehousing and storage"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Stores": {
             SCAT: {code: "268", description: "Stores"},
@@ -2423,6 +2688,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(a)", description: ""},
         },
         "Stud Farms": {
             SCAT: {code: "269", description: "Stud Farms"},
@@ -2432,6 +2698,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "", description: ""},
         },
         "Studios": {
             SCAT: {code: "270", description: "Studios"},
@@ -2441,6 +2708,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "97.0", description: "Activities of households as employers of domestic personnel"},
             NACE_level_1: {code: "T", description: "Other services activities"},
             UK_SIC: {code: "96.09", description: "Other personal service activities n.e.c."},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Surgeries, Clinics, Health Centre (incl Dentists etc)": {
             SCAT: {code: "271", description: "Surgeries, Clinics, Health Centre (incl Dentists etc)"},
@@ -2450,6 +2718,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(e)", description: ""},
         },
         "Swimming Pools (Local Authority)": {
             SCAT: {code: "272", description: "Swimming Pools (Local Authority)"},
@@ -2459,6 +2728,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F2(d)", description: ""},
         },
         "Swimming Pools (Private)": {
             SCAT: {code: "273", description: "Swimming Pools (Private)"},
@@ -2468,6 +2738,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F2(d)", description: ""},
         },
         "Tanneries": {
             SCAT: {code: "274", description: "Tanneries"},
@@ -2477,6 +2748,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Telecommunications Cable Networks (National Scheme)": {
             SCAT: {code: "275", description: "Telecommunications Cable Networks (National Scheme)"},
@@ -2486,6 +2758,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "61.2", description: "Telecommunication reselling activities and intermediation service activities for telecommunication"},
             NACE_level_1: {code: "K", description: "Telecommunication, computer programming, consulting, computing infrastructure and other information service activities"},
             UK_SIC: {code: "61.10", description: "Wired telecommunications activities"},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Telecommunications Switching Centres": {
             SCAT: {code: "276", description: "Telecommunications Switching Centres"},
@@ -2495,6 +2768,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "61.2", description: "Telecommunication reselling activities and intermediation service activities for telecommunication"},
             NACE_level_1: {code: "K", description: "Telecommunication, computer programming, consulting, computing infrastructure and other information service activities"},
             UK_SIC: {code: "61.10", description: "Wired telecommunications activities"},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Tennis Centres": {
             SCAT: {code: "277", description: "Tennis Centres"},
@@ -2504,6 +2778,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(d)", description: ""},
         },
         "Tennis Courts/Clubs": {
             SCAT: {code: "278", description: "Tennis Courts/Clubs"},
@@ -2513,6 +2788,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(d)", description: ""},
         },
         "Theatres (National Scheme)": {
             SCAT: {code: "279", description: "Theatres (National Scheme)"},
@@ -2522,6 +2798,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Theme Parks": {
             SCAT: {code: "280", description: "Theme Parks"},
@@ -2531,6 +2808,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Timeshare Complexes (National Scheme)": {
             SCAT: {code: "281", description: "Timeshare Complexes (National Scheme)"},
@@ -2540,6 +2818,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "55.3", description: "Camping grounds and recreational vehicle parks"},
             NACE_level_1: {code: "I", description: "Accommodation and food service activities"},
             UK_SIC: {code: "55.20", description: "Holiday and other short-stay accommodation"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Tolls (Ferries, Roads And Bridges)": {
             SCAT: {code: "282", description: "Tolls (Ferries, Roads And Bridges)"},
@@ -2549,6 +2828,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Totalisators On Horse Racecourses": {
             SCAT: {code: "283", description: "Totalisators On Horse Racecourses"},
@@ -2558,6 +2838,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F2(c)", description: ""},
         },
         "Tourist Attractions/Dark Rides": {
             SCAT: {code: "284", description: "Tourist Attractions/Dark Rides"},
@@ -2567,6 +2848,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "94.1", description: "Activities of business, employers and professional membership organisations"},
             NACE_level_1: {code: "S", description: "Arts, sports and recreation"},
             UK_SIC: {code: "93.29", description: "Other amusement and recreation activities"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Training Centre (Non Residential)": {
             SCAT: {code: "285", description: "Training Centre (Non Residential)"},
@@ -2576,6 +2858,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "85.6", description: "Educational support activities"},
             NACE_level_1: {code: "Q", description: "Education"},
             UK_SIC: {code: "85.59", description: "Other education n.e.c."},
+            planning_classes: {code: "F1(a)", description: ""},
         },
         "Training Centre (Residential)": {
             SCAT: {code: "286", description: "Training Centre (Residential)"},
@@ -2585,6 +2868,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "85.6", description: "Educational support activities"},
             NACE_level_1: {code: "Q", description: "Education"},
             UK_SIC: {code: "85.59", description: "Other education n.e.c."},
+            planning_classes: {code: "F1(a)", description: ""},
         },
         "Truck Stops": {
             SCAT: {code: "287", description: "Truck Stops"},
@@ -2594,6 +2878,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Universities (Excluding Oxbridge) (National Scheme)": {
             SCAT: {code: "288", description: "Universities (Excluding Oxbridge) (National Scheme)"},
@@ -2603,6 +2888,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "85.5", description: "Other education"},
             NACE_level_1: {code: "Q", description: "Education"},
             UK_SIC: {code: "85.42", description: "Tertiary education"},
+            planning_classes: {code: "F1(a)", description: ""},
         },
         "Vehicle Repair Workshops & Garages": {
             SCAT: {code: "289", description: "Vehicle Repair Workshops & Garages"},
@@ -2612,6 +2898,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Vehicle Testing Centres (With Test Tracks)": {
             SCAT: {code: "290", description: "Vehicle Testing Centres (With Test Tracks)"},
@@ -2621,6 +2908,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "72.1", description: "Research and experimental development on natural sciences and engineering"},
             NACE_level_1: {code: "N", description: "Professional, scientific and technical activities"},
             UK_SIC: {code: "71.20", description: "Technical testing and analysis"},
+            planning_classes: {code: "E(g)(ii)", description: ""},
         },
         "Vehicle Testing Centres (Without Test Tracks)": {
             SCAT: {code: "291", description: "Vehicle Testing Centres (Without Test Tracks)"},
@@ -2630,6 +2918,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "72.1", description: "Research and experimental development on natural sciences and engineering"},
             NACE_level_1: {code: "N", description: "Professional, scientific and technical activities"},
             UK_SIC: {code: "71.20", description: "Technical testing and analysis"},
+            planning_classes: {code: "E(g)(ii)", description: ""},
         },
         "Veterinary Clinics / Animal Clinics": {
             SCAT: {code: "292", description: "Veterinary Clinics / Animal Clinics"},
@@ -2639,6 +2928,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "77.1", description: "Rental and leasing of motor vehicles"},
             NACE_level_1: {code: "N", description: "Professional, scientific and technical activities"},
             UK_SIC: {code: "75.00", description: "Veterinary activities"},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Village Halls, Scout Huts, Cadet Huts Etc": {
             SCAT: {code: "293", description: "Village Halls, Scout Huts, Cadet Huts Etc"},
@@ -2648,6 +2938,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "95.1", description: "Repair and maintenance of computers and communication equipment"},
             NACE_level_1: {code: "T", description: "Other services activities"},
             UK_SIC: {code: "94.99", description: "Activities of other membership organisations n.e.c."},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Vineyards/Wineries": {
             SCAT: {code: "294", description: "Vineyards/Wineries"},
@@ -2657,6 +2948,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "", description: ""},
         },
         "Wafer Fabrications (National Scheme)": {
             SCAT: {code: "295", description: "Wafer Fabrications (National Scheme)"},
@@ -2666,6 +2958,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "War Games Courses/Misc Ag. Use": {
             SCAT: {code: "296", description: "War Games Courses/Misc Ag. Use"},
@@ -2675,6 +2968,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "94.1", description: "Activities of business, employers and professional membership organisations"},
             NACE_level_1: {code: "S", description: "Arts, sports and recreation"},
             UK_SIC: {code: "93.29", description: "Other amusement and recreation activities"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Waste Incinerator Plants": {
             SCAT: {code: "297", description: "Waste Incinerator Plants"},
@@ -2684,6 +2978,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "B2", description: ""},
         },
         "Waste Recycling Plants": {
             SCAT: {code: "298", description: "Waste Recycling Plants"},
@@ -2693,6 +2988,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "B2", description: ""},
         },
         "Waste Transfer Stations": {
             SCAT: {code: "299", description: "Waste Transfer Stations"},
@@ -2702,6 +2998,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "B2", description: ""},
         },
         "Water Undertakings (Non-Statutory)": {
             SCAT: {code: "300", description: "Water Undertakings (Non-Statutory)"},
@@ -2711,6 +3008,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "37.0", description: "Sewerage"},
             NACE_level_1: {code: "E", description: "Water supply; sewerage; waste managment and remediation activities"},
             UK_SIC: {code: "36.00", description: "Water collection, treatment and supply"},
+            planning_classes: {code: "E(g)(iii) ", description: ""},
         },
         "Wholesale Warehouses": {
             SCAT: {code: "301", description: "Wholesale Warehouses"},
@@ -2720,6 +3018,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "52.2", description: "Support activities for transportation"},
             NACE_level_1: {code: "H", description: "Transportation and storage"},
             UK_SIC: {code: "52.10", description: "Warehousing and storage"},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Windmills": {
             SCAT: {code: "302", description: "Windmills"},
@@ -2729,6 +3028,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Wine Bars": {
             SCAT: {code: "303", description: "Wine Bars"},
@@ -2738,6 +3038,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "56.4", description: "Intermediation service activities for food and beverage services activities"},
             NACE_level_1: {code: "I", description: "Accommodation and food service activities"},
             UK_SIC: {code: "56.30", description: "Beverage serving activities"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Zoos & Safari Parks": {
             SCAT: {code: "304", description: "Zoos & Safari Parks"},
@@ -2747,6 +3048,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Abattoirs & Slaughter Houses (Contractors Valuation)": {
             SCAT: {code: "400", description: "Abattoirs & Slaughter Houses (Contractors Valuation)"},
@@ -2756,6 +3058,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "10.2", description: "Processing and preserving of fish, crustaceans and molluscs"},
             NACE_level_1: {code: "C", description: "Manufacturing"},
             UK_SIC: {code: "10.13", description: "Production of meat and poultry meat products"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Abattoirs & Slaughter Houses (Rental Valuation)": {
             SCAT: {code: "401", description: "Abattoirs & Slaughter Houses (Rental Valuation)"},
@@ -2765,6 +3068,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "10.2", description: "Processing and preserving of fish, crustaceans and molluscs"},
             NACE_level_1: {code: "C", description: "Manufacturing"},
             UK_SIC: {code: "10.13", description: "Production of meat and poultry meat products"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Agricultural Research Centres": {
             SCAT: {code: "402", description: "Agricultural Research Centres"},
@@ -2774,6 +3078,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "72.2", description: "Research and experimental development on social sciences and humanities"},
             NACE_level_1: {code: "N", description: "Professional, scientific and technical activities"},
             UK_SIC: {code: "72.19", description: "Other research and experimental development on natural sciences and engineering"},
+            planning_classes: {code: "E(g)(ii)", description: ""},
         },
         "Aquaria": {
             SCAT: {code: "403", description: "Aquaria"},
@@ -2783,6 +3088,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Archives": {
             SCAT: {code: "404", description: "Archives"},
@@ -2792,6 +3098,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "91.2", description: "Museum, collection, historical site and monument activities"},
             NACE_level_1: {code: "S", description: "Arts, sports and recreation"},
             UK_SIC: {code: "91.01", description: "Library and archive activities"},
+            planning_classes: {code: "F1(d)", description: ""},
         },
         "Boathouses": {
             SCAT: {code: "405", description: "Boathouses"},
@@ -2801,6 +3108,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Bus Garages (Contractors Valuation)": {
             SCAT: {code: "406", description: "Bus Garages (Contractors Valuation)"},
@@ -2810,6 +3118,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "B8", description: ""},
         },
         "Bus Garages (Rental Valuation)": {
             SCAT: {code: "407", description: "Bus Garages (Rental Valuation)"},
@@ -2819,6 +3128,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "B8", description: ""},
         },
         "Business Units": {
             SCAT: {code: "408", description: "Business Units"},
@@ -2828,6 +3138,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "82.2", description: "Activities of call centres"},
             NACE_level_1: {code: "O", description: "Administrative and support service activities"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(i)", description: ""},
         },
         "Cafes": {
             SCAT: {code: "409", description: "Cafes"},
@@ -2837,6 +3148,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "56.4", description: "Intermediation service activities for food and beverage services activities"},
             NACE_level_1: {code: "I", description: "Accommodation and food service activities"},
             UK_SIC: {code: "56.30", description: "Beverage serving activities"},
+            planning_classes: {code: "E(b)", description: ""},
         },
         "Changing Rooms": {
             SCAT: {code: "410", description: "Changing Rooms"},
@@ -2846,6 +3158,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(d)", description: ""},
         },
         "Coastguard Stations": {
             SCAT: {code: "411", description: "Coastguard Stations"},
@@ -2855,6 +3168,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Cold Stores (Contractors Valuation)": {
             SCAT: {code: "412", description: "Cold Stores (Contractors Valuation)"},
@@ -2864,6 +3178,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "52.2", description: "Support activities for transportation"},
             NACE_level_1: {code: "H", description: "Transportation and storage"},
             UK_SIC: {code: "52.10", description: "Warehousing and storage"},
+            planning_classes: {code: "B8", description: ""},
         },
         "Cold Stores (Rental Valuation)": {
             SCAT: {code: "413", description: "Cold Stores (Rental Valuation)"},
@@ -2873,6 +3188,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "52.2", description: "Support activities for transportation"},
             NACE_level_1: {code: "H", description: "Transportation and storage"},
             UK_SIC: {code: "52.10", description: "Warehousing and storage"},
+            planning_classes: {code: "B8", description: ""},
         },
         "Courts (Contractors Valuation)": {
             SCAT: {code: "414", description: "Courts (Contractors Valuation)"},
@@ -2882,6 +3198,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F1(g)", description: ""},
         },
         "Courts (Rental Valuation)": {
             SCAT: {code: "415", description: "Courts (Rental Valuation)"},
@@ -2891,6 +3208,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F1(g)", description: ""},
         },
         "Gymnasia/Fitness Suites": {
             SCAT: {code: "416", description: "Gymnasia/Fitness Suites"},
@@ -2900,6 +3218,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(d)", description: ""},
         },
         "Hairdressing/Beauty Salons": {
             SCAT: {code: "417", description: "Hairdressing/Beauty Salons"},
@@ -2909,6 +3228,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(c)(ii)", description: ""},
         },
         "Information/Visitor Centres": {
             SCAT: {code: "418", description: "Information/Visitor Centres"},
@@ -2918,6 +3238,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "82.2", description: "Activities of call centres"},
             NACE_level_1: {code: "O", description: "Administrative and support service activities"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Land Used for Display": {
             SCAT: {code: "419", description: "Land Used for Display"},
@@ -2927,6 +3248,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(a)", description: ""},
         },
         "Lifeboat Stations": {
             SCAT: {code: "420", description: "Lifeboat Stations"},
@@ -2936,6 +3258,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Miniature Railways": {
             SCAT: {code: "421", description: "Miniature Railways"},
@@ -2945,6 +3268,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "94.1", description: "Activities of business, employers and professional membership organisations"},
             NACE_level_1: {code: "S", description: "Arts, sports and recreation"},
             UK_SIC: {code: "93.29", description: "Other amusement and recreation activities"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Pack Houses": {
             SCAT: {code: "422", description: "Pack Houses"},
@@ -2954,6 +3278,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Peat Fields": {
             SCAT: {code: "423", description: "Peat Fields"},
@@ -2963,6 +3288,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Pet Grooming Parlours": {
             SCAT: {code: "424", description: "Pet Grooming Parlours"},
@@ -2972,6 +3298,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "97.0", description: "Activities of households as employers of domestic personnel"},
             NACE_level_1: {code: "T", description: "Other services activities"},
             UK_SIC: {code: "96.09", description: "Other personal service activities n.e.c."},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Pharmacies Within/Adjacent to Surgery/Health Centre": {
             SCAT: {code: "425", description: "Pharmacies Within/Adjacent to Surgery/Health Centre"},
@@ -2981,6 +3308,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Pitch and Putt/Putting Greens": {
             SCAT: {code: "426", description: "Pitch and Putt/Putting Greens"},
@@ -2990,6 +3318,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F2(c)", description: ""},
         },
         "Pitches for Stalls, Sales or Promotions": {
             SCAT: {code: "427", description: "Pitches for Stalls, Sales or Promotions"},
@@ -2999,6 +3328,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(a)", description: ""},
         },
         "Police Training Colleges": {
             SCAT: {code: "428", description: "Police Training Colleges"},
@@ -3008,6 +3338,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "85.6", description: "Educational support activities"},
             NACE_level_1: {code: "Q", description: "Education"},
             UK_SIC: {code: "85.59", description: "Other education n.e.c."},
+            planning_classes: {code: "F1(a)", description: ""},
         },
         "Post Offices": {
             SCAT: {code: "429", description: "Post Offices"},
@@ -3017,6 +3348,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "53.2", description: "Other postal and courier activities"},
             NACE_level_1: {code: "H", description: "Transportation and storage"},
             UK_SIC: {code: "53.10", description: "Postal activities under universal service obligation"},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Pumping Mines": {
             SCAT: {code: "430", description: "Pumping Mines"},
@@ -3026,6 +3358,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "10.1", description: "Processing and preserving of meat and production of meat products"},
             NACE_level_1: {code: "B", description: "Mining and quarrying"},
             UK_SIC: {code: "09.90", description: "Support activities for other mining and quarrying"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Religious Retreats/Study Centres (Residential)": {
             SCAT: {code: "431", description: "Religious Retreats/Study Centres (Residential)"},
@@ -3035,6 +3368,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F1(f)", description: ""},
         },
         "Sales Offices": {
             SCAT: {code: "432", description: "Sales Offices"},
@@ -3044,6 +3378,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "82.2", description: "Activities of call centres"},
             NACE_level_1: {code: "O", description: "Administrative and support service activities"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Statutory Docks and Harbours (Formula)": {
             SCAT: {code: "433", description: "Statutory Docks and Harbours (Formula)"},
@@ -3053,6 +3388,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Statutory Docks and Harbours (Non- Formula, Prescribed)": {
             SCAT: {code: "434", description: "Statutory Docks and Harbours (Non- Formula, Prescribed)"},
@@ -3062,6 +3398,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Statutory Docks and Harbours (Other)": {
             SCAT: {code: "435", description: "Statutory Docks and Harbours (Other)"},
@@ -3071,6 +3408,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Surgeries, Clinics, Health Centres (Contractors Valuation)": {
             SCAT: {code: "436", description: "Surgeries, Clinics, Health Centres (Contractors Valuation)"},
@@ -3080,6 +3418,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(e)", description: ""},
         },
         "Surgeries, Clinics, Health Centres (Rental Valuation)": {
             SCAT: {code: "437", description: "Surgeries, Clinics, Health Centres (Rental Valuation)"},
@@ -3089,6 +3428,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(e)", description: ""},
         },
         "Telescope Sites": {
             SCAT: {code: "438", description: "Telescope Sites"},
@@ -3098,6 +3438,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "72.2", description: "Research and experimental development on social sciences and humanities"},
             NACE_level_1: {code: "N", description: "Professional, scientific and technical activities"},
             UK_SIC: {code: "72.19", description: "Other research and experimental development on natural sciences and engineering"},
+            planning_classes: {code: "E(g)(ii)", description: ""},
         },
         "University - Ancillary Land or Buildings": {
             SCAT: {code: "439", description: "University - Ancillary Land or Buildings"},
@@ -3107,6 +3448,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "85.5", description: "Other education"},
             NACE_level_1: {code: "Q", description: "Education"},
             UK_SIC: {code: "85.42", description: "Tertiary education"},
+            planning_classes: {code: "F1(a)", description: ""},
         },
         "University Occupation Within Hospitals": {
             SCAT: {code: "440", description: "University Occupation Within Hospitals"},
@@ -3116,6 +3458,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "85.5", description: "Other education"},
             NACE_level_1: {code: "Q", description: "Education"},
             UK_SIC: {code: "85.42", description: "Tertiary education"},
+            planning_classes: {code: "F1(a)", description: ""},
         },
         "Weighbridges": {
             SCAT: {code: "441", description: "Weighbridges"},
@@ -3125,6 +3468,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Takeaway Food Outlet (Predominantly Off Premises)": {
             SCAT: {code: "442", description: "Takeaway Food Outlet (Predominantly Off Premises)"},
@@ -3134,6 +3478,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "56.2", description: "Event catering, contract catering service activities and other food service activities"},
             NACE_level_1: {code: "I", description: "Accommodation and food service activities"},
             UK_SIC: {code: "56.10", description: "Restaurants and mobile food service activities"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Cafes/Restaurants Within/Part of Specialist Property": {
             SCAT: {code: "500", description: "Cafes/Restaurants Within/Part of Specialist Property"},
@@ -3143,6 +3488,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "56.4", description: "Intermediation service activities for food and beverage services activities"},
             NACE_level_1: {code: "I", description: "Accommodation and food service activities"},
             UK_SIC: {code: "56.30", description: "Beverage serving activities"},
+            planning_classes: {code: "E(b)", description: ""},
         },
         "Car Parking Within/Part of Specialist Property": {
             SCAT: {code: "501", description: "Car Parking Within/Part of Specialist Property"},
@@ -3152,6 +3498,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Garages Within/Part of Specialist Property": {
             SCAT: {code: "502", description: "Garages Within/Part of Specialist Property"},
@@ -3161,6 +3508,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "B8", description: ""},
         },
         "Gymnasia/Fitness Suites Within/Part of Specialist Property": {
             SCAT: {code: "503", description: "Gymnasia/Fitness Suites Within/Part of Specialist Property"},
@@ -3170,6 +3518,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(d)", description: ""},
         },
         "Kiosks Within/Part of Specialist Property": {
             SCAT: {code: "504", description: "Kiosks Within/Part of Specialist Property"},
@@ -3179,6 +3528,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(a)", description: ""},
         },
         "Nurseries/Creches Within/Part of Specialist Property": {
             SCAT: {code: "505", description: "Nurseries/Creches Within/Part of Specialist Property"},
@@ -3188,6 +3538,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "85.2", description: "Primary education"},
             NACE_level_1: {code: "Q", description: "Education"},
             UK_SIC: {code: "85.10", description: "Pre-primary education"},
+            planning_classes: {code: "F1(a)", description: ""},
         },
         "Offices Within/Part of Specialist Property": {
             SCAT: {code: "506", description: "Offices Within/Part of Specialist Property"},
@@ -3197,6 +3548,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "82.2", description: "Activities of call centres"},
             NACE_level_1: {code: "O", description: "Administrative and support service activities"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(i)", description: ""},
         },
         "Salons/Clinics Within/Part of Specialist Property": {
             SCAT: {code: "507", description: "Salons/Clinics Within/Part of Specialist Property"},
@@ -3206,6 +3558,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(c)(ii)", description: ""},
         },
         "Shops Within/Part of Specialist Property": {
             SCAT: {code: "508", description: "Shops Within/Part of Specialist Property"},
@@ -3215,6 +3568,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(c)(ii)", description: ""},
         },
         "Sports & Leisure Centres Within/Part of Specialist Property": {
             SCAT: {code: "509", description: "Sports & Leisure Centres Within/Part of Specialist Property"},
@@ -3224,6 +3578,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(d)", description: ""},
         },
         "Stores Within/Part of Specialist Property": {
             SCAT: {code: "510", description: "Stores Within/Part of Specialist Property"},
@@ -3233,6 +3588,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(c)(ii)", description: ""},
         },
         "Warehouses Within/Part of Specialist Property": {
             SCAT: {code: "511", description: "Warehouses Within/Part of Specialist Property"},
@@ -3242,6 +3598,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "52.2", description: "Support activities for transportation"},
             NACE_level_1: {code: "H", description: "Transportation and storage"},
             UK_SIC: {code: "52.10", description: "Warehousing and storage"},
+            planning_classes: {code: "B8", description: ""},
         },
         "Workshops Within/Part of Specialist Property": {
             SCAT: {code: "512", description: "Workshops Within/Part of Specialist Property"},
@@ -3251,6 +3608,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "25.9", description: "Manufacture of other fabricated metal products"},
             NACE_level_1: {code: "C", description: "Manufacturing"},
             UK_SIC: {code: "25.73", description: "Manufacture of tools"},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Miscellaneous Within/Part of Specialist Property": {
             SCAT: {code: "513", description: "Miscellaneous Within/Part of Specialist Property"},
@@ -3260,6 +3618,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Sponsored Roundabout Advertising Displays": {
             SCAT: {code: "700", description: "Sponsored Roundabout Advertising Displays"},
@@ -3269,6 +3628,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(a)", description: ""},
         },
         "Restaurant With Letting Accomodation": {
             SCAT: {code: "701", description: "Restaurant With Letting Accomodation"},
@@ -3278,6 +3638,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(b)", description: ""},
         },
         "Driving Standards Agency Centre": {
             SCAT: {code: "702", description: "Driving Standards Agency Centre"},
@@ -3287,6 +3648,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "75.0", description: "Veterinary activities"},
             NACE_level_1: {code: "N", description: "Professional, scientific and technical activities"},
             UK_SIC: {code: "74.90", description: "Other professional, scientific and technical activities n.e.c."},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Residual Shopping Mall": {
             SCAT: {code: "703", description: "Residual Shopping Mall"},
@@ -3296,6 +3658,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(a)", description: ""},
         },
         "Land Used For Seasonal Markets & Events": {
             SCAT: {code: "704", description: "Land Used For Seasonal Markets & Events"},
@@ -3305,6 +3668,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(a)", description: ""},
         },
         "Market Stall (Not Pitch)": {
             SCAT: {code: "705", description: "Market Stall (Not Pitch)"},
@@ -3314,6 +3678,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(a)", description: ""},
         },
         "Advertising Displays On Pavements & Bus Shelters": {
             SCAT: {code: "706", description: "Advertising Displays On Pavements & Bus Shelters"},
@@ -3323,6 +3688,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(a)", description: ""},
         },
         "Advertising Displays At Superstores": {
             SCAT: {code: "707", description: "Advertising Displays At Superstores"},
@@ -3332,6 +3698,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(a)", description: ""},
         },
         "Advertising Displays From Phone Booths": {
             SCAT: {code: "708", description: "Advertising Displays From Phone Booths"},
@@ -3341,6 +3708,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(a)", description: ""},
         },
         "Dark Retailing/Internet Sites": {
             SCAT: {code: "709", description: "Dark Retailing/Internet Sites"},
@@ -3350,6 +3718,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(a)", description: ""},
         },
         "Residual Mall": {
             SCAT: {code: "710", description: "Residual Mall"},
@@ -3359,6 +3728,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(a)", description: ""},
         },
         "Advertising Displays From Agricultural Land": {
             SCAT: {code: "711", description: "Advertising Displays From Agricultural Land"},
@@ -3368,6 +3738,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(a)", description: ""},
         },
         "Rail Freight Depots": {
             SCAT: {code: "712", description: "Rail Freight Depots"},
@@ -3377,6 +3748,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "49.3", description: "Other passenger land transport"},
             NACE_level_1: {code: "H", description: "Transportation and storage"},
             UK_SIC: {code: "49.20", description: "Freight rail transport"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Bicycle Folding Box Site": {
             SCAT: {code: "713", description: "Bicycle Folding Box Site"},
@@ -3386,6 +3758,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "B8", description: ""},
         },
         "Rail Maintenance Depots": {
             SCAT: {code: "714", description: "Rail Maintenance Depots"},
@@ -3395,6 +3768,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Football Training Grounds": {
             SCAT: {code: "715", description: "Football Training Grounds"},
@@ -3404,6 +3778,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F2(c)", description: ""},
         },
         "Cafe/Restaurants Within/Part of NonSpecialist Properties": {
             SCAT: {code: "716", description: "Cafe/Restaurants Within/Part of NonSpecialist Properties"},
@@ -3413,6 +3788,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "56.4", description: "Intermediation service activities for food and beverage services activities"},
             NACE_level_1: {code: "I", description: "Accommodation and food service activities"},
             UK_SIC: {code: "56.30", description: "Beverage serving activities"},
+            planning_classes: {code: "E(b)", description: ""},
         },
         "Delivery Box Site & Premises": {
             SCAT: {code: "717", description: "Delivery Box Site & Premises"},
@@ -3422,6 +3798,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Electric Charge Stations": {
             SCAT: {code: "718", description: "Electric Charge Stations"},
@@ -3431,6 +3808,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Car Washes (Stand Alone - Hand Car Wash)": {
             SCAT: {code: "719", description: "Car Washes (Stand Alone - Hand Car Wash)"},
@@ -3440,6 +3818,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "LPG Service Station": {
             SCAT: {code: "720", description: "LPG Service Station"},
@@ -3449,6 +3828,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "47.4", description: "Retail sale of information and communication equipment"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
             UK_SIC: {code: "47.30", description: "Retail sale of automotive fuel in specialised stores"},
+            planning_classes: {code: "E(a)", description: ""},
         },
         "Self Storage Facility": {
             SCAT: {code: "721", description: "Self Storage Facility"},
@@ -3458,6 +3838,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "52.2", description: "Support activities for transportation"},
             NACE_level_1: {code: "H", description: "Transportation and storage"},
             UK_SIC: {code: "52.10", description: "Warehousing and storage"},
+            planning_classes: {code: "B8", description: ""},
         },
         "Serviced Appartments": {
             SCAT: {code: "722", description: "Serviced Appartments"},
@@ -3467,6 +3848,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "55.3", description: "Camping grounds and recreational vehicle parks"},
             NACE_level_1: {code: "I", description: "Accommodation and food service activities"},
             UK_SIC: {code: "55.20", description: "Holiday and other short-stay accommodation"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Serviced Offices": {
             SCAT: {code: "723", description: "Serviced Offices"},
@@ -3476,6 +3858,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "82.2", description: "Activities of call centres"},
             NACE_level_1: {code: "O", description: "Administrative and support service activities"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(i)", description: ""},
         },
         "Street Points (eg Cycle Docking Stations)": {
             SCAT: {code: "724", description: "Street Points (eg Cycle Docking Stations)"},
@@ -3485,6 +3868,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Park & Ride Car Parks": {
             SCAT: {code: "725", description: "Park & Ride Car Parks"},
@@ -3494,6 +3878,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Telecommunications Large Broadcast Sites": {
             SCAT: {code: "726", description: "Telecommunications Large Broadcast Sites"},
@@ -3503,6 +3888,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "61.2", description: "Telecommunication reselling activities and intermediation service activities for telecommunication"},
             NACE_level_1: {code: "K", description: "Telecommunication, computer programming, consulting, computing infrastructure and other information service activities"},
             UK_SIC: {code: "61.10", description: "Wired telecommunications activities"},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Waste Anaerobic Digestion Plants": {
             SCAT: {code: "727", description: "Waste Anaerobic Digestion Plants"},
@@ -3512,6 +3898,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "38.3", description: "Waste disposal without recovery"},
             NACE_level_1: {code: "E", description: "Water supply; sewerage; waste managment and remediation activities"},
             UK_SIC: {code: "38.3", description: "Materials recovery"},
+            planning_classes: {code: "B2", description: ""},
         },
         "Bagging Plant & Premises": {
             SCAT: {code: "728", description: "Bagging Plant & Premises"},
@@ -3521,6 +3908,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii) ", description: ""},
         },
         "Renewable Generators - Mixed Technologies": {
             SCAT: {code: "729", description: "Renewable Generators - Mixed Technologies"},
@@ -3530,6 +3918,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii) ", description: ""},
         },
         "Biomass Biological (Crop & Slurry Based Anaerobic Digestors, Incl Gas to Grid)": {
             SCAT: {code: "730", description: "Biomass Biological (Crop & Slurry Based Anaerobic Digestors, Incl Gas to Grid)"},
@@ -3539,6 +3928,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii) ", description: ""},
         },
         "Biomass Thermal (Incl Combustion, Gasification and Pyrolysis)": {
             SCAT: {code: "731", description: "Biomass Thermal (Incl Combustion, Gasification and Pyrolysis)"},
@@ -3548,6 +3938,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii) ", description: ""},
         },
         "Click & Collect Locker Site": {
             SCAT: {code: "732", description: "Click & Collect Locker Site"},
@@ -3557,6 +3948,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "53.2", description: "Other postal and courier activities"},
             NACE_level_1: {code: "H", description: "Transportation and storage"},
             UK_SIC: {code: "53.10", description: "Postal activities under universal service obligation"},
+            planning_classes: {code: "B8", description: ""},
         },
         "Battery Store": {
             SCAT: {code: "733", description: "Battery Store"},
@@ -3566,6 +3958,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(a)", description: ""},
         },
         "Wedding and Function Venue": {
             SCAT: {code: "734", description: "Wedding and Function Venue"},
@@ -3575,6 +3968,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "97.0", description: "Activities of households as employers of domestic personnel"},
             NACE_level_1: {code: "T", description: "Other services activities"},
             UK_SIC: {code: "96.09", description: "Other personal service activities n.e.c."},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Historic Property (National Trust/English Heritage)": {
             SCAT: {code: "735", description: "Historic Property (National Trust/English Heritage)"},
@@ -3584,6 +3978,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "91.3", description: "Conservation, restoration and other support activities for cultural heritage"},
             NACE_level_1: {code: "S", description: "Arts, sports and recreation"},
             UK_SIC: {code: "91.03", description: "Operation of historical sites and buildings and similar visitor attractions"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Holiday Home Self Catering (Complexs)": {
             SCAT: {code: "736", description: "Holiday Home Self Catering (Complexs)"},
@@ -3593,6 +3988,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "55.3", description: "Camping grounds and recreational vehicle parks"},
             NACE_level_1: {code: "I", description: "Accommodation and food service activities"},
             UK_SIC: {code: "55.20", description: "Holiday and other short-stay accommodation"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Ferry Terminal": {
             SCAT: {code: "737", description: "Ferry Terminal"},
@@ -3602,6 +3998,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Builders Merchant": {
             SCAT: {code: "738", description: "Builders Merchant"},
@@ -3611,6 +4008,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(c)(ii)", description: ""},
         },
         "Soccer Centres": {
             SCAT: {code: "739", description: "Soccer Centres"},
@@ -3620,6 +4018,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "F2(c)", description: ""},
         },
         "Secure Childrens Homes": {
             SCAT: {code: "740", description: "Secure Childrens Homes"},
@@ -3629,6 +4028,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "88.1", description: "Social work activities without accommodation for older persons or persons with disabilities"},
             NACE_level_1: {code: "R", description: "Human health and social work activities"},
             UK_SIC: {code: "87.90", description: "Other residential care activities"},
+            planning_classes: {code: "E(e)", description: ""},
         },
         "Independent Gas Transport (IGT)": {
             SCAT: {code: "741", description: "Independent Gas Transport (IGT)"},
@@ -3638,6 +4038,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii) ", description: ""},
         },
         "Independent Distribution Network Operators (IDNO)": {
             SCAT: {code: "742", description: "Independent Distribution Network Operators (IDNO)"},
@@ -3647,6 +4048,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii) ", description: ""},
         },
         "Renewable Power Generators - Photovoltaic": {
             SCAT: {code: "743", description: "Renewable Power Generators - Photovoltaic"},
@@ -3656,6 +4058,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii) ", description: ""},
         },
         "Renewable Power Generators – Wind": {
             SCAT: {code: "744", description: "Renewable Power Generators – Wind"},
@@ -3665,6 +4068,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii) ", description: ""},
         },
         "Renewable Power Generators – Other": {
             SCAT: {code: "745", description: "Renewable Power Generators – Other"},
@@ -3674,6 +4078,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii) ", description: ""},
         },
         "Renewable Power Generators - Hydro": {
             SCAT: {code: "746", description: "Renewable Power Generators - Hydro"},
@@ -3683,6 +4088,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii) ", description: ""},
         },
         "Fossil Fuel Power Stations": {
             SCAT: {code: "747", description: "Fossil Fuel Power Stations"},
@@ -3692,6 +4098,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii) ", description: ""},
         },
         "Nuclear Power Stations": {
             SCAT: {code: "748", description: "Nuclear Power Stations"},
@@ -3701,6 +4108,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii) ", description: ""},
         },
         "Underground Gas Storage Facility": {
             SCAT: {code: "749", description: "Underground Gas Storage Facility"},
@@ -3710,6 +4118,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(g)(iii) ", description: ""},
         },
         "NHS Clinics & Health Centres (Contractors)": {
             SCAT: {code: "750", description: "NHS Clinics & Health Centres (Contractors)"},
@@ -3719,6 +4128,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "86.2", description: "Medical and dental practice activities"},
             NACE_level_1: {code: "R", description: "Human health and social work activities"},
             UK_SIC: {code: "86.10", description: "Hospital activities"},
+            planning_classes: {code: "E(e)", description: ""},
         },
         "NHS Clinics & Health Centres (Rentals)": {
             SCAT: {code: "751", description: "NHS Clinics & Health Centres (Rentals)"},
@@ -3728,6 +4138,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "86.2", description: "Medical and dental practice activities"},
             NACE_level_1: {code: "R", description: "Human health and social work activities"},
             UK_SIC: {code: "86.10", description: "Hospital activities"},
+            planning_classes: {code: "E(e)", description: ""},
         },
         "Surgeries (Other Than GP/NHS) (Contractors)": {
             SCAT: {code: "752", description: "Surgeries (Other Than GP/NHS) (Contractors)"},
@@ -3737,6 +4148,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(e)", description: ""},
         },
         "Surgeries (Other Than GP/NHS) (Rentals)": {
             SCAT: {code: "753", description: "Surgeries (Other Than GP/NHS) (Rentals)"},
@@ -3746,6 +4158,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(e)", description: ""},
         },
         "GP Surgeries (Contractors)": {
             SCAT: {code: "754", description: "GP Surgeries (Contractors)"},
@@ -3755,6 +4168,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(e)", description: ""},
         },
         "GP Surgeries (Rentals)": {
             SCAT: {code: "755", description: "GP Surgeries (Rentals)"},
@@ -3764,6 +4178,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(e)", description: ""},
         },
         "Equestrian Hospitals": {
             SCAT: {code: "756", description: "Equestrian Hospitals"},
@@ -3773,6 +4188,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "77.1", description: "Rental and leasing of motor vehicles"},
             NACE_level_1: {code: "N", description: "Professional, scientific and technical activities"},
             UK_SIC: {code: "75.00", description: "Veterinary activities"},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Plant Nurseries": {
             SCAT: {code: "757", description: "Plant Nurseries"},
@@ -3782,6 +4198,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "01.4", description: "Animal production"},
             NACE_level_1: {code: "A", description: "Agriculture, forestry and fishing"},
             UK_SIC: {code: "01.30", description: "Plant propagation"},
+            planning_classes: {code: "", description: ""},
         },
         "Commercial Miscellaneous": {
             SCAT: {code: "992", description: "Commercial Miscellaneous"},
@@ -3791,6 +4208,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "E(c)(iii)", description: ""},
         },
         "Leisure Miscellaneous": {
             SCAT: {code: "993", description: "Leisure Miscellaneous"},
@@ -3800,6 +4218,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "94.1", description: "Activities of business, employers and professional membership organisations"},
             NACE_level_1: {code: "S", description: "Arts, sports and recreation"},
             UK_SIC: {code: "93.29", description: "Other amusement and recreation activities"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Industrial Miscellaneous": {
             SCAT: {code: "994", description: "Industrial Miscellaneous"},
@@ -3809,6 +4228,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "33.1", description: "Repair and maintenance of fabricated metal products, machinery and equipment"},
             NACE_level_1: {code: "C", description: "Manufacturing"},
             UK_SIC: {code: "32.99", description: "Other manufacturing n.e.c."},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Educational Miscellaneous": {
             SCAT: {code: "995", description: "Educational Miscellaneous"},
@@ -3818,6 +4238,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "85.6", description: "Educational support activities"},
             NACE_level_1: {code: "Q", description: "Education"},
             UK_SIC: {code: "85.59", description: "Other education n.e.c."},
+            planning_classes: {code: "F1(a)", description: ""},
         },
         "Formula Assessed Miscellaneous": {
             SCAT: {code: "996", description: "Formula Assessed Miscellaneous"},
@@ -3827,6 +4248,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Minerals Miscellaneous": {
             SCAT: {code: "997", description: "Minerals Miscellaneous"},
@@ -3836,6 +4258,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "09.1", description: "Support activities for petroleum and natural gas extraction"},
             NACE_level_1: {code: "B", description: "Mining and quarrying"},
             UK_SIC: {code: "08.99", description: "Other mining and quarrying n.e.c."},
+            planning_classes: {code: "E(g)(iii)", description: ""},
         },
         "Crown Miscellaneous": {
             SCAT: {code: "998", description: "Crown Miscellaneous"},
@@ -3845,6 +4268,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "", description: "missing entry in classification"},
             UK_SIC: {code: "", description: "missing entry in classification"},
+            planning_classes: {code: "Sui generis", description: ""},
         },
         "Miscellaneous": {
             SCAT: {code: "999", description: "Miscellaneous"},
@@ -3854,6 +4278,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_3: {code: "97.0", description: "Activities of households as employers of domestic personnel"},
             NACE_level_1: {code: "T", description: "Other services activities"},
             UK_SIC: {code: "96.09", description: "Other personal service activities n.e.c."},
+            planning_classes: {code: "Sui generis", description: ""},
         },
     }
 
@@ -3947,6 +4372,14 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     <div className="info-details">
                     <div className="code">{landuseCodesData[item].UK_SIC.code}</div>
                     <div className="description">{landuseCodesData[item].UK_SIC.description}</div>
+                    </div>
+                </div>
+                <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
+                    <Tooltip text={ "Planning classes" } />
+                    <div className="label">UK Planning Use Classes:</div>
+                    <div className="info-details">
+                    <div className="code">{landuseCodesData[item].planning_classes.code}</div>
+                    <div className="description">{landuseCodesData[item].planning_classes.description}</div>
                     </div>
                 </div>
                 <DataTitleCopyable
