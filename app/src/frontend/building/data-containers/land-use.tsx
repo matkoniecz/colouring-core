@@ -4409,6 +4409,15 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     </div>
                 </>}
                 <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
+                        <Tooltip text={ "[NACE: The Statistical Classification of Economic Activities in the European Community]( https://ec.europa.eu/eurostat/web/nace)" } />
+                        <div className="label">NACE level 1:</div>
+                        <div className="info-details">
+                        <div className="code">{landuseCodesData[item].NACE_level_1.code}</div>
+                        <div className="description">{landuseCodesData[item].NACE_level_1.description}</div>
+                        </div>
+                    </div>
+                </>
+                <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
                     <Tooltip text={ "[ISIC: The International Standard Industrial Classification of All Economic Activities]( https://unstats.un.org/unsd/classifications/Econ/isic)" } />
                     <div className="label">ISIC:</div>
                     <div className="info-details">
