@@ -4382,6 +4382,8 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     <div className="description">{landuseCodesData[item].planning_classes.description}</div>
                     </div>
                 </div>
+
+
                 <DataTitleCopyable
                     slug={"props.slug"}
                     slugModifier={"props.slugModifier"}
@@ -4412,11 +4414,11 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                         <Tooltip text={ "[NACE: The Statistical Classification of Economic Activities in the European Community]( https://ec.europa.eu/eurostat/web/nace)" } />
                         <div className="label">NACE level 1:</div>
                         <div className="info-details">
-                        <div className="code">{landuseCodesData[item].NACE_level_1.code}</div>
-                        <div className="description">{landuseCodesData[item].NACE_level_1.description}</div>
+                            <div className="code">{landuseCodesData[item].NACE_level_1.code}</div>
+                            <div className="description">{landuseCodesData[item].NACE_level_1.description}</div>
                         </div>
-                    </div>
-                </>
+                </div>
+
                 <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
                     <Tooltip text={ "[ISIC: The International Standard Industrial Classification of All Economic Activities]( https://unstats.un.org/unsd/classifications/Econ/isic)" } />
                     <div className="label">ISIC:</div>
@@ -4433,8 +4435,8 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     <div className="description">{landuseCodesData[item].CPA.description}</div>
                     </div>
                 </div>
-                </div>
-                </>
+            </div>
+            </>
                    : ""
                  ))
                 }</>: ""}
@@ -4476,6 +4478,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     copy={props.copy}
                     onChange={props.onChange}
                 />
+
             </DataEntryGroup>
             {/*
             <DataEntryGroup name="Specific Land Use/s (old classification)" collapsed={subcat==null || subcat!="1"}>
