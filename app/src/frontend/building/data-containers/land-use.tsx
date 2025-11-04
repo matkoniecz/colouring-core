@@ -9,6 +9,8 @@ import Verification from '../data-components/verification';
 import { useDisplayPreferences } from '../../displayPreferences-context';
 import { DataEntryGroup } from '../data-components/data-entry-group';
 import InfoBox from '../../components/info-box';
+import Tooltip from '../../components/tooltip';
+import { DataTitleCopyable } from '../data-components/data-title';
 
 /**
  * Use view/edit section
@@ -3860,6 +3862,34 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
 
     const { parcel, parcelSwitchOnClick, darkLightTheme } = useDisplayPreferences();
     
+    const ScatInfoBox = ({ item, landuseCodesData }) => {
+        const codeLines = landuseCodesData[item].SCAT.code.split("\n");
+        const descriptionLines = landuseCodesData[item].SCAT.description.split("\n");
+      
+        return (
+          <div className="info-box-container">
+            <div
+              className={`alert alert-dark`}
+              role="alert"
+              style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}
+            >
+              <Tooltip text={"tooltip"} />
+              <div className="label">UK National Non-Domestic Rates (VOA SCat):</div>
+              <div className="info-details">
+                {codeLines.map((line, index) => (
+                  <React.Fragment key={index}>
+                    <div className="code">{line}</div>
+                    <div className="description">
+                      {descriptionLines[index] || ""}
+                    </div>
+                  </React.Fragment>
+                ))}
+              </div>
+            </div>
+          </div>
+        );
+      };
+
     return (
         <Fragment>
             <DataEntryGroup name="Current Land Use/s" collapsed={subcat==null || subcat!="1"}>
@@ -3899,6 +3929,75 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     user_verified_as={props.user_verified.current_landuse_group_scat && props.user_verified.current_landuse_group_scat.join(", ")}
                     verified_count={props.building.verified.current_landuse_group_scat}
                     />
+                <hr />
+                {props.building.current_landuse_group_scat != null ? <> {
+                  props.building.current_landuse_group_scat.map((item, index) => (
+                    item in landuseCodesData ?                  
+                    <>
+                <div className="info-box-container">
+                <DataTitleCopyable
+                    slug={"props.slug"}
+                    slugModifier={"props.slugModifier"}
+                    title={"Relevant UK landuse codes"}
+                    tooltip={null}
+                    disabled={false}
+                /> 
+                <ScatInfoBox item={item} landuseCodesData={landuseCodesData} />
+                <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
+                    <Tooltip text={ "[UK SIC: The UK Standard Industrial Classification of economic activities](https://www.ons.gov.uk/methodology/classificationsandstandards/ukstandardindustrialclassificationofeconomicactivities)" } />
+                    <div className="label">UK Standard Industrial Classification (SIC):</div>
+                    <div className="info-details">
+                    <div className="code">{landuseCodesData[item].UK_SIC.code}</div>
+                    <div className="description">{landuseCodesData[item].UK_SIC.description}</div>
+                    </div>
+                </div>
+                <DataTitleCopyable
+                    slug={"props.slug"}
+                    slugModifier={"props.slugModifier"}
+                    title={"Relevant international landuse codes"}
+                    tooltip={null}
+                    disabled={false}
+                /> 
+                {landuseCodesData[item].NACE_level_4.description != "missing entry in classification" ? <>
+                    <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
+                        <Tooltip text={ "[NACE: The Statistical Classification of Economic Activities in the European Community]( https://ec.europa.eu/eurostat/web/nace)" } />
+                        <div className="label">NACE level 4:</div>
+                        <div className="info-details">
+                        <div className="code">{landuseCodesData[item].NACE_level_4.code}</div>
+                        <div className="description">{landuseCodesData[item].NACE_level_4.description}</div>
+                        </div>
+                    </div>
+                </>: <>
+                    <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
+                        <Tooltip text={ "[NACE: The Statistical Classification of Economic Activities in the European Community]( https://ec.europa.eu/eurostat/web/nace)" } />
+                        <div className="label">NACE level 3:</div>
+                        <div className="info-details">
+                        <div className="code">{landuseCodesData[item].NACE_level_3.code}</div>
+                        <div className="description">{landuseCodesData[item].NACE_level_3.description}</div>
+                        </div>
+                    </div>
+                </>}
+                <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
+                    <Tooltip text={ "[ISIC: The International Standard Industrial Classification of All Economic Activities]( https://unstats.un.org/unsd/classifications/Econ/isic)" } />
+                    <div className="label">ISIC:</div>
+                    <div className="info-details">
+                    <div className="code">{landuseCodesData[item].ISIC.code}</div>
+                    <div className="description">{landuseCodesData[item].ISIC.description}</div>
+                    </div>
+                </div>
+                <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
+                    <Tooltip text={ "[CPA: The Statistical Classification of Products by Activity](https://ec.europa.eu/eurostat/web/cpa)" } />
+                    <div className="label">CPA:</div>
+                    <div className="info-details">
+                    <div className="code">{landuseCodesData[item].CPA.code}</div>
+                    <div className="description">{landuseCodesData[item].CPA.description}</div>
+                    </div>
+                </div>
+                </div>
+                </>
+                   : ""
+                 ))
+                }</>: ""}
                 <SelectDataEntry
                     title={dataFields.current_landuse_scat_source.title}
                     slug="current_landuse_scat_source"
