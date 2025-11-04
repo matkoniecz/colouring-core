@@ -110,6 +110,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     onChange={props.onChange}
                 />
             </DataEntryGroup>
+            {/*
             <DataEntryGroup name="Specific Land Use/s (old classification)" collapsed={subcat==null || subcat!="1"}>
                 <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
                     <i>
@@ -184,6 +185,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     onChange={props.onChange}
                 />
             </DataEntryGroup>
+            */}
             <DataEntryGroup name="General Land Use" collapsed={subcat==null || subcat!="2"}>
                 {(props.mapColourScale != "is_domestic") ? 
                     <button className={`map-switcher-inline disabled-state btn btn-outline btn-outline-dark key-button`} onClick={switchToIsDomesticMapStyle}>
