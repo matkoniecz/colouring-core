@@ -3895,9 +3895,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             <DataEntryGroup name="Current Land Use/s" collapsed={subcat==null || subcat!="1"}>
                 <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
                     <i>
-                        Can you help us identify residential, non-residential and mixed use buildings (and verify these too)? 
-
-                        (In the UK over 90% of properties are residential.)
+                        In the UK over 90% of properties are residential. Please note that reference codes for residential buildings, and places of worship, are not included in land use classification systems shown below, except within UK Planning Use Classes.
                     </i>
                 </div>
                 {(props.mapColourScale != "landuse_scat") ? 
