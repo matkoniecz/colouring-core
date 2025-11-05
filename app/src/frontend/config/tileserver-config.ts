@@ -59,6 +59,7 @@ export type BuildingMapTileset =
     'landuse_scat_places_of_worship' |
     'landuse_scat_other' |
     'landuse_scat_mixed_use' |
+    'planning_classes_display' |
     'original_landuse' |
     'dynamics_demolished_count' |
     'disaster_severity' |

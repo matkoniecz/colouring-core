@@ -912,6 +912,39 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
             },
         },
         {
+            mapStyle: 'planning_classes_display',
+            legend: {
+                title: 'Planning Use Classes',
+                elements: [
+                    { color: '#7025a6', text: 'Public worship or religious instruction (or in connection with such use)' },
+                    { color: '#2ec54f', text: 'Public halls or exhibition halls' },
+                    { color: '#a44603', text: 'Indoor or outdoor swimming pools or skating rinks' },
+                    { color: '#ff9fbc', text: 'Law courts' },
+                    { color: '#9aff00', text: 'Sui generis' },
+                    { color: '#d4d4d4', text: 'Display or retail sale of goods, other than hot food' },
+                    { color: '#4bffe8', text: 'Provision of medical or health services (except the use of premises attached to the residence of the consultant or practitioner)' },
+                    { color: '#ff5b00', text: 'General industrial' },
+                    { color: '#f5f58f', text: 'Halls or meeting places for the principal use of the local community' },
+                    { color: '#fd00cf', text: 'Public libraries or public reading rooms' },
+                    { color: '#ffee00', text: 'Sale of food and drink for consumption (mostly) on the premises' },
+                    { color: '#a7cdfe', text: 'Indoor sport, recreation or fitness (not involving motorised vehicles or firearms or use as a swimming pool or skating rink,)' },
+                    { color: '#00b5ff', text: 'Hotels' },
+                    { color: '#ffc800', text: 'Provision of education' },
+                    { color: '#cb73ff', text: 'Areas or places for outdoor sport or recreation (not involving motorised vehicles or firearms)' },
+                    { color: '#808080', text: 'Storage or distribution - This class includes open air storage' },
+                    { color: '#e5050d', text: 'Financial services' },
+                    { color: '#00ff87', text: 'Other appropriate services in a commercial, business or service locality' },
+                    { color: '#ff007c', text: 'Museums' },
+                    { color: '#0077ff', text: 'Industrial processes' },
+                    { color: '#ffdb66', text: 'Research and development of products or processes' },
+                    { color: '#5c00ff', text: 'Creche, day nursery or day centre (not including a residential use)' },
+                    { color: '#00ffa5', text: 'Offices to carry out any operational or administrative functions' },
+                    { color: '#ff6ad5', text: 'Professional services (other than health or medical services), or' },
+                ]
+            },
+        },
+
+        {
             mapStyle: 'is_domestic',
             legend: {
                 title: 'Residential building',
