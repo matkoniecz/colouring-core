@@ -867,7 +867,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_4: {code: "47.12", description: "Other non-specialised retail sale"},
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
-            UK_SIC: {code: "", description: "missing entry in classification"},
+            UK_SIC: {code: "47.19", description: "Other retail sale in non-specialised stores"},
             planning_classes: {code: "E(a)", description: "Display or retail sale of goods, other than hot food"},
         },
         "Distilleries": {
@@ -977,7 +977,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_4: {code: "47.12", description: "Other non-specialised retail sale"},
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
-            UK_SIC: {code: "", description: "missing entry in classification"},
+            UK_SIC: {code: "47.19", description: "Other retail sale in non-specialised stores"},
             planning_classes: {code: "E(a)", description: "Display or retail sale of goods, other than hot food"},
         },
         "Farm Shops": {
@@ -1547,7 +1547,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_4: {code: "47.12", description: "Other non-specialised retail sale"},
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
-            UK_SIC: {code: "", description: "missing entry in classification"},
+            UK_SIC: {code: "47.19", description: "Other retail sale in non-specialised stores"},
             planning_classes: {code: "E(a)", description: "Display or retail sale of goods, other than hot food"},
         },
         "Large Shops (Over 1850m²)": {
@@ -1557,7 +1557,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_4: {code: "47.12", description: "Other non-specialised retail sale"},
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
-            UK_SIC: {code: "", description: "missing entry in classification"},
+            UK_SIC: {code: "47.19", description: "Other retail sale in non-specialised stores"},
             planning_classes: {code: "E(a)", description: "Display or retail sale of goods, other than hot food"},
         },
         "Libraries": {
@@ -1657,7 +1657,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_4: {code: "47.12", description: "Other non-specialised retail sale"},
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
-            UK_SIC: {code: "", description: "missing entry in classification"},
+            UK_SIC: {code: "47.19", description: "Other retail sale in non-specialised stores"},
             planning_classes: {code: "E(a)", description: "Display or retail sale of goods, other than hot food"},
         },
         "Mineral Depot and Premises": {
@@ -2037,7 +2037,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_4: {code: "70.20", description: "Business and other management consultancy activities"},
             NACE_level_3: {code: "71.1", description: "Architectural and engineering activities and related technical consultancy"},
             NACE_level_1: {code: "N", description: "Professional, scientific and technical activities"},
-            UK_SIC: {code: "", description: "missing entry in classification"},
+            UK_SIC: {code: "70.22", description: "Business and other management consultancy activities"},
             planning_classes: {code: "E(g)(i)", description: "Offices to carry out any operational or administrative functions"},
         },
         "Offices (Headquarters/Institutional)": {
@@ -2497,7 +2497,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_4: {code: "47.12", description: "Other non-specialised retail sale"},
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
-            UK_SIC: {code: "", description: "missing entry in classification"},
+            UK_SIC: {code: "47.19", description: "Other retail sale in non-specialised stores"},
             planning_classes: {code: "E(a)", description: "Display or retail sale of goods, other than hot food"},
         },
         "Showhouses (National Scheme)": {
@@ -2517,7 +2517,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_4: {code: "47.12", description: "Other non-specialised retail sale"},
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
-            UK_SIC: {code: "", description: "missing entry in classification"},
+            UK_SIC: {code: "47.19", description: "Other retail sale in non-specialised stores"},
             planning_classes: {code: "E(a)", description: "Display or retail sale of goods, other than hot food"},
         },
         "Ski Centres": {
@@ -2687,7 +2687,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_4: {code: "47.12", description: "Other non-specialised retail sale"},
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
-            UK_SIC: {code: "", description: "missing entry in classification"},
+            UK_SIC: {code: "47.19", description: "Other retail sale in non-specialised stores"},
             planning_classes: {code: "E(a)", description: "Display or retail sale of goods, other than hot food"},
         },
         "Stud Farms": {
@@ -2977,7 +2977,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_4: {code: "38.31", description: "Incineration without energy recovery"},
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "E", description: "Water supply; sewerage; waste managment and remediation activities"},
-            UK_SIC: {code: "", description: "missing entry in classification"},
+            UK_SIC: {code: "39.00", description: "Remediation activities and other waste management services"},
             planning_classes: {code: "B2", description: "General industrial"},
         },
         "Waste Recycling Plants": {
@@ -2997,7 +2997,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_4: {code: "38.31", description: "Incineration without energy recovery"},
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "E", description: "Water supply; sewerage; waste managment and remediation activities"},
-            UK_SIC: {code: "", description: "missing entry in classification"},
+            UK_SIC: {code: "39.00", description: "Remediation activities and other waste management services"},
             planning_classes: {code: "B2", description: "General industrial"},
         },
         "Water Undertakings (Non-Statutory)": {
@@ -3137,7 +3137,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_4: {code: "82.10", description: "Office administrative and support activities"},
             NACE_level_3: {code: "82.2", description: "Activities of call centres"},
             NACE_level_1: {code: "O", description: "Administrative and support service activities"},
-            UK_SIC: {code: "", description: "missing entry in classification"},
+            UK_SIC: {code: "82.11", description: "Combined office administrative service activities"},
             planning_classes: {code: "E(g)(i)", description: "Offices to carry out any operational or administrative functions"},
         },
         "Cafes": {
@@ -3237,7 +3237,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_4: {code: "82.10", description: "Office administrative and support activities"},
             NACE_level_3: {code: "82.2", description: "Activities of call centres"},
             NACE_level_1: {code: "O", description: "Administrative and support service activities"},
-            UK_SIC: {code: "", description: "missing entry in classification"},
+            UK_SIC: {code: "82.11", description: "Combined office administrative service activities"},
             planning_classes: {code: "E(c)(iii)", description: "Other appropriate services in a commercial, business or service locality"},
         },
         "Land Used for Display": {
@@ -3377,7 +3377,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_4: {code: "82.10", description: "Office administrative and support activities"},
             NACE_level_3: {code: "82.2", description: "Activities of call centres"},
             NACE_level_1: {code: "O", description: "Administrative and support service activities"},
-            UK_SIC: {code: "", description: "missing entry in classification"},
+            UK_SIC: {code: "82.11", description: "Combined office administrative service activities"},
             planning_classes: {code: "E(c)(iii)", description: "Other appropriate services in a commercial, business or service locality"},
         },
         "Statutory Docks and Harbours (Formula)": {
@@ -3547,7 +3547,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_4: {code: "82.10", description: "Office administrative and support activities"},
             NACE_level_3: {code: "82.2", description: "Activities of call centres"},
             NACE_level_1: {code: "O", description: "Administrative and support service activities"},
-            UK_SIC: {code: "", description: "missing entry in classification"},
+            UK_SIC: {code: "82.11", description: "Combined office administrative service activities"},
             planning_classes: {code: "E(g)(i)", description: ""},
         },
         "Salons/Clinics Within/Part of Specialist Property": {
@@ -3567,7 +3567,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_4: {code: "47.12", description: "Other non-specialised retail sale"},
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
-            UK_SIC: {code: "", description: "missing entry in classification"},
+            UK_SIC: {code: "47.19", description: "Other retail sale in non-specialised stores"},
             planning_classes: {code: "E(c)(ii)", description: "Professional services (other than health or medical services), or"},
         },
         "Sports & Leisure Centres Within/Part of Specialist Property": {
@@ -3587,7 +3587,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_4: {code: "47.12", description: "Other non-specialised retail sale"},
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
-            UK_SIC: {code: "", description: "missing entry in classification"},
+            UK_SIC: {code: "47.19", description: "Other retail sale in non-specialised stores"},
             planning_classes: {code: "E(c)(ii)", description: "Professional services (other than health or medical services), or"},
         },
         "Warehouses Within/Part of Specialist Property": {
@@ -3657,7 +3657,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_4: {code: "47.12", description: "Other non-specialised retail sale"},
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
-            UK_SIC: {code: "", description: "missing entry in classification"},
+            UK_SIC: {code: "47.19", description: "Other retail sale in non-specialised stores"},
             planning_classes: {code: "E(a)", description: "Display or retail sale of goods, other than hot food"},
         },
         "Land Used For Seasonal Markets & Events": {
@@ -3667,7 +3667,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_4: {code: "47.12", description: "Other non-specialised retail sale"},
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
-            UK_SIC: {code: "", description: "missing entry in classification"},
+            UK_SIC: {code: "47.19", description: "Other retail sale in non-specialised stores"},
             planning_classes: {code: "E(a)", description: "Display or retail sale of goods, other than hot food"},
         },
         "Market Stall (Not Pitch)": {
@@ -3677,7 +3677,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_4: {code: "47.91", description: "Intermediation service activities for non-specialised retail sale"},
             NACE_level_3: {code: "", description: "missing entry in classification"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
-            UK_SIC: {code: "", description: "missing entry in classification"},
+            UK_SIC: {code: "47.89", description: "Retail sale via stalls and markets of other goods"},
             planning_classes: {code: "E(a)", description: "Display or retail sale of goods, other than hot food"},
         },
         "Advertising Displays On Pavements & Bus Shelters": {
@@ -3717,7 +3717,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_4: {code: "47.12", description: "Other non-specialised retail sale"},
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
-            UK_SIC: {code: "", description: "missing entry in classification"},
+            UK_SIC: {code: "47.19", description: "Other retail sale in non-specialised stores"},
             planning_classes: {code: "E(a)", description: "Display or retail sale of goods, other than hot food"},
         },
         "Residual Mall": {
@@ -3727,7 +3727,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_4: {code: "47.12", description: "Other non-specialised retail sale"},
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
-            UK_SIC: {code: "", description: "missing entry in classification"},
+            UK_SIC: {code: "47.19", description: "Other retail sale in non-specialised stores"},
             planning_classes: {code: "E(a)", description: "Display or retail sale of goods, other than hot food"},
         },
         "Advertising Displays From Agricultural Land": {
@@ -3857,7 +3857,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_4: {code: "82.10", description: "Office administrative and support activities"},
             NACE_level_3: {code: "82.2", description: "Activities of call centres"},
             NACE_level_1: {code: "O", description: "Administrative and support service activities"},
-            UK_SIC: {code: "", description: "missing entry in classification"},
+            UK_SIC: {code: "82.11", description: "Combined office administrative service activities"},
             planning_classes: {code: "E(g)(i)", description: ""},
         },
         "Street Points (eg Cycle Docking Stations)": {
@@ -3957,7 +3957,7 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
             NACE_level_4: {code: "47.12", description: "Other non-specialised retail sale"},
             NACE_level_3: {code: "47.2", description: "Retail sale of food, beverages and tobacco"},
             NACE_level_1: {code: "G", description: "Wholesale and retail trade"},
-            UK_SIC: {code: "", description: "missing entry in classification"},
+            UK_SIC: {code: "47.19", description: "Other retail sale in non-specialised stores"},
             planning_classes: {code: "E(a)", description: "Display or retail sale of goods, other than hot food"},
         },
         "Wedding and Function Venue": {
