@@ -761,7 +761,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         {
             mapStyle: 'landuse_scat_residential',
             legend: {
-                title: 'Residential Land Use',
+                title: 'Residential',
                 elements: [
                     { color: '#7025a6', text: 'Residential' },
                 ]
@@ -770,7 +770,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         {
             mapStyle: 'landuse_scat_retail',
             legend: {
-                title: 'Retail Land Use',
+                title: 'Retail',
                 elements: [
                     { color: '#ff5b00', text: 'Retail' },
                 ]
@@ -779,7 +779,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         {
             mapStyle: 'landuse_scat_accomodation_and_food',
             legend: {
-                title: 'Accommodation & Food Land Use',
+                title: 'Accommodation & Food',
                 elements: [
                     { color: '#ff9fbc', text: 'Accommodation & Food' },
                 ]
@@ -788,7 +788,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         {
             mapStyle: 'landuse_scat_education',
             legend: {
-                title: 'Education Land Use',
+                title: 'Education',
                 elements: [
                     { color: '#a7cdfe', text: 'Education' },
                 ]
@@ -797,7 +797,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         {
             mapStyle: 'landuse_scat_health',
             legend: {
-                title: 'Health Land Use',
+                title: 'Health',
                 elements: [
                     { color: '#00b5ff', text: 'Health' },
                 ]
@@ -806,7 +806,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         {
             mapStyle: 'landuse_scat_arts_sport_and_recreation',
             legend: {
-                title: 'Arts, Sport & Recreation Land Use',
+                title: 'Arts, Sport & Recreation',
                 elements: [
                     { color: '#fd00cf', text: 'Arts, Sport & Recreation' },
                 ]
@@ -815,7 +815,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         {
             mapStyle: 'landuse_scat_places_of_worship',
             legend: {
-                title: 'Places of Worship Land Use',
+                title: 'Places of Worship',
                 elements: [
                     { color: '#cb73ff', text: 'Places of Worship' },
                 ]
@@ -824,7 +824,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         {
             mapStyle: 'landuse_scat_public_administration_defence_and_security',
             legend: {
-                title: 'Public Admin, Defence & Security Land Use',
+                title: 'Public Admin, Defence & Security',
                 elements: [
                     { color: '#4bffe8', text: 'Public Admin, Defence & Security' },
                 ]
@@ -833,7 +833,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         {
             mapStyle: 'landuse_scat_industry_and_business',
             legend: {
-                title: 'Industry & Business Land Use',
+                title: 'Industry & Business',
                 elements: [
                     { color: '#fffd81', text: 'Industry & Business' },
                 ]
@@ -842,7 +842,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         {
             mapStyle: 'landuse_scat_transport_and_storage',
             legend: {
-                title: 'Transport & Storage Land Use',
+                title: 'Transport & Storage',
                 elements: [
                     { color: '#9aff00', text: 'Transport & Storage' },
                 ]
@@ -851,7 +851,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         {
             mapStyle: 'landuse_scat_utilities',
             legend: {
-                title: 'Utilities Land Use',
+                title: 'Utilities',
                 elements: [
                     { color: '#d4d4d4', text: 'Utilities' },
                 ]
@@ -860,7 +860,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         {
             mapStyle: 'landuse_scat_professional_scientific_and_technical_activities',
             legend: {
-                title: 'Professional, Scientific & Technical activities Land Use',
+                title: 'Professional, Scientific & Technical activities',
                 elements: [
                     { color: '#ffc800', text: 'Professional, Scientific & Technical activities' },
                 ]
@@ -869,7 +869,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         {
             mapStyle: 'landuse_scat_telecommunication_computing_broadcasting_and_publishing',
             legend: {
-                title: 'Telecoms., Computing, Broadcasting & Publishing Land Use',
+                title: 'Telecoms., Computing, Broadcasting & Publishing',
                 elements: [
                     { color: '#ffee00', text: 'Telecoms., Computing, Broadcasting & Publishing' },
                 ]
@@ -878,7 +878,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         {
             mapStyle: 'landuse_scat_agriculture_forestry_and_fishing',
             legend: {
-                title: 'Agriculture, Forestry & Fishing Land Use',
+                title: 'Agriculture, Forestry & Fishing',
                 elements: [
                     { color: '#2ec54f', text: 'Agriculture, Forestry & Fishing' },
                 ]
@@ -887,7 +887,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         {
             mapStyle: 'landuse_scat_mining_and_quarrying',
             legend: {
-                title: 'Mining & Quarrying Land Use',
+                title: 'Mining & Quarrying',
                 elements: [
                     { color: '#a44603', text: 'Mining & Quarrying' },
                 ]
@@ -896,7 +896,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         {
             mapStyle: 'landuse_scat_other',
             legend: {
-                title: 'Other Land Use',
+                title: 'Other',
                 elements: [
                     { color: '#808080', text: 'Other' },
                 ]
@@ -905,7 +905,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         {
             mapStyle: 'landuse_scat_mixed_use',
             legend: {
-                title: 'Mixed Land Use',
+                title: 'Mixed',
                 elements: [
                     { color: '#e31a1c', text: 'Mixed Use' },
                 ]
