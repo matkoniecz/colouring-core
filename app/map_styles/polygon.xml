@@ -2446,108 +2446,108 @@
 
         <Rule>
             <Filter>[current_landuse_group_scat] = "AA/RAC Service Centres and Boxes"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Air Ports (Minor) (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Air Strips (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Aircraft Works With Airfields"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Airport Let Outs"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Aluminum Smelting Works"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Ambulance Stations"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Amusement Arcades"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Amusement Parks"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Animal Boarding"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Arenas"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Army Hereditaments"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Artificial Fibre Works"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Asphalt Plants"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Auction Rooms"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Baling Plants"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Banks/Insurance/Building Society Offices & Other A2 Uses"</Filter>
-            <PolygonSymbolizer fill="#e5050d" />
-            <LineSymbolizer stroke="#e5050d" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff9fbc" />
+            <LineSymbolizer stroke="#ff9fbc" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Beach Huts"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Beet Sugar Factories"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Betting Offices"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Bingo Halls (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Bird Sanctuaries"</Filter>
@@ -2556,563 +2556,563 @@
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Boat Yards"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Bowling Alleys"</Filter>
-            <PolygonSymbolizer fill="#a7cdfe" />
-            <LineSymbolizer stroke="#a7cdfe" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#f5f58f" />
+            <LineSymbolizer stroke="#f5f58f" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Bowling Centres (Indoor)"</Filter>
-            <PolygonSymbolizer fill="#a7cdfe" />
-            <LineSymbolizer stroke="#a7cdfe" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#f5f58f" />
+            <LineSymbolizer stroke="#f5f58f" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Bowling Greens (Outdoor)"</Filter>
-            <PolygonSymbolizer fill="#cb73ff" />
-            <LineSymbolizer stroke="#cb73ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#7025a6" />
+            <LineSymbolizer stroke="#7025a6" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Breweries (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Brickworks (Traditional), Clay Tile/Pipe Works"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Bulk Cement Storage Depots"</Filter>
-            <PolygonSymbolizer fill="#808080" />
-            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#00ffa5" />
+            <LineSymbolizer stroke="#00ffa5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Bullion/Money Stores (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#e5050d" />
-            <LineSymbolizer stroke="#e5050d" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff9fbc" />
+            <LineSymbolizer stroke="#ff9fbc" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Bus Garages"</Filter>
-            <PolygonSymbolizer fill="#808080" />
-            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#00ffa5" />
+            <LineSymbolizer stroke="#00ffa5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Bus Stations"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Cable Head End Buildings"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Car Auction Buildings/Sites"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Car Parks (Multi-Storey)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Car Parks (Surfaced Open)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Car Parks (Unsurfaced Open)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Car Showrooms"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Car Spaces"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Car Supermarkets"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Car Washes (Stand Alone)"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Car/Caravan Sales/Display/Hiring Sites"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Caravan Parks (Leisure) (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Caravan Sites and Pitches (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Casinos and Gambling Clubs"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Cement Tile Works"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Cement Works"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Cemeteries (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Chalet Parks (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Chemical Works"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Cinemas (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Civic and Public Buildings (Local Authority Occupations)"</Filter>
-            <PolygonSymbolizer fill="#f5f58f" />
-            <LineSymbolizer stroke="#f5f58f" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#d4d4d4" />
+            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Civic Amenity Sites"</Filter>
+            <PolygonSymbolizer fill="#d4d4d4" />
+            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Civil Airports"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Clubhouses"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Licensed Sports, Social & Private Members Clubs"</Filter>
             <PolygonSymbolizer fill="#f5f58f" />
             <LineSymbolizer stroke="#f5f58f" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Civil Airports"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Clubhouses"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Licensed Sports, Social & Private Members Clubs"</Filter>
-            <PolygonSymbolizer fill="#a7cdfe" />
-            <LineSymbolizer stroke="#a7cdfe" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
             <Filter>[current_landuse_group_scat] = "Inns"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Coking and Carbonising Plants"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Cold Stores"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Colleges of Further Education (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#ffc800" />
-            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#808080" />
+            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Communication Stations (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Community Day Centres"</Filter>
-            <PolygonSymbolizer fill="#5c00ff" />
-            <LineSymbolizer stroke="#5c00ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#2ec54f" />
+            <LineSymbolizer stroke="#2ec54f" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Computer Centres (Non-Purpose Built)"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Computer Centres (Purpose Built)"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Concert Halls (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Concrete Batching Plants"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Concrete Block Works"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Concrete Product Works"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Conference & Exhibition Centres"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Wedding & Function Venues"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Contractors Huts & Compounds"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Country House Hotels"</Filter>
-            <PolygonSymbolizer fill="#00b5ff" />
-            <LineSymbolizer stroke="#00b5ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#4bffe8" />
+            <LineSymbolizer stroke="#4bffe8" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Creameries"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Crematoria (With & Without Cemeteries) (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Cricket Centres"</Filter>
-            <PolygonSymbolizer fill="#a7cdfe" />
-            <LineSymbolizer stroke="#a7cdfe" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#f5f58f" />
+            <LineSymbolizer stroke="#f5f58f" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Cricket Grounds (County)"</Filter>
-            <PolygonSymbolizer fill="#cb73ff" />
-            <LineSymbolizer stroke="#cb73ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#7025a6" />
+            <LineSymbolizer stroke="#7025a6" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Cricket Grounds/Pitches (Non- County)"</Filter>
-            <PolygonSymbolizer fill="#cb73ff" />
-            <LineSymbolizer stroke="#cb73ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#7025a6" />
+            <LineSymbolizer stroke="#7025a6" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Dance Schools & Centres"</Filter>
-            <PolygonSymbolizer fill="#ffc800" />
-            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#808080" />
+            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Day Nurseries/Play Schools"</Filter>
-            <PolygonSymbolizer fill="#ffc800" />
-            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#808080" />
+            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Departmental and Walk Round Stores (Large)"</Filter>
-            <PolygonSymbolizer fill="#d4d4d4" />
-            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Distilleries"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "District Heating Undertakings & Networks"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Docks and Harbours (Non-Statutory)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Domestic Fuel Installations"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Drive-In Restaurants"</Filter>
-            <PolygonSymbolizer fill="#ffee00" />
-            <LineSymbolizer stroke="#ffee00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Drive-Thru Restaurants"</Filter>
-            <PolygonSymbolizer fill="#ffee00" />
-            <LineSymbolizer stroke="#ffee00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Mine Water Treatment Plant and Premises"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Electricity Undertakings (Non- Statutory)"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Exhaust and Tyre Centres"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Factories, Workshops and Warehouses (Incl Bakeries & Dairies)"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Factory Shops"</Filter>
-            <PolygonSymbolizer fill="#d4d4d4" />
-            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Farm Shops"</Filter>
-            <PolygonSymbolizer fill="#d4d4d4" />
-            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Field Study, Activity and Adventure Centres"</Filter>
-            <PolygonSymbolizer fill="#ffc800" />
-            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Film and TV Studios"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Fire Stations"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Flour Mills (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Food Courts"</Filter>
-            <PolygonSymbolizer fill="#ffee00" />
-            <LineSymbolizer stroke="#ffee00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Food Processing Centres"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Convenience Store"</Filter>
-            <PolygonSymbolizer fill="#d4d4d4" />
-            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Football Grounds"</Filter>
-            <PolygonSymbolizer fill="#cb73ff" />
-            <LineSymbolizer stroke="#cb73ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Football Pitches"</Filter>
-            <PolygonSymbolizer fill="#cb73ff" />
-            <LineSymbolizer stroke="#cb73ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Football Stadia"</Filter>
-            <PolygonSymbolizer fill="#cb73ff" />
-            <LineSymbolizer stroke="#cb73ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Foundries"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Funeral Parlours/Chapels Of Rest"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Garages (Transport and Commercial)"</Filter>
-            <PolygonSymbolizer fill="#808080" />
-            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Garden Centres"</Filter>
-            <PolygonSymbolizer fill="#d4d4d4" />
-            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Gas Processing Plants"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Go Kart Rinks"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Golf Courses"</Filter>
-            <PolygonSymbolizer fill="#cb73ff" />
-            <LineSymbolizer stroke="#cb73ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Golf Driving Ranges"</Filter>
-            <PolygonSymbolizer fill="#cb73ff" />
-            <LineSymbolizer stroke="#cb73ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Grain Silos"</Filter>
-            <PolygonSymbolizer fill="#808080" />
-            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Granaries and Intervention Stores"</Filter>
-            <PolygonSymbolizer fill="#808080" />
-            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Greyhound Racetracks"</Filter>
-            <PolygonSymbolizer fill="#cb73ff" />
-            <LineSymbolizer stroke="#cb73ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Guest & Boarding Houses"</Filter>
-            <PolygonSymbolizer fill="#00b5ff" />
-            <LineSymbolizer stroke="#00b5ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Traveller Sites"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Health Farms"</Filter>
-            <PolygonSymbolizer fill="#4bffe8" />
-            <LineSymbolizer stroke="#4bffe8" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Heliports"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Heredits Used For Primary Treatment/Processing Of Minerals"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Heritage Railways"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "High Tech Warehouses"</Filter>
-            <PolygonSymbolizer fill="#808080" />
-            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Holiday Centres"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Holiday Homes (Self Catering)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Horse Racecourses"</Filter>
-            <PolygonSymbolizer fill="#cb73ff" />
-            <LineSymbolizer stroke="#cb73ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Hospital Let Outs"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Hospitals & Clinics NHS (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#4bffe8" />
-            <LineSymbolizer stroke="#4bffe8" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Hospitals & Clinics (Private) (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#4bffe8" />
-            <LineSymbolizer stroke="#4bffe8" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Hostels"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Hotels (3 Star And Under)"</Filter>
-            <PolygonSymbolizer fill="#00b5ff" />
-            <LineSymbolizer stroke="#00b5ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Hotels (4 Star & Above) & Major Chain Operated ( includes 3* & above consortium hotels)"</Filter>
-            <PolygonSymbolizer fill="#00b5ff" />
-            <LineSymbolizer stroke="#00b5ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Hypermarkets/Superstores (over 2500m²)"</Filter>
-            <PolygonSymbolizer fill="#d4d4d4" />
-            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Ice Rinks"</Filter>
             <PolygonSymbolizer fill="#a44603" />
             <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
         </Rule>
         <Rule>
+            <Filter>[current_landuse_group_scat] = "Distilleries"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "District Heating Undertakings & Networks"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Docks and Harbours (Non-Statutory)"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Domestic Fuel Installations"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Drive-In Restaurants"</Filter>
+            <PolygonSymbolizer fill="#5c00ff" />
+            <LineSymbolizer stroke="#5c00ff" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Drive-Thru Restaurants"</Filter>
+            <PolygonSymbolizer fill="#5c00ff" />
+            <LineSymbolizer stroke="#5c00ff" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Mine Water Treatment Plant and Premises"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Electricity Undertakings (Non- Statutory)"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Exhaust and Tyre Centres"</Filter>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Factories, Workshops and Warehouses (Incl Bakeries & Dairies)"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Factory Shops"</Filter>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Farm Shops"</Filter>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Field Study, Activity and Adventure Centres"</Filter>
+            <PolygonSymbolizer fill="#808080" />
+            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Film and TV Studios"</Filter>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Fire Stations"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Flour Mills (National Scheme)"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Food Courts"</Filter>
+            <PolygonSymbolizer fill="#5c00ff" />
+            <LineSymbolizer stroke="#5c00ff" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Food Processing Centres"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Convenience Store"</Filter>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Football Grounds"</Filter>
+            <PolygonSymbolizer fill="#7025a6" />
+            <LineSymbolizer stroke="#7025a6" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Football Pitches"</Filter>
+            <PolygonSymbolizer fill="#7025a6" />
+            <LineSymbolizer stroke="#7025a6" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Football Stadia"</Filter>
+            <PolygonSymbolizer fill="#7025a6" />
+            <LineSymbolizer stroke="#7025a6" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Foundries"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Funeral Parlours/Chapels Of Rest"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Garages (Transport and Commercial)"</Filter>
+            <PolygonSymbolizer fill="#00ffa5" />
+            <LineSymbolizer stroke="#00ffa5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Garden Centres"</Filter>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Gas Processing Plants"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Go Kart Rinks"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Golf Courses"</Filter>
+            <PolygonSymbolizer fill="#7025a6" />
+            <LineSymbolizer stroke="#7025a6" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Golf Driving Ranges"</Filter>
+            <PolygonSymbolizer fill="#7025a6" />
+            <LineSymbolizer stroke="#7025a6" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Grain Silos"</Filter>
+            <PolygonSymbolizer fill="#00ffa5" />
+            <LineSymbolizer stroke="#00ffa5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Granaries and Intervention Stores"</Filter>
+            <PolygonSymbolizer fill="#00ffa5" />
+            <LineSymbolizer stroke="#00ffa5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Greyhound Racetracks"</Filter>
+            <PolygonSymbolizer fill="#7025a6" />
+            <LineSymbolizer stroke="#7025a6" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Guest & Boarding Houses"</Filter>
+            <PolygonSymbolizer fill="#4bffe8" />
+            <LineSymbolizer stroke="#4bffe8" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Traveller Sites"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Health Farms"</Filter>
+            <PolygonSymbolizer fill="#e5050d" />
+            <LineSymbolizer stroke="#e5050d" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Heliports"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Heredits Used For Primary Treatment/Processing Of Minerals"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Heritage Railways"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "High Tech Warehouses"</Filter>
+            <PolygonSymbolizer fill="#00ffa5" />
+            <LineSymbolizer stroke="#00ffa5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Holiday Centres"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Holiday Homes (Self Catering)"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Horse Racecourses"</Filter>
+            <PolygonSymbolizer fill="#7025a6" />
+            <LineSymbolizer stroke="#7025a6" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Hospital Let Outs"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Hospitals & Clinics NHS (National Scheme)"</Filter>
+            <PolygonSymbolizer fill="#e5050d" />
+            <LineSymbolizer stroke="#e5050d" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Hospitals & Clinics (Private) (National Scheme)"</Filter>
+            <PolygonSymbolizer fill="#e5050d" />
+            <LineSymbolizer stroke="#e5050d" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Hostels"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Hotels (3 Star And Under)"</Filter>
+            <PolygonSymbolizer fill="#4bffe8" />
+            <LineSymbolizer stroke="#4bffe8" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Hotels (4 Star & Above) & Major Chain Operated ( includes 3* & above consortium hotels)"</Filter>
+            <PolygonSymbolizer fill="#4bffe8" />
+            <LineSymbolizer stroke="#4bffe8" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Hypermarkets/Superstores (over 2500m²)"</Filter>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Ice Rinks"</Filter>
+            <PolygonSymbolizer fill="#ff5b00" />
+            <LineSymbolizer stroke="#ff5b00" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
             <Filter>[current_landuse_group_scat] = "Interactive Telephone Kiosks"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Iron and/or Steel Works"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Kennels and Catteries"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Laboratories"</Filter>
@@ -3121,288 +3121,288 @@
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Lakes With Water Sport Facilities"</Filter>
-            <PolygonSymbolizer fill="#cb73ff" />
-            <LineSymbolizer stroke="#cb73ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#7025a6" />
+            <LineSymbolizer stroke="#7025a6" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Land Used For Advertising"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Land Used For Car Boot Sales"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Land Used For Storage"</Filter>
-            <PolygonSymbolizer fill="#808080" />
-            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Landfill Gas Generator Sites"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Land used for Waste Composting"</Filter>
-            <PolygonSymbolizer fill="#ff5b00" />
-            <LineSymbolizer stroke="#ff5b00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Large Distribution Warehouses"</Filter>
-            <PolygonSymbolizer fill="#808080" />
-            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Large Food Stores (750 - 2500m²)"</Filter>
-            <PolygonSymbolizer fill="#ffee00" />
-            <LineSymbolizer stroke="#ffee00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Large Industrials (Over 20,000m²)"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Large Shops (750 - 1850m²)"</Filter>
-            <PolygonSymbolizer fill="#d4d4d4" />
-            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Large Shops (Over 1850m²)"</Filter>
-            <PolygonSymbolizer fill="#d4d4d4" />
-            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Libraries"</Filter>
-            <PolygonSymbolizer fill="#fd00cf" />
-            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Liquid Bulk Storage (Incl Petrol & Oil) (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#808080" />
-            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Livestock Markets (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#ffee00" />
-            <LineSymbolizer stroke="#ffee00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Local Authority Schools (National Scheme)"</Filter>
             <PolygonSymbolizer fill="#ffc800" />
             <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Lodges (National Scheme)"</Filter>
+            <Filter>[current_landuse_group_scat] = "Land Used For Car Boot Sales"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Land Used For Storage"</Filter>
+            <PolygonSymbolizer fill="#00ffa5" />
+            <LineSymbolizer stroke="#00ffa5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Landfill Gas Generator Sites"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Land used for Waste Composting"</Filter>
             <PolygonSymbolizer fill="#9aff00" />
             <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Large Distribution Warehouses"</Filter>
+            <PolygonSymbolizer fill="#00ffa5" />
+            <LineSymbolizer stroke="#00ffa5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Large Food Stores (750 - 2500m²)"</Filter>
+            <PolygonSymbolizer fill="#5c00ff" />
+            <LineSymbolizer stroke="#5c00ff" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Large Industrials (Over 20,000m²)"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Large Shops (750 - 1850m²)"</Filter>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Large Shops (Over 1850m²)"</Filter>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Libraries"</Filter>
+            <PolygonSymbolizer fill="#ff007c" />
+            <LineSymbolizer stroke="#ff007c" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Liquid Bulk Storage (Incl Petrol & Oil) (National Scheme)"</Filter>
+            <PolygonSymbolizer fill="#00ffa5" />
+            <LineSymbolizer stroke="#00ffa5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Livestock Markets (National Scheme)"</Filter>
+            <PolygonSymbolizer fill="#5c00ff" />
+            <LineSymbolizer stroke="#5c00ff" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Local Authority Schools (National Scheme)"</Filter>
+            <PolygonSymbolizer fill="#808080" />
+            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Lodges (National Scheme)"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Lorry Parks"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Maltings - Non Trad"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Maltings - Trad"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Marinas (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Markets (Other Than Livestock)"</Filter>
-            <PolygonSymbolizer fill="#d4d4d4" />
-            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Mineral Depot and Premises"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Mineral Producing Hereditament - Blockstone"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Mineral Producing Hereditament - Brine"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Mineral Producing Hereditament - Chalk"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Mineral Producing Hereditament - China Clay"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Mineral Producing Hereditament - Clay"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Mineral Producing Hereditament - Coal"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Mineral Producing Hereditament - Fluorspar"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Mineral Producing Hereditament - Gas"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Mineral Producing Hereditament - Hardrock"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Mineral Producing Hereditament - Inert"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Mineral Producing Hereditament - Oil"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Mineral Producing Hereditament - Other Mineral Category"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Mineral Producing Hereditament - Putrescible"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Mineral Producing Hereditament - Sand and Gravel"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Mineral Producing Hereditament - Sand"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Mineral Producing Hereditament - Shale Unburnt"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Mineral Producing Hereditament - Slate"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Mineral Producing Hereditament With Batching Plant"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Mineral Producing Hereditament With Coating Plant"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Mineral Producing Heredtament With Tunnel Kiln"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "MOD Hereditaments"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Model Villages"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Moorings (Floating Hereditaments)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Mortuaries"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Motor Racetracks"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Motor Vehicle Works"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Motorway Service Area Let Outs"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Motorway and Major Road Service Areas"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Museums and Art Galleries (Contractors)"</Filter>
-            <PolygonSymbolizer fill="#ff007c" />
-            <LineSymbolizer stroke="#ff007c" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#a7cdfe" />
+            <LineSymbolizer stroke="#a7cdfe" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Museums and Art Galleries (NonContractors)"</Filter>
-            <PolygonSymbolizer fill="#ff007c" />
-            <LineSymbolizer stroke="#ff007c" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#a7cdfe" />
+            <LineSymbolizer stroke="#a7cdfe" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Navy Hereditaments"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Newspaper Printing Works (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Night Clubs & Discotheques"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Nuclear Establishments"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Nursing Homes (Inc. Old Peoples Homes)"</Filter>
-            <PolygonSymbolizer fill="#4bffe8" />
-            <LineSymbolizer stroke="#4bffe8" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#e5050d" />
+            <LineSymbolizer stroke="#e5050d" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Observatories"</Filter>
@@ -3411,423 +3411,423 @@
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Offices (Inc Computer Centres)"</Filter>
-            <PolygonSymbolizer fill="#00ffa5" />
-            <LineSymbolizer stroke="#00ffa5" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#00b5ff" />
+            <LineSymbolizer stroke="#00b5ff" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Offices (Headquarters/Institutional)"</Filter>
-            <PolygonSymbolizer fill="#00ffa5" />
-            <LineSymbolizer stroke="#00ffa5" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#00b5ff" />
+            <LineSymbolizer stroke="#00b5ff" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Oil Refineries"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Oxbridge Colleges"</Filter>
-            <PolygonSymbolizer fill="#ffc800" />
-            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#808080" />
+            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Paper Mills"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Pavilions"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Petrol Filling Stations (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Pharmacies"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Photographic Booths"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Pipelines"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Pleasure Piers"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Point to Point and Eventing Courses"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Police Stations"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Polo Grounds"</Filter>
-            <PolygonSymbolizer fill="#cb73ff" />
-            <LineSymbolizer stroke="#cb73ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#7025a6" />
+            <LineSymbolizer stroke="#7025a6" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Post Office Sorting Centres"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Potteries"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Power Generators"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Prison Service Hereditaments"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Property used for Secondary Aggregate Processing"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Provender Mills (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Public and Independent Schools (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#ffc800" />
-            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#808080" />
+            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Public Conveniences (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Public Halls"</Filter>
-            <PolygonSymbolizer fill="#2ec54f" />
-            <LineSymbolizer stroke="#2ec54f" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#00ff87" />
+            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Public Houses/Pub Restaurants (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#ffee00" />
-            <LineSymbolizer stroke="#ffee00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#5c00ff" />
+            <LineSymbolizer stroke="#5c00ff" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Public Houses/Pub Restaurants (Inc. Lodge) (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#ffee00" />
-            <LineSymbolizer stroke="#ffee00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#5c00ff" />
+            <LineSymbolizer stroke="#5c00ff" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Public Telephone Kiosks (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Racing Stables (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#cb73ff" />
-            <LineSymbolizer stroke="#cb73ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#7025a6" />
+            <LineSymbolizer stroke="#7025a6" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "RAF Hereditaments"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Railways & Tramways (Non Leisure)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Recording Studios"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Refuse Destructor Plants/Disposal Sites"</Filter>
-            <PolygonSymbolizer fill="#ff5b00" />
-            <LineSymbolizer stroke="#ff5b00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#9aff00" />
+            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Restaurants"</Filter>
-            <PolygonSymbolizer fill="#ffee00" />
-            <LineSymbolizer stroke="#ffee00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#5c00ff" />
+            <LineSymbolizer stroke="#5c00ff" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Retail Warehouses and Foodstores"</Filter>
-            <PolygonSymbolizer fill="#d4d4d4" />
-            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Riding Schools & Livery Stables (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#cb73ff" />
-            <LineSymbolizer stroke="#cb73ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#7025a6" />
+            <LineSymbolizer stroke="#7025a6" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Rifle and Weapons Ranges"</Filter>
-            <PolygonSymbolizer fill="#a7cdfe" />
-            <LineSymbolizer stroke="#a7cdfe" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#f5f58f" />
+            <LineSymbolizer stroke="#f5f58f" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Roadside Restaurants (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#ffee00" />
-            <LineSymbolizer stroke="#ffee00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#5c00ff" />
+            <LineSymbolizer stroke="#5c00ff" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Roller Skating Rinks"</Filter>
-            <PolygonSymbolizer fill="#a7cdfe" />
-            <LineSymbolizer stroke="#a7cdfe" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#f5f58f" />
+            <LineSymbolizer stroke="#f5f58f" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Royal Palaces"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Rugby League Grounds"</Filter>
+            <PolygonSymbolizer fill="#7025a6" />
+            <LineSymbolizer stroke="#7025a6" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Rugby Union Grounds"</Filter>
+            <PolygonSymbolizer fill="#7025a6" />
+            <LineSymbolizer stroke="#7025a6" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Sales Kiosks"</Filter>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Scrap Metal/Breakers Yard"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Sea Dredged Aggregate Processing Plants & Depots"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Sewage Works (National Scheme)"</Filter>
             <PolygonSymbolizer fill="#9aff00" />
             <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Rugby League Grounds"</Filter>
-            <PolygonSymbolizer fill="#cb73ff" />
-            <LineSymbolizer stroke="#cb73ff" stroke-width="2.0"/>
+            <Filter>[current_landuse_group_scat] = "Ship Building Yards"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Rugby Union Grounds"</Filter>
-            <PolygonSymbolizer fill="#cb73ff" />
-            <LineSymbolizer stroke="#cb73ff" stroke-width="2.0"/>
+            <Filter>[current_landuse_group_scat] = "Ship Repair Yards"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Sales Kiosks"</Filter>
-            <PolygonSymbolizer fill="#d4d4d4" />
-            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
+            <Filter>[current_landuse_group_scat] = "Shops"</Filter>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Scrap Metal/Breakers Yard"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <Filter>[current_landuse_group_scat] = "Showhouses (National Scheme)"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Sea Dredged Aggregate Processing Plants & Depots"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <Filter>[current_landuse_group_scat] = "Showrooms"</Filter>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Sewage Works (National Scheme)"</Filter>
+            <Filter>[current_landuse_group_scat] = "Ski Centres"</Filter>
+            <PolygonSymbolizer fill="#7025a6" />
+            <LineSymbolizer stroke="#7025a6" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Snooker Halls/Clubs"</Filter>
+            <PolygonSymbolizer fill="#f5f58f" />
+            <LineSymbolizer stroke="#f5f58f" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Speedway Racetracks"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Spoil Heap Workings"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Sports & Leisure Centres (LA) (Dry Only) (National Scheme)"</Filter>
+            <PolygonSymbolizer fill="#f5f58f" />
+            <LineSymbolizer stroke="#f5f58f" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Sports & Leisure Centres (LA) (Wet & Dry) (National Scheme)"</Filter>
+            <PolygonSymbolizer fill="#f5f58f" />
+            <LineSymbolizer stroke="#f5f58f" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Sports & Leisure Centres (Private)(Dry Only)"</Filter>
+            <PolygonSymbolizer fill="#f5f58f" />
+            <LineSymbolizer stroke="#f5f58f" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Sports & Leisure Centres (Private)(Wet & Dry)"</Filter>
+            <PolygonSymbolizer fill="#f5f58f" />
+            <LineSymbolizer stroke="#f5f58f" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Sports Grounds"</Filter>
+            <PolygonSymbolizer fill="#7025a6" />
+            <LineSymbolizer stroke="#7025a6" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Sports Stadia"</Filter>
+            <PolygonSymbolizer fill="#7025a6" />
+            <LineSymbolizer stroke="#7025a6" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Squash Courts"</Filter>
+            <PolygonSymbolizer fill="#f5f58f" />
+            <LineSymbolizer stroke="#f5f58f" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Stately Homes & Historic Houses (National Scheme)"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Station Let Outs"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Storage Depots"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Stores"</Filter>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Studios"</Filter>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Surgeries, Clinics, Health Centre (incl Dentists etc)"</Filter>
+            <PolygonSymbolizer fill="#e5050d" />
+            <LineSymbolizer stroke="#e5050d" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Swimming Pools (Local Authority)"</Filter>
             <PolygonSymbolizer fill="#ff5b00" />
             <LineSymbolizer stroke="#ff5b00" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Ship Building Yards"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Ship Repair Yards"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Shops"</Filter>
-            <PolygonSymbolizer fill="#d4d4d4" />
-            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Showhouses (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Showrooms"</Filter>
-            <PolygonSymbolizer fill="#d4d4d4" />
-            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Ski Centres"</Filter>
-            <PolygonSymbolizer fill="#cb73ff" />
-            <LineSymbolizer stroke="#cb73ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Snooker Halls/Clubs"</Filter>
-            <PolygonSymbolizer fill="#a7cdfe" />
-            <LineSymbolizer stroke="#a7cdfe" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Speedway Racetracks"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Spoil Heap Workings"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Sports & Leisure Centres (LA) (Dry Only) (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#a7cdfe" />
-            <LineSymbolizer stroke="#a7cdfe" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Sports & Leisure Centres (LA) (Wet & Dry) (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#a7cdfe" />
-            <LineSymbolizer stroke="#a7cdfe" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Sports & Leisure Centres (Private)(Dry Only)"</Filter>
-            <PolygonSymbolizer fill="#a7cdfe" />
-            <LineSymbolizer stroke="#a7cdfe" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Sports & Leisure Centres (Private)(Wet & Dry)"</Filter>
-            <PolygonSymbolizer fill="#a7cdfe" />
-            <LineSymbolizer stroke="#a7cdfe" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Sports Grounds"</Filter>
-            <PolygonSymbolizer fill="#cb73ff" />
-            <LineSymbolizer stroke="#cb73ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Sports Stadia"</Filter>
-            <PolygonSymbolizer fill="#cb73ff" />
-            <LineSymbolizer stroke="#cb73ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Squash Courts"</Filter>
-            <PolygonSymbolizer fill="#a7cdfe" />
-            <LineSymbolizer stroke="#a7cdfe" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Stately Homes & Historic Houses (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Station Let Outs"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Storage Depots"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Stores"</Filter>
-            <PolygonSymbolizer fill="#d4d4d4" />
-            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Studios"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Surgeries, Clinics, Health Centre (incl Dentists etc)"</Filter>
-            <PolygonSymbolizer fill="#4bffe8" />
-            <LineSymbolizer stroke="#4bffe8" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Swimming Pools (Local Authority)"</Filter>
-            <PolygonSymbolizer fill="#a44603" />
-            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
             <Filter>[current_landuse_group_scat] = "Swimming Pools (Private)"</Filter>
-            <PolygonSymbolizer fill="#a44603" />
-            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff5b00" />
+            <LineSymbolizer stroke="#ff5b00" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Tanneries"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Telecommunications Cable Networks (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Telecommunications Switching Centres"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Tennis Centres"</Filter>
-            <PolygonSymbolizer fill="#a7cdfe" />
-            <LineSymbolizer stroke="#a7cdfe" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#f5f58f" />
+            <LineSymbolizer stroke="#f5f58f" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Tennis Courts/Clubs"</Filter>
-            <PolygonSymbolizer fill="#a7cdfe" />
-            <LineSymbolizer stroke="#a7cdfe" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#f5f58f" />
+            <LineSymbolizer stroke="#f5f58f" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Theatres (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Theme Parks"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Timeshare Complexes (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Tolls (Ferries, Roads And Bridges)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Totalisators On Horse Racecourses"</Filter>
-            <PolygonSymbolizer fill="#cb73ff" />
-            <LineSymbolizer stroke="#cb73ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#7025a6" />
+            <LineSymbolizer stroke="#7025a6" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Tourist Attractions/Dark Rides"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Training Centre (Non Residential)"</Filter>
-            <PolygonSymbolizer fill="#ffc800" />
-            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#808080" />
+            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Training Centre (Residential)"</Filter>
-            <PolygonSymbolizer fill="#ffc800" />
-            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#808080" />
+            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Truck Stops"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Universities (Excluding Oxbridge) (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#ffc800" />
-            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#808080" />
+            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Vehicle Repair Workshops & Garages"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Vehicle Testing Centres (With Test Tracks)"</Filter>
@@ -3841,73 +3841,73 @@
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Veterinary Clinics / Animal Clinics"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Village Halls, Scout Huts, Cadet Huts Etc"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Wafer Fabrications (National Scheme)"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "War Games Courses/Misc Ag. Use"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Waste Incinerator Plants"</Filter>
-            <PolygonSymbolizer fill="#ff5b00" />
-            <LineSymbolizer stroke="#ff5b00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#9aff00" />
+            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Waste Recycling Plants"</Filter>
-            <PolygonSymbolizer fill="#ff5b00" />
-            <LineSymbolizer stroke="#ff5b00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#9aff00" />
+            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Waste Transfer Stations"</Filter>
-            <PolygonSymbolizer fill="#ff5b00" />
-            <LineSymbolizer stroke="#ff5b00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#9aff00" />
+            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Water Undertakings (Non-Statutory)"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Wholesale Warehouses"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Windmills"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Wine Bars"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Zoos & Safari Parks"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Abattoirs & Slaughter Houses (Contractors Valuation)"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Abattoirs & Slaughter Houses (Rental Valuation)"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Agricultural Research Centres"</Filter>
@@ -3916,178 +3916,178 @@
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Aquaria"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Archives"</Filter>
-            <PolygonSymbolizer fill="#fd00cf" />
-            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Boathouses"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Bus Garages (Contractors Valuation)"</Filter>
-            <PolygonSymbolizer fill="#808080" />
-            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Bus Garages (Rental Valuation)"</Filter>
-            <PolygonSymbolizer fill="#808080" />
-            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Business Units"</Filter>
-            <PolygonSymbolizer fill="#00ffa5" />
-            <LineSymbolizer stroke="#00ffa5" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Cafes"</Filter>
-            <PolygonSymbolizer fill="#ffee00" />
-            <LineSymbolizer stroke="#ffee00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Changing Rooms"</Filter>
-            <PolygonSymbolizer fill="#a7cdfe" />
-            <LineSymbolizer stroke="#a7cdfe" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Coastguard Stations"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Cold Stores (Contractors Valuation)"</Filter>
-            <PolygonSymbolizer fill="#808080" />
-            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Cold Stores (Rental Valuation)"</Filter>
-            <PolygonSymbolizer fill="#808080" />
-            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Courts (Contractors Valuation)"</Filter>
-            <PolygonSymbolizer fill="#ff9fbc" />
-            <LineSymbolizer stroke="#ff9fbc" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Courts (Rental Valuation)"</Filter>
-            <PolygonSymbolizer fill="#ff9fbc" />
-            <LineSymbolizer stroke="#ff9fbc" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Gymnasia/Fitness Suites"</Filter>
-            <PolygonSymbolizer fill="#a7cdfe" />
-            <LineSymbolizer stroke="#a7cdfe" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Hairdressing/Beauty Salons"</Filter>
             <PolygonSymbolizer fill="#ff6ad5" />
             <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Information/Visitor Centres"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
+            <Filter>[current_landuse_group_scat] = "Archives"</Filter>
+            <PolygonSymbolizer fill="#ff007c" />
+            <LineSymbolizer stroke="#ff007c" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Land Used for Display"</Filter>
-            <PolygonSymbolizer fill="#d4d4d4" />
-            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
+            <Filter>[current_landuse_group_scat] = "Boathouses"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Lifeboat Stations"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <Filter>[current_landuse_group_scat] = "Bus Garages (Contractors Valuation)"</Filter>
+            <PolygonSymbolizer fill="#00ffa5" />
+            <LineSymbolizer stroke="#00ffa5" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Miniature Railways"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <Filter>[current_landuse_group_scat] = "Bus Garages (Rental Valuation)"</Filter>
+            <PolygonSymbolizer fill="#00ffa5" />
+            <LineSymbolizer stroke="#00ffa5" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Pack Houses"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
+            <Filter>[current_landuse_group_scat] = "Business Units"</Filter>
+            <PolygonSymbolizer fill="#00b5ff" />
+            <LineSymbolizer stroke="#00b5ff" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Peat Fields"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <Filter>[current_landuse_group_scat] = "Cafes"</Filter>
+            <PolygonSymbolizer fill="#5c00ff" />
+            <LineSymbolizer stroke="#5c00ff" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Pet Grooming Parlours"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
+            <Filter>[current_landuse_group_scat] = "Changing Rooms"</Filter>
+            <PolygonSymbolizer fill="#f5f58f" />
+            <LineSymbolizer stroke="#f5f58f" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Pharmacies Within/Adjacent to Surgery/Health Centre"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
+            <Filter>[current_landuse_group_scat] = "Coastguard Stations"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Pitch and Putt/Putting Greens"</Filter>
+            <Filter>[current_landuse_group_scat] = "Cold Stores (Contractors Valuation)"</Filter>
+            <PolygonSymbolizer fill="#00ffa5" />
+            <LineSymbolizer stroke="#00ffa5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Cold Stores (Rental Valuation)"</Filter>
+            <PolygonSymbolizer fill="#00ffa5" />
+            <LineSymbolizer stroke="#00ffa5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Courts (Contractors Valuation)"</Filter>
+            <PolygonSymbolizer fill="#ffee00" />
+            <LineSymbolizer stroke="#ffee00" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Courts (Rental Valuation)"</Filter>
+            <PolygonSymbolizer fill="#ffee00" />
+            <LineSymbolizer stroke="#ffee00" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Gymnasia/Fitness Suites"</Filter>
+            <PolygonSymbolizer fill="#f5f58f" />
+            <LineSymbolizer stroke="#f5f58f" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Hairdressing/Beauty Salons"</Filter>
             <PolygonSymbolizer fill="#cb73ff" />
             <LineSymbolizer stroke="#cb73ff" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Pitches for Stalls, Sales or Promotions"</Filter>
-            <PolygonSymbolizer fill="#d4d4d4" />
-            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Police Training Colleges"</Filter>
+            <Filter>[current_landuse_group_scat] = "Information/Visitor Centres"</Filter>
             <PolygonSymbolizer fill="#ffc800" />
             <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Post Offices"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
+            <Filter>[current_landuse_group_scat] = "Land Used for Display"</Filter>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Pumping Mines"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <Filter>[current_landuse_group_scat] = "Lifeboat Stations"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Religious Retreats/Study Centres (Residential)"</Filter>
+            <Filter>[current_landuse_group_scat] = "Miniature Railways"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Pack Houses"</Filter>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Peat Fields"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Pet Grooming Parlours"</Filter>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Pharmacies Within/Adjacent to Surgery/Health Centre"</Filter>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Pitch and Putt/Putting Greens"</Filter>
             <PolygonSymbolizer fill="#7025a6" />
             <LineSymbolizer stroke="#7025a6" stroke-width="2.0"/>
         </Rule>
         <Rule>
+            <Filter>[current_landuse_group_scat] = "Pitches for Stalls, Sales or Promotions"</Filter>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Police Training Colleges"</Filter>
+            <PolygonSymbolizer fill="#808080" />
+            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Post Offices"</Filter>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Pumping Mines"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Religious Retreats/Study Centres (Residential)"</Filter>
+            <PolygonSymbolizer fill="#0077ff" />
+            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
             <Filter>[current_landuse_group_scat] = "Sales Offices"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Statutory Docks and Harbours (Formula)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Statutory Docks and Harbours (Non- Formula, Prescribed)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Statutory Docks and Harbours (Other)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Surgeries, Clinics, Health Centres (Contractors Valuation)"</Filter>
-            <PolygonSymbolizer fill="#4bffe8" />
-            <LineSymbolizer stroke="#4bffe8" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#e5050d" />
+            <LineSymbolizer stroke="#e5050d" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Surgeries, Clinics, Health Centres (Rental Valuation)"</Filter>
-            <PolygonSymbolizer fill="#4bffe8" />
-            <LineSymbolizer stroke="#4bffe8" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#e5050d" />
+            <LineSymbolizer stroke="#e5050d" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Telescope Sites"</Filter>
@@ -4096,418 +4096,418 @@
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "University - Ancillary Land or Buildings"</Filter>
-            <PolygonSymbolizer fill="#ffc800" />
-            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#808080" />
+            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "University Occupation Within Hospitals"</Filter>
-            <PolygonSymbolizer fill="#ffc800" />
-            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#808080" />
+            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Weighbridges"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Takeaway Food Outlet (Predominantly Off Premises)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Cafes/Restaurants Within/Part of Specialist Property"</Filter>
-            <PolygonSymbolizer fill="#ffee00" />
-            <LineSymbolizer stroke="#ffee00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#5c00ff" />
+            <LineSymbolizer stroke="#5c00ff" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Car Parking Within/Part of Specialist Property"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Garages Within/Part of Specialist Property"</Filter>
-            <PolygonSymbolizer fill="#808080" />
-            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#00ffa5" />
+            <LineSymbolizer stroke="#00ffa5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Gymnasia/Fitness Suites Within/Part of Specialist Property"</Filter>
-            <PolygonSymbolizer fill="#a7cdfe" />
-            <LineSymbolizer stroke="#a7cdfe" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#f5f58f" />
+            <LineSymbolizer stroke="#f5f58f" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Kiosks Within/Part of Specialist Property"</Filter>
-            <PolygonSymbolizer fill="#d4d4d4" />
-            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Nurseries/Creches Within/Part of Specialist Property"</Filter>
-            <PolygonSymbolizer fill="#ffc800" />
-            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#808080" />
+            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Offices Within/Part of Specialist Property"</Filter>
-            <PolygonSymbolizer fill="#00ffa5" />
-            <LineSymbolizer stroke="#00ffa5" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#00b5ff" />
+            <LineSymbolizer stroke="#00b5ff" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Salons/Clinics Within/Part of Specialist Property"</Filter>
-            <PolygonSymbolizer fill="#ff6ad5" />
-            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Shops Within/Part of Specialist Property"</Filter>
-            <PolygonSymbolizer fill="#ff6ad5" />
-            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Sports & Leisure Centres Within/Part of Specialist Property"</Filter>
-            <PolygonSymbolizer fill="#a7cdfe" />
-            <LineSymbolizer stroke="#a7cdfe" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Stores Within/Part of Specialist Property"</Filter>
-            <PolygonSymbolizer fill="#ff6ad5" />
-            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Warehouses Within/Part of Specialist Property"</Filter>
-            <PolygonSymbolizer fill="#808080" />
-            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Workshops Within/Part of Specialist Property"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Miscellaneous Within/Part of Specialist Property"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Sponsored Roundabout Advertising Displays"</Filter>
-            <PolygonSymbolizer fill="#d4d4d4" />
-            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Restaurant With Letting Accomodation"</Filter>
-            <PolygonSymbolizer fill="#ffee00" />
-            <LineSymbolizer stroke="#ffee00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Driving Standards Agency Centre"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Residual Shopping Mall"</Filter>
-            <PolygonSymbolizer fill="#d4d4d4" />
-            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Land Used For Seasonal Markets & Events"</Filter>
-            <PolygonSymbolizer fill="#d4d4d4" />
-            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Market Stall (Not Pitch)"</Filter>
-            <PolygonSymbolizer fill="#d4d4d4" />
-            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Advertising Displays On Pavements & Bus Shelters"</Filter>
-            <PolygonSymbolizer fill="#d4d4d4" />
-            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Advertising Displays At Superstores"</Filter>
-            <PolygonSymbolizer fill="#d4d4d4" />
-            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Advertising Displays From Phone Booths"</Filter>
-            <PolygonSymbolizer fill="#d4d4d4" />
-            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Dark Retailing/Internet Sites"</Filter>
-            <PolygonSymbolizer fill="#d4d4d4" />
-            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Residual Mall"</Filter>
-            <PolygonSymbolizer fill="#d4d4d4" />
-            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Advertising Displays From Agricultural Land"</Filter>
-            <PolygonSymbolizer fill="#d4d4d4" />
-            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Rail Freight Depots"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Bicycle Folding Box Site"</Filter>
-            <PolygonSymbolizer fill="#808080" />
-            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Rail Maintenance Depots"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Football Training Grounds"</Filter>
             <PolygonSymbolizer fill="#cb73ff" />
             <LineSymbolizer stroke="#cb73ff" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Cafe/Restaurants Within/Part of NonSpecialist Properties"</Filter>
-            <PolygonSymbolizer fill="#ffee00" />
-            <LineSymbolizer stroke="#ffee00" stroke-width="2.0"/>
+            <Filter>[current_landuse_group_scat] = "Shops Within/Part of Specialist Property"</Filter>
+            <PolygonSymbolizer fill="#cb73ff" />
+            <LineSymbolizer stroke="#cb73ff" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Delivery Box Site & Premises"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <Filter>[current_landuse_group_scat] = "Sports & Leisure Centres Within/Part of Specialist Property"</Filter>
+            <PolygonSymbolizer fill="#f5f58f" />
+            <LineSymbolizer stroke="#f5f58f" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Electric Charge Stations"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <Filter>[current_landuse_group_scat] = "Stores Within/Part of Specialist Property"</Filter>
+            <PolygonSymbolizer fill="#cb73ff" />
+            <LineSymbolizer stroke="#cb73ff" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Car Washes (Stand Alone - Hand Car Wash)"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "LPG Service Station"</Filter>
-            <PolygonSymbolizer fill="#d4d4d4" />
-            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Self Storage Facility"</Filter>
-            <PolygonSymbolizer fill="#808080" />
-            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Serviced Appartments"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Serviced Offices"</Filter>
+            <Filter>[current_landuse_group_scat] = "Warehouses Within/Part of Specialist Property"</Filter>
             <PolygonSymbolizer fill="#00ffa5" />
             <LineSymbolizer stroke="#00ffa5" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Street Points (eg Cycle Docking Stations)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <Filter>[current_landuse_group_scat] = "Workshops Within/Part of Specialist Property"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Park & Ride Car Parks"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Telecommunications Large Broadcast Sites"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Waste Anaerobic Digestion Plants"</Filter>
-            <PolygonSymbolizer fill="#ff5b00" />
-            <LineSymbolizer stroke="#ff5b00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Bagging Plant & Premises"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Renewable Generators - Mixed Technologies"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Biomass Biological (Crop & Slurry Based Anaerobic Digestors, Incl Gas to Grid)"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Biomass Thermal (Incl Combustion, Gasification and Pyrolysis)"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Click & Collect Locker Site"</Filter>
-            <PolygonSymbolizer fill="#808080" />
-            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Battery Store"</Filter>
-            <PolygonSymbolizer fill="#d4d4d4" />
-            <LineSymbolizer stroke="#d4d4d4" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Wedding and Function Venue"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Historic Property (National Trust/English Heritage)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Holiday Home Self Catering (Complexs)"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Ferry Terminal"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Builders Merchant"</Filter>
+            <Filter>[current_landuse_group_scat] = "Miscellaneous Within/Part of Specialist Property"</Filter>
             <PolygonSymbolizer fill="#ff6ad5" />
             <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Soccer Centres"</Filter>
-            <PolygonSymbolizer fill="#cb73ff" />
-            <LineSymbolizer stroke="#cb73ff" stroke-width="2.0"/>
+            <Filter>[current_landuse_group_scat] = "Sponsored Roundabout Advertising Displays"</Filter>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Secure Childrens Homes"</Filter>
-            <PolygonSymbolizer fill="#4bffe8" />
-            <LineSymbolizer stroke="#4bffe8" stroke-width="2.0"/>
+            <Filter>[current_landuse_group_scat] = "Restaurant With Letting Accomodation"</Filter>
+            <PolygonSymbolizer fill="#5c00ff" />
+            <LineSymbolizer stroke="#5c00ff" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Independent Gas Transport (IGT)"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Independent Distribution Network Operators (IDNO)"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Renewable Power Generators - Photovoltaic"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Renewable Power Generators – Wind"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Renewable Power Generators – Other"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Renewable Power Generators - Hydro"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Fossil Fuel Power Stations"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Nuclear Power Stations"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Underground Gas Storage Facility"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "NHS Clinics & Health Centres (Contractors)"</Filter>
-            <PolygonSymbolizer fill="#4bffe8" />
-            <LineSymbolizer stroke="#4bffe8" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "NHS Clinics & Health Centres (Rentals)"</Filter>
-            <PolygonSymbolizer fill="#4bffe8" />
-            <LineSymbolizer stroke="#4bffe8" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Surgeries (Other Than GP/NHS) (Contractors)"</Filter>
-            <PolygonSymbolizer fill="#4bffe8" />
-            <LineSymbolizer stroke="#4bffe8" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Surgeries (Other Than GP/NHS) (Rentals)"</Filter>
-            <PolygonSymbolizer fill="#4bffe8" />
-            <LineSymbolizer stroke="#4bffe8" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "GP Surgeries (Contractors)"</Filter>
-            <PolygonSymbolizer fill="#4bffe8" />
-            <LineSymbolizer stroke="#4bffe8" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "GP Surgeries (Rentals)"</Filter>
-            <PolygonSymbolizer fill="#4bffe8" />
-            <LineSymbolizer stroke="#4bffe8" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Equestrian Hospitals"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Commercial Miscellaneous"</Filter>
-            <PolygonSymbolizer fill="#00ff87" />
-            <LineSymbolizer stroke="#00ff87" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Leisure Miscellaneous"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Industrial Miscellaneous"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
-        </Rule>
-        <Rule>
-            <Filter>[current_landuse_group_scat] = "Educational Miscellaneous"</Filter>
+            <Filter>[current_landuse_group_scat] = "Driving Standards Agency Centre"</Filter>
             <PolygonSymbolizer fill="#ffc800" />
             <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
         </Rule>
         <Rule>
-            <Filter>[current_landuse_group_scat] = "Formula Assessed Miscellaneous"</Filter>
+            <Filter>[current_landuse_group_scat] = "Residual Shopping Mall"</Filter>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Land Used For Seasonal Markets & Events"</Filter>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Market Stall (Not Pitch)"</Filter>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Advertising Displays On Pavements & Bus Shelters"</Filter>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Advertising Displays At Superstores"</Filter>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Advertising Displays From Phone Booths"</Filter>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Dark Retailing/Internet Sites"</Filter>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Residual Mall"</Filter>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Advertising Displays From Agricultural Land"</Filter>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Rail Freight Depots"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Bicycle Folding Box Site"</Filter>
+            <PolygonSymbolizer fill="#00ffa5" />
+            <LineSymbolizer stroke="#00ffa5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Rail Maintenance Depots"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Football Training Grounds"</Filter>
+            <PolygonSymbolizer fill="#7025a6" />
+            <LineSymbolizer stroke="#7025a6" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Cafe/Restaurants Within/Part of NonSpecialist Properties"</Filter>
+            <PolygonSymbolizer fill="#5c00ff" />
+            <LineSymbolizer stroke="#5c00ff" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Delivery Box Site & Premises"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Electric Charge Stations"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Car Washes (Stand Alone - Hand Car Wash)"</Filter>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "LPG Service Station"</Filter>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Self Storage Facility"</Filter>
+            <PolygonSymbolizer fill="#00ffa5" />
+            <LineSymbolizer stroke="#00ffa5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Serviced Appartments"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Serviced Offices"</Filter>
+            <PolygonSymbolizer fill="#00b5ff" />
+            <LineSymbolizer stroke="#00b5ff" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Street Points (eg Cycle Docking Stations)"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Park & Ride Car Parks"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Telecommunications Large Broadcast Sites"</Filter>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Waste Anaerobic Digestion Plants"</Filter>
             <PolygonSymbolizer fill="#9aff00" />
             <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Bagging Plant & Premises"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Renewable Generators - Mixed Technologies"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Biomass Biological (Crop & Slurry Based Anaerobic Digestors, Incl Gas to Grid)"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Biomass Thermal (Incl Combustion, Gasification and Pyrolysis)"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Click & Collect Locker Site"</Filter>
+            <PolygonSymbolizer fill="#00ffa5" />
+            <LineSymbolizer stroke="#00ffa5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Battery Store"</Filter>
+            <PolygonSymbolizer fill="#a44603" />
+            <LineSymbolizer stroke="#a44603" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Wedding and Function Venue"</Filter>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Historic Property (National Trust/English Heritage)"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Holiday Home Self Catering (Complexs)"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Ferry Terminal"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Builders Merchant"</Filter>
+            <PolygonSymbolizer fill="#cb73ff" />
+            <LineSymbolizer stroke="#cb73ff" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Soccer Centres"</Filter>
+            <PolygonSymbolizer fill="#7025a6" />
+            <LineSymbolizer stroke="#7025a6" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Secure Childrens Homes"</Filter>
+            <PolygonSymbolizer fill="#e5050d" />
+            <LineSymbolizer stroke="#e5050d" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Independent Gas Transport (IGT)"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Independent Distribution Network Operators (IDNO)"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Renewable Power Generators - Photovoltaic"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Renewable Power Generators – Wind"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Renewable Power Generators – Other"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Renewable Power Generators - Hydro"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Fossil Fuel Power Stations"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Nuclear Power Stations"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Underground Gas Storage Facility"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "NHS Clinics & Health Centres (Contractors)"</Filter>
+            <PolygonSymbolizer fill="#e5050d" />
+            <LineSymbolizer stroke="#e5050d" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "NHS Clinics & Health Centres (Rentals)"</Filter>
+            <PolygonSymbolizer fill="#e5050d" />
+            <LineSymbolizer stroke="#e5050d" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Surgeries (Other Than GP/NHS) (Contractors)"</Filter>
+            <PolygonSymbolizer fill="#e5050d" />
+            <LineSymbolizer stroke="#e5050d" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Surgeries (Other Than GP/NHS) (Rentals)"</Filter>
+            <PolygonSymbolizer fill="#e5050d" />
+            <LineSymbolizer stroke="#e5050d" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "GP Surgeries (Contractors)"</Filter>
+            <PolygonSymbolizer fill="#e5050d" />
+            <LineSymbolizer stroke="#e5050d" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "GP Surgeries (Rentals)"</Filter>
+            <PolygonSymbolizer fill="#e5050d" />
+            <LineSymbolizer stroke="#e5050d" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Equestrian Hospitals"</Filter>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Commercial Miscellaneous"</Filter>
+            <PolygonSymbolizer fill="#ffc800" />
+            <LineSymbolizer stroke="#ffc800" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Leisure Miscellaneous"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Industrial Miscellaneous"</Filter>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Educational Miscellaneous"</Filter>
+            <PolygonSymbolizer fill="#808080" />
+            <LineSymbolizer stroke="#808080" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[current_landuse_group_scat] = "Formula Assessed Miscellaneous"</Filter>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Minerals Miscellaneous"</Filter>
-            <PolygonSymbolizer fill="#0077ff" />
-            <LineSymbolizer stroke="#0077ff" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#fd00cf" />
+            <LineSymbolizer stroke="#fd00cf" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Crown Miscellaneous"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
         <Rule>
             <Filter>[current_landuse_group_scat] = "Miscellaneous"</Filter>
-            <PolygonSymbolizer fill="#9aff00" />
-            <LineSymbolizer stroke="#9aff00" stroke-width="2.0"/>
+            <PolygonSymbolizer fill="#ff6ad5" />
+            <LineSymbolizer stroke="#ff6ad5" stroke-width="2.0"/>
         </Rule>
 
         <Rule>
