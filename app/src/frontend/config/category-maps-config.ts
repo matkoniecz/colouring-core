@@ -944,6 +944,35 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
             },
         },
         {
+            mapStyle: 'isic_level_one_display',
+            legend: {
+                title: 'ISIC level one',
+                elements: [
+                    { color: '#7025a6', text: 'Accommodation and food service activities' },
+                    { color: '#2ec54f', text: 'Administrative and support service activities' },
+                    { color: '#a44603', text: 'Agriculture, forestry and fishing' },
+                    { color: '#ff9fbc', text: 'Arts, sports and recreation' },
+                    { color: '#9aff00', text: 'Construction' },
+                    { color: '#d4d4d4', text: 'Education' },
+                    { color: '#4bffe8', text: 'Electricity, gas, steam and air conditioning supply' },
+                    { color: '#ff5b00', text: 'Financial and Insurance activities' },
+                    { color: '#f5f58f', text: 'Human health and social work activities' },
+                    { color: '#fd00cf', text: 'Manufacturing' },
+                    { color: '#ffee00', text: 'Mining and quarrying' },
+                    { color: '#a7cdfe', text: 'Other service activities' },
+                    { color: '#00b5ff', text: 'Other services activities' },
+                    { color: '#ffc800', text: 'Professional, scientific and technical activities' },
+                    { color: '#cb73ff', text: 'Public administration and defence; compulsory social security' },
+                    { color: '#808080', text: 'Publishing, broadcasting, and content production and distribution activities' },
+                    { color: '#e5050d', text: 'Real estate activities' },
+                    { color: '#00ff87', text: 'Telecommunications, computer programming, consultancy, computing infrastructure, and other information service activities' },
+                    { color: '#ff007c', text: 'Transportation and storage' },
+                    { color: '#0077ff', text: 'Water supply; sewerage; waste managment and remediation activities' },
+                    { color: '#ffdb66', text: 'Wholesale and retail trade' },
+                ]
+            },
+        },
+        {
             mapStyle: 'is_domestic',
             legend: {
                 title: 'Residential building',
