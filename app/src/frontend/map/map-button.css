@@ -123,6 +123,7 @@
 }
 
 .key-button-disabled {
+    color: #141619;
     background-color: lightgrey !important;
 }
 
