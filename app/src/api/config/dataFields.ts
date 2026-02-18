@@ -48,6 +48,17 @@ export interface DataFieldConfig {
 }
 
 export const buildingAttributesConfig = valueType<DataFieldConfig>()({ /* eslint-disable @typescript-eslint/camelcase */
+    date_source: {
+        edit: true,
+        verify: true,
+    },
+    date_source_detail: {
+        edit: true,
+    },
+    date_link: {
+        edit: true,
+        verify: true,
+    },
     ref_toid: {
         edit: false
     },
@@ -154,10 +165,6 @@ export const buildingAttributesConfig = valueType<DataFieldConfig>()({ /* eslint
         edit: true,
         verify: true,
     },
-    date_link: {
-        edit: true,
-        verify: true,
-    },
     date_year_inferred: {
         edit: true,
         verify: true,
@@ -171,10 +178,6 @@ export const buildingAttributesConfig = valueType<DataFieldConfig>()({ /* eslint
         verify: true,
     },
     date_source_type: {
-        edit: true,
-        verify: true,
-    },
-    date_source: {
         edit: true,
         verify: true,
     },
