@@ -61,18 +61,18 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
             },
         },
         {
-            mapStyle: 'age_inferred',
+            mapStyle: 'age_epc_estimated',
             legend: {
-                disclaimer: 'This map shows age data that has been automatically inferred from other kinds of data. For example, for London, historical street networks data are used.',
-                title: 'Age (Automatically inferred)',
+                disclaimer: 'This map shows age based on official 2025 EPC data, required for new, sold and rented residential buildings.',
+                title: 'Age (Official data - EPCs)',
                 elements: ageLegend,
             },
         },
         {
-            mapStyle: 'age_epc_estimated',
+            mapStyle: 'age_inferred',
             legend: {
-                disclaimer: 'This map shows age based on official 2025 EPC data, required for new, sold and rented residential buildings.',
-                title: 'Age (Official data from EPCs)',
+                disclaimer: 'This map shows age data that has been automatically inferred from other kinds of data. For example, for London, historical street networks data are used.',
+                title: 'Age (Automatically inferred)',
                 elements: ageLegend,
             },
         },
