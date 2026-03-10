@@ -666,6 +666,18 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
     ],
     [Category.TypologySize]: [
         {
+            mapStyle: 'building_attachment_form',
+            legend: {
+                title: 'Attachment/Adjacency',
+                elements: [
+                    { color: "#f2a2b9", text: "Detached" },
+                    { color: "#ab8fb0", text: "Semi-Detached" },
+                    { color: "#3891d1", text: "End-Terrace" },
+                    { color: "#226291", text: "Mid-Terrace" }
+                ]
+            },
+        },
+        {
             mapStyle: 'typology_classification',
             legend: {
                 title: 'Historical Period/Description',
@@ -713,18 +725,6 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
                     { color: '#a44603', text: 'Minerals' },
                     { color: '#ffffff', text: 'Vacant & Derelict' },
                     { color: '#6c6f8e', text: 'Unclassified, presumed non-residential' }
-                ]
-            },
-        },
-        {
-            mapStyle: 'building_attachment_form',
-            legend: {
-                title: 'Attachment/Adjacency',
-                elements: [
-                    { color: "#f2a2b9", text: "Detached" },
-                    { color: "#ab8fb0", text: "Semi-Detached" },
-                    { color: "#3891d1", text: "End-Terrace" },
-                    { color: "#226291", text: "Mid-Terrace" }
                 ]
             },
         },
