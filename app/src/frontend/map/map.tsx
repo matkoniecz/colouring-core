@@ -164,7 +164,7 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                     <AerialPhotosMapLayer revisionId={revisionId} />
                     <BoroughBoundaryLayer/>
                     <ParcelBoundaryLayer/>
-                    <FloodBoundaryLayer/>
+                    <FloodBoundaryLayer enabledOverride={mapColourScale === "disaster_severity" || mapColourScale === "dynamics_demolished_count" } />
                     <VistaBoundaryLayer/>
                     <CeremonialCountiesLayer/>
                     <RegionsLayer/>
@@ -203,10 +203,10 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                 <ThemeSwitcher onSubmit={darkLightThemeSwitch} currentTheme={darkLightTheme} />
                 <DataLayerSwitcher />
                 {
-                    (showLayerSelection == "enabled") ?
+                    (showLayerSelection == "enabled" || mapColourScale === "disaster_severity" || mapColourScale === "dynamics_demolished_count") ?
                     <>
                         <ParcelSwitcher/>
-                        <FloodSwitcher/>
+                        <FloodSwitcher enabledOverride={mapColourScale === "disaster_severity" || mapColourScale === "dynamics_demolished_count"}/>
                         <ConservationAreaSwitcher/>
                         <WorldHeritageSitesSwitcher/>
                         { /* <HistoricMapSwitcher/> */ }
