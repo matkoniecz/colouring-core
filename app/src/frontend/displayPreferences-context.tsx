@@ -97,6 +97,14 @@ interface DisplayPreferencesContextState {
     showLayerSelection: LayerEnablementState;
     showLayerSelectionSwitch: (e: React.FormEvent<HTMLFormElement>) => void;
     showLayerSelectionSwitchOnClick: React.MouseEventHandler<HTMLButtonElement>;
+
+    trees: LayerEnablementState;
+    treesSwitch: (e: React.FormEvent<HTMLFormElement>) => void;
+    treesSwitchOnClick: React.MouseEventHandler<HTMLButtonElement>;
+
+    treesFull: LayerEnablementState;
+    treesFullSwitch: (e: React.FormEvent<HTMLFormElement>) => void;
+    treesFullSwitchOnClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 const stub = (): never => {
@@ -198,6 +206,14 @@ export const DisplayPreferencesContext = createContext<DisplayPreferencesContext
     showLayerSelection: undefined,
     showLayerSelectionSwitch: stub,
     showLayerSelectionSwitchOnClick: undefined,
+
+    trees: undefined,
+    treesSwitch: stub,
+    treesSwitchOnClick: undefined,
+
+    treesFull: undefined,
+    treesFullSwitch: stub,
+    treesFullSwitchOnClick: undefined,
 });
 
 const noop = () => {};
@@ -225,6 +241,8 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
     const defaultOpenStreetMap = 'disabled'
     const defaultEditableBuildings = 'enabled'
     const defaultShowLayerSelection = 'disabled'
+    const defaultTrees = 'disabled'
+    const defaultTreesFull = 'disabled'
     const [vista, setVista] = useState<LayerEnablementState>(defaultVista);
     const [streetLights, setStreetLights] = useState<LayerEnablementState>(defaultStreetLights);
     const [flood, setFlood] = useState<LayerEnablementState>(defaultFlood);
@@ -248,6 +266,8 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
     const [editableBuildings, setEditableBuildings] = useState<LayerEnablementState>(defaultEditableBuildings);
     const [darkLightTheme, setDarkLightTheme] = useState<MapTheme>('night');
     const [showLayerSelection, setShowLayerSelection] = useState<LayerEnablementState>(defaultShowLayerSelection);
+    const [trees, setTrees] = useState<LayerEnablementState>(defaultTrees);
+    const [treesFull, setTreesFull] = useState<LayerEnablementState>(defaultTreesFull);
 
     const showOverlayList = useCallback(
         (e) => {
@@ -280,6 +300,8 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
             setMotorways(defaultMotorways);
             setEditableBuildings(defaultEditableBuildings)
             setShowLayerSelection(defaultShowLayerSelection); // reset layers + hiding this panel is integrated into one action
+            setTrees(defaultTrees);
+            setTreesFull(defaultTreesFull);
             //setDarkLightTheme('night'); // reset only layers
     },
         []
@@ -341,6 +363,12 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
             return true;
         }
         if(greenbelt != defaultGreenbelt) {
+            return true;
+        }
+        if(trees != defaultTrees) {
+            return true;
+        }
+        if(treesFull != defaultTreesFull) {
             return true;
         }
         if(openStreetMap != defaultOpenStreetMap) {
@@ -703,6 +731,35 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
         const newGreenbelt = (greenbelt === 'enabled')? 'disabled' : 'enabled';
         setGreenbelt(newGreenbelt);
     }
+    const treesSwitch = useCallback(
+        (e) => {
+            flipTrees(e)
+        },
+        [trees],
+    )
+    const treesSwitchOnClick = (e) => {
+        flipTrees(e)
+    }
+    function flipTrees(e) {
+        e.preventDefault();
+        const newTrees = (trees === 'enabled')? 'disabled' : 'enabled';
+        setTrees(newTrees);
+    }
+    
+    const treesFullSwitch = useCallback(
+        (e) => {
+            flipTreesFull(e)
+        },
+        [treesFull],
+    )
+    const treesFullSwitchOnClick = (e) => {
+        flipTreesFull(e)
+    }
+    function flipTreesFull(e) {
+        e.preventDefault();
+        const newTreesFull = (treesFull === 'enabled')? 'disabled' : 'enabled';
+        setTreesFull(newTreesFull);
+    }
 
     const darkLightThemeSwitch = useCallback(
         (e) => {
@@ -809,6 +866,14 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
             greenbeltSwitch,
             greenbeltSwitchOnClick,
 
+            trees,
+            treesSwitch,
+            treesSwitchOnClick,
+
+            treesFull,
+            treesFullSwitch,
+            treesFullSwitchOnClick,
+            
             openStreetMap,
             openStreetMapSwitch,
             openStreetMapSwitchOnClick,

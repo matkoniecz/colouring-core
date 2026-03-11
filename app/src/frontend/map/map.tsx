@@ -36,6 +36,7 @@ import { BuildingNumbersLayer } from './layers/building-numbers-layer';
 import { BuildingHighlightLayer } from './layers/building-highlight-layer';
 import { HistoricalFootprintsLayer } from './layers/historical-footprints-layer';
 import { GreenbeltLayer } from './layers/greenbelt-layer';
+import { TreesLayer } from './layers/trees-layer';
 
 import { Legend } from './legend';
 import SearchBox from './search-box';
@@ -61,6 +62,7 @@ import { CreativeSwitcher } from './creative-switcher';
 import { HousingSwitcher } from './housing-switcher';
 import { GreenbeltSwitcher } from './greenbelt-switcher';
 import { EditableBuildingsSwitcher } from './editable-buildings-switcher';
+import { TreesSwitcher } from './trees-switcher';
 import { BuildingMapTileset } from '../config/tileserver-config';
 import { useDisplayPreferences } from '../displayPreferences-context';
 import { CategoryMapDefinition } from '../config/category-maps-config';
@@ -167,6 +169,7 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                     <BoroughBoundaryLayer/>
                     <ParcelBoundaryLayer/>
                     <FloodBoundaryLayer enabledOverride={mapColourScale === "disaster_severity" || mapColourScale === "dynamics_demolished_count" } />
+                    <TreesLayer/>
                     <VistaBoundaryLayer/>
                     <StreetLightsLayer initialMapViewport={initialMapViewport.zoom} enabledOverride={ mapColourScale === undefined }/>
                     <CeremonialCountiesLayer/>
@@ -227,6 +230,7 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                         <AerialPhotosMapSwitcher/>
                         <EditableBuildingsSwitcher />
                         <OpenStreetMapSwitcher />
+                        <TreesSwitcher />
                     </>
                     : <></>
                 }
