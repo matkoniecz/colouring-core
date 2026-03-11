@@ -10,7 +10,7 @@
             <form className={`map-button ${trees}-state ${darkLightTheme}`} onSubmit={treesSwitch}>
                 <button className="btn btn-outline btn-outline-dark"
                     type="submit">
-                    {(trees === 'enabled')? 'trees on' : 'trees off'}
+                    {(trees === 'enabled')? 'Trees [on]' : 'Trees [off]'}
                 </button>
             </form>
         );

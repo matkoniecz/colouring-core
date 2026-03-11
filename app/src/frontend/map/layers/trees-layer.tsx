@@ -17,7 +17,7 @@ export function TreesLayer() {
     if(trees == "enabled") {
         return treesGeojson &&
         <GeoJSON 
-        attribution='TODO attribution'
+        attribution='<a href="https://arxiv.org/abs/2510.13861">Andrés Camilo Zúñiga-González, Anil Madhavapeddy, Ronita Bardhan</a>'
         data={treesGeojson}
         style={{color: '#0f0', fill: true, weight: 1, opacity: 0.6}}
     />;
