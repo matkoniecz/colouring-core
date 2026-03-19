@@ -10,6 +10,10 @@ interface DisplayPreferencesContextState {
     vistaSwitch: (e: React.FormEvent<HTMLFormElement>) => void;
     vistaSwitchOnClick: React.MouseEventHandler<HTMLButtonElement>;
 
+    streetLights: LayerEnablementState;
+    streetLightsSwitch: (e: React.FormEvent<HTMLFormElement>) => void;
+    streetLightsSwitchOnClick: React.MouseEventHandler<HTMLButtonElement>;
+
     flood: LayerEnablementState;
     floodSwitch: (e: React.FormEvent<HTMLFormElement>) => void;
     floodSwitchOnClick: React.MouseEventHandler<HTMLButtonElement>;
@@ -107,6 +111,10 @@ export const DisplayPreferencesContext = createContext<DisplayPreferencesContext
     vistaSwitch: stub,
     vistaSwitchOnClick: undefined,
 
+    streetLights: undefined,
+    streetLightsSwitch: stub,
+    streetLightsSwitchOnClick: undefined,
+
     flood: undefined,
     floodSwitch: stub,
     floodSwitchOnClick: undefined,
@@ -196,6 +204,7 @@ const noop = () => {};
 
 export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
     const defaultVista = 'disabled'
+    const defaultStreetLights = 'disabled'
     const defaultFlood = 'disabled'
     const defaultCreative = 'disabled'
     const defaultHousing = 'disabled'
@@ -217,6 +226,7 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
     const defaultEditableBuildings = 'enabled'
     const defaultShowLayerSelection = 'disabled'
     const [vista, setVista] = useState<LayerEnablementState>(defaultVista);
+    const [streetLights, setStreetLights] = useState<LayerEnablementState>(defaultStreetLights);
     const [flood, setFlood] = useState<LayerEnablementState>(defaultFlood);
     const [creative, setCreative] = useState<LayerEnablementState>(defaultCreative);
     const [housing, setHousing] = useState<LayerEnablementState>(defaultHousing);
@@ -250,6 +260,7 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
         (e) => {
             setOpenStreetMapMap(defaultOpenStreetMap);
             setVista(defaultVista);
+            setStreetLights(defaultStreetLights);
             setFlood(defaultFlood);
             setCreative(defaultCreative);
             setHousing(defaultHousing);
@@ -276,6 +287,9 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
 
     function anyLayerModifiedState() {
         if(vista != defaultVista) {
+            return true;
+        }
+        if(streetLights != defaultStreetLights) {
             return true;
         }
         if(flood != defaultFlood) {
@@ -353,6 +367,21 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
             e.preventDefault();
             const newVista = (vista === 'enabled')? 'disabled' : 'enabled';
             setVista(newVista);
+    }
+
+    const streetLightsSwitch = useCallback(
+        (e) => {
+            flipStreetLights(e)
+        },
+        [streetLights],
+    )
+    const streetLightsSwitchOnClick = (e) => {
+        flipStreetLights(e)
+    }
+    function flipStreetLights(e) {
+        e.preventDefault();
+        const newStreetLights = (streetLights === 'enabled')? 'disabled' : 'enabled';
+        setStreetLights(newStreetLights);
     }
 
     const floodSwitch = useCallback(
@@ -714,6 +743,9 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
             vista,
             vistaSwitch,
             vistaSwitchOnClick,
+            streetLights,
+            streetLightsSwitch,
+            streetLightsSwitchOnClick,
             flood,
             floodSwitch,
             floodSwitchOnClick,

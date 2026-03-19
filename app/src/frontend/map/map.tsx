@@ -13,6 +13,7 @@ import { CityBaseMapLayer } from './layers/city-base-map-layer';
 import { BoroughBoundaryLayer } from './layers/borough-boundary-layer';
 import { BoroughLabelLayer } from './layers/borough-label-layer';
 import { RegionLabelLayer } from './layers/region-label-layer';
+import { StreetLightsLayer } from './layers/street-lights-layer';
 import { ParcelBoundaryLayer } from './layers/parcel-boundary-layer';
 import { HistoricDataLayer } from './layers/historic-data-layer';
 import { HistoricMapLayer } from './layers/historic-map-layer';
@@ -41,6 +42,7 @@ import SearchBox from './search-box';
 import ThemeSwitcher from './theme-switcher';
 import DataLayerSwitcher from './data-switcher';
 import { BoroughSwitcher } from './borough-switcher';
+import { StreetLightsSwitcher } from './street-lights-switcher';
 import { ParcelSwitcher } from './parcel-switcher';
 import { FloodSwitcher } from './flood-switcher';
 import { ConservationAreaSwitcher } from './conservation-switcher';
@@ -166,6 +168,7 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                     <ParcelBoundaryLayer/>
                     <FloodBoundaryLayer enabledOverride={mapColourScale === "disaster_severity" || mapColourScale === "dynamics_demolished_count" } />
                     <VistaBoundaryLayer/>
+                    <StreetLightsLayer initialMapViewport={initialMapViewport.zoom}/>
                     <CeremonialCountiesLayer/>
                     <RegionsLayer/>
                     <GreenbeltLayer/>
@@ -213,6 +216,7 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                         { /* <HistoricDataSwitcher/> */ }
                         { /* <HistoricMapLeicestershireSwitcher/> */ }
                         <VistaSwitcher />
+                        <StreetLightsSwitcher/>
                         <HousingSwitcher />
                         <CreativeSwitcher />
                         <RegionsSwitcher />
