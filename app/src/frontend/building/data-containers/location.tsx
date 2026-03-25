@@ -42,6 +42,13 @@ const LocationView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     Building footprints are an essential component of Colouring {config.cityName} and are used data capture, collation, verification & visualisation.
                     </i>
                 </div>
+                {props.building.ref_toid === null ? <></> :
+                    <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
+                    <i>
+                    {props.building.ref_toid.slice(0, 4) == "osgb" ? "Selected building footprint is from OSMM" : (props.building.ref_toid.slice(0, 19) == "inspire+local_ntrsc" ? "Selected building footprint is from INSPIRE/OS Local Map intersection." : "")}
+                    </i>
+                    </div>
+                }
                 <NumericDataEntry
                     title={dataFields.location_latitude.title}
                     slug="location_latitude"
