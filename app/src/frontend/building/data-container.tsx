@@ -372,6 +372,11 @@ const withCopyEdit: (wc: React.ComponentType<CategoryViewProps>) => DataContaine
                         : 
                         "" 
                     }
+                    {(this.props.title === "Urban Infrastructure Context") ? 
+                        "Helllo!" 
+                        : 
+                        "" 
+                    }
                 </InfoBox>
                 <EditHistoryLatest
                     building={this.props.building}
