@@ -42,13 +42,53 @@ const LocationView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     Building footprints are an essential component of Colouring {config.cityName} and are used data capture, collation, verification & visualisation.
                     </i>
                 </div>
+        <div className="data-title">
+            <div className="data-title-text">
+                <label>
+                    You are viewing this building footprint dataset:
+                </label>
+            </div>
+        </div>
                 {props.building.ref_toid === null ? <></> :
                     <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
                     <i>
-                    {props.building.ref_toid.slice(0, 4) == "osgb" ? "Selected building footprint is from OSMM" : (props.building.ref_toid.slice(0, 19) == "inspire+local_ntrsc" ? "Selected building footprint is from INSPIRE/OS Local Map intersection." : "")}
+                    {props.building.ref_toid.slice(0, 4) === "osgb" ? "Selected building footprint is from Ordance Survey Master Map" : (props.building.ref_toid.slice(0, 19) === "inspire+local_ntrsc" ? "Selected building footprint is from INSPIRE/OS Local Map intersection." : "")}
                     </i>
                     </div>
                 }
+                <SelectDataEntry
+                    title="You are viewing this type of building footprint dataset"
+                    slug="not_applicable"
+                    value={props.building.ref_toid.slice(0, 4) === "osgb" ? "Official government" : "Academic"}
+                    disabled={true}
+                    mode={props.mode}
+                    onChange={props.onChange}
+                    tooltip={null}
+                    placeholder={props.building.ref_toid.slice(0, 4) === "osgb" ? "Official government" : "Academic"}
+                    options={["Official government", "Academic"]}
+                    />
+                <MultiDataEntry
+                    title="Building footprint dataset link:"
+                    slug="not_applicable"
+                    value={props.building.ref_toid.slice(0, 4) === "osgb" ? ["https://www.ordnancesurvey.co.uk/customers/public-sector/os-data-hub-public-sector", "https://www.ordnancesurvey.co.uk/products/os-mastermap-topography-layer"] : ["https://use-land-property-data.service.gov.uk/datasets/inspire/download", "https://osdatahub.os.uk/downloads/open/OpenMapLocal"]}
+                    mode={props.mode}
+                    onChange={props.onChange}
+                    tooltip={dataFields.location_coordinates_links.tooltip}
+                    placeholder="https://..."
+                    editableEntries={false}
+                    isUrl={true}
+                />
+                <MultiDataEntry
+                    title="Footprint method link:"
+                    slug="not_applicable"
+                    value={props.building.ref_toid.slice(0, 4) === "osgb" ? ["https://docs.os.uk/os-downloads/products/maps-and-imagery-portfolio/os-mastermap-topography-layer/os-mastermap-topography-layer-technical-specification"] : ["https://github.com/colouring-cities/manual/wiki/G2.-BUILDING-FOOTPRINTS-SOURCES"]}
+                    mode={props.mode}
+                    onChange={props.onChange}
+                    tooltip={dataFields.location_coordinates_links.tooltip}
+                    placeholder="https://..."
+                    editableEntries={false}
+                    isUrl={true}
+                />
                 <NumericDataEntry
                     title={dataFields.location_latitude.title}
                     slug="location_latitude"
