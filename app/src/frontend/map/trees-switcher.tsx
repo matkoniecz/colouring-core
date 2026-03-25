@@ -4,13 +4,13 @@
     import './map-button.css';
     import { useDisplayPreferences } from '../displayPreferences-context';
 
-    export const TreesSwitcher: React.FC<{}> = () => {
+    export function TreesSwitcher({enabledOverride}: {enabledOverride: boolean}) {
         const { trees, treesSwitch, darkLightTheme } = useDisplayPreferences();
         return (
-            <form className={`map-button ${trees}-state ${darkLightTheme}`} onSubmit={treesSwitch}>
+            <form className={`map-button ${(trees === 'enabled' || enabledOverride) ? 'enabled' : 'disabled'}-state ${darkLightTheme}`} onSubmit={treesSwitch}>
                 <button className="btn btn-outline btn-outline-dark"
                     type="submit">
-                    {(trees === 'enabled')? 'Trees [on]' : 'Trees [off]'}
+                    {(trees === 'enabled' || enabledOverride)? 'Trees [on]' : 'Trees [off]'}
                 </button>
             </form>
         );

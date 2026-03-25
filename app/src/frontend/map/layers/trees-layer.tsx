@@ -5,7 +5,7 @@ import { GeoJSON } from 'react-leaflet';
 import { apiGet } from '../../apiHelpers';
 import { useDisplayPreferences } from '../../displayPreferences-context';
 
-export function TreesLayer() {
+export function TreesLayer({enabledOverride}: {enabledOverride: boolean}) {
     const [treesGeojson, setTreesGeojson] = useState<GeoJsonObject>(null);
     const { trees } = useDisplayPreferences();
 
@@ -14,7 +14,7 @@ export function TreesLayer() {
             .then(data => setTreesGeojson(data as GeoJsonObject));
     }, []);
 
-    if(trees == "enabled") {
+    if(trees == "enabled" || enabledOverride) {
         return treesGeojson &&
         <GeoJSON 
         attribution='<a href="https://arxiv.org/abs/2510.13861">Andrés Camilo Zúñiga-González, Anil Madhavapeddy, Ronita Bardhan</a>'

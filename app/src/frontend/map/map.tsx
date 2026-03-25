@@ -169,7 +169,7 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                     <BoroughBoundaryLayer/>
                     <ParcelBoundaryLayer/>
                     <FloodBoundaryLayer enabledOverride={mapColourScale === "disaster_severity" || mapColourScale === "dynamics_demolished_count" } />
-                    <TreesLayer/>
+                    <TreesLayer enabledOverride={mapColourScale === "context_back_garden" || mapColourScale === "energy_green_roof"}/>
                     <VistaBoundaryLayer/>
                     <StreetLightsLayer initialMapViewport={initialMapViewport.zoom} enabledOverride={ mapColourScale === undefined }/>
                     <CeremonialCountiesLayer/>
@@ -209,7 +209,7 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                 <ThemeSwitcher onSubmit={darkLightThemeSwitch} currentTheme={darkLightTheme} />
                 <DataLayerSwitcher />
                 {
-                    (showLayerSelection == "enabled" || mapColourScale === "disaster_severity" || mapColourScale === "dynamics_demolished_count" || mapColourScale === undefined) ?
+                    (showLayerSelection == "enabled" || mapColourScale === "disaster_severity" || mapColourScale === "dynamics_demolished_count" || mapColourScale === undefined || mapColourScale === "context_back_garden" || mapColourScale === "energy_green_roof") ?
                     <>
                         <ParcelSwitcher/>
                         <FloodSwitcher enabledOverride={mapColourScale === "disaster_severity" || mapColourScale === "dynamics_demolished_count"}/>
@@ -230,7 +230,7 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                         <AerialPhotosMapSwitcher/>
                         <EditableBuildingsSwitcher />
                         <OpenStreetMapSwitcher />
-                        <TreesSwitcher />
+                        <TreesSwitcher enabledOverride={mapColourScale === "context_back_garden" || mapColourScale === "energy_green_roof"} />
                     </>
                     : <></>
                 }
