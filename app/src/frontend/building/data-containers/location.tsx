@@ -51,13 +51,11 @@ const LocationView: React.FunctionComponent<CategoryViewProps> = (props) => {
         </div>
                 {props.building.ref_toid === null ? <></> :
                     <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
-                    <i>
-                    {props.building.ref_toid.slice(0, 4) === "osgb" ? "Selected building footprint is from Ordance Survey Master Map" : (props.building.ref_toid.slice(0, 19) === "inspire+local_ntrsc" ? "Selected building footprint is from INSPIRE/OS Local Map intersection." : "")}
-                    </i>
+                    {props.building.ref_toid.slice(0, 4) === "osgb" ? "Ordnance Survey Master Map" : (props.building.ref_toid.slice(0, 19) === "inspire+local_ntrsc" ? "INSPIRE/OS Local Map intersection" : "")}
                     </div>
                 }
                 <SelectDataEntry
-                    title="You are viewing this type of building footprint dataset"
+                    title="Building footprint dataset type:"
                     slug="not_applicable"
                     value={props.building.ref_toid.slice(0, 4) === "osgb" ? "Official government" : "Academic"}
                     disabled={true}
@@ -68,7 +66,7 @@ const LocationView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     options={["Official government", "Academic"]}
                     />
                 <MultiDataEntry
-                    title="Building footprint dataset link:"
+                    title="Building footprint type links:"
                     slug="not_applicable"
                     value={props.building.ref_toid.slice(0, 4) === "osgb" ? ["https://www.ordnancesurvey.co.uk/customers/public-sector/os-data-hub-public-sector", "https://www.ordnancesurvey.co.uk/products/os-mastermap-topography-layer"] : ["https://use-land-property-data.service.gov.uk/datasets/inspire/download", "https://osdatahub.os.uk/downloads/open/OpenMapLocal"]}
                     mode={props.mode}
@@ -79,7 +77,7 @@ const LocationView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     isUrl={true}
                 />
                 <MultiDataEntry
-                    title="Footprint method link:"
+                    title="Building footprint method link:"
                     slug="not_applicable"
                     value={props.building.ref_toid.slice(0, 4) === "osgb" ? ["https://docs.os.uk/os-downloads/products/maps-and-imagery-portfolio/os-mastermap-topography-layer/os-mastermap-topography-layer-technical-specification"] : ["https://github.com/colouring-cities/manual/wiki/G2.-BUILDING-FOOTPRINTS-SOURCES"]}
                     mode={props.mode}
