@@ -39,7 +39,7 @@ const LocationView: React.FunctionComponent<CategoryViewProps> = (props) => {
             <DataEntryGroup name="Building Footprints Sources" collapsed={subcat==null || subcat!="4"}>
             <div className={`alert alert-dark`} role="alert" style={{ fontSize: 13, backgroundColor: "#f6f8f9" }}>
                     <i>
-                    Building footprints are an essential component of Colouring {config.cityName} and are used data capture, collation, verification & visualisation.
+                    Building footprints are an essential component of Colouring {config.cityName} and are used for data capture, collation, verification & visualisation.
                     </i>
                 </div>
         <div className="data-title">
