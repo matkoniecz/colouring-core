@@ -168,7 +168,7 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                     <ParcelBoundaryLayer/>
                     <FloodBoundaryLayer enabledOverride={mapColourScale === "disaster_severity" || mapColourScale === "dynamics_demolished_count" } />
                     <VistaBoundaryLayer/>
-                    <StreetLightsLayer initialMapViewport={initialMapViewport.zoom}/>
+                    <StreetLightsLayer initialMapViewport={initialMapViewport.zoom} enabledOverride={ mapColourScale === undefined }/>
                     <CeremonialCountiesLayer/>
                     <RegionsLayer/>
                     <GreenbeltLayer/>
@@ -206,7 +206,7 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                 <ThemeSwitcher onSubmit={darkLightThemeSwitch} currentTheme={darkLightTheme} />
                 <DataLayerSwitcher />
                 {
-                    (showLayerSelection == "enabled" || mapColourScale === "disaster_severity" || mapColourScale === "dynamics_demolished_count") ?
+                    (showLayerSelection == "enabled" || mapColourScale === "disaster_severity" || mapColourScale === "dynamics_demolished_count" || mapColourScale === undefined) ?
                     <>
                         <ParcelSwitcher/>
                         <FloodSwitcher enabledOverride={mapColourScale === "disaster_severity" || mapColourScale === "dynamics_demolished_count"}/>
@@ -216,7 +216,7 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                         { /* <HistoricDataSwitcher/> */ }
                         { /* <HistoricMapLeicestershireSwitcher/> */ }
                         <VistaSwitcher />
-                        <StreetLightsSwitcher/>
+                        <StreetLightsSwitcher enabledOverride={ mapColourScale === undefined } />
                         <HousingSwitcher />
                         <CreativeSwitcher />
                         <RegionsSwitcher />

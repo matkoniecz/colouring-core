@@ -6,7 +6,7 @@ import { useDisplayPreferences } from '../../displayPreferences-context';
 import { apiGet } from '../../apiHelpers';
 import { useMapEvents } from 'react-leaflet';
 
-export function StreetLightsLayer({initialMapViewport}: {initialMapViewport: number}) {
+export function StreetLightsLayer({initialMapViewport, enabledOverride}: {initialMapViewport: number, enabledOverride: Boolean}) {
     const [streetLightsGeojson, setStreetLightsGeojson] = useState<GeoJsonObject | null>(null);
     const [zoom, setZoom] = useState<number>(initialMapViewport);
     const { streetLights } = useDisplayPreferences();
@@ -27,7 +27,7 @@ export function StreetLightsLayer({initialMapViewport}: {initialMapViewport: num
             : { radius: 0.5, color: '#ffff90', fillOpacity: 1, weight: 0, opacity: 1, fill: true }
         );
 
-    if (streetLights !== "enabled" || !streetLightsGeojson) return null;
+    if (enabledOverride == false && (streetLights !== "enabled" || !streetLightsGeojson)) return null;
 
     function isHigh(zoom){
         return zoom > 15
