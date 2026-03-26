@@ -14,6 +14,14 @@ interface DisplayPreferencesContextState {
     streetLightsSwitch: (e: React.FormEvent<HTMLFormElement>) => void;
     streetLightsSwitchOnClick: React.MouseEventHandler<HTMLButtonElement>;
 
+    demolishedOverlay: LayerEnablementState;
+    demolishedOverlaySwitch: (e: React.FormEvent<HTMLFormElement>) => void;
+    demolishedOverlaySwitchOnClick: React.MouseEventHandler<HTMLButtonElement>;
+
+    newConstructionOverlay: LayerEnablementState;
+    newConstructionOverlaySwitch: (e: React.FormEvent<HTMLFormElement>) => void;
+    newConstructionOverlaySwitchOnClick: React.MouseEventHandler<HTMLButtonElement>;
+
     flood: LayerEnablementState;
     floodSwitch: (e: React.FormEvent<HTMLFormElement>) => void;
     floodSwitchOnClick: React.MouseEventHandler<HTMLButtonElement>;
@@ -123,6 +131,14 @@ export const DisplayPreferencesContext = createContext<DisplayPreferencesContext
     streetLightsSwitch: stub,
     streetLightsSwitchOnClick: undefined,
 
+    demolishedOverlay: undefined,
+    demolishedOverlaySwitch: stub,
+    demolishedOverlaySwitchOnClick: undefined,
+
+    newConstructionOverlay: undefined,
+    newConstructionOverlaySwitch: stub,
+    newConstructionOverlaySwitchOnClick: undefined,
+
     flood: undefined,
     floodSwitch: stub,
     floodSwitchOnClick: undefined,
@@ -221,6 +237,8 @@ const noop = () => {};
 export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
     const defaultVista = 'disabled'
     const defaultStreetLights = 'disabled'
+    const defaultDemolishedOverlay = 'disabled'
+    const defaultNewConstructionOverlay = 'disabled'
     const defaultFlood = 'disabled'
     const defaultCreative = 'disabled'
     const defaultHousing = 'disabled'
@@ -245,6 +263,8 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
     const defaultTreesFull = 'disabled'
     const [vista, setVista] = useState<LayerEnablementState>(defaultVista);
     const [streetLights, setStreetLights] = useState<LayerEnablementState>(defaultStreetLights);
+    const [demolishedOverlay, setDemolishedOverlay] = useState<LayerEnablementState>(defaultDemolishedOverlay);
+    const [newConstructionOverlay, setNewConstructionOverlay] = useState<LayerEnablementState>(defaultNewConstructionOverlay);
     const [flood, setFlood] = useState<LayerEnablementState>(defaultFlood);
     const [creative, setCreative] = useState<LayerEnablementState>(defaultCreative);
     const [housing, setHousing] = useState<LayerEnablementState>(defaultHousing);
@@ -281,6 +301,8 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
             setOpenStreetMapMap(defaultOpenStreetMap);
             setVista(defaultVista);
             setStreetLights(defaultStreetLights);
+            setDemolishedOverlay(defaultDemolishedOverlay);
+            setNewConstructionOverlay(defaultNewConstructionOverlay);
             setFlood(defaultFlood);
             setCreative(defaultCreative);
             setHousing(defaultHousing);
@@ -312,6 +334,12 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
             return true;
         }
         if(streetLights != defaultStreetLights) {
+            return true;
+        }
+        if(demolishedOverlay != defaultDemolishedOverlay) {
+            return true;
+        }
+        if(newConstructionOverlay != defaultNewConstructionOverlay) {
             return true;
         }
         if(flood != defaultFlood) {
@@ -410,6 +438,37 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
         e.preventDefault();
         const newStreetLights = (streetLights === 'enabled')? 'disabled' : 'enabled';
         setStreetLights(newStreetLights);
+    }
+
+    const demolishedOverlaySwitch = useCallback(
+        (e) => {
+            flipDemolishedOverlay(e)
+        },
+        [demolishedOverlay],
+    )
+    const demolishedOverlaySwitchOnClick = (e) => {
+        flipDemolishedOverlay(e)
+    }
+    function flipDemolishedOverlay(e) {
+        e.preventDefault();
+        const newDemolishedOverlay = (demolishedOverlay === 'enabled')? 'disabled' : 'enabled';
+        setDemolishedOverlay(newDemolishedOverlay);
+    }
+
+
+    const newConstructionOverlaySwitch = useCallback(
+        (e) => {
+            flipNewConstructionOverlay(e)
+        },
+        [newConstructionOverlay],
+    )
+    const newConstructionOverlaySwitchOnClick = (e) => {
+        flipNewConstructionOverlay(e)
+    }
+    function flipNewConstructionOverlay(e) {
+        e.preventDefault();
+        const newNewConstructionOverlay = (newConstructionOverlay === 'enabled')? 'disabled' : 'enabled';
+        setNewConstructionOverlay(newNewConstructionOverlay);
     }
 
     const floodSwitch = useCallback(
@@ -803,6 +862,12 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
             streetLights,
             streetLightsSwitch,
             streetLightsSwitchOnClick,
+            demolishedOverlay,
+            demolishedOverlaySwitch,
+            demolishedOverlaySwitchOnClick,
+            newConstructionOverlay,
+            newConstructionOverlaySwitch,
+            newConstructionOverlaySwitchOnClick,
             flood,
             floodSwitch,
             floodSwitchOnClick,

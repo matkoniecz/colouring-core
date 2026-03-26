@@ -21,6 +21,8 @@ import { HistoricMapLayerWithoutFill } from './layers/historic-map-without-fill-
 import { HistoricMapLayerLeicestershire } from './layers/historic-map-leicestershire-layer';
 import { AerialPhotosMapLayer } from './layers/aerial-photos-map-layer';
 import { OpenStreetMapLayer } from './layers/openstreetmap-layer';
+import { DemolishedOverlayLayer } from './layers/demolished-overlay-layer';
+import { NewConstructionOverlayLayer } from './layers/new-construction-overlay-layer';
 import { FloodBoundaryLayer } from './layers/flood-boundary-layer';
 import { ConservationAreaBoundaryLayer } from './layers/conservation-boundary-layer';
 import { WorldHeritageSitesLayer } from './layers/world-heritage-sites-layer';
@@ -45,6 +47,8 @@ import DataLayerSwitcher from './data-switcher';
 import { BoroughSwitcher } from './borough-switcher';
 import { StreetLightsSwitcher } from './street-lights-switcher';
 import { ParcelSwitcher } from './parcel-switcher';
+import { DemolishedOverlaySwitcher } from './demolished-overlay-switcher';
+import { NewConstructionOverlaySwitcher } from './new-construction-overlay-switcher';
 import { FloodSwitcher } from './flood-switcher';
 import { ConservationAreaSwitcher } from './conservation-switcher';
 import { WorldHeritageSitesSwitcher } from './world-heritage-sites-switcher';
@@ -160,6 +164,8 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                     style={{zIndex: 300}}
                 >
                     <WorldHeritageSitesLayer/>
+                    <DemolishedOverlayLayer/>
+                    <NewConstructionOverlayLayer/>
                     <ConservationAreaBoundaryLayer/>
                     <HistoricDataLayer revisionId={revisionId} />
                     <HistoricMapLayer />
@@ -211,6 +217,8 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                 {
                     (showLayerSelection == "enabled" || mapColourScale === "disaster_severity" || mapColourScale === "dynamics_demolished_count" || mapColourScale === undefined || mapColourScale === "context_back_garden" || mapColourScale === "energy_green_roof") ?
                     <>
+                        <DemolishedOverlaySwitcher/>
+                        <NewConstructionOverlaySwitcher/>
                         <ParcelSwitcher/>
                         <FloodSwitcher enabledOverride={mapColourScale === "disaster_severity" || mapColourScale === "dynamics_demolished_count"}/>
                         <ConservationAreaSwitcher/>
