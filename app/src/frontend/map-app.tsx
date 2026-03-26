@@ -180,6 +180,7 @@ export const MapApp: React.FC<MapAppProps> = props => {
                 mapColourScale={mapColourScale}
                 onMapColourScale={setMapColourScale}
                 categoryMapDefinitions={categoryMapDefinitions}
+                currentCategory={currentCategory}
             />
         </>
     );

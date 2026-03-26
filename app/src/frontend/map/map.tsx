@@ -70,6 +70,7 @@ import { TreesSwitcher } from './trees-switcher';
 import { BuildingMapTileset } from '../config/tileserver-config';
 import { useDisplayPreferences } from '../displayPreferences-context';
 import { CategoryMapDefinition } from '../config/category-maps-config';
+import { Category } from '../config/categories-config';
 
 interface ColouringMapProps {
     selectedBuildingId: number;
@@ -78,7 +79,8 @@ interface ColouringMapProps {
     onBuildingAction: (building: Building) => void;
     mapColourScale: BuildingMapTileset;
     onMapColourScale: (x: BuildingMapTileset) => void;
-    categoryMapDefinitions: CategoryMapDefinition[]
+    categoryMapDefinitions: CategoryMapDefinition[];
+    currentCategory: Category;
 }
 
 export const ColouringMap : FC<ColouringMapProps> = ({
@@ -89,6 +91,7 @@ export const ColouringMap : FC<ColouringMapProps> = ({
     mapColourScale,
     onMapColourScale,
     categoryMapDefinitions,
+    currentCategory,
     children
 }) => {
     const { darkLightTheme, darkLightThemeSwitch, showLayerSelection } = useDisplayPreferences();
@@ -177,7 +180,7 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                     <FloodBoundaryLayer enabledOverride={mapColourScale === "disaster_severity" || mapColourScale === "dynamics_demolished_count" } />
                     <TreesLayer enabledOverride={mapColourScale === "context_back_garden" || mapColourScale === "energy_green_roof"}/>
                     <VistaBoundaryLayer/>
-                    <StreetLightsLayer initialMapViewport={initialMapViewport.zoom} enabledOverride={ mapColourScale === undefined }/>
+                    <StreetLightsLayer initialMapViewport={initialMapViewport.zoom} enabledOverride={ currentCategory == Category.UrbanInfrastructure }/>
                     <CeremonialCountiesLayer/>
                     <RegionsLayer/>
                     <GreenbeltLayer/>
@@ -215,7 +218,7 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                 <ThemeSwitcher onSubmit={darkLightThemeSwitch} currentTheme={darkLightTheme} />
                 <DataLayerSwitcher />
                 {
-                    (showLayerSelection == "enabled" || mapColourScale === "disaster_severity" || mapColourScale === "dynamics_demolished_count" || mapColourScale === undefined || mapColourScale === "context_back_garden" || mapColourScale === "energy_green_roof") ?
+                    (showLayerSelection == "enabled" || mapColourScale === "disaster_severity" || mapColourScale === "dynamics_demolished_count" || currentCategory == Category.UrbanInfrastructure || mapColourScale === "context_back_garden" || mapColourScale === "energy_green_roof") ?
                     <>
                         <DemolishedOverlaySwitcher/>
                         <NewConstructionOverlaySwitcher/>
@@ -227,7 +230,7 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                         { /* <HistoricDataSwitcher/> */ }
                         { /* <HistoricMapLeicestershireSwitcher/> */ }
                         <VistaSwitcher />
-                        <StreetLightsSwitcher enabledOverride={ mapColourScale === undefined } />
+                        <StreetLightsSwitcher enabledOverride={ currentCategory == Category.UrbanInfrastructure } />
                         <HousingSwitcher />
                         <CreativeSwitcher />
                         <RegionsSwitcher />
