@@ -128,6 +128,18 @@ const LocationView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     verified_count={props.building.verified.location_longitude}
                     />
                 <SelectDataEntry
+                    title="Choose a different footprint type:"
+                    slug="not_applicable"
+                    value={null}
+                    disabled={true}
+                    mode={props.mode}
+                    onChange={props.onChange}
+                    tooltip={null}
+                    placeholder={"Not available yet."}
+                    options={["Not available yet"]}
+                />
+                {/*
+                <SelectDataEntry
                     title={dataFields.location_coordinates_source.title}
                     slug="location_coordinates_source"
                     value={props.building.location_coordinates_source}
@@ -154,6 +166,7 @@ const LocationView: React.FunctionComponent<CategoryViewProps> = (props) => {
                         />
                     </>
                 }
+                */}
             </DataEntryGroup>
             <DataEntryGroup name="Individual Building/Property Address" collapsed={subcat==null || subcat!="1"}>
                 {/* <DataEntry
