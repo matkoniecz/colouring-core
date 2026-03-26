@@ -102,13 +102,13 @@ export const categoriesConfig: {[key in Category]: CategoryDefinition} = {
     },
     [Category.RetrofitCondition]: {
         slug: 'retrofit-condition',
-        name: 'Retrofit & Condition',
+        name: 'Lifecycle & Circularity',
         aboutUrl: 'https://github.com/colouring-cities/manual/wiki/E1.--DATA#7-street-context',
         intro: "This section provides open data on the condition of the building and its retrofit history.",
     },
     [Category.EnergyPerformance]: {
         slug: 'energy-performance',
-        name: 'Energy Performance & Systems',
+        name: 'Energy & Retrofit',
         aboutUrl: 'https://github.com/colouring-cities/manual/wiki/E1.--DATA#8-team',
         intro: 'This section provides open data on the energy performance of the building.',
     },
