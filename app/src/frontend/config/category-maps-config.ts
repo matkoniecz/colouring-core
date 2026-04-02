@@ -132,6 +132,19 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
     ],
     [Category.ConstructionDesign]: [
         {
+            mapStyle: 'construction_material_window_frame',
+            legend: {
+                title: 'Window frame material',
+                elements: [
+                    { color: "#b5a859", text: "Wood" },
+                    { color: "#8fc3a0", text: "Metal" },
+                    { color: "#ff3939", text: "Plastic" },
+                    { color: "#8080ff", text: "Other" },
+                    { color: "#ffffff", text: "No windows" }
+                ]
+            },
+        },
+        {
             mapStyle: 'construction_core_material',
             legend: {
                 title: 'Core material',
@@ -202,19 +215,6 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
                     { color: "#8fc3a0", text: "Other Metal" },
                     { color: "#96613b", text: "Other Natural Material" },
                     { color: "#c48a85", text: "Other Man-Made Material" }
-                ]
-            },
-        },
-        {
-            mapStyle: 'construction_material_window_frame',
-            legend: {
-                title: 'Window frame material',
-                elements: [
-                    { color: "#b5a859", text: "Wood" },
-                    { color: "#8fc3a0", text: "Metal" },
-                    { color: "#ff3939", text: "Plastic" },
-                    { color: "#8080ff", text: "Other" },
-                    { color: "#ffffff", text: "No windows" }
                 ]
             },
         },
@@ -666,7 +666,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         {
             mapStyle: 'typology_classification',
             legend: {
-                title: 'Historical Period/Description',
+                title: 'Block/Density Classification',
                 elements: [
                     { color: '#0311AB', text: '1-3 storeys: Detached' },
                     { color: '#3845D4', text: '1-3 storeys: Tightly grouped' },
