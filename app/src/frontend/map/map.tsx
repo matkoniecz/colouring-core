@@ -71,6 +71,7 @@ import { BuildingMapTileset } from '../config/tileserver-config';
 import { useDisplayPreferences } from '../displayPreferences-context';
 import { CategoryMapDefinition } from '../config/category-maps-config';
 import { Category } from '../config/categories-config';
+import { CustomZoomControl} from './layers/custom-zoom-control'
 
 interface ColouringMapProps {
     selectedBuildingId: number;
@@ -151,7 +152,7 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                     name={'cc-base-building-pane'}
                     style={{zIndex: 195}}
                 >
-                    <BuildingBaseLayer theme={darkLightTheme} />
+                    {/* <BuildingBaseLayer theme={darkLightTheme} /> */}
                 </Pane>
 
                 {
@@ -205,7 +206,8 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                     <RegionLabelLayer/>
                 </Pane>
 
-                <ZoomControl position="topright" />
+                {/* <ZoomControl position="topright" /> */}
+                 <CustomZoomControl/>
                 <AttributionControl prefix=""/>
             </MapContainer>
             {
