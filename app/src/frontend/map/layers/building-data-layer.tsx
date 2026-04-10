@@ -100,7 +100,7 @@ export function BuildingDataLayer({
                 updateInterval={200}
                 key={`${tileset}-${revisionId}`}
                 url={getTileLayerUrl(tileset, { rev: revisionId })}
-                minZoom={9}
+                minZoom={7}
                 maxZoom={19}
                 detectRetina={false}
                 eventHandlers={{
