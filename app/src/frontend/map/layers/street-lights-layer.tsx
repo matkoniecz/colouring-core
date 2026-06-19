@@ -35,6 +35,7 @@ export function StreetLightsLayer({initialMapViewport, enabledOverride}: {initia
 
     return (
         <GeoJSON
+            attribution='street light data courtesy of Dr Hans Schumann, Dr Paul Lester, and Nick Smith Associates'
             key={isHigh(zoom) ? 'high' : 'low'}
             data={streetLightsGeojson}
             pointToLayer={pointToLayer(isHigh(zoom))}
