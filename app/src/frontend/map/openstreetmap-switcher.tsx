@@ -3,13 +3,17 @@ import React from 'react';
 import './map-button.css';
 import { useDisplayPreferences } from '../displayPreferences-context';
 
-export const OpenStreetMapSwitcher: React.FC<{}> = () => {
+export function OpenStreetMapSwitcher({showButtonOnlyIfLayerOn}: {showButtonOnlyIfLayerOn: boolean}) {
     const { openStreetMap, openStreetMapSwitch, darkLightTheme } = useDisplayPreferences();
+    const enabled = openStreetMap === 'enabled';
+    if (showButtonOnlyIfLayerOn && enabled === false) {
+        return <></>
+    }
     return (
         <form className={`map-button ${openStreetMap}-state ${darkLightTheme}`} onSubmit={openStreetMapSwitch}>
             <button className="btn btn-outline btn-outline-dark"
                 type="submit">
-                {(openStreetMap === 'enabled')? 'OpenStreetMap [on]' : 'OpenStreetMap [off]'}
+                {enabled ? 'OpenStreetMap [on]' : 'OpenStreetMap [off]'}
             </button>
         </form>
     );

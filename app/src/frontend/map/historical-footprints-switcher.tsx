@@ -3,7 +3,7 @@ import React from 'react';
 import './map-button.css';
 import { useDisplayPreferences } from '../displayPreferences-context';
 
-export const HistoricalFootprintsSwitcher: React.FC<{}> = () => {
+export function HistoricalFootprintsSwitcher({showButtonOnlyIfLayerOn}: {showButtonOnlyIfLayerOn: boolean}) {
     const { historicalFootprints, historicalFootprintsSwitch, darkLightTheme } = useDisplayPreferences();
     
     return (

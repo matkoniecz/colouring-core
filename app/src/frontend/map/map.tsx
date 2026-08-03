@@ -84,6 +84,7 @@ interface ColouringMapProps {
     currentCategory: Category;
 }
 
+
 export const ColouringMap : FC<ColouringMapProps> = ({
     mode,
     revisionId,
@@ -98,7 +99,14 @@ export const ColouringMap : FC<ColouringMapProps> = ({
     const { darkLightTheme, darkLightThemeSwitch, showLayerSelection } = useDisplayPreferences();
     const [position, setPosition] = useState(initialMapViewport.position);
     const [zoom, setZoom] = useState(initialMapViewport.zoom);
-
+    const showButtonOnlyIfLayerOn = !(
+        showLayerSelection == "enabled" ||
+        mapColourScale === "disaster_severity" ||
+        mapColourScale === "dynamics_demolished_count" ||
+        currentCategory == Category.UrbanInfrastructure ||
+        mapColourScale === "context_back_garden" ||
+        mapColourScale === "energy_green_roof"
+    );
 
     const handleLocate = useCallback(
         (lat: number, lng: number, zoom: number) => {
@@ -220,32 +228,30 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                 <ThemeSwitcher onSubmit={darkLightThemeSwitch} currentTheme={darkLightTheme} />
                 <DataLayerSwitcher />
                 {
-                    (showLayerSelection == "enabled" || mapColourScale === "disaster_severity" || mapColourScale === "dynamics_demolished_count" || currentCategory == Category.UrbanInfrastructure || mapColourScale === "context_back_garden" || mapColourScale === "energy_green_roof") ?
                     <>
-                        <DemolishedOverlaySwitcher/>
-                        <NewConstructionOverlaySwitcher/>
-                        <ParcelSwitcher/>
-                        <FloodSwitcher enabledOverride={mapColourScale === "disaster_severity" || mapColourScale === "dynamics_demolished_count"}/>
-                        <ConservationAreaSwitcher/>
-                        <WorldHeritageSitesSwitcher/>
+                        <DemolishedOverlaySwitcher showButtonOnlyIfLayerOn={showButtonOnlyIfLayerOn}/>
+                        <NewConstructionOverlaySwitcher showButtonOnlyIfLayerOn={showButtonOnlyIfLayerOn}/>
+                        <ParcelSwitcher showButtonOnlyIfLayerOn={showButtonOnlyIfLayerOn}/>
+                        <FloodSwitcher  showButtonOnlyIfLayerOn={showButtonOnlyIfLayerOn} enabledOverride={mapColourScale === "disaster_severity" || mapColourScale === "dynamics_demolished_count"}/>
+                        <ConservationAreaSwitcher  showButtonOnlyIfLayerOn={showButtonOnlyIfLayerOn}/>
+                        <WorldHeritageSitesSwitcher  showButtonOnlyIfLayerOn={showButtonOnlyIfLayerOn}/>
                         { /* <HistoricMapSwitcher/> */ }
                         { /* <HistoricDataSwitcher/> */ }
                         { /* <HistoricMapLeicestershireSwitcher/> */ }
-                        <VistaSwitcher />
-                        <StreetLightsSwitcher enabledOverride={ currentCategory == Category.UrbanInfrastructure } />
-                        <HousingSwitcher />
-                        <CreativeSwitcher />
-                        <RegionsSwitcher />
-                        <CeremonialCountiesSwitcher />
-                        <BoroughSwitcher/>
-                        <GreenbeltSwitcher />
-                        <MotorwaysSwitcher />
-                        <AerialPhotosMapSwitcher/>
-                        <EditableBuildingsSwitcher />
-                        <OpenStreetMapSwitcher />
-                        <TreesSwitcher enabledOverride={mapColourScale === "context_back_garden" || mapColourScale === "energy_green_roof"} />
+                        <VistaSwitcher  showButtonOnlyIfLayerOn={showButtonOnlyIfLayerOn}/>
+                        <StreetLightsSwitcher  showButtonOnlyIfLayerOn={showButtonOnlyIfLayerOn} enabledOverride={ currentCategory == Category.UrbanInfrastructure } />
+                        <HousingSwitcher showButtonOnlyIfLayerOn={showButtonOnlyIfLayerOn}/>
+                        <CreativeSwitcher showButtonOnlyIfLayerOn={showButtonOnlyIfLayerOn}/>
+                        <RegionsSwitcher showButtonOnlyIfLayerOn={showButtonOnlyIfLayerOn}/>
+                        <CeremonialCountiesSwitcher showButtonOnlyIfLayerOn={showButtonOnlyIfLayerOn}/>
+                        <BoroughSwitcher showButtonOnlyIfLayerOn={showButtonOnlyIfLayerOn}/>
+                        <GreenbeltSwitcher showButtonOnlyIfLayerOn={showButtonOnlyIfLayerOn}/>
+                        <MotorwaysSwitcher showButtonOnlyIfLayerOn={showButtonOnlyIfLayerOn}/>
+                        <AerialPhotosMapSwitcher showButtonOnlyIfLayerOn={showButtonOnlyIfLayerOn}/>
+                        <EditableBuildingsSwitcher showButtonOnlyIfLayerOn={showButtonOnlyIfLayerOn}/>
+                        <OpenStreetMapSwitcher showButtonOnlyIfLayerOn={showButtonOnlyIfLayerOn}/>
+                        <TreesSwitcher  showButtonOnlyIfLayerOn={showButtonOnlyIfLayerOn} enabledOverride={mapColourScale === "context_back_garden" || mapColourScale === "energy_green_roof"} />
                     </>
-                    : <></>
                 }
             </div>
             <SearchBox onLocate={handleLocate} />

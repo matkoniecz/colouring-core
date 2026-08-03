@@ -1,18 +1,21 @@
 
-    import React from 'react';
+import React from 'react';
 
-    import './map-button.css';
-    import { useDisplayPreferences } from '../displayPreferences-context';
+import './map-button.css';
+import { useDisplayPreferences } from '../displayPreferences-context';
 
-    export const MotorwaysSwitcher: React.FC<{}> = () => {
-        const { motorways, motorwaysSwitch, darkLightTheme } = useDisplayPreferences();
-        return (
-            <form className={`map-button ${motorways}-state ${darkLightTheme}`} onSubmit={motorwaysSwitch}>
-                <button className="btn btn-outline btn-outline-dark"
-                    type="submit">
-                    {(motorways === 'enabled')? 'Motorways [on]' : 'Motorways [off]'}
-                </button>
-            </form>
-        );
+export function MotorwaysSwitcher({showButtonOnlyIfLayerOn}: {showButtonOnlyIfLayerOn: boolean}) {
+    const { motorways, motorwaysSwitch, darkLightTheme } = useDisplayPreferences();
+    const enabled = motorways === 'enabled';
+    if (showButtonOnlyIfLayerOn && enabled === false) {
+        return <></>
     }
-    
+    return (
+        <form className={`map-button ${motorways}-state ${darkLightTheme}`} onSubmit={motorwaysSwitch}>
+            <button className="btn btn-outline btn-outline-dark"
+                type="submit">
+                {enabled ? 'Motorways [on]' : 'Motorways [off]'}
+            </button>
+        </form>
+    );
+}

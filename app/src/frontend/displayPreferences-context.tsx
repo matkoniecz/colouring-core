@@ -4,7 +4,7 @@ import { LayerEnablementState, MapTheme } from './config/map-config';
 
 interface DisplayPreferencesContextState {
     showOverlayList: (e: React.FormEvent<HTMLFormElement>) => void;
-    resetLayersAndHideTheirList: (e: React.FormEvent<HTMLFormElement>) => void;
+    hideOverlayList: (e: React.FormEvent<HTMLFormElement>) => void;
 
     vista: LayerEnablementState;
     vistaSwitch: (e: React.FormEvent<HTMLFormElement>) => void;
@@ -121,7 +121,7 @@ const stub = (): never => {
 
 export const DisplayPreferencesContext = createContext<DisplayPreferencesContextState>({
     showOverlayList: stub,
-    resetLayersAndHideTheirList: stub,
+    hideOverlayList: stub,
 
     vista: undefined,
     vistaSwitch: stub,
@@ -296,36 +296,10 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
         []
     )
 
-    const resetLayersAndHideTheirList = useCallback(
+    const hideOverlayList = useCallback(
         (e) => {
-            setOpenStreetMapMap(defaultOpenStreetMap);
-            setVista(defaultVista);
-            setStreetLights(defaultStreetLights);
-            setDemolishedOverlay(defaultDemolishedOverlay);
-            setNewConstructionOverlay(defaultNewConstructionOverlay);
-            setFlood(defaultFlood);
-            setCreative(defaultCreative);
-            setHousing(defaultHousing);
-            setBorough(defaultBorough)
-            setParcel(defaultParcel);
-            setConservation(defaultConservation);
-            setWorldHeritageSites(defaultWorldHeritageSites);
-            setHistoricData(defaultHistoricData);
-            setHistoricMap(defaultHistoricMap);
-            setHistoricMapLeicestershire(defaultHistoricMapLeicestershire);
-            setaerialPhotosMap(defaultaerialPhotosMap);
-            setHistoricalFootprints(defaultHistoricalFootprints);
-            setHistoricalMapAndFootprintsWithoutFill(defaultHistoricalMapAndFootprintsWithoutFill);
-            setRegions(defaultRegions);
-            setCeremonialCounties(defaultCeremonialCounties);
-            setGreenbelt(defaultGreenbelt);
-            setMotorways(defaultMotorways);
-            setEditableBuildings(defaultEditableBuildings)
-            setShowLayerSelection(defaultShowLayerSelection); // reset layers + hiding this panel is integrated into one action
-            setTrees(defaultTrees);
-            setTreesFull(defaultTreesFull);
-            //setDarkLightTheme('night'); // reset only layers
-    },
+            setShowLayerSelection('disabled');
+        },
         []
     )
 
@@ -854,7 +828,7 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
     return (
         <DisplayPreferencesContext.Provider value={{
             showOverlayList,
-            resetLayersAndHideTheirList,
+            hideOverlayList,
 
             vista,
             vistaSwitch,

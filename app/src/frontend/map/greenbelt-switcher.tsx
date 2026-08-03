@@ -1,18 +1,21 @@
 
-    import React from 'react';
+import React from 'react';
 
-    import './map-button.css';
-    import { useDisplayPreferences } from '../displayPreferences-context';
+import './map-button.css';
+import { useDisplayPreferences } from '../displayPreferences-context';
 
-    export const GreenbeltSwitcher: React.FC<{}> = () => {
-        const { greenbelt, greenbeltSwitch, darkLightTheme } = useDisplayPreferences();
-        return (
-            <form className={`map-button ${greenbelt}-state ${darkLightTheme}`} onSubmit={greenbeltSwitch}>
-                <button className="btn btn-outline btn-outline-dark"
-                    type="submit">
-                    {(greenbelt === 'enabled')? 'Greenbelt [on]' : 'Greenbelt [off]'}
-                </button>
-            </form>
-        );
+export function GreenbeltSwitcher({showButtonOnlyIfLayerOn}: {showButtonOnlyIfLayerOn: boolean}) {
+    const { greenbelt, greenbeltSwitch, darkLightTheme } = useDisplayPreferences();
+    const enabled = greenbelt === 'enabled';
+    if (showButtonOnlyIfLayerOn && enabled === false) {
+        return <></>
     }
-    
+    return (
+        <form className={`map-button ${greenbelt}-state ${darkLightTheme}`} onSubmit={greenbeltSwitch}>
+            <button className="btn btn-outline btn-outline-dark"
+                type="submit">
+                {enabled ? 'Greenbelt [on]' : 'Greenbelt [off]'}
+            </button>
+        </form>
+    );
+}

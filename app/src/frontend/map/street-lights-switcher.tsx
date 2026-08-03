@@ -4,13 +4,17 @@ import React from 'react';
 import './map-button.css';
 import { useDisplayPreferences } from '../displayPreferences-context';
 
-export function StreetLightsSwitcher({enabledOverride}: {enabledOverride: boolean}) {
+export function StreetLightsSwitcher({showButtonOnlyIfLayerOn, enabledOverride}: {showButtonOnlyIfLayerOn: boolean, enabledOverride: boolean}) {
     const { streetLights, streetLightsSwitch, darkLightTheme } = useDisplayPreferences();
+    const enabled = streetLights === 'enabled';
+    if (showButtonOnlyIfLayerOn && enabled === false) {
+        return <></>
+    }
     return (
-        <form className={`map-button ${(streetLights === 'enabled' || enabledOverride) ? 'enabled' : 'disabled'}-state ${darkLightTheme}`} onSubmit={streetLightsSwitch}>
+        <form className={`map-button ${(enabled || enabledOverride) ? 'enabled' : 'disabled'}-state ${darkLightTheme}`} onSubmit={streetLightsSwitch}>
             <button className="btn btn-outline btn-outline-dark"
                 type="submit">
-                {(streetLights === 'enabled' || enabledOverride)? 'Streetlights [on] ' : 'Streetlights [off]'}
+                {(enabled || enabledOverride)? 'Streetlights [on] ' : 'Streetlights [off]'}
             </button>
         </form>
     );
