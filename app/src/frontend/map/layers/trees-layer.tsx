@@ -17,7 +17,7 @@ export function TreesLayer({enabledOverride}: {enabledOverride: boolean}) {
     if(trees == "enabled" || enabledOverride) {
         return treesGeojson &&
         <GeoJSON 
-        attribution='<a href="https://arxiv.org/abs/2510.13861">Andrés Camilo Zúñiga-González, Anil Madhavapeddy, Ronita Bardhan</a>'
+        attribution='Tree data courtesy of <a href="https://arxiv.org/abs/2510.13861">Andrés Camilo Zúñiga-González, Anil Madhavapeddy, Ronita Bardhan</a>'
         data={treesGeojson}
         style={{color: '#0f0', fill: true, weight: 1, opacity: 0.6}}
     />;
