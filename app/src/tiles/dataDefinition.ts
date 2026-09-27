@@ -53,29 +53,25 @@ const LAYER_QUERIES = {
                 (date_year_inferred_upper + date_year_inferred_lower)/2
             ) AS date_year
         FROM
-            buildings
-        WHERE COALESCE(date_year, date_epc_lower_bound + date_epc_upper_bound, date_year_inferred, date_year_inferred_upper + date_year_inferred_lower) IS NOT NULL`,
+            buildings`,
     date_year: `
         SELECT
             geometry_id,
             date_year
         FROM
-            buildings
-        WHERE date_year IS NOT NULL`,
+            buildings`,
     age_inferred: `
         SELECT
             geometry_id,
             COALESCE(date_year_inferred, (date_year_inferred_upper + date_year_inferred_lower)/2) AS date_year
         FROM
-            buildings
-        WHERE COALESCE(date_year_inferred, date_year_inferred_upper + date_year_inferred_lower) IS NOT NULL`,
+            buildings`,
     age_epc_estimated: `
         SELECT
             geometry_id,
             (date_epc_lower_bound + date_epc_upper_bound)/2 AS epc_year_estimated
         FROM
-            buildings
-        WHERE date_epc_lower_bound IS NOT NULL AND date_epc_upper_bound IS NOT NULL`,
+            buildings`,
     date_year_completed: `
         SELECT
             geometry_id,
@@ -1850,10 +1846,10 @@ const LAYER_QUERIES = {
                 WHEN date_year >= 1980 AND date_year <= 1999 THEN '1980-1999 (Late 20th Century)'
                 WHEN date_year >= 2000 AND date_year <= 2025 THEN '2000-2025 (Early 21st Century)'
                 WHEN typology_style_period IS NOT NULL THEN  typology_style_period
+                ELSE NULL
             END AS typology_style_period
         FROM
-            buildings
-        WHERE typology_style_period IS NOT NULL OR (date_year >= 43 AND date_year <= 2025)`,
+            buildings`,
     typology_dynamic_classification: `
         SELECT
             geometry_id,

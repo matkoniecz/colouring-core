@@ -937,6 +937,11 @@
             <PolygonSymbolizer fill="#d0c291" />
             <LineSymbolizer stroke="#d0c291" stroke-width="2.0"/>
         </Rule>
+        <Rule>
+            <Filter>[date_year] is null</Filter>
+            <PolygonSymbolizer fill="#909090" />
+            <LineSymbolizer stroke="#909090" stroke-width="2.0"/>
+        </Rule>
 
         <Rule>
             <MaxScaleDenominator>8530</MaxScaleDenominator>
@@ -1025,6 +1030,11 @@
             <PolygonSymbolizer fill="#d0c291" />
             <LineSymbolizer stroke="#d0c291" stroke-width="2.0"/>
         </Rule>
+        <Rule>
+            <Filter>[date_year] is null</Filter>
+            <PolygonSymbolizer fill="#909090" />
+            <LineSymbolizer stroke="#909090" stroke-width="2.0"/>
+        </Rule>
 
         <Rule>
             <MaxScaleDenominator>8530</MaxScaleDenominator>
@@ -1112,6 +1122,11 @@
             <Filter>[date_year] &lt; 1700</Filter>
             <PolygonSymbolizer fill="#d0c291" />
             <LineSymbolizer stroke="#d0c291" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[date_year] is null</Filter>
+            <PolygonSymbolizer fill="#909090" />
+            <LineSymbolizer stroke="#909090" stroke-width="2.0"/>
         </Rule>
 
         <Rule>
@@ -1464,6 +1479,11 @@
             <Filter>[epc_year_estimated] &lt; 1700</Filter>
             <PolygonSymbolizer fill="#d0c291" />
             <LineSymbolizer stroke="#d0c291" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[epc_year_estimated] is null</Filter>
+            <PolygonSymbolizer fill="#909090" />
+            <LineSymbolizer stroke="#909090" stroke-width="2.0"/>
         </Rule>
 
         <Rule>
@@ -7320,6 +7340,11 @@
             <Filter>[typology_style_period] = "2000-2025 (Early 21st Century)"</Filter>
             <PolygonSymbolizer fill="#fae269" />
             <LineSymbolizer stroke="#fae269" stroke-width="2.0"/>
+        </Rule>
+        <Rule>
+            <Filter>[typology_style_period] is null</Filter>
+            <PolygonSymbolizer fill="#909090" />
+            <LineSymbolizer stroke="#909090" stroke-width="2.0"/>
         </Rule>
 
         <Rule>
