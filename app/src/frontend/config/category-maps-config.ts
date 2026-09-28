@@ -40,6 +40,7 @@ export const ageLegend = [
     { color: '#acc98f', text: '1750-1799' },
     { color: '#6d8a51', text: '1700-1749' },
     { color: '#d0c291', text: '<1700' },
+    { color: "#909090", text: 'No data.' },
 ]
 
 export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = {
@@ -61,6 +62,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
                     { color: '#d0c291', text: '1485-1603 (Tudor)' },
                     { color: '#a9a695', text: '410-1485 (Medieval)' },
                     { color: '#dadada', text: '43AD-410 (Roman)' },
+                    { color: "#909090", text: 'No data.' },
                 ]
             }
         },
