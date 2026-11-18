@@ -74,7 +74,7 @@ import { Category } from '../config/categories-config';
 import { CustomZoomControl} from './layers/custom-zoom-control'
 
 interface ColouringMapProps {
-    selectedBuildingId: number;
+    selectedBuildingId?: number;
     mode: 'basic' | 'view' | 'edit' | 'multi-edit';
     revisionId: string;
     onBuildingAction: (building: Building) => void;

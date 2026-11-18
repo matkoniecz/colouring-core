@@ -165,7 +165,7 @@ class TileCache {
     }
 
     private shouldBulkClearTileset(tileset: string): boolean {
-        return this.shouldCacheFn == undefined || this.shouldBulkClearTilesetFn(tileset);
+        return this.shouldBulkClearTilesetFn == undefined || this.shouldBulkClearTilesetFn(tileset);
     }
 }
 
