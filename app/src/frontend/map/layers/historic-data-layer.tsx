@@ -5,7 +5,7 @@ import { LayerEnablementState } from '../../config/map-config';
 import { BuildingBaseLayerAllZoom } from './building-base-layer-all-zoom';
 import { useDisplayPreferences } from '../../displayPreferences-context';
 
-export function HistoricDataLayer({}) {
+export function HistoricDataLayer({revisionId}: {revisionId: string}) {
     const { historicData } = useDisplayPreferences();
     if(historicData == "enabled") {
         return <><WMSTileLayer

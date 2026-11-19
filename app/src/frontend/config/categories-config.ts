@@ -3,18 +3,18 @@
  * The string value is also the category URL slug.
  */
 export enum Category {
-    Location = 'location',
-    LandUse = 'use',
-    Type = 'type',
-    Age = 'age',
-    Size = 'size',
-    Construction = 'construction',
-    Streetscape = 'streetscape',
-    Team = 'team',
-    Planning = 'planning',
-    Sustainability = 'sustainability',
-    Resilience = 'resilience',
+    AgeHistory = 'age-history',
     Community = 'community',
+    PlanningConservation = 'planning-conservation',
+    WaterGreenInfrastructure = 'water-green-infrastructure',
+    LandUse = 'land-use',
+    Location = 'location',
+    UrbanInfrastructure = 'urban-infrastructure',
+    DisasterManagement = 'disaster-management',
+    ConstructionDesign = 'construction-design',
+    RetrofitCondition = 'retrofit-condition',
+    EnergyPerformance = 'energy-performance',
+    TypologySize = 'typology-size',
 }
 
 /**
@@ -25,20 +25,19 @@ export enum Category {
 export const categoriesOrder: Category[] = [
     Category.Location,
     Category.LandUse,
-    Category.Type,
-    Category.Size,
-    Category.Construction,
-    Category.Age,
-    Category.Streetscape,
-    Category.Team,
-    Category.Planning,
-    Category.Sustainability,
-    Category.Resilience,
+    Category.TypologySize,
+    Category.ConstructionDesign,
+    Category.AgeHistory,
+    Category.PlanningConservation,
+    Category.RetrofitCondition,
+    Category.EnergyPerformance,
+    Category.WaterGreenInfrastructure,
+    Category.UrbanInfrastructure,
+    Category.DisasterManagement,
     Category.Community,
 ];
 
 interface CategoryDefinition {
-    inactive?: boolean;
     slug: string;
     name: string;
     aboutUrl: string;
@@ -46,29 +45,35 @@ interface CategoryDefinition {
 }
 
 export const categoriesConfig: {[key in Category]: CategoryDefinition} = {
-    [Category.Age]: {
-        slug: 'age',
+    [Category.AgeHistory]: {
+        slug: 'age-history',
         name: 'Alter & Geschichte',
         aboutUrl: 'https://colouring.dresden.ioer.info/kacheln#c773',
         intro: 'Daten zum Gebäudealter können vielfältige Analysen unterstützen und helfen, langfristige Veränderungen vorherzusagen.',
     },
-    [Category.Size]: {
-        slug: 'size',
-        name: 'Größe',
-        aboutUrl: 'https://colouring.dresden.ioer.info/kacheln#c767',
-        intro: 'Wie groß sind Gebäude? Wie sind sie geformt?',
+    [Category.Community]: {
+        slug: 'community',
+        name: 'Community',
+        aboutUrl: 'https://github.com/colouring-cities/manual/wiki/E1.--DATA#12-community',
+        intro: 'Wie funktionieren Gebäude für die lokale Bevölkerung?',
     },
-    [Category.Team]: {
-        slug: 'team',
-        name: 'Team',
-        aboutUrl: '',
-        intro: 'Wer hat die Gebäude erbaut?',
+    [Category.PlanningConservation]: {
+        slug: 'planning-conservation',
+        name: 'Planung & Denkmalschutz',
+        aboutUrl: 'https://github.com/colouring-cities/manual/wiki/E1.--DATA#5-construction',
+        intro: 'Planung bezüglich dem Schutz und der Wiedernutzung von Gebäuden.',
     },
-    [Category.Construction]: {
-        slug: 'construction',
-        name: 'Konstruktion',
-        aboutUrl: 'https://colouring.dresden.ioer.info/kacheln#c770',
-        intro: 'Wie sind die Gebäude gebaut?',
+    [Category.WaterGreenInfrastructure]: {
+        slug: 'water-green-infrastructure',
+        name: 'Grün- & Wasserinfrastruktur',
+        aboutUrl: 'https://github.com/colouring-cities/manual/wiki/E1.--DATA#10-energy-performance',
+        intro: 'Daten zur Wasserversorgung und zur grünen Infrastruktur des Gebäudes.',
+    },
+    [Category.LandUse]: {
+        slug: 'land-use',
+        name: 'Nutzung & Eigentum',
+        aboutUrl: 'https://colouring.dresden.ioer.info/kacheln#c748',
+        intro: 'Wie werden Gebäude genutzt? Wie änderte sich dies über die Zeit?',
     },
     [Category.Location]: {
         slug: 'location',
@@ -76,47 +81,40 @@ export const categoriesConfig: {[key in Category]: CategoryDefinition} = {
         aboutUrl: 'https://colouring.dresden.ioer.info/kacheln#c745',
         intro: 'Wo befinden sich die Gebäude? Adresse, Standort und Verweise auf externe Datensätze.',
     },
-    [Category.Community]: {
-        slug: 'community',
-        name: 'Community',
-        aboutUrl: '',
-        intro: 'Wie funktionieren Gebäude für die lokale Bevölkerung?',
+    [Category.UrbanInfrastructure]: {
+        slug: 'urban-infrastructure',
+        name: 'Städtische Infrastruktur',
+        aboutUrl: 'https://github.com/colouring-cities/manual/wiki/E1.--DATA#9-planning',
+        intro: 'Daten zur Umgebung des Gebäudes und zum Straßenraum.',
     },
-    [Category.Planning]: {
-        slug: 'planning',
-        name: 'Planung',
-        aboutUrl: '',
-        intro: 'Planung bezüglich dem Schutz und der Wiedernutzung von Gebäuden.',
-    },
-    [Category.Sustainability]: {
-        slug: 'sustainability',
-        name: 'Energie',
-        aboutUrl: '',
-        intro: 'Sind Gebäude energieeffizient?',
-    },
-    [Category.Type]: {
-        slug: 'type',
-        name: 'Typologie',
-        aboutUrl: 'https://colouring.dresden.ioer.info/kacheln#c751',
-        intro: 'Wie lassen sich Gebäude Typologien zuordnen?',
-    },
-    [Category.LandUse]: {
-        slug: 'use',
-        name: 'Nutzung',
-        aboutUrl: 'https://colouring.dresden.ioer.info/kacheln#c748',
-        intro: 'Wie werden Gebäude genutzt? Wie änderte sich dies über die Zeit?',
-    },
-    [Category.Streetscape]: {
-        inactive: true,
-        slug: 'streetscape',
-        name: 'Straßenraum',
-        aboutUrl: '',
-        intro: "Wie sieht die Umgebung von Gebäuden bezüglich des Straßenraums aus? Coming soon…",
-    },
-    [Category.Resilience]: {
-        slug: 'resilience',
+    [Category.DisasterManagement]: {
+        slug: 'disaster-management',
         name: 'Resilienz',
         aboutUrl: 'https://colouring.dresden.ioer.info/kacheln#c776',
         intro: 'Wie gut sind Gebäude auf Extremwetterereignisse angepasst?'
+    },
+    [Category.ConstructionDesign]: {
+        slug: 'construction-design',
+        name: 'Konstruktion & Gestaltung',
+        aboutUrl: 'https://colouring.dresden.ioer.info/kacheln#c770',
+        intro: 'Wie sind die Gebäude gebaut? Wer hat sie entworfen und erbaut?',
+    },
+    [Category.RetrofitCondition]: {
+        slug: 'retrofit-condition',
+        name: 'Sanierung & Zustand',
+        aboutUrl: 'https://github.com/colouring-cities/manual/wiki/E1.--DATA#7-street-context',
+        intro: 'Daten zum Zustand des Gebäudes und zu seiner Sanierungsgeschichte.',
+    },
+    [Category.EnergyPerformance]: {
+        slug: 'energy-performance',
+        name: 'Energie',
+        aboutUrl: 'https://github.com/colouring-cities/manual/wiki/E1.--DATA#8-team',
+        intro: 'Sind Gebäude energieeffizient?',
+    },
+    [Category.TypologySize]: {
+        slug: 'typology-size',
+        name: 'Typologie & Größe',
+        aboutUrl: 'https://colouring.dresden.ioer.info/kacheln#c751',
+        intro: 'Wie lassen sich Gebäude Typologien zuordnen? Wie groß sind Gebäude, wie sind sie geformt?',
     },
 };

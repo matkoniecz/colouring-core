@@ -42,12 +42,13 @@ export const MyAccountPage: React.FC = () => {
         );
     }
 
-    const issuesURL = config.githubURL + "/issues"
+    const issuesURL = config.githubURL + "/issues";
+    const discussURL = config.githubURL + "/discussions";
 
     return (
         <article>
             <section className="main-col">
-                { !isLoading && <ErrorBox msg={userError} /> }
+                { !isLoading && userError && <ErrorBox msg={userError} /> }
                 {!userError && (<>
                     <h1 className="h1">Willkommen, {user.username}!</h1>
                     <p>
@@ -63,10 +64,10 @@ export const MyAccountPage: React.FC = () => {
                         <Link to="/code-of-conduct.html">Verhaltenskodex für Mitwirkende</Link>.
                         {/* later add data accuracy agreement here... in German  */}
                     </p>
-                    <ErrorBox msg={error} />
+                    {error && <ErrorBox msg={error} />}
                     <form onSubmit={handleLogout}>
                         <div className="buttons-container">
-                            <Link to="/edit/age" className="btn btn-warning">Starten</Link>
+                            <Link to="/edit/age-history" className="btn btn-warning">Starten</Link>
                             <input className="btn btn-secondary" type="submit" value="Ausloggen"/>
                         </div>
                     </form>

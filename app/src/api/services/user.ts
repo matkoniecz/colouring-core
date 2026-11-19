@@ -2,6 +2,7 @@
  * User data access
  *
  */
+import { Session, SessionData } from 'express-session';
 import { errors } from 'pg-promise';
 import { promisify } from 'util';
 
@@ -149,7 +150,7 @@ async function getNewUserAPIKey(id: string) {
     }
 }
 
-async function authAPIUser(key: string): Promise<string> {
+async function authAPIUser(key: string): Promise<string | undefined> {
     try {
         const { user_id } = await db.one(
             `SELECT
@@ -190,7 +191,7 @@ async function deleteUser(id: string) {
     }
 }
 
-function logout(session: Express.Session): Promise<void> {
+function logout(session: Session & Partial<SessionData>): Promise<void> {
     session.user_id = undefined;
 
     return promisify(session.destroy.bind(session))();

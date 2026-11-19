@@ -19,7 +19,7 @@ interface MenuLink {
 }
 
 
-function getCurrentMenuLinks(username: string): MenuLink[][] {
+function getCurrentMenuLinks(username: string | undefined): MenuLink[][] {
     return [
         [
             ...(
@@ -85,12 +85,27 @@ function getCurrentMenuLinks(username: string): MenuLink[][] {
                 external: true
             },
             {
-                to: "https://pages.colouring.london/buildingcategories",
+                to: config.manualURL,
+                text: "About the Colouring " + config.cityName + " Project",
+                external: true
+            },
+            {
+                to: "https://github.com/colouring-cities/manual/wiki/M3.1-News",
+                text: "Colouring Cities development news",
+                external: true
+            },
+            {
+                to: "https://github.com/colouring-cities/manual/wiki/How‐to‐use-Platform-Guides",
+                text: "How to Use",
+                external: true
+            },
+            {
+                to: "https://github.com/colouring-cities/manual/wiki/E1.--DATA",
                 text: "Data Categories",
                 external: true
             },
             {
-                to: "https://pages.colouring.london/whoisinvolved",
+                to: "https://github.com/colouring-cities/manual/wiki/M3.2-Colouring-Britain:-Who's-Involved%3F",
                 text: "Who's Involved?",
                 external: true
             }, */
@@ -116,13 +131,8 @@ function getCurrentMenuLinks(username: string): MenuLink[][] {
                 text: "Top Contributors"
             },
             {
-                to: "https://discuss.colouring.london",
-                text: "Discussion Forum",
-                external: true
-            },
-            {
-                to: "https://discuss.colouring.london/c/blog/9",
-                text: "Blog",
+                to: config.githubURL+"/discussions",
+                text: "Discussion Forum (GitHub)",
                 external: true
             },
         ], */
@@ -199,7 +209,7 @@ const InternalNavLink: React.FC<{to: string; onClick: () => void}> = ({ to, onCl
 );
 
 const ExternalNavLink: React.FC<{to: string}> = ({ to, children }) => (
-    <a className="nav-link" href={to}>
+    <a className="nav-link" href={to} target="_blank">
         {children}
     </a>
 );

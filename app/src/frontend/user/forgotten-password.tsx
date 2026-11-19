@@ -62,7 +62,7 @@ export default class ForgottenPassword extends React.Component<{}, ForgottenPass
                 <section className="main-col">
                     <h1 className="h2">Passwort zurücksetzen</h1>
                     <p>Bitte geben Sie die für den Account genutzte E-Mail Adresse an. Ein Link zum Zurücksetzen des Passworts wird an diese E-Mail Adresse verschickt.</p>
-                    <ErrorBox msg={this.state.error} />
+                    {this.state.error && <ErrorBox msg={this.state.error} />}
                     <InfoBox msg="">
                         {this.state.success ?
                             `Wenn diese E-Mail Adresse schon bei Colouring ${config.cityName} registriert ist, wird ein Passwort zum Zurücksetzen an folgende E-Mail Adresse verschickt:  ${this.state.emailUsed}. Bitte prüfen Sie Ihren Posteingang.` :

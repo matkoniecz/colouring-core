@@ -10,7 +10,7 @@ import './welcome.css';
 const Welcome = () => (
     <div className="section-body welcome">
         <Categories mode="view"/>
-        <h1 className="h2">Willkommen bei Colouring {config.cityName}!</h1>
+        <h1 className="h3">Willkommen bei Colouring {config.cityName}!</h1>
         <p>
             Wie alt sind die Gebäude Dresdens? Aus welchen Materialien wurden sie überwiegend erbaut? Und wie gut sind sie baulich vorbereitet, um mit extremen Ereignissen wie Starkregen, Hochwasser oder Hitze umgehen zu können?
         </p>

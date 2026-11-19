@@ -11,7 +11,6 @@ import { Header } from './header';
 import { MapApp } from './map-app';
 import { Building, UserVerified } from './models/building';
 import { User } from './models/user';
-import AboutPage from './pages/about';
 import ChangesPage from './pages/changes';
 import CodeOfConductPage from './pages/code-of-conduct';
 import ContactPage from './pages/contact';
@@ -20,7 +19,6 @@ import DataAccuracyPage from './pages/data-accuracy';
 import DataExtracts from './pages/data-extracts';
 import LeaderboardPage from './pages/leaderboard';
 import OrdnanceSurveyLicencePage from './pages/ordnance-survey-licence';
-import OrdnanceSurveyUprnPage from './pages/ordnance-survey-uprn';
 import PrivacyPolicyPage from './pages/privacy-policy';
 import ForgottenPassword from './user/forgotten-password';
 import { Login } from './user/login';
@@ -66,20 +64,18 @@ export const App: React.FC<AppProps> = props => {
                         <Header animateLogo={false} />
                     </Route>
                     <Route>
-                        <Header animateLogo={true} />
+                        <Header animateLogo={false} />
                     </Route>
                 </Switch>
                 <Switch>
-                    <Route exact path="/about.html" component={AboutPage} />
                     <AuthRoute exact path="/login.html" component={Login} />
                     <AuthRoute exact path="/forgotten-password.html" component={ForgottenPassword} />
                     <AuthRoute exact path="/password-reset.html" component={PasswordReset} />
                     <AuthRoute exact path="/sign-up.html" component={SignUp} />
                     <PrivateRoute exact path="/my-account.html" component={MyAccountPage} />
                     <Route exact path="/privacy-policy.html" component={PrivacyPolicyPage} />
-                    <Route exact path="/contributor-agreement.html" component={ContributorAgreementPage} />
                     <Route exact path="/ordnance-survey-licence.html" component={OrdnanceSurveyLicencePage} />
-                    <Route exact path="/ordnance-survey-uprn.html" component={OrdnanceSurveyUprnPage} />
+                    <Route exact path="/contributor-agreement.html" component={ContributorAgreementPage} />
                     <Route exact path="/data-accuracy.html" component={DataAccuracyPage} />
                     <Route exact path="/data-extracts.html" component={DataExtracts} />
                     <Route exact path="/contact.html" component={ContactPage} />

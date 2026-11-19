@@ -30,20 +30,20 @@ const LogoGrid: React.FunctionComponent = () => (
     <div className="grid">
         <div className="row">
             <div className="cell background-location"></div>
-            <div className="cell background-use"></div>
-            <div className="cell background-type"></div>
-            <div className="cell background-age"></div>
+            <div className="cell background-land-use"></div>
+            <div className="cell background-typology-size"></div>
+            <div className="cell background-construction-design"></div>
         </div>
         <div className="row">
-            <div className="cell background-size"></div>
-            <div className="cell background-construction"></div>
-            <div className="cell background-streetscape"></div>
-            <div className="cell background-team"></div>
+            <div className="cell background-age-history"></div>
+            <div className="cell background-planning-conservation"></div>
+            <div className="cell background-retrofit-condition"></div>
+            <div className="cell background-energy-performance"></div>
         </div>
         <div className="row">
-            <div className="cell background-sustainability"></div>
-            <div className="cell background-planning"></div>
-            <div className="cell background-resilience"></div>
+            <div className="cell background-water-green-infrastructure"></div>
+            <div className="cell background-urban-infrastructure"></div>
+            <div className="cell background-disaster-management"></div>
             <div className="cell background-community"></div>
         </div>
     </div>

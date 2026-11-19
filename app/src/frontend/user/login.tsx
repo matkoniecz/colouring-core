@@ -37,7 +37,7 @@ export const Login: React.FC = () => {
                         href="https://github.com/colouring-cities/colouring-dresden/issues">
                     hier</a> berichten.
                 </InfoBox>
-                <ErrorBox msg={error} />
+                {error && <ErrorBox msg={error} />}
                 <form onSubmit={onSubmit}>
                     <label htmlFor="username">Benutzername*</label>
                     <input name="username" id="username"

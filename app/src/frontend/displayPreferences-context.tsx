@@ -26,6 +26,10 @@ interface DisplayPreferencesContextState {
     conservationSwitch: (e: React.FormEvent<HTMLFormElement>) => void;
     conservationSwitchOnClick: React.MouseEventHandler<HTMLButtonElement>;
 
+    worldHeritageSites: LayerEnablementState;
+    worldHeritageSitesSwitch: (e: React.FormEvent<HTMLFormElement>) => void;
+    worldHeritageSitesSwitchOnClick: React.MouseEventHandler<HTMLButtonElement>;
+
     parcel: LayerEnablementState;
     parcelSwitch: (e: React.FormEvent<HTMLFormElement>) => void;
     parcelSwitchOnClick: React.MouseEventHandler<HTMLButtonElement>;
@@ -49,6 +53,13 @@ interface DisplayPreferencesContextState {
     historic_1945_Data: LayerEnablementState;
     historic_1945_DataSwitch: (e: React.FormEvent<HTMLFormElement>) => void;
     historic_1945_DataSwitchOnClick: React.MouseEventHandler<HTMLButtonElement>;
+    historicMap: LayerEnablementState;
+    historicMapSwitch: (e: React.FormEvent<HTMLFormElement>) => void;
+    historicMapSwitchOnClick: React.MouseEventHandler<HTMLButtonElement>;
+
+    editableBuildings: LayerEnablementState;
+    editableBuildingsSwitch: (e: React.FormEvent<HTMLFormElement>) => void;
+    editableBuildingsSwitchOnClick: React.MouseEventHandler<HTMLButtonElement>;
 
     darkLightTheme: MapTheme;
     darkLightThemeSwitch: (e: React.FormEvent<HTMLFormElement>) => void;
@@ -87,6 +98,10 @@ export const DisplayPreferencesContext = createContext<DisplayPreferencesContext
     conservationSwitch: stub,
     conservationSwitchOnClick: undefined,
 
+    worldHeritageSites: undefined,
+    worldHeritageSitesSwitch: stub,
+    worldHeritageSitesSwitchOnClick: undefined,
+
     parcel: undefined,
     parcelSwitch: stub,
     parcelSwitchOnClick: undefined,
@@ -110,6 +125,13 @@ export const DisplayPreferencesContext = createContext<DisplayPreferencesContext
     historic_1945_Data: undefined,
     historic_1945_DataSwitch: stub,
     historic_1945_DataSwitchOnClick: undefined,
+    historicMap: undefined,
+    historicMapSwitch: stub,
+    historicMapSwitchOnClick: undefined,
+
+    editableBuildings: undefined,
+    editableBuildingsSwitch: stub,
+    editableBuildingsSwitchOnClick: undefined,
 
     darkLightTheme: undefined,
     darkLightThemeSwitch: stub,
@@ -130,10 +152,13 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
     const defaultBorough = 'disabled'
     const defaultParcel = 'disabled'
     const defaultConservation = 'disabled'
+    const defaultWorldHeritageSites = 'disabled'
     const defaultHistoricData = 'disabled'
     const defaultHistoric_1880_Data = 'disabled'
     const defaultHistoric_1911_Data = 'disabled'
     const defaultHistoric_1945_Data = 'disabled'
+    const defaultHistoricMap = 'disabled'
+    const defaultEditableBuildings = 'enabled'
     const defaultShowLayerSelection = 'disabled'
     const [vista, setVista] = useState<LayerEnablementState>(defaultVista);
     const [flood, setFlood] = useState<LayerEnablementState>(defaultFlood);
@@ -142,10 +167,13 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
     const [borough, setBorough] = useState<LayerEnablementState>(defaultBorough);
     const [parcel, setParcel] = useState<LayerEnablementState>(defaultParcel);
     const [conservation, setConservation] = useState<LayerEnablementState>(defaultConservation);
+    const [worldHeritageSites, setWorldHeritageSites] = useState<LayerEnablementState>(defaultWorldHeritageSites);
     const [historicData, setHistoricData] = useState<LayerEnablementState>(defaultHistoricData);
     const [historic_1880_Data, setHistoric_1880_Data] = useState<LayerEnablementState>(defaultHistoric_1880_Data);
     const [historic_1911_Data, setHistoric_1911_Data] = useState<LayerEnablementState>(defaultHistoric_1911_Data);
     const [historic_1945_Data, setHistoric_1945_Data] = useState<LayerEnablementState>(defaultHistoric_1945_Data);
+    const [historicMap, setHistoricMap] = useState<LayerEnablementState>(defaultHistoricMap);
+    const [editableBuildings, setEditableBuildings] = useState<LayerEnablementState>(defaultEditableBuildings);
     const [darkLightTheme, setDarkLightTheme] = useState<MapTheme>('night');
     const [showLayerSelection, setShowLayerSelection] = useState<LayerEnablementState>(defaultShowLayerSelection);
 
@@ -165,10 +193,13 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
             setBorough(defaultBorough)
             setParcel(defaultParcel);
             setConservation(defaultConservation);
+            setWorldHeritageSites(defaultWorldHeritageSites);
             setHistoricData(defaultHistoricData);
             setHistoric_1880_Data(defaultHistoric_1880_Data);
             setHistoric_1911_Data(defaultHistoric_1911_Data);
             setHistoric_1945_Data(defaultHistoric_1945_Data);
+            setHistoricMap(defaultHistoricMap);
+            setEditableBuildings(defaultEditableBuildings)
             setShowLayerSelection(defaultShowLayerSelection); // reset layers + hiding this panel is integrated into one action
             //setDarkLightTheme('night'); // reset only layers
     },
@@ -197,6 +228,9 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
         if(conservation != defaultConservation) {
             return true;
         }
+        if(worldHeritageSites != defaultWorldHeritageSites) {
+            return true;
+        }
         if(historicData != defaultHistoricData) {
             return true;
         }
@@ -209,6 +243,13 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
         if(historic_1945_Data != defaultHistoric_1945_Data) {
             return true;
         }
+        if(historicMap != defaultHistoricMap) {
+            return true;
+        }
+        if(editableBuildings != defaultEditableBuildings) {
+            return true;
+        }
+        setEditableBuildings
         //darkLightTheme not handled here
         return false;
     }
@@ -318,11 +359,29 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
         setConservation(newConservation);
     }
 
+    const worldHeritageSitesSwitch = useCallback(
+        (e) => {
+            flipWorldHeritageSites(e)
+        },
+        [worldHeritageSites],
+    )
+    const worldHeritageSitesSwitchOnClick = (e) => {
+        flipWorldHeritageSites(e)
+    }
+    function flipWorldHeritageSites(e) {
+        e.preventDefault();
+        const newWorldHeritageSites = (worldHeritageSites === 'enabled')? 'disabled' : 'enabled';
+        setWorldHeritageSites(newWorldHeritageSites);
+    }
+
     const historicDataSwitch = useCallback(
         (e) => {
-            flipHistoricData(e)
+            if (historicMap === 'enabled') {
+                fliphistoricMap(e);
+            }
+            flipHistoricData(e);
         },
-        [historicData],
+        [historicData, historicMap],
     )
     const historicDataSwitchOnClick = (e) => {
         flipHistoricData(e)
@@ -379,6 +438,39 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
     }
 
 
+    const historicMapSwitch = useCallback(
+        (e) => {
+            if (historicData === 'enabled') {
+                flipHistoricData(e);
+            }
+            fliphistoricMap(e);
+        },
+        [historicMap, historicData],
+    )
+    const historicMapSwitchOnClick = (e) => {
+        fliphistoricMap(e)
+    }
+    function fliphistoricMap(e) {
+        e.preventDefault();
+        const newHistoric = (historicMap === 'enabled')? 'disabled' : 'enabled';
+        setHistoricMap(newHistoric);
+    }
+
+    const editableBuildingsSwitch = useCallback(
+        (e) => {
+            flipEditableBuildings(e)
+        },
+        [editableBuildings],
+    )
+    const editableBuildingsSwitchOnClick = (e) => {
+        flipEditableBuildings(e)
+    }
+    function flipEditableBuildings(e) {
+        e.preventDefault();
+        const newValue = (editableBuildings === 'enabled')? 'disabled' : 'enabled';
+        setEditableBuildings(newValue);
+    }
+
     const darkLightThemeSwitch = useCallback(
         (e) => {
             flipDarkLightTheme(e)
@@ -430,6 +522,9 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
             conservation,
             conservationSwitch,
             conservationSwitchOnClick,
+            worldHeritageSites,
+            worldHeritageSitesSwitch,
+            worldHeritageSitesSwitchOnClick,
             parcel,
             parcelSwitch,
             parcelSwitchOnClick,
@@ -453,6 +548,13 @@ export const DisplayPreferencesProvider: React.FC<{}> = ({children}) => {
             historic_1945_Data,
             historic_1945_DataSwitch,
             historic_1945_DataSwitchOnClick,
+            historicMap,
+            historicMapSwitch,
+            historicMapSwitchOnClick,
+
+            editableBuildings,
+            editableBuildingsSwitch,
+            editableBuildingsSwitchOnClick,
 
             darkLightTheme,
             darkLightThemeSwitch,

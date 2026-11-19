@@ -1,6 +1,30 @@
-import { faLessThanEqual } from '@fortawesome/free-solid-svg-icons';
 import { Category } from './categories-config';
+import { CCConfig } from '../../cc-config';
+let ccconfig: CCConfig = require('../../cc-config.json')
 
+/*
+ * Common list of Source Types, used in multiple menus
+*/
+export const commonSourceTypes = [
+    "Assessed by eye/personal knowledge of the building",
+    "Assessed using professional knowledge of building or building type",
+    "Assessed using streetview photographs, satellite imagery or maps",
+    "Assessed by specialist emergency group",
+    "Central government record/online database",
+    "Local government record/online database",
+    "Live streamed from a government source",
+    "Open database (non-profit)",
+    "Open database (commercial)",
+    "Website (non-profit)",
+    "Website (commercial)",
+    "Inferred computationally from CCRP data",
+    "Inferred by eye from CCRP data",
+    "Synthetic data",
+    "Other"
+];
+
+const freeTextDisclaimer : string = 
+    "<br/><br/>(For security reasons, we are not currently allowing free-text input and are looking into other ways of collecting this data).";
 
 /**
  * This interface is used only in code which uses dataFields, not in the dataFields definition itself
@@ -15,7 +39,7 @@ export interface DataFieldDefinition {
      * A field could be displayed in several categories, but this value will be used
      * when a single category needs to be shown in the context of a field, e.g.
      * in the case of edit history or the copy-paste tool (multi-edit)
-     *  */ 
+     *  */
     category: Category;
 
     /**
@@ -41,7 +65,7 @@ export interface DataFieldDefinition {
     /**
      * If the defined type is a dictionary, this describes the types of the dictionary's fields
      */
-    fields?: { [key: string]: Omit<DataFieldDefinition, 'category'>}
+    fields?: { [key: string]: Omit<DataFieldDefinition, 'category'> }
 
     /**
      * The example is used to determine the runtime type in which the attribute data is stored (e.g. number, string, object)
@@ -69,12 +93,14 @@ export const buildingUserFields = {
         perUser: true,
         category: Category.Community,
         title: "Mögen Sie dieses Gebäude und denken Sie, dass es einen Beitrag zur Stadt leistet?",
+        tooltip: "In your opinion, does this specific building contribute something to the city?",
         example: true,
     },
     community_type_worth_keeping: {
         perUser: true,
         category: Category.Community,
         title: "Glauben Sie, dass dieser **Gebäudetyp** einen Beitrag zur Stadt leistet?",
+        tooltip: "In your opinion, does this type of building contribute something to the city?",
         example: true,
     },
     community_type_worth_keeping_reasons: {
@@ -110,19 +136,171 @@ export const buildingUserFields = {
             other: false
         }
     },
-    
+    community_building_worth_keeping: {
+        perUser: true,
+        category: Category.Community,
+        title: "Do you have any other comments on this **type** of building?",
+        tooltip: "Please tick the box if you think this kind of building should be kept by our towns and cities for the future?",
+        example: true,
+    },
+    community_building_worth_keeping_reasons: {
+        perUser: true,
+        category: Category.Community,
+        title: 'I think that: (Please tick all that apply)',
+        fields: {
+            internal_layout: {
+                title: 'The internal layout works well.'
+            },
+            building_feel: {
+                title: "The building feels nice to be in/use."
+            },
+            near_greenery: {
+                title: 'The building is near greenery.'
+            },
+            adaptable: {
+                title: 'This kind of building is very adaptable.'
+            },
+            durable: {
+                title: 'This kind of building is well built and long lasting.'
+            },
+            building_other: {
+                title: 'Other'
+            }
+        },
+        example: {
+            internal_layout: true,
+            building_feel: true,
+            near_greenery: false,
+            adaptable: true,
+            durable: true,
+            building_other: false
+        }
+    },
+    community_building_worth_keeping_based_on: {
+        perUser: true,
+        category: Category.Community,
+        title: "How well do you know this building and its streetscape?",
+        tooltip: "What are your answers to the questions below based on, please select an answer.",
+        example: "",
+        items: [
+            "Local knowledge",
+            "Professional interest",
+            "A general impression from passing through the area",
+            "Seeing an image"
+        ]
+    },
+    community_streetscape_worth_keeping: {
+        perUser: true,
+        category: Category.Community,
+        title: "Do you have any other comments on this **type** of streetscape?",
+        tooltip: "Please tick the box if you think this kind of streetscape should be kept by our towns and cities for the future?",
+        example: true,
+    },
+    community_streetscape_worth_keeping_reasons: {
+        perUser: true,
+        category: Category.Community,
+        title: 'I think that: (Please tick all that apply)',
+        fields: {
+            street_feel: {
+                title: "The street feels nice to walk down."
+            },
+            feels_safe: {
+                title: 'The layout and type of buildings makes the street feels safe.'
+            },
+            interesting: {
+                title: 'There are interesting things to look at.'
+            },
+            greenery: {
+                title: 'The street has greenery.'
+            },
+            public_art: {
+                title: 'The street has public art.'
+            },
+            streetscape_other: {
+                title: 'Other'
+            }
+        },
+        example: {
+            street_feel: true,
+            feels_safe: true,
+            interesting: false,
+            greenery: true,
+            public_art: true,
+            streetscape_other: false
+        }
+    },
+    community_streetscape_worth_keeping_based_on: {
+        perUser: true,
+        category: Category.Community,
+        title: "Are your answers above based on:",
+        tooltip: "What are your answers to the above questions based on, please select an answer.",
+        example: "",
+        items: [
+            "Local knowledge of the street",
+            "Professional interest in this kind of building",
+            "A general impression from passing through the area",
+            "Seeing an image of the streetscape"
+        ]
+    },
+    community_school_project_data: {
+        perUser: true,
+        category: Category.Community,
+        title: "Are you entering this data as part of a school project?",
+        tooltip: "Please tick here if data is being entered as part of a school project.",
+        example: true,
+    },
+
     community_local_significance: {
         perUser: true,
         category: Category.Community,
         title: "Sind Sie der Meinung, dass dieses Gebäude als Gebäude von besonderem lokalen Interesse erfasst werden sollte?",
-        example: true
+        tooltip: "In your opinion, is this building of special local interest?",
+        example: true,
     },
     community_expected_planning_application: {
         perUser: true,
         category: Category.Community,
         title: "Glauben Sie, dass dieses Gebäude in den nächsten sechs Monaten Gegenstand eines Bauantrags sein könnte, der dessen Abriss beinhaltet?",
-        example: true
-    }
+        tooltip: "Are you aware of any upcoming planning applications relating to this building?",
+        example: true,
+    },
+    
+    community_building_hominess: {
+        category: Category.Community,
+        title: "Hominess of the building’s exterior.",
+        tooltip: `Based on <a href="https://www.sciencedirect.com/science/article/pii/S0010945220300332?casa_token=WiBFU-E3AGcAAAAA:6qOymtPLh1gxvgLXiVSD8OAhbOY37-ErO3NehKj4vEnhZr-uR2lCU-vFcbGDE8IN8UkI8Ug">Coburn et. al</a>.`,
+        example: 3,
+    },
+    community_building_coherence: {
+        category: Category.Community,
+        title: "Coherence of the building's exterior",
+        tooltip: `Based on <a href="https://www.sciencedirect.com/science/article/pii/S0010945220300332?casa_token=WiBFU-E3AGcAAAAA:6qOymtPLh1gxvgLXiVSD8OAhbOY37-ErO3NehKj4vEnhZr-uR2lCU-vFcbGDE8IN8UkI8Ug">Coburn et. al</a>.`,
+        example: 3,
+    },
+    community_building_fascination: {
+        category: Category.Community,
+        title: "Fascination of the building's exterior",
+        tooltip: `Based on <a href="https://www.sciencedirect.com/science/article/pii/S0010945220300332?casa_token=WiBFU-E3AGcAAAAA:6qOymtPLh1gxvgLXiVSD8OAhbOY37-ErO3NehKj4vEnhZr-uR2lCU-vFcbGDE8IN8UkI8Ug">Coburn et. al</a>.`,
+        example: 3,
+    },
+    community_streetscape_hominess: {
+        category: Category.Community,
+        title: "Hominess of the surrounding streetscape.",
+        tooltip: `Based on <a href="https://www.sciencedirect.com/science/article/pii/S0010945220300332?casa_token=WiBFU-E3AGcAAAAA:6qOymtPLh1gxvgLXiVSD8OAhbOY37-ErO3NehKj4vEnhZr-uR2lCU-vFcbGDE8IN8UkI8Ug">Coburn et. al</a>.`,
+        example: 3,
+    },
+    community_streetscape_coherence: {
+        category: Category.Community,
+        title: "Coherence of the surrounding streetscape.",
+        tooltip: `Based on <a href="https://www.sciencedirect.com/science/article/pii/S0010945220300332?casa_token=WiBFU-E3AGcAAAAA:6qOymtPLh1gxvgLXiVSD8OAhbOY37-ErO3NehKj4vEnhZr-uR2lCU-vFcbGDE8IN8UkI8Ug">Coburn et. al</a>.`,
+        example: 3,
+    },
+    community_streetscape_fascination: {
+        category: Category.Community,
+        title: "Fascination of the surrounding streetscape.",
+        tooltip: `Based on <a href="https://www.sciencedirect.com/science/article/pii/S0010945220300332?casa_token=WiBFU-E3AGcAAAAA:6qOymtPLh1gxvgLXiVSD8OAhbOY37-ErO3NehKj4vEnhZr-uR2lCU-vFcbGDE8IN8UkI8Ug">Coburn et. al</a>.`,
+        example: 3,
+    },
 };
 
 
@@ -132,6 +310,18 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         title: "Name des Gebäudes (Link zu weiteren Informationen)",
         tooltip: "Link zu einer Website mit weiteren Informationen über das Gebäude (für die meisten Gebäude nicht erforderlich).",
         example: "https://de.wikipedia.org/wiki/Neues_Rathaus_(Dresden)",
+    },
+    location_name_link: {
+        category: Category.Location,
+        title: "Building name link (non-residential) - Wikipedia or other",
+        tooltip: "The name of the building." + freeTextDisclaimer,
+        example: "https://en.wikipedia.org/wiki/Palace_of_Westminster",
+    },
+    location_residential_name_link: {
+        category: Category.Location,
+        title: "Building name link (residential) - Wikipedia or other",
+        tooltip: "The name of the building." + freeTextDisclaimer,
+        example: "https://en.wikipedia.org/wiki/221B_Baker_Street",
     },
     location_number: {
         category: Category.Location,
@@ -149,25 +339,69 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         category: Category.Location,
         title: "weitere Adresszeile",
         example: "",
-        //tooltip: ,
+        tooltip: freeTextDisclaimer,
     },
     location_town: {
         category: Category.Location,
         title: "Stadt",
         example: "Dresden",
-        //tooltip: ,
+        tooltip: freeTextDisclaimer,
     },
     location_postcode: {
         category: Category.Location,
         title: "Postleitzahl",
         example: "01067",
-        //tooltip: ,
+        tooltip: "Correctly formatted UK postcode, i.e. NW1 2FB",
+    },
+    location_address_source: {
+        category: Category.Location,
+        title: "Source type",
+        example: "",
+        tooltip: undefined,
+        items: commonSourceTypes
+    },
+    location_address_links: {
+        category: Category.Location,
+        title: "Source link(s)",
+        tooltip: undefined,
+        example: ["", "", ""],
     },
     ref_toid: {
         category: Category.Location,
-        title: "Building Footprint ID",
-        tooltip: "Ordnance Survey Topography Layer ID (TOID) [<a href='https://www.ordnancesurvey.co.uk/business-government/products/open-toid'>link</a>]",
+        title: "Open building footprint ID",
+        tooltip: "Ordnance Survey Topography Layer ID (TOID)",
         example: "",
+    },
+    location_alternative_footprint_links: {
+        category: Category.Location,
+        title: "Alternative open building footprint links",
+        tooltip: "Links to alternative building footprint datasets (include the direct link to the footprint of this building where possible).",
+        example: ["", "", ""],
+    },
+    location_subdivided: {
+        category: Category.Location,
+        title: 'Is this building subdivided',
+        tooltip: undefined,
+        example: true,
+    },
+    location_num_subdivisions: {
+        category: Category.Location,
+        title: "How many properties are there within this building?",
+        tooltip: "For example, if a former house has been converted into three flats, put '3'",
+        example: 3,
+    },
+    location_subdivisions_source_type: {
+        category: Category.AgeHistory,
+        title: "Source type",
+        tooltip: undefined,
+        items: commonSourceTypes,
+        example: "",
+    },
+    location_subdivisions_source_links: {
+        category: Category.AgeHistory,
+        title: "Source link(s)",
+        tooltip: undefined,
+        example: ["", "", ""],
     },
     
     /**
@@ -178,37 +412,49 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         category: Category.Location,
         title: "Flurstückskennzeichen",
         tooltip: "Flurstückskennzeichen (wird automatisiert abgeleitet)",
-        /* example: [{uprn: "", parent_uprn: "" }, {uprn: "", parent_uprn: "" }], */
-        
+        example: [{ uprn: "", parent_uprn: "" }, { uprn: "", parent_uprn: "" }],
     },
 
     planning_data: {
         category: Category.Location,
         title: "PLANNING DATA",
-        tooltip: "PLANNING DATA",
-        example: [{uprn: "", building_id: 1, data_source: ""},
-                  {uprn: "", building_id: 1, data_source: "", status: "", status_before_aliasing: "", decision_date: "", description: "", planning_application_link: "", registered_with_local_authority_date: "", last_synced_date: "", data_source_link: "", address: ""},
-                ],
+        tooltip: undefined,
+        example: [{ uprn: "", building_id: 1, data_source: "" },
+        { uprn: "", building_id: 1, data_source: "", status: "", status_before_aliasing: "", decision_date: "", description: "", planning_application_link: "", registered_with_local_authority_date: "", last_synced_date: "", data_source_link: "", address: "" },
+        ],
     },
-
 
     ref_osm_id: {
         category: Category.Location,
         title: "OpenStreetMap ID",
-        tooltip: "OpenStreetMap feature ID",
+        tooltip: "OpenStreetMap building ('way') ID - Numerical string of up to 9 characters",
         example: "",
     },
     location_latitude: {
         category: Category.Location,
         title: "geogr. Breitengrad",
+        tooltip: "Latitude of building, using WGS 84 (EPSG:4326). Building geometry is reduced to a point representing it.",
         example: 51.049259,
     },
     location_longitude: {
         category: Category.Location,
         title: "geogr. Längengrad",
+        tooltip: "Longitude of building, using WGS 84 (EPSG:4326). Building geometry is reduced to a point representing it.",
         example: 13.73836,
     },
-
+    location_coordinates_source: {
+        category: Category.Location,
+        title: "Source type",
+        example: "",
+        tooltip: undefined,
+        items: commonSourceTypes
+    },
+    location_coordinates_links: {
+        category: Category.Location,
+        title: "Source link(s)",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
     current_landuse_group: {
         category: Category.LandUse,
         title: "Aktuelle Gebäudenutzung (Group)",
@@ -218,7 +464,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
     current_landuse_order: {
         category: Category.LandUse,
         title: "Aktuelle Gebäudenutzung (Order)",
-        tooltip: "Land use Order as classified by [NLUD](https://www.gov.uk/government/statistics/national-land-use-database-land-use-and-land-cover-classification)",
+        tooltip: "Land use Order as classified by [NLUD](https://www.gov.uk/government/statistics/national-land-use-database-land-use-and-land-cover-classification). Derived automatically from the data above.",
         example: "",
     },
     current_landuse_source: {
@@ -254,30 +500,58 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         example: true,
     },
     building_attachment_form: {
-        category: Category.Type,
+        category: Category.TypologySize,
         title: "Morphologischer Bautyp/ Nachbarschaft",
         tooltip: "Dieses Merkmal beschreibt die Lagebeziehung zu benachbarten Gebäuden. Mögliche Werte: freistehend, Doppelhaushälfte, Gebäudereihe (am Ende oder innerhalb)",
         example: "",
+        items: [
+            'freistehend',
+            'Doppelhaushälfte',
+            'Häuserreihe (Ende)',
+            'Häuserreihe (innerhalb)'
+        ],
+        // Colouring Dresden: values match the German enum values in the Dresden DB (migrations 051, 053)
     },
-    date_change_building_use: {
-        category: Category.Type,
-        title:"Wann änderte sich die Gebäudenutzung?",
-        tooltip: "Dies ist das Datum, an dem das Gebäude nicht mehr für die Funktion genutzt wird, für die es gebaut wurde. Wenn es z. B. ein Lagerhaus war, das jetzt ein Büro ist, wäre dies das Datum, an dem es zu einem Bürohaus wurde.",
-        example: 1920,
-    },
-    /**
-     * original_building_use does not exist in database yet.
-     * Slug needs to be adjusted if the db column will be named differently 
-     */
-    original_building_use: {
-        category: Category.Type,
-        title: "Originale Gebäudenutzung (bei Erbauung)",
-        tooltip: "Wofür wurde das Gebäude ursprünglich genutzt, als es gebaut wurde? Wenn es z. B. ein Lagerhaus war, das jetzt ein Büro ist, wäre hier das Lagerhaus gemeint.",
+    building_attachment_source_type: {
+        category: Category.AgeHistory,
+        title: "Source type",
+        tooltip: undefined,
+        items: commonSourceTypes,
         example: "",
     },
-
+    building_attachment_source_links: {
+        category: Category.AgeHistory,
+        title: "Source link(s)",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    building_residential_typology_description: {
+        category: Category.TypologySize,
+        title: "Which dropdown option best matches the residential typology description?",
+        tooltip: undefined,
+        example: "",
+        items: [
+            "Single-storey house/Bungalow",
+            "Multi-storey house",
+            "Maisonette",
+            "Flat"
+        ]
+    },
+    building_residential_typology_source_type: {
+        category: Category.TypologySize,
+        title: "Source type",
+        tooltip: undefined,
+        items: commonSourceTypes,
+        example: "",
+    },
+    building_residential_typology_source_links: {
+        category: Category.TypologySize,
+        title: "Source link(s)",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
     size_roof_shape: {
-        category: Category.Type,
+        category: Category.TypologySize,
         title: "Dachform",
         example: "",
         tooltip: "Welche Form weist das Dach des Gebäudes auf?",
@@ -295,45 +569,1877 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
             "Schalen- und Membrandächer"
         ],
     },
-
-
-    size_roof_shape_source: {
-        category: Category.Type,
-        title: "Datenquelle Dachform",
-        tooltip: "Freitextfeld für Datenquelle",
-        example: "",
-    },
-
-
-
-
-
     date_year: {
-        category: Category.Age,
+        category: Category.AgeHistory,
         title: "Baujahr (ggf. beste Schätzung)",
         tooltip: "Das Jahr, in dem das Gebäude fertiggestellt worden ist (Fertigstellung).",
         example: 1924,
     },
-    date_lower : {
-        category: Category.Age,
+    date_year_completed: {
+        category: Category.AgeHistory,
+        title: "Year construction completed if known",
+        tooltip: undefined,
+        example: 1925,
+    },
+    date_lower: {
+        category: Category.AgeHistory,
         title: "Baujahr (frühest mögliches Jahr)",
         tooltip: "Das früheste Jahr, in dem das Gebäude fertiggestellt worden sein könnte.",
         example: 1900,
     },
     date_upper: {
-        category: Category.Age,
+        category: Category.AgeHistory,
         title: "Baujahr (spätest mögliches Jahr)",
         tooltip: "Das späteste Jahr, in dem das Gebäude fertiggestellt worden sein könnte.",
         example: 2000,
     },
+    date_year_inferred: {
+        category: Category.AgeHistory,
+        title: "Year construction started (automatically inferred from other data)",
+        tooltip: undefined,
+        example: 1924,
+    },
+    date_year_inferred_lower: {
+        category: Category.AgeHistory,
+        title: "Best estimate for the earliest year in which construction could have started (automatically inferred from other data)",
+        tooltip: undefined,
+        example: 1920,
+    },
+    date_year_inferred_upper: {
+        category: Category.AgeHistory,
+        title: "This should be the latest year in which construction could have started (automatically inferred from other data)",
+        tooltip: undefined,
+        example: 1935,
+    },
     facade_year: {
-        category: Category.Age,
+        category: Category.AgeHistory,
         title: "Baujahr der Fassade",
         tooltip: "Wann wurde die Fassade des Gebäudes erbaut? (ggf. beste Schätzung)",
         example: 1900,
     },
+    date_source_type: {
+        category: Category.AgeHistory,
+        title: "Source type",
+        tooltip: undefined,
+        items: commonSourceTypes,
+        example: "",
+    },
+    date_source_links: {
+        category: Category.AgeHistory,
+        title: "Additional Source link(s)",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    size_storeys_core: {
+        category: Category.ConstructionDesign,
+        title: "Anzahl Hauptgeschosse",
+        tooltip: "Wie viele Etagen liegen zwischen dem Straßenniveau und dem Beginn des Daches (Traufenhöhe)?",
+        example: 10,
+    },
+    size_storeys_attic: {
+        category: Category.ConstructionDesign,
+        title: "Anzahl Dachgeschosse",
+        tooltip: "Wie viele Etagen befinden sich im Dachbereich (zwischen Traufen- und Firsthöhe)?",
+        example: 1,
+    },
+    size_storeys_basement: {
+        category: Category.ConstructionDesign,
+        title: "Anzahl Kellergeschosse",
+        tooltip: "Wie viele Etagen befinden sich im Keller (unterhalb des Straßenniveaus)?",
+        example: 1,
+    },
+    size_storeys_source_type: {
+        category: Category.EnergyPerformance,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    size_storeys_source_links: {
+        category: Category.EnergyPerformance,
+        title: "Source links",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    size_height_apex: {
+        category: Category.ConstructionDesign,
+        title: "Firsthöhe (in Metern)",
+        example: 25.5,
+        tooltip: 'Höhe vom Straßenniveau bis zum Dachfirst',
+    },
+    construction_material_window_frame: {
+        category: Category.ConstructionDesign,
+        title: "What is the material used for most of the window frames?",
+        tooltip: undefined,
+        example: "Wood",
+        items: [
+            "Wood",
+            "Metal",
+            "Plastic",
+            "Other",
+            "No windows"
+        ]
+    },
+    construction_material_window_frame_source_type: {
+        category: Category.ConstructionDesign,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    construction_material_window_frame_source_links: {
+        category: Category.ConstructionDesign,
+        title: "Source links",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    size_height_apex_source_type: {
+        category: Category.EnergyPerformance,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    size_height_apex_source_links: {
+        category: Category.EnergyPerformance,
+        title: "Source links",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    size_height_eaves: {
+        category: Category.ConstructionDesign,
+        title: "Traufenhöhe (in Metern)",
+        example: 20.3,
+        tooltip: 'Höhe vom Straßenniveau bis zur Traufe (Beginn des Daches)',
+    },
+    size_height_eaves_source_type: {
+        category: Category.EnergyPerformance,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    size_height_eaves_source_links: {
+        category: Category.EnergyPerformance,
+        title: "Source links",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    size_floor_area_ground: {
+        category: Category.ConstructionDesign,
+        title: "Grundfläche (in Quadratmetern)",
+        example: 1245.6,
+        tooltip: undefined,
+    },
+    size_floor_area_total: {
+        category: Category.ConstructionDesign,
+        title: "Summe Geschossfläche (in Quadratmetern)",
+        example: 2001.7,
+        tooltip: undefined,
+    },
+    size_floor_area_source_type: {
+        category: Category.EnergyPerformance,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    size_floor_area_source_links: {
+        category: Category.EnergyPerformance,
+        title: "Source links",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    size_width_frontage: {
+        category: Category.ConstructionDesign,
+        title: "Breite der Fassade/ der Gebäudefront (in Metern)",
+        example: 12.2,
+        tooltip: "Size of the frontage of the building (in meters)",
+    },
+    size_width_frontage_source_type: {
+        category: Category.EnergyPerformance,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    size_width_frontage_source_links: {
+        category: Category.EnergyPerformance,
+        title: "Source links",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+
+    size_configuration: {
+        category: Category.ConstructionDesign,
+        title: "Configuration (semi/detached, end/terrace)",
+        example: "",
+        //tooltip: ,
+    },
+
+    size_plot_area_total: {
+        category: Category.RetrofitCondition,
+        title: "Total area of plot (m²)",
+        example: 123.02,
+        tooltip: undefined,
+    },
+    size_plot_area_total_source_type: {
+        category: Category.EnergyPerformance,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    size_plot_area_total_source_links: {
+        category: Category.EnergyPerformance,
+        title: "Source links",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    size_far_ratio: {
+        category: Category.RetrofitCondition,
+        title: "FAR ratio (percentage of plot covered by building)",
+        example: 60.0,
+        tooltip: "The measurement of a building's floor area in relation to the size of the lot/parcel.",
+    },
+    size_far_ratio_source_type: {
+        category: Category.EnergyPerformance,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    size_far_ratio_source_links: {
+        category: Category.EnergyPerformance,
+        title: "Source links",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    size_parcel_geometry: {
+        category: Category.RetrofitCondition,
+        title: "Land parcel geometry link",
+        example: "https://",
+        tooltip: "Please provide a link to the land parcel geometry for this building (<a href='https://www.gov.uk/guidance/inspire-index-polygons-spatial-data'>INSPIRE Polygons</a>)",
+    },
+    size_parcel_geometry_source_type: {
+        category: Category.EnergyPerformance,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    size_parcel_geometry_source_links: {
+        category: Category.EnergyPerformance,
+        title: "Source links",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+
+    construction_core_material: {
+        category: Category.PlanningConservation,
+        title: "Primärer Baustoff",
+        tooltip:"Das vorwiegend genutzte Baumaterial im Gebäude",
+        example: "",
+        items: [
+            'Ziegel',
+            'andere Mauersteine: Kalksandstein',
+            'andere Mauersteine: Porenbeton',
+            'andere Mauersteine: Bruchstein',
+            'Stahlbeton',
+            'Stahl',
+            'Holz',
+            'anderes Baumaterial'
+        ],
+        // Colouring Dresden: values match the German enum values in the Dresden DB (migrations 051, 053)
+    },
+    construction_core_material_source_type: {
+        category: Category.PlanningConservation,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    construction_core_material_source_links: {
+        category: Category.PlanningConservation,
+        title: "Source links",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+
+    construction_secondary_materials: {
+        category: Category.PlanningConservation,
+        title: "Sekundärer Baustoff",
+        tooltip:"Andere wichtige Baumaterialien",
+        example: "",
+    },
+
+    construction_roof_covering: {
+        category: Category.PlanningConservation,
+        title: "Vorherrschende Dachbedeckung",
+        tooltip:'Material des Daches',
+        example: "",
+        items: [
+            'Schiefer',
+            'Lehmziegel',
+            'Holz',
+            'Asphalt',
+            'Eisen oder Stahl',
+            'anderes Metall',
+            'anderes natürliches Material',
+            'anderes künstliches Material'
+        ],
+        // Colouring Dresden: values match the German enum values in the Dresden DB (migrations 051, 053)
+    },
+    construction_roof_covering_source_type: {
+        category: Category.PlanningConservation,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    construction_roof_covering_source_links: {
+        category: Category.PlanningConservation,
+        title: "Source links",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    construction_structural_system: {
+        category: Category.PlanningConservation,
+        title: "What type of structural system does the building appear to have?",
+        tooltip: "Refer to GEM Taxonomy [<a href='https://github.com/gem/gem_taxonomy'>LINK</a>]",
+        example: "Solid masonry walls supporting the roof",
+        items: [
+            "Solid masonry walls supporting the roof",
+            "A lateral load resisting structure (e.g. concrete or wooden frame)",
+            "Other"
+        ]
+    },
+    construction_structural_system_source_type: {
+        category: Category.PlanningConservation,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    construction_structural_system_source_links: {
+        category: Category.PlanningConservation,
+        title: "Source links",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    construction_foundation: {
+        category: Category.PlanningConservation,
+        title: "What is the foundation system thought to be",
+        tooltip: "Refer to GEM Taxonomy [<a href='https://taxonomy.openquake.org/terms/foundation-system'>LINK</a>]",
+        example: "Deep Foundations with lateral support",
+        items: [
+            "Shallow foundations with no lateral support",
+            "Shallow foundations with lateral support",
+            "Deep foundations with no lateral support",
+            "Deep Foundations with lateral support",
+            "Other"
+        ]
+    },
+    construction_foundation_source_type: {
+        category: Category.PlanningConservation,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    construction_foundation_source_links: {
+        category: Category.PlanningConservation,
+        title: "Source links",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    construction_roof_shape: {
+        category: Category.PlanningConservation,
+        title: "What kind of roof shape does the building have?",
+        tooltip: "Refer to GEM Taxonomy [<a href='https://taxonomy.openquake.org/terms/roof-shape'>LINK</a>]",
+        example: "Pitched with gable ends",
+        items: [
+            "Flat",
+            "Pitched with gable ends",
+            "Pitched and hipped",
+            "Pitched with dormers",
+            "Monopitch",
+            "Sawtooth",
+            "Curved",
+            "Complex regular",
+            "Complex irregular",
+            "Other"
+        ]
+    },
+    construction_roof_shape_source_type: {
+        category: Category.PlanningConservation,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    construction_roof_shape_source_links: {
+        category: Category.PlanningConservation,
+        title: "Source links",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    construction_irregularities: {
+        category: Category.PlanningConservation,
+        title: "Are there any irregularities in the shape of the building?",
+        tooltip: "i.e. Is one side higher than other? - Refer to GEM Taxonomy [<a href='https://github.com/gem/gem_taxonomy'>LINK</a>]",
+        example: "No irregularities",
+        items: [
+            "Vertical irregularities",
+            "Horizontal irregularities",
+            "No irregularities"
+        ]
+    },
+    construction_irregularities_source_type: {
+        category: Category.PlanningConservation,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    construction_irregularities_source_links: {
+        category: Category.PlanningConservation,
+        title: "Source links",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    construction_decorative_features: {
+        category: Category.PlanningConservation,
+        title: "Are there decorative features/mouldings integrated into the facade?",
+        tooltip: "Any features that are part of the facade that are purely decorative.",
+        example: true,
+    },
+    construction_decorative_feature_materials: {
+        category: Category.PlanningConservation,
+        title: "What are these decorative features mainly made of?",
+        tooltip: "What material are the main/majority of decorative features constructed from?",
+        example: "Concrete",
+        items: [
+            "Wood",
+            "Clay",
+            "Concrete",
+            "Glass",
+            "Metal",
+            "Other"
+        ]
+    },
+    construction_decorative_feature_source_type: {
+        category: Category.PlanningConservation,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    construction_decorative_feature_source_links: {
+        category: Category.PlanningConservation,
+        title: "Source links",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    construction_internal_wall: {
+        category: Category.PlanningConservation,
+        title: "What is the main internal wall material thought to be?",
+        tooltip: "The material that comprises the majority of the internal walls of the property.",
+        example: "",
+        items: [
+            'Brick',
+            'Stone',
+            'Concrete blocks',
+            'Concrete slabs/panels',
+            'Wood',
+            'Metal',
+            'Adobe/Earth',
+            'Glass',
+            'Plastic',
+            'Stucco on light framing',
+            'Vegetative (straw, matting etc)',
+            'Cement based boards',
+            'Other'
+        ]
+    },
+    construction_internal_wall_source_type: {
+        category: Category.PlanningConservation,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    construction_internal_wall_source_links: {
+        category: Category.PlanningConservation,
+        title: "Source links",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    construction_external_wall: {
+        category: Category.PlanningConservation,
+        title: "What is the main external wall material thought to be?",
+        tooltip: 'The material that comprises the majority of the external walls of the property.',
+        example: "",
+        items: [
+            'Brick',
+            'Stone',
+            'Concrete blocks',
+            'Concrete slabs/panels',
+            'Wood',
+            'Metal',
+            'Adobe/Earth',
+            'Glass',
+            'Plastic',
+            'Stucco on light framing',
+            'Vegetative (straw, matting etc)',
+            'Cement based boards',
+            'Other'
+        ]
+    },
+    construction_external_wall_source_type: {
+        category: Category.PlanningConservation,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    construction_external_wall_source_links: {
+        category: Category.PlanningConservation,
+        title: "Source links",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    construction_ground_floor: {
+        category: Category.PlanningConservation,
+        title: "What is the main ground floor material thought to be?",
+        tooltip: undefined,
+        example: "",
+        items: [
+            'Masonry',
+            'Earthen',
+            'Concrete',
+            'Wood',
+            'Metal',
+            'Other',
+        ]
+    },
+    construction_ground_floor_source_type: {
+        category: Category.PlanningConservation,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    construction_ground_floor_source_links: {
+        category: Category.PlanningConservation,
+        title: "Source links",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+
+    sust_breeam_rating: {
+        category: Category.WaterGreenInfrastructure,
+        title: "Official environmental quality rating",
+        tooltip: ccconfig.energy_rating,
+        example: "",
+    },
+    sust_breeam_rating_source_type: {
+        category: Category.WaterGreenInfrastructure,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    sust_breeam_rating_source_link: {
+        category: Category.WaterGreenInfrastructure,
+        title: "Source link",
+        tooltip: undefined,
+        example: "",
+    },
+    sust_dec: {
+        category: Category.WaterGreenInfrastructure,
+        title: "Non-residential Building Energy Rating",
+        tooltip: "Display Energy Certificate (DEC) Any public building should have (and display) a DEC. Showing how the energy use for that building compares to other buildings with same use",
+        example: "G",
+    },
+    sust_aggregate_estimate_epc: {
+        category: Category.WaterGreenInfrastructure,
+        title: "Residential Building Energy Rating",
+        tooltip: "Energy Performance Certificate (EPC) Any premises sold or rented is required to have an EPC to show how energy efficient it is. Only buildings rate grade E or higher may be rented",
+        example: "",
+    },
+    sust_aggregate_estimate_epc_source_type: {
+        category: Category.EnergyPerformance,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    sust_aggregate_estimate_epc_source_link: {
+        category: Category.EnergyPerformance,
+        title: "Source link",
+        tooltip: undefined,
+        example: "",
+    },
+    sust_dec_source_type: {
+        category: Category.EnergyPerformance,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    sust_dec_source_link: {
+        category: Category.EnergyPerformance,
+        title: "Source link",
+        tooltip: undefined,
+        example: "",
+    },
+    sust_retrofit_date: {
+        category: Category.WaterGreenInfrastructure,
+        title: "Letzter bedeutsamer Umbau",
+        tooltip: "Datum der letzten größeren Gebäuderenovierung",
+        example: 2002,
+    },
+    sust_retrofit_source_type: {
+        category: Category.EnergyPerformance,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    sust_retrofit_source_links: {
+        category: Category.EnergyPerformance,
+        title: "Source links",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    sust_life_expectancy: {
+        category: Category.WaterGreenInfrastructure,
+        title: "Erwartete Lebensdauer (Typologie)",
+        example: 123,
+    },
+
+    survival_status: {
+        category: Category.AgeHistory,
+        title: "Survival status",
+        tooltip: "Survival and Loss tracked using Historical Maps",
+        items: [
+            "Same as Historical Map (Unchanged)",
+            "Similar to Historical Map (Some Changes)",
+            "Historical Building(s) Demolished",
+            "Current Building on Previous Green Space"
+        ],
+        example: "",
+    },
+
+    survival_source: {
+        category: Category.AgeHistory,
+        title: "Method type",
+        tooltip: undefined,
+        items: [
+            "Matched by comparing maps",
+            "Checked using streetview images",
+            "Historical publication or archive document",
+            "Expert knowledge",
+            "Other"
+        ],
+        example: "",
+    },
+
+    survival_source_links: {
+        category: Category.AgeHistory,
+        title: "Source link(s)",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+
+    edit_history: {
+        category: Category.UrbanInfrastructure,
+        title: "PLANNING DATA",
+        tooltip: undefined,
+        example: [{}],
+    },
+
+    planning_portal_link: {
+        category: Category.UrbanInfrastructure,
+        title: "Local authority planning application link",
+        example: "",
+        //tooltip: ,
+    },
+    planning_in_conservation_area_url: {
+        category: Category.UrbanInfrastructure,
+        title: "Please provide a link to information about the conservation area.",
+        tooltip: "Link to a website containing information about the conservation area that the building is in.",
+        example: "",
+    },
+    planning_crowdsourced_site_completion_status: {
+        category: Category.UrbanInfrastructure,
+        title: "Has the work on this site been completed?",
+        tooltip: "Select 'yes' if all work has been completed, 'no' if work is still ongoing.",
+        example: true,
+    },
+    planning_crowdsourced_site_completion_year: {
+        category: Category.UrbanInfrastructure,
+        title: "Year of completion (best estimate)",
+        tooltip: "Year when the work was completed, if known",
+        example: 2022,
+    },
+    planning_crowdsourced_site_completion_source_type: {
+        category: Category.EnergyPerformance,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    planning_crowdsourced_site_completion_source_links: {
+        category: Category.EnergyPerformance,
+        title: "Source links",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    planning_crowdsourced_planning_id: {
+        category: Category.UrbanInfrastructure,
+        title: "If you know of a planning application that has been recently submitted for this site, and is not listed in the blue box above, please enter its planning application ID below:",
+        example: "1112/QWERTY",
+        //tooltip: ,
+    },
+    planning_in_conservation_area: {
+        category: Category.UrbanInfrastructure,
+        title: "Is the building in a conservation area?",
+        tooltip: "Is the building in any kind of special conservation area, such as...?",
+        example: true,
+    },
+    planning_in_conservation_area_id: {
+        category: Category.UrbanInfrastructure,
+        title: "Conservation Area identifier",
+        example: "",
+        //tooltip: ,
+    },
+    planning_conservation_area_name: {
+        category: Category.UrbanInfrastructure,
+        title: "Conservation Area Name",
+        example: "",
+        //tooltip: ,
+    },
+    planning_listed: {
+        category: Category.UrbanInfrastructure,
+        title: "Is this a listed building?",
+        tooltip: "Is the building a listed building according to <a href=\"https://historicengland.org.uk/advice/hpg/has/whs/\" target=\"_blank\">Historic England</a>",
+        example: true,
+    },
+    planning_list_id: {
+        category: Category.UrbanInfrastructure,
+        title: "Please add the ID from the NHLE if the building is listed:",
+        example: "121436",
+        tooltip: "National Heritage List for England (NHLE)",
+    },
+    planning_list_grade: {
+        category: Category.UrbanInfrastructure,
+        title: "What is its protection rating?",
+        tooltip: "What level of protection rating applies to this building?",
+        example: "II",
+        items: [
+            'I',
+            'II*',
+            'II',
+        ]
+    },
+    planning_heritage_at_risk_url: {
+        category: Category.UrbanInfrastructure,
+        title: "If the building is on a heritage at risk register, please provide a link to the entry on the register.",
+        tooltip: "Please provide the full link to the building's entry on the register, if possible.",
+        example: "",
+    },
+    planning_world_heritage_site: {
+        category: Category.UrbanInfrastructure,
+        title: "Is the building part of a World Heritage Site?",
+        tooltip: "Is the building part of a UNESCO <a href=\"https://www.unesco.org/en\" target=\"_blank\">World Heritage Site</a>",
+        example: true,
+    },
+    planning_world_list_id: {
+        category: Category.UrbanInfrastructure,
+        title: "Please add the World Heritage Site ID:",
+        tooltip: "Add the ID of the building/site on the UNESCO World Heritage Site registry. A link to the relevant resource will be generated automatically.",
+        example: "488",
+    },
+    planning_glher_url: {
+        category: Category.UrbanInfrastructure,
+        title: "Is it recorded on any historic environment records?",
+        example: "",
+        //tooltip: ,
+    },
+    planning_in_apa: {
+        category: Category.UrbanInfrastructure,
+        title: "Is the building in an area of archaeological priority?",
+        tooltip: "If the building is in an area of archaeological priority, select 'yes'.",
+        example: true,
+    },
+    planning_in_apa_url: {
+        category: Category.UrbanInfrastructure,
+        title: "Area of archaeological priority link",
+        tooltip: "Please provide a link to more information about the area of archaeological priority.",
+        example: "",
+    },
+    planning_local_list: {
+        category: Category.UrbanInfrastructure,
+        title: "Is the building a locally listed heritage asset?",
+        tooltip: "Examples of locally-listed heritage assets include...",
+        example: true,
+    },
+    planning_local_list_url: {
+        category: Category.UrbanInfrastructure,
+        title: "Please provide a link to the heritage asset registry.",
+        tooltip: "A website containing information about the asset registry, ideally a link to the buildings entry on that registry.",
+        example: "",
+    },
+    planning_historic_area_assessment: {
+        category: Category.UrbanInfrastructure,
+        title: "Does the building have any other type of designation?",
+        tooltip: "Select yes if the building has any other type of special designation that does not fit into the categories above.",
+        example: true,
+    },
+    planning_historic_area_assessment_url: {
+        category: Category.UrbanInfrastructure,
+        title: "Links to other designation type:",
+        tooltip: "Please provide a link describing the other special types of designation that apply to this building.",
+        example: "",
+    },
+    planning_demolition_proposed: {
+        category: Category.UrbanInfrastructure,
+        title: "Is the building proposed for demolition?",
+        example: true,
+        //tooltip: ,
+    },
+    planning_missing_data: {
+        category: Category.UrbanInfrastructure,
+        title: "Is information on a planning application relating to this building missing?",
+        tooltip: undefined,
+        example: true,
+    },
+    planning_missing_data_links: {
+        category: Category.EnergyPerformance,
+        title: "Source links",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    planning_heritage_at_risk: {
+        category: Category.UrbanInfrastructure,
+        title: "Is the building on a heritage at risk register?",
+        tooltip: "Examples of a heritage at risk register include...",
+        example: true,
+    },
+    planning_scientific_interest: {
+        category: Category.UrbanInfrastructure,
+        title: "Is the building on a site of special scientific interest?",
+        tooltip: "Is this building located in an area of special scientific interest.",
+        example: true,
+    },
+    planning_scientific_interest_source_type: {
+        category: Category.EnergyPerformance,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    planning_scientific_interest_source_links: {
+        category: Category.EnergyPerformance,
+        title: "Source links",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    planning_flood_zone: {
+        category: Category.UrbanInfrastructure,
+        title: "Is the building inside a Flood Zone?",
+        tooltip: "the GLA official description: \"All areas with more than a 1 in 1,000 annual probability of either river or sea flooding.\"",
+        example: true,
+    },
+    planning_housing_zone: {
+        category: Category.UrbanInfrastructure,
+        title: "Is the building in a Housing Zone?",
+        tooltip: "the GLA official description: \"Housing zones are areas funded by the Mayor and government to attract developers and relevant partners to build new homes.\"",
+        example: true,
+    },
+    planning_enterprise_zone: {
+        category: Category.UrbanInfrastructure,
+        title: "Is the building in a Creative Enterprise Zone?",
+        tooltip: "GLA official description: \"Creative Enterprise Zones are a new Mayoral initiative to designate areas of London where artists and creative businesses can find permanent affordable space to work; are supported to start-up and grow; and where local people are helped to learn creative sector skills and find new jobs.\"",
+        example: true,
+    },
+    planning_protected_vista: {
+        category: Category.UrbanInfrastructure,
+        title: "Is the building within a Protected Vista?",
+        tooltip: "GLA official description: \"The Protected Vistas are established in the London Plan with more detailed guidance provided in the London View Management Framework (LVMF). The London Plan seeks to protect the significant views which help to define London, including the panoramas, linear views and townscape views in this layer.\"",
+        example: true,
+    },
+    
+
+    is_domestic: {
+        category: Category.EnergyPerformance,
+        title: "Handelt es sich um ein Wohngebäude?",
+        tooltip: undefined,
+        example: "gemischte Nutzung",
+        items: [
+            "Yes",
+            "No",
+            "Mixed domestic/non-domestic"
+        ],
+    },
+    is_domestic_source: {
+        category: Category.EnergyPerformance,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    is_domestic_links: {
+        category: Category.EnergyPerformance,
+        title: "Source links",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    likes_total: {
+        category: Category.Community,
+        title: "Gesamtanzahl an Likes",
+        example: 100,
+        tooltip: "Menschen, die das Gebäude mögen und der Meinung sind, dass es zur Stadt beiträgt.",
+    },
+    community_type_worth_keeping_total: {
+        category: Category.Community,
+        title: "Menschen, die der Meinung sind, dass diese Art von Gebäude zur Stadt beiträgt.",
+        example: 100,
+    },
+    community_building_worth_keeping_total: {
+        category: Category.Community,
+        title: "People who think this type of building contributes to the city.",
+        example: 100,
+    },
+    community_streetscape_worth_keeping_total: {
+        category: Category.Community,
+        title: "People who think this type of building contributes to the city.",
+        example: 100,
+    },
+    community_local_significance_total: {
+        category: Category.Community,
+        title: "Personen, die der Meinung sind, dass das Gebäude als Gebäude von lokalem Interesse erfasst werden sollte",
+        example: 100,
+    },
+    community_building_hominess_count: {
+        category: Category.Community,
+        title: "People who think the building should be recorded as one of local interest",
+        example: 100,
+    },
+    community_building_coherence_count: {
+        category: Category.Community,
+        title: "People who think the building should be recorded as one of local interest",
+        example: 100,
+    },
+    community_building_fascination_count: {
+        category: Category.Community,
+        title: "People who think the building should be recorded as one of local interest",
+        example: 100,
+    },
+    community_streetscape_hominess_count: {
+        category: Category.Community,
+        title: "People who think the building should be recorded as one of local interest",
+        example: 100,
+    },
+    community_streetscape_coherence_count: {
+        category: Category.Community,
+        title: "People who think the building should be recorded as one of local interest",
+        example: 100,
+    },
+    community_streetscape_fascination_count: {
+        category: Category.Community,
+        title: "People who think the building should be recorded as one of local interest",
+        example: 100,
+    },
+    community_building_hominess_avg: {
+        category: Category.Community,
+        title: "People who think the building should be recorded as one of local interest",
+        example: 3,
+    },
+    community_building_coherence_avg: {
+        category: Category.Community,
+        title: "People who think the building should be recorded as one of local interest",
+        example: 3,
+    },
+    community_building_fascination_avg: {
+        category: Category.Community,
+        title: "People who think the building should be recorded as one of local interest",
+        example: 3,
+    },
+    community_building_neuroaesthetic_avg: {
+        category: Category.Community,
+        title: "People who think the building should be recorded as one of local interest",
+        example: 3,
+    },
+    community_streetscape_hominess_avg: {
+        category: Category.Community,
+        title: "People who think the building should be recorded as one of local interest",
+        example: 100,
+    },
+    community_streetscape_coherence_avg: {
+        category: Category.Community,
+        title: "People who think the building should be recorded as one of local interest",
+        example: 100,
+    },
+    community_streetscape_fascination_avg: {
+        category: Category.Community,
+        title: "People who think the building should be recorded as one of local interest",
+        example: 100,
+    },
+    community_streetscape_neuroaesthetic_avg: {
+        category: Category.Community,
+        title: "People who think the building should be recorded as one of local interest",
+        example: 3,
+    },
+
+    community_expected_planning_application_total: {
+        category: Category.Community,
+        title: "Personen, die glauben, dass das Gebäude in naher Zukunft von einem Bauantrag betroffen sein wird",
+        example: 100,
+    },
+
+    community_activities_current: {
+        category: Category.Community,
+        title: "Finden in dem Gebäude derzeit Aktivitäten statt, die der Gemeinschaft offenstehen?",
+        tooltip: "z. B. Jugendclub, Kirche, Arztpraxis, Kneipe",
+        example: true,
+    },
+    community_activities: {
+        category: Category.Community,
+        title: "Wurde dieser Ort in der Vergangenheit bereits für Gemeinschaftsaktivitäten genutzt?",
+        tooltip: "z. B. Jugendclub, Kirche, Arztpraxis, Kneipe",
+        example: true,
+    },
+    community_activities_always: {
+        category: Category.Community,
+        title: "Wurde das Gebäude schon immer für Gemeinschaftsaktivitäten genutzt?",
+        tooltip: "z. B. Jugendclub, Kirche, Arztpraxis, Kneipe",
+        example: true,
+    },
+    community_public_ownership: {
+        category: Category.Community,
+        title: "Ist das Gebäude in öffentlichem/kommunalem Besitz?",
+        tooltip: undefined,
+        example: "Nicht in öffentlichem/Gemeindeeigentum",
+        items: [
+            "Public/State body",
+            "Public body with Private company",
+            "Charity",
+            "Community group/Cooperative",
+            "Other non-profit body",
+            "Privately owned company",
+            "Privately owned offshore company",
+            "Private individual",
+            "Other",
+        ],
+    },
+    community_public_ownership_source_type: {
+        category: Category.UrbanInfrastructure,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    community_public_ownership_sources: {
+        category: Category.Community,
+        title: "Link Quelle zu Eigentum der Gemeinschaft",
+        tooltip: undefined,
+        example: ["https://example.com"],
+    },
+
+    dynamics_has_demolished_buildings: {
+        category: Category.DisasterManagement,
+        title: 'Wurden an dieser Stelle jemals weitere Gebäude errichtet?',
+        example: true,
+    },
+
+    demolished_buildings: {
+        category: Category.DisasterManagement,
+        title: 'Past (demolished) buildings on this site',
+        items: {
+            year_constructed: {
+                title: 'Construction year',
+                example: { min: 1989, max: 1991 },
+            },
+            year_demolished: {
+                title: 'Demolition year',
+                example: { min: 1993, max: 1994 },
+            },
+            lifespan: {
+                title: 'Lifespan',
+                example: "2-5",
+            },
+            overlap_present: {
+                title: 'Roughly what percentage of this building was inside the current site boundary?',
+                tooltip: '',
+                example: "25%"
+            },
+            links: {
+                title: 'Links / sources',
+                example: ["", ""]
+            }
+        },
+        example: [
+            {
+                year_constructed: { min: 1989, max: 1991 },
+                year_demolished: { min: 1993, max: 1994 },
+                lifespan: "2-5", overlap_present: "50%", links: ["", ""]
+            }
+        ]
+    },
+    has_extension: {
+        category: Category.EnergyPerformance,
+        title: "Gibt es einen Anbau/ Erweiterung?",
+        tooltip: "If the data in this section relates to the original main building, select \"yes\". If the data relates to a later extension/ redevelopment, select \"no\".",
+        example: false,
+    },
+    extension_year: {
+        category: Category.EnergyPerformance,
+        title: "Baujahr Anbau/ Erweiterung (ggf. beste Schätzung)",
+        tooltip: "Dieses Feld ist dasselbe wie Baujahr (Kategorie Alter)",
+        tooltip_extension: "Dies sollte das Jahr sein, in dem der Anbau errichtet wurde, nicht das ursprüngliche Gebäude",
+        example: 2020,
+    },
+    extension_source_type: {
+        category: Category.EnergyPerformance,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    extension_source_links: {
+        category: Category.EnergyPerformance,
+        title: "Source link(s)",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    developer_type: {
+        category: Category.EnergyPerformance,
+        title: "Art Auftraggeber/ Bauherr",
+        tooltip: "The original developer involved in the construction of the main building.",
+        example: "",
+        items: [
+            "Staat",
+            "Wohltätigkeitsorganisation",
+            "Gemeinschaft/Genossenschaft",
+            "Andere gemeinnützige Einrichtung",
+            "Privat (Einzelperson)",
+            "Kommerziell (Unternehmen/ Immobilienfirma)",
+            "Religiöse Einrichtung",
+            "Sonstige"
+        ],
+    },
+    developer_name: {
+        category: Category.EnergyPerformance,
+        title: "Wer waren die Auftraggeber (Personen)?",
+        tooltip: "Freies Textfeld, z.B. Vorname Leerzeichen Nachname",
+        example: ["", "", ""],
+    },
+    developer_links: {
+        category: Category.EnergyPerformance,
+        title: "Developer link(s)",
+        tooltip: "Link(s) to webpage(s) explaining who developed the building.",
+        example: ["", "", ""],
+    },
+    developer_source_type: {
+        category: Category.EnergyPerformance,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    developer_source_link: {
+        category: Category.EnergyPerformance,
+        title: "Datenquelle Links zu Auftraggeber",
+        tooltip: "URL Datenquelle Links zu Auftraggeber",
+        example: ["", "", ""],
+    },
+    extension_developer_type: {
+        category: Category.EnergyPerformance,
+        title: "What type of developer built the extension?",
+        tooltip: "The main developer involved in the construction of the extension of the  building.",
+        example: "",
+        items: [
+            "State",
+            "Charity",
+            "Community/Cooperative",
+            "Other non-profit body",
+            "Private (individual)",
+            "Commercial (company/estate)",
+            "Religious body",
+            "Other"
+        ]
+    },
+    extension_developer_name: {
+        category: Category.EnergyPerformance,
+        title: "Who were the developer(s)?",
+        tooltip: "Name(s) of the extension's developers." + freeTextDisclaimer,
+        example: ["", "", ""],
+    },
+    extension_developer_links: {
+        category: Category.EnergyPerformance,
+        title: "Developer link(s)",
+        tooltip: "Link(s) to webpage(s) explaining who developed the extension.",
+        example: ["", "", ""],
+    },
+    extension_developer_source_type: {
+        category: Category.EnergyPerformance,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    extension_developer_source_link: {
+        category: Category.EnergyPerformance,
+        title: "Source links for developer(s)",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    landowner: {
+        category: Category.EnergyPerformance,
+        title: "Eigentümer zur Zeit der Erbauung ",
+        tooltip: "Freies Textfeld, z.B. Vorname Leerzeichen Nachname",
+        example: ["", "", ""],
+    },
+    landowner_links: {
+        category: Category.EnergyPerformance,
+        title: "Landowner link(s)",
+        tooltip: "Link(s) to webpage(s) explaining who owned the land when when the building was built.",
+        example: ["", "", ""],
+    },
+    landowner_source_type: {
+        category: Category.EnergyPerformance,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    landowner_source_link: {
+        category: Category.EnergyPerformance,
+        title: "Datenquelle Links zu Eigentümer",
+        tooltip: "URL Datenquelle Links zu Eigentümer",
+        example: ["", "", ""],
+    },
+    designers: {
+        category: Category.EnergyPerformance,
+        title: "Architekten",
+        tooltip: "Freies Textfeld, z.B. Vorname Leerzeichen Nachname",
+        example: ["", "", ""],
+    },
+    designers_links: {
+        category: Category.EnergyPerformance,
+        title: "Designer link(s)",
+        tooltip: "Link(s) to webpage(s) explaining who designed the building.",
+        example: ["", "", ""],
+    },
+    designers_source_type: {
+        category: Category.EnergyPerformance,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    designers_source_link: {
+        category: Category.EnergyPerformance,
+        title: "Datenquelle Links zu Architekten",
+        tooltip: "URL Datenquelle Links zu Architekten",
+        example: ["", "", ""],
+    },
+    lead_designer_type: {
+        category: Category.EnergyPerformance,
+        title: "Was trifft auf den/ die leitende/-n Architekten/-in am besten zu?",
+        tooltip: "The original designer/architect involved in the construction of the main building.",
+        example: "",
+        items: [
+            "Eigentümer*in",
+            "Spekulant*in",
+            "Bauamt / Behörde",
+            "Architekt*in / Architekturbüro",
+            "Bauingenieur*in/ Ingenieurbüro",
+            "Sonstige"
+        ],
+    },
+    extension_designers: {
+        category: Category.EnergyPerformance,
+        title: "Who were the main designer(s) of the extension?",
+        tooltip: "Designer(s)/Architect(s) of the extension to the property." + freeTextDisclaimer,
+        example: ["", "", ""],
+    },
+    extension_designers_links: {
+        category: Category.EnergyPerformance,
+        title: "Designer link(s)",
+        tooltip: "Link(s) to webpage(s) explaining who designed the extension.",
+        example: ["", "", ""],
+    },
+    extension_designers_source_type: {
+        category: Category.EnergyPerformance,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    extension_designers_source_link: {
+        category: Category.EnergyPerformance,
+        title: "Source links for designer(s)",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    extension_lead_designer_type: {
+        category: Category.EnergyPerformance,
+        title: "Which title best describes the lead designer?",
+        tooltip: "The original designer/architect involved in the extension of the building.",
+        example: "",
+        items: [
+            "Landowner",
+            "Speculative builder",
+            "Government architecture department",
+            "Architect/ architectural firm",
+            "Engineer/ Engineering firm",
+            "Other"
+        ]
+    },
+    designer_awards: {
+        category: Category.EnergyPerformance,
+        title: "Hat das Planungsteam für dieses Gebäude irgendwelche Preise gewonnen?",
+        tooltip: "Any design awards or other awards that have been awarded to the building or any of the developers.",
+        example: false,
+    },
+    awards_source_link: {
+        category: Category.EnergyPerformance,
+        title: "Datenquelle Link zu Architekturpreis",
+        tooltip: "URL Datenquelle Link zu Architekturpreis",
+        example: ["", "", ""],
+    },
+    builder: {
+        category: Category.EnergyPerformance,
+        title: "Name der ausführenden Baufirma",
+        tooltip: "Who were the builders/construction team involved in the original construction of the main building." + freeTextDisclaimer,
+        example: ["", "", ""],
+    },
+    builder_links: {
+        category: Category.EnergyPerformance,
+        title: "Builder link(s)",
+        tooltip: "Link(s) to webpage(s) explaining who built the building.",
+        example: ["", "", ""],
+    },
+    builder_source_type: {
+        category: Category.EnergyPerformance,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    builder_source_link: {
+        category: Category.EnergyPerformance,
+        title: "Datenquelle Name der ausführenden Baufirma",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    extension_builder: {
+        category: Category.EnergyPerformance,
+        title: "Name of builder/construction team.",
+        tooltip: "Who were the builders/construction team involved in the construction of the extension to the building." + freeTextDisclaimer,
+        example: ["", "", ""],
+    },
+    extension_builder_links: {
+        category: Category.EnergyPerformance,
+        title: "Builder link(s)",
+        tooltip: "Link(s) to webpage(s) explaining who built the building.",
+        example: ["", "", ""],
+    },
+    extension_builder_source_type: {
+        category: Category.EnergyPerformance,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    extension_builder_source_link: {
+        category: Category.EnergyPerformance,
+        title: "Source for builder/construction team",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    other_team: {
+        category: Category.EnergyPerformance,
+        title: "weitere wichtige am Bau beteiligte Personen",
+        example: ["", "", ""],
+    },
+    other_team_source_link: {
+        category: Category.EnergyPerformance,
+        title: "Datenquelle weitere wichtige am Bau beteiligte Personen",
+        example: ["", "", ""],
+    },
+    building_client: {
+        category: Category.EnergyPerformance,
+        title: "Original building client link(s)",
+        tooltip: "Link(s) describing the client who commissioned the original building?" + freeTextDisclaimer,
+        example: ["", "", ""]
+    },
+    building_client_source_type: {
+        category: Category.EnergyPerformance,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    building_client_source_link: {
+        category: Category.EnergyPerformance,
+        title: "Source link(s)",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    extension_client: {
+        category: Category.EnergyPerformance,
+        title: "Extension client link(s)",
+        tooltip: "Link(s) describing the client who commissioned the most significant extension to the building?" + freeTextDisclaimer,
+        example: ["", "", ""]
+    },
+    extension_client_source_type: {
+        category: Category.EnergyPerformance,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    extension_client_source_link: {
+        category: Category.EnergyPerformance,
+        title: "Source link(s)",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    disaster_type: {
+        category: Category.DisasterManagement,
+        title: "Disaster type",
+        tooltip: "What type of disaster has taken place that may have affected/damaged this building?",
+        example: "Flood",
+        items: [
+            'Flood',
+            'Earthquake',
+            'Hurricane',
+            'Fire',
+            'Extreme heat',
+            'Political/war damage',
+            'Other human (blast damage/spills etc.)',
+            'Other'
+        ]
+    },
+    disaster_severity: {
+        category: Category.DisasterManagement,
+        title: "How severe do you assess the damage to be?",
+        tooltip: "What is your best estimate for the severity of damage to the building",
+        example: "Building destroyed",
+        items: [
+            'Building destroyed',
+            'Very severe',
+            'Severe',
+            'Moderate',
+            'Minimal',
+            'No damage visible',
+        ]
+    },
+    disaster_assessment_method: {
+        category: Category.DisasterManagement,
+        title: "Damage assessment type",
+        tooltip: "How was the damage to the building assessed?",
+        example: "Citizen/Passerby by eye",
+        items: commonSourceTypes
+    },
+    disaster_source_link: {
+        category: Category.DisasterManagement,
+        title: "Damage assessment source link(s)",
+        tooltip: "Please add a source link(s) to official documentation/photographic evidence where applicable",
+        example: ["", "", ""],
+    },
+    disaster_start_date: {
+        category: Category.DisasterManagement,
+        title: "Start date",
+        tooltip: "What was the start date of the disaster?",
+        example: "01/04/2023"
+    },
+    disaster_end_date: {
+        category: Category.DisasterManagement,
+        title: "End date",
+        tooltip: "What was the end date of the disaster? (if different to start date)",
+        example: "03/04/2023"
+    },
+
+    context_front_garden: {
+        category: Category.RetrofitCondition,
+        title: "Does the building have a front garden with greenery?",
+        tooltip: "Is the front garden mainly green/planted?",
+        example: true,
+    },
+    context_back_garden: {
+        category: Category.RetrofitCondition,
+        title: "Does the building have a back garden with greenery?",
+        tooltip: "Is the back garden mainly green/planted?",
+        example: true
+    },
+    context_flats_garden: {
+        category: Category.RetrofitCondition,
+        title: "Does this building contain flats and have a dedicated green space?",
+        tooltip: "If the building is a block of flats, does it have a dedicated garden area/green space?",
+        example: true
+    },
+    context_garden_source_type: {
+        category: Category.RetrofitCondition,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    context_garden_source_links: {
+        category: Category.RetrofitCondition,
+        title: "Source link(s)",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    context_street_width: {
+        category: Category.EnergyPerformance,
+        title: "Average street width (m)",
+        tooltip: "Average width of the street in metres.",
+        example: 10
+    },
+    context_street_width_source_type: {
+        category: Category.EnergyPerformance,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    context_street_width_source_links: {
+        category: Category.EnergyPerformance,
+        title: "Source link(s)",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    context_pavement_width: {
+        category: Category.EnergyPerformance,
+        title: "Average pavement width (m)",
+        tooltip: "Average width of the pavement in metres.",
+        example: 10
+    },
+    context_pavement_width_source_type: {
+        category: Category.EnergyPerformance,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    context_pavement_width_source_links: {
+        category: Category.EnergyPerformance,
+        title: "Source link(s)",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    context_walkability_index: {
+        category: Category.EnergyPerformance,
+        title: "Walkability index",
+        tooltip: "How walkable is the area...?",
+        example: 10
+    },
+    context_green_space_distance: {
+        category: Category.EnergyPerformance,
+        title: "Distance to nearest green space (m)",
+        tooltip: "Approximate distance from the front door of the building to the nearest public green space (in meters).",
+        example: 10
+    },
+    context_green_space_distance_source_type: {
+        category: Category.EnergyPerformance,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    context_green_space_distance_source_links: {
+        category: Category.EnergyPerformance,
+        title: "Source link(s)",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    context_tree_distance: {
+        category: Category.EnergyPerformance,
+        title: "Distance to nearest tree (m)",
+        tooltip: "Approximate distance from the front door of the building to the nearest tree in meters.",
+        example: 10
+    },
+    context_tree_distance_source_type: {
+        category: Category.EnergyPerformance,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    context_tree_distance_source_links: {
+        category: Category.EnergyPerformance,
+        title: "Source link(s)",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    context_street_geometry: {
+        category: Category.EnergyPerformance,
+        title: "Street network geometry link",
+        tooltip: "Link to a website with the name of the building..",
+        example: "https://en.wikipedia.org/",
+    },
+    context_street_geometry_source_type: {
+        category: Category.EnergyPerformance,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    context_street_geometry_source_links: {
+        category: Category.EnergyPerformance,
+        title: "Source link(s)",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    age_cladding_date: {
+        category: Category.AgeHistory,
+        title: "Cladding date (best estimate)",
+        tooltip: undefined,
+        example: 1970
+    },
+    age_cladding_date_source_type: {
+        category: Category.AgeHistory,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    age_cladding_date_source_links: {
+        category: Category.AgeHistory,
+        title: "Source link(s)",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    age_extension_date: {
+        category: Category.AgeHistory,
+        title: "Date of significant extensions (best estimate)",
+        tooltip: undefined,
+        example: 1970
+    },
+    age_extension_date_source_type: {
+        category: Category.AgeHistory,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    age_extension_date_source_links: {
+        category: Category.AgeHistory,
+        title: "Source link(s)",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    age_retrofit_date: {
+        category: Category.AgeHistory,
+        title: "Date of last significant retrofit (best estimate)",
+        tooltip: undefined,
+        example: 1970
+    },
+    age_retrofit_date_source_type: {
+        category: Category.AgeHistory,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    age_retrofit_date_source_links: {
+        category: Category.AgeHistory,
+        title: "Source link(s)",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    age_historical_raster_map_links: {
+        category: Category.AgeHistory,
+        title: "Historical maps links",
+        tooltip: "Links to rasterised historical maps",
+        example: ["", "", ""],
+    },
+    age_historical_vectorised_footprint_links: {
+        category: Category.AgeHistory,
+        title: "Extracted vectorised historical footprints links",
+        tooltip: "Extracted vectorised historical footprints links",
+        example: ["", "", ""],
+    },
+
+    energy_solar: {
+        category: Category.WaterGreenInfrastructure,
+        title: "Does the building have solar panels?",
+        tooltip: "Are there any kinds of solar panels on the roof of the building?",
+        example: true
+    },
+    energy_solar_source_type: {
+        category: Category.WaterGreenInfrastructure,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    energy_solar_source_links: {
+        category: Category.WaterGreenInfrastructure,
+        title: "Source link(s)",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    energy_green_roof: {
+        category: Category.WaterGreenInfrastructure,
+        title: "Does the building have green walls/green roof?",
+        tooltip: "Are there any green walls, or a green roof, on the building?",
+        example: true
+    },
+    energy_green_roof_source_type: {
+        category: Category.WaterGreenInfrastructure,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    energy_green_roof_source_links: {
+        category: Category.WaterGreenInfrastructure,
+        title: "Source link(s)",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+
+    typology_classification: {
+        category: Category.TypologySize,
+        title: "Which dropdown option best suits the building and its context?",
+        tooltip: "Adapted from building type classifications developed in urban morphology. See <a href=\"https://www.smog.chalmers.se/\">https://www.smog.chalmers.se/</a> 'Space Matrix' for further information.",
+        example: "8+ storeys: Detached",
+        items: [
+            'Low-rise: Not part of a group/cluster (1-3 core floors- excluding extensions)',
+            'Low-rise: Part of dense block/row/terrace',
+            'Low-rise: Part of group of widely spaced blocks (includes semi-detached houses)',
+            'Mid-rise: Not part of a group/cluster (4-7 core floors)',
+            'Mid-rise: Part of group of densely spaced blocks',
+            'Mid-rise: Part of group of widely spaced blocks',
+            'High rise: Not part of a group/cluster',
+            'High-rise: Part of group of densely spaced blocks (8 + core floors)',
+            'High-rise: Part of group of widely spaced blocks',
+        ]
+    },
+    typology_classification_source_type: {
+        category: Category.TypologySize,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    typology_classification_source_links: {
+        category: Category.TypologySize,
+        title: "Source link(s)",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    typology_style_period: {
+        category: Category.TypologySize,
+        title: "Which description best suits the building's historical period?",
+        tooltip: undefined,
+        example: "Georgian (1714-1837)",
+        items: [
+            '43AD-410 (Roman)',
+            '410-1485 (Medieval)',
+            '1485-1603 (Tudor)',
+            '1603-1714 (Stuart)',
+            '1714-1837 (Georgian)',
+            '1837-1901 (Victorian)',
+            '1901-1914 (Edwardian)',
+            '1914-1945 (WWI-WWII)',
+            '1946-1979 (Post war)',
+            '1980-1999 (Late 20th Century)',
+            '2000-2025 (Early 21st Century)',
+        ]
+    },
+    typology_style_period_source_type: {
+        category: Category.TypologySize,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    typology_style_period_source_links: {
+        category: Category.TypologySize,
+        title: "Source link(s)",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    typology_dynamic_classification: {
+        category: Category.TypologySize,
+        title: "Which dropdown option best describes the urban tissue?",
+        tooltip: "Based on a dynamic classification system for urban tissue developed by Brenda Case Scheer. For further information click <a href=\"https://github.com/colouring-cities/manual/wiki/X08.-London-prototype:-Dynamics-data-capture-and-urban-morphology#14-building-typologies-and-dynamic-classifications\">here</a>.",
+        example: "Large plots with internal roads",
+        items: [
+            'Small, often repetitive plots, mainly residential',
+            'Linear non-domestic, i.e. high streets',
+            'Large plots with internal roads',
+        ]
+    },
+    typology_dynamic_classification_source_type: {
+        category: Category.TypologySize,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    typology_dynamic_classification_source_links: {
+        category: Category.TypologySize,
+        title: "Source link(s)",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    typology_original_use: {
+        category: Category.TypologySize,
+        title: "Which land use best describes the purpose for which the building was originally built?",
+        tooltip: "Land use Groups as classified by [NLUD](https://www.gov.uk/government/statistics/national-land-use-database-land-use-and-land-cover-classification).\n\nNote: Homes used as offices for working from home should be classified as residential.",
+        example: ["", ""],
+    },
+    typology_original_use_verified: {
+        category: Category.LandUse,
+        title: 'Has this land use been manually verified?',
+        example: true,
+    },
+    typology_original_use_order: {
+        category: Category.TypologySize,
+        title: "Original land use (order)",
+        tooltip: "Land use Order as classified by [NLUD](https://www.gov.uk/government/statistics/national-land-use-database-land-use-and-land-cover-classification). Derived automatically from the data above.",
+        example: "",
+    },
+    typology_original_use_source_type: {
+        category: Category.TypologySize,
+        title: "Source type",
+        tooltip: undefined,
+        example: "",
+        items: commonSourceTypes
+    },
+    typology_original_use_source_links: {
+        category: Category.TypologySize,
+        title: "Source link(s)",
+        tooltip: undefined,
+        example: ["", "", ""],
+    },
+    // Colouring Dresden (field removed in core)
+    date_change_building_use: {
+        category: Category.TypologySize,
+        title:"Wann änderte sich die Gebäudenutzung?",
+        tooltip: "Dies ist das Datum, an dem das Gebäude nicht mehr für die Funktion genutzt wird, für die es gebaut wurde. Wenn es z. B. ein Lagerhaus war, das jetzt ein Büro ist, wäre dies das Datum, an dem es zu einem Bürohaus wurde.",
+        example: 1920,
+    },
+    // Colouring Dresden (field removed in core)
+    original_building_use: {
+        category: Category.TypologySize,
+        title: "Originale Gebäudenutzung (bei Erbauung)",
+        tooltip: "Wofür wurde das Gebäude ursprünglich genutzt, als es gebaut wurde? Wenn es z. B. ein Lagerhaus war, das jetzt ein Büro ist, wäre hier das Lagerhaus gemeint.",
+        example: "",
+    },
+    // Colouring Dresden (field removed in core)
     date_source: {
-        category: Category.Age,
+        category: Category.AgeHistory,
         title: "Datenquelle der Information",
         tooltip: "Datenquelle für das Baujahr des Gebäudes",
         items: [
@@ -354,463 +2460,36 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         ],
         example: "",
     },
+    // Colouring Dresden (field removed in core)
     date_source_detail: {
-        category: Category.Age,
+        category: Category.AgeHistory,
         title: "Details Datenquelle",
         tooltip: "Referenzen zur Datenquelle für die Gebäudenutzung (maximal 500 Zeichen)",
         example: "",
     },
+    // Colouring Dresden (field removed in core)
     date_link: {
-        category: Category.Age,
+        category: Category.AgeHistory,
         title: "Link zu Text oder Foto",
         tooltip: "URL als Referenz für das Baujahr",
         example: ["", "", ""],
     },
-
-    size_storeys_core: {
-        category: Category.Size,
-        title: "Anzahl Hauptgeschosse",
-        tooltip: "Wie viele Etagen liegen zwischen dem Straßenniveau und dem Beginn des Daches (Traufenhöhe)?",
-        example: 10,
-    },
-    size_storeys_attic: {
-        category: Category.Size,
-        title: "Anzahl Dachgeschosse",
-        tooltip: "Wie viele Etagen befinden sich im Dachbereich (zwischen Traufen- und Firsthöhe)?",
-        example: 1,
-    },
-    size_storeys_basement: {
-        category: Category.Size,
-        title: "Anzahl Kellergeschosse",
-        tooltip: "Wie viele Etagen befinden sich im Keller (unterhalb des Straßenniveaus)?",
-        example: 1,
-    },
-    size_height_apex: {
-        category: Category.Size,
-        title: "Firsthöhe (in Metern)",
-        example: 25.5,
-        tooltip: 'Höhe vom Straßenniveau bis zum Dachfirst',
-    },
-    size_height_eaves: {
-        category: Category.Size,
-        title: "Traufenhöhe (in Metern)",
-        example: 20.3,
-        tooltip: 'Höhe vom Straßenniveau bis zur Traufe (Beginn des Daches)',
-    },
-    size_floor_area_ground: {
-        category: Category.Size,
-        title: "Grundfläche (in Quadratmetern)",
-        example: 1245.6,
-        //tooltip: ,
-    },
-    size_floor_area_total: {
-        category: Category.Size,
-        title: "Summe Geschossfläche (in Quadratmetern)",
-        example: 2001.7,
-        //tooltip: ,
-    },
-    size_width_frontage: {
-        category: Category.Size,
-        title: "Breite der Fassade/ der Gebäudefront (in Metern)",
-        example: 12.2,
-        //tooltip: ,
-    },
-
-    size_configuration: {
-        category: Category.Size,
-        title: "Configuration (semi/detached, end/terrace)",
-        example: "",
-        //tooltip: ,
-    },
-
-    size_plot_area_total: {
-        category: Category.Streetscape,
-        title: "Total area of plot (m²)",
-        example: 123.02,
-        //tooltip: ,
-    },
-    size_far_ratio: {
-        category: Category.Streetscape,
-        title: "FAR ratio (percentage of plot covered by building)",
-        example: 0.1,
-        //tooltip: ,
-    },
-
-    construction_core_material: {
-        category: Category.Construction,
-        title: "Primärer Baustoff",
-        tooltip:"Das vorwiegend genutzte Baumaterial im Gebäude",
-        example: "",
-    },
-
-    construction_secondary_materials: {
-        category: Category.Construction,
-        title: "Sekundärer Baustoff",
-        tooltip:"Andere wichtige Baumaterialien",
-        example: "",
-    },
-
-    construction_roof_covering: {
-        category: Category.Construction,
-        title: "Vorherrschende Dachbedeckung",
-        tooltip:'Material des Daches',
-        example: "",
-    },
-
-    sust_breeam_rating: {
-        category: Category.Sustainability,
-        title: "Official Environmental Quality Rating",
-        tooltip: "Building Research Establishment Environmental Assessment Method (BREEAM) May not be present for many buildings",
-        example: "",
-    },
-    sust_dec: {
-        category: Category.Sustainability,
-        title: "Non-domestic Building Energy Rating",
-        tooltip: "Display Energy Certificate (DEC) Any public building should have (and display) a DEC. Showing how the energy use for that building compares to other buildings with same use",
-        example: "G",
-    },
-    sust_aggregate_estimate_epc: {
-        category: Category.Sustainability,
-        title: "Domestic Building Energy Rating",
-        tooltip: "Energy Performance Certificate (EPC) Any premises sold or rented is required to have an EPC to show how energy efficient it is. Only buildings rate grade E or higher maybe rented",
-        example: "",
-    },
-    sust_retrofit_date: {
-        category: Category.Sustainability,
-        title: "Letzter bedeutsamer Umbau",
-        tooltip: "Datum der letzten größeren Gebäuderenovierung",
-        example: 2002,
-    },
-    sust_life_expectancy: {
-        category: Category.Sustainability,
-        title: "Erwartete Lebensdauer (Typologie)",
-        example: 123,
-        //tooltip: ,
-    },
-
+    // Colouring Dresden (field removed in core)
     historical_status: {
-        category: Category.Age,
+        category: Category.AgeHistory,
         title: "Historischer Status",
         tooltip: "Überdauern und Verlust des Gebäudes - nachverfolgt anhand historischer Karten",
+        example: "",
     },
 
-    edit_history: {
-        category: Category.Planning,
-        title: "PLANNING DATA",
-        tooltip: "PLANNING DATA",
-        example: [{}],
-    },
+    /* +++ Colouring Dresden specific fields +++ */
 
 
-    planning_portal_link: {
-        category: Category.Planning,
-        title: "Local authority planning application link",
+    size_roof_shape_source: {
+        category: Category.TypologySize,
+        title: "Datenquelle Dachform",
+        tooltip: "Freitextfeld für Datenquelle",
         example: "",
-        //tooltip: ,
-    },
-    planning_in_conservation_area_url: {
-        category: Category.Planning,
-        title: "Is the building in a conservation area?",
-        example: "",
-        //tooltip: ,
-    },
-    planning_crowdsourced_site_completion_status: {
-        category: Category.Planning,
-        title: "Has the work on this site been completed?",
-        example: true,
-        //tooltip: ,
-    },
-    planning_crowdsourced_site_completion_year: {
-        category: Category.Planning,
-        title: "Year of completion if known",
-        example: 2022,
-        //tooltip: ,
-    },
-    planning_crowdsourced_planning_id: {
-        category: Category.Planning,
-        title: "If you know of a planning application that has been recently submitted for this site, and is not listed in the blue box above, please enter its planning application ID below:",
-        example: "1112/QWERTY",
-        //tooltip: ,
-    },
-    planning_in_conservation_area_id: {
-        category: Category.Planning,
-        title: "Conservation Area identifier",
-        example: "",
-        //tooltip: ,
-    },
-    planning_conservation_area_name: {
-        category: Category.Planning,
-        title: "Conservation Area Name",
-        example: "",
-        //tooltip: ,
-    },
-    planning_list_id: {
-        category: Category.Planning,
-        title: "If the building is on a national heritage register, please add the ID:",
-        example: "121436",
-        tooltip: "e.g. National Heritage List for England (NHLE)",
-    },
-    planning_list_grade: {
-        category: Category.Planning,
-        title: "What is its rating?",
-        example: "II",
-        //tooltip: ,
-    },
-    planning_heritage_at_risk_url: {
-        category: Category.Planning,
-        title: "If the building is on a heritage at risk register, please add the ID:",
-        example: "",
-        //tooltip: ,
-    },
-    planning_world_list_id: {
-        category: Category.Planning,
-        title: "If the building is on a <a href=\"https://historicengland.org.uk/advice/hpg/has/whs/\" target=\"_blank\">World Heritage Site</a> please add the ID:",
-        example: "488",
-        //tooltip: ,
-    },
-    planning_glher_url: {
-        category: Category.Planning,
-        title: "Is it recorded on any historic environment records?",
-        example: "",
-        //tooltip: ,
-    },
-    planning_in_apa_url: {
-        category: Category.Planning,
-        title: "Is it in an area if archaeological priority?",
-        example: "",
-        //tooltip: ,
-    },
-    planning_local_list_url: {
-        category: Category.Planning,
-        title: "Is it a locally listed heritage asset?",
-        example: "",
-        //tooltip: ,
-    },
-    planning_historic_area_assessment_url: {
-        category: Category.Planning,
-        title: "Does it have any other kind of historic area assessment?",
-        example: "",
-        //tooltip: ,
-    },
-    planning_demolition_proposed: {
-        category: Category.Planning,
-        title: "Is the building proposed for demolition?",
-        example: true,
-        //tooltip: ,
-    },
-
-    is_domestic: {
-        category: Category.Team,
-        title: "Handelt es sich um ein Wohngebäude?",
-        tooltip: "",
-        example: "gemischte Nutzung"
-    },
-    likes_total: {
-        category: Category.Community,
-        title: "Gesamtanzahl an Likes",
-        example: 100,
-        tooltip: "Menschen, die das Gebäude mögen und der Meinung sind, dass es zur Stadt beiträgt.",
-    },
-    community_type_worth_keeping_total: {
-        category: Category.Community,
-        title: "Menschen, die der Meinung sind, dass diese Art von Gebäude zur Stadt beiträgt.",
-        example: 100,
-    },
-    community_local_significance_total: {
-        category: Category.Community,
-        title: "Personen, die der Meinung sind, dass das Gebäude als Gebäude von lokalem Interesse erfasst werden sollte",
-        example: 100,
-    },
-
-    community_expected_planning_application_total: {
-        category: Category.Community,
-        title: "Personen, die glauben, dass das Gebäude in naher Zukunft von einem Bauantrag betroffen sein wird",
-        example: 100,
-    },
-
-    community_activities_current: {
-        category: Category.Community,
-        title: "Finden in dem Gebäude derzeit Aktivitäten statt, die der Gemeinschaft offenstehen?",
-        tooltip: "z. B. Jugendclub, Kirche, Arztpraxis, Kneipe",
-        example: true
-    },
-    community_activities: {
-        category: Category.Community,
-        title: "Wurde dieser Ort in der Vergangenheit bereits für Gemeinschaftsaktivitäten genutzt?",
-        tooltip: "z. B. Jugendclub, Kirche, Arztpraxis, Kneipe",
-        example: true
-    },
-    community_activities_always: {
-        category: Category.Community,
-        title: "Wurde das Gebäude schon immer für Gemeinschaftsaktivitäten genutzt?",
-        tooltip: "z. B. Jugendclub, Kirche, Arztpraxis, Kneipe",
-        example: true
-    },
-    // community_activities_dates: {
-    //     category: Category.Community,
-    //     title: "When was this building used for community activities?"
-    // },
-
-
-    community_public_ownership: {
-        category: Category.Community,
-        title: "Ist das Gebäude in öffentlichem/kommunalem Besitz?",
-        example: "Nicht in öffentlichem/Gemeindeeigentum"
-    },
-
-    community_public_ownership_sources: {
-        category: Category.Community,
-        title: "Link Quelle zu Eigentum der Gemeinschaft",
-        example: ["https://example.com"]
-    },
-
-    dynamics_has_demolished_buildings: {
-        category: Category.Resilience,
-        title: 'Wurden an dieser Stelle jemals weitere Gebäude errichtet?',
-        example: true,
-    },
-
-/*     demolished_buildings: {
-        category: Category.Resilience,
-        title: 'Frühere (abgerissene) Gebäude an diesem Standort',
-        items: {
-            year_constructed: {
-                title: 'Baujahr',
-                example: { min: 1989, max: 1991 },
-            },
-            year_demolished: {
-                title: 'Jahr des Abrisses',
-                example: { min: 1993, max: 1994 },
-            },
-            lifespan: {
-                title: 'Lebensdauer',
-                example: "2-5",
-            },
-            overlap_present: {
-                title: 'Wie viel Prozent dieses Gebäudes befand sich ungefähr innerhalb der derzeitigen Grundstücksgrenze?',
-                tooltip: '',
-                example: "25%"
-            },
-            links: {
-                title: 'Links / Datenquellen',
-                example: ["", ""]
-            }
-        },
-        example: [
-            {
-                year_constructed: { min: 1989, max: 1991 },
-                year_demolished: { min: 1993, max: 1994 },
-                lifespan: "2-5", overlap_present: "50%", links: ["", ""]}
-        ]
-    }, */
-    has_extension: {
-        category: Category.Team,
-        title: "Gibt es einen Anbau/ Erweiterung?",
-        tooltip: "",
-        example: false
-    },
-    extension_year: {
-        category: Category.Team,
-        title: "Baujahr Anbau/ Erweiterung (ggf. beste Schätzung)",
-        tooltip: "Dieses Feld ist dasselbe wie Baujahr (Kategorie Alter)",
-        tooltip_extension: "Dies sollte das Jahr sein, in dem der Anbau errichtet wurde, nicht das ursprüngliche Gebäude",
-        example: 2020
-    },
-    developer_type: {
-        category: Category.Team,
-        title: "Art Auftraggeber/ Bauherr",
-        example: "",
-        items: [
-            "Staat",
-            "Wohltätigkeitsorganisation",
-            "Gemeinschaft/Genossenschaft",
-            "Andere gemeinnützige Einrichtung",
-            "Privat (Einzelperson)",
-            "Kommerziell (Unternehmen/ Immobilienfirma)",
-            "Religiöse Einrichtung",
-            "Sonstige"
-        ]
-    },
-    developer_name: {
-        category: Category.Team,
-        title: "Wer waren die Auftraggeber (Personen)?",
-        tooltip: "Freies Textfeld, z.B. Vorname Leerzeichen Nachname",
-        example: ["", "", ""],
-    },
-    developer_source_link: {
-        category: Category.Team,
-        title: "Datenquelle Links zu Auftraggeber",
-        tooltip: "URL Datenquelle Links zu Auftraggeber",
-        example: ["", "", ""],
-    },
-    landowner: {
-        category: Category.Team,
-        title: "Eigentümer zur Zeit der Erbauung ",
-        tooltip: "Freies Textfeld, z.B. Vorname Leerzeichen Nachname",
-        example: ["", "", ""],
-    },
-    landowner_source_link: {
-        category: Category.Team,
-        title: "Datenquelle Links zu Eigentümer",
-        tooltip: "URL Datenquelle Links zu Eigentümer",
-        example: ["", "", ""],
-    },
-    designers: {
-        category: Category.Team,
-        title: "Architekten",
-        tooltip: "Freies Textfeld, z.B. Vorname Leerzeichen Nachname",
-        example: ["", "", ""],
-    },
-    designers_source_link: {
-        category: Category.Team,
-        title: "Datenquelle Links zu Architekten",
-        tooltip: "URL Datenquelle Links zu Architekten",
-        example: ["", "", ""],
-    },
-    lead_designer_type: {
-        category: Category.Team,
-        title: "Was trifft auf den/ die leitende/-n Architekten/-in am besten zu?",
-        example: "",
-        items: [
-            "Eigentümer*in",
-            "Spekulant*in",
-            "Bauamt / Behörde",
-            "Architekt*in / Architekturbüro",
-            "Bauingenieur*in/ Ingenieurbüro",
-            "Sonstige"
-        ]
-    },
-    designer_awards: {
-        category: Category.Team,
-        title: "Hat das Planungsteam für dieses Gebäude irgendwelche Preise gewonnen?",
-        tooltip: "",
-        example: false
-    },
-    awards_source_link: {
-        category: Category.Team,
-        title: "Datenquelle Link zu Architekturpreis",
-        tooltip: "URL Datenquelle Link zu Architekturpreis",
-        example: ["", "", ""],
-    },
-    builder: {
-        category: Category.Team,
-        title: "Name der ausführenden Baufirma",
-        example: ["", "", ""],
-    },
-    builder_source_link: {
-        category: Category.Team,
-        title: "Datenquelle Name der ausführenden Baufirma",
-        example: ["", "", ""],
-    },
-    other_team: {
-        category: Category.Team,
-        title: "weitere wichtige am Bau beteiligte Personen",
-        example: ["", "", ""],
-    },
-    other_team_source_link: {
-        category: Category.Team,
-        title: "Datenquelle weitere wichtige am Bau beteiligte Personen",
-        example: ["", "", ""],
     },
 
 
@@ -1035,7 +2714,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
     /* construction */
 
     building_status: {
-        category: Category.Construction,
+        category: Category.ConstructionDesign,
         title: "Aktueller Gebäudezustand",
         tooltip: "In welchem Zustand befindet sich das Gebäude?",
         example: "",
@@ -1054,7 +2733,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
 
 
     building_status_source: {
-        category: Category.Construction,
+        category: Category.ConstructionDesign,
         title: "Datenquelle aktueller Gebäudezustand",
         tooltip: "Freitextfeld für Datenquelle",
         example: "",
@@ -1062,7 +2741,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
 
 
     last_renovation: {
-        category: Category.Construction,
+        category: Category.ConstructionDesign,
         title: "Jahr der letzten Sanierung",
         tooltip: "In welchem Jahr wurde das Gebäude das letzte Mal saniert?",
         example: 2004
@@ -1071,7 +2750,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
 
 
     last_renovation_source: {
-        category: Category.Construction,
+        category: Category.ConstructionDesign,
         title: "Datenquelle Jahr der letzten Sanierung",
         tooltip: "Freitextfeld für Datenquelle",
         example: "",
@@ -1079,7 +2758,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
 
 
     construction_system_type: {
-        category: Category.Construction,
+        category: Category.ConstructionDesign,
         title: "Hauptkonstruktion",
         tooltip: "Bauweise des Gebäudes",
         example: "",
@@ -1098,7 +2777,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
     },
 
     construction_system_type_source: {
-        category: Category.Construction,
+        category: Category.ConstructionDesign,
         title: "Datenquelle Hauptkonstruktion",
         tooltip: "Freitextfeld für Datenquelle",
         example: "",
@@ -1107,7 +2786,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
     /* typology --> in future: to planning */
 
     building_owner: {
-        category: Category.Planning,
+        category: Category.TypologySize,
         title: "Eigentumsform des Gebäudes",
         tooltip: "Eigentumsform des Gebäudes",
         example: "",
@@ -1128,14 +2807,14 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
     },
 
     building_owner_source: {
-        category: Category.Planning,
+        category: Category.TypologySize,
         title: "Datenquelle Eigentumsform des Gebäudes",
         tooltip: "Freitextfeld für Datenquelle",
         example: "",
     },
 
     architectural_style: {
-        category: Category.Age,
+        category: Category.AgeHistory,
         title: "Baustil und äußeres Erscheinungsbild",
         tooltip: "Welcher Baustil beschreibt das vorherrschende äußere Erscheinungsbild des Gebäudes am besten?",
         example: "",
@@ -1159,7 +2838,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
     },
 
     architectural_style_source: {
-        category: Category.Age,
+        category: Category.AgeHistory,
         title: "Datenquelle Baustil und äußeres Erscheinungsbild",
         tooltip: "Art der Datenquelle",
         example: "",
@@ -1182,7 +2861,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
 
 
     thermal_stress_objective: {
-        category: Category.Resilience,
+        category: Category.DisasterManagement,
         title: 'Objektive Einschätzung der Hitzebelastung',
         items: {
             acquisition_type: {
@@ -1247,7 +2926,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
 
 
     thermal_stress_subjective: {
-        category: Category.Resilience,
+        category: Category.DisasterManagement,
         title: 'Subjektive Einschätzung der Hitzebelastung',
         items: {
             orientation: {
@@ -1311,7 +2990,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
 
 
     facade_window_percentage: {
-        category: Category.Resilience,
+        category: Category.DisasterManagement,
         title: "Anteil Fenster an Fassade",
         tooltip: "Wie viel Fassadenfläche ist durch Fenster bedeckt (ungefähr)?",
         example: "",
@@ -1327,7 +3006,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
 
     direction_of_windows: {
         /* perUser: true, */
-        category: Category.Resilience,
+        category: Category.DisasterManagement,
         title: 'Zu welchen Himmelsrichtungen befinden sich Fenster? (Mehrfachauswahl möglich)',
         fields: {
             north: {
@@ -1369,7 +3048,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
     
     heat_adaption_measure: {
         /* perUser: true, */
-        category: Category.Resilience,
+        category: Category.DisasterManagement,
         title: 'Welche Anpassungsmaßnahmen wurden am Gebäude bereits umgesetzt? (Mehrfachauswahl möglich)',
         fields: {
             sun_protection_outside: {
@@ -1414,7 +3093,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
     },
 
     roof_colour: {
-        category: Category.Resilience,
+        category: Category.DisasterManagement,
         title: "Dachfarbe",
         tooltip: "Welche Farbe hat das Dach überwiegend?",
         example: "",
@@ -1441,7 +3120,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
 
 
     roof_colour_type: {
-        category: Category.Resilience,
+        category: Category.DisasterManagement,
         title: "Dachfarbe Oberfläche",
         tooltip: "Welche Beschaffenheit hat die Oberfläche des Daches?",
         example: "",
@@ -1453,7 +3132,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
     },
 
     facade_colour: {
-        category: Category.Resilience,
+        category: Category.DisasterManagement,
         title: "Fassadenfarbe",
         tooltip: "Welche Farbe hat die Fassade überwiegend?",
         example: "",
@@ -1480,7 +3159,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
     },
 
     terrain_connection_yesno: {
-        category: Category.Resilience,
+        category: Category.DisasterManagement,
         title: "Ist der Boden des Erdgeschosses höher als das umliegende Gelände?",
         tooltip: "Beginnt das Erdgeschoss über dem umliegenden Gelände?",
         example: "",
@@ -1492,7 +3171,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
     },
 
     terrain_connection_difference: {
-        category: Category.Resilience,
+        category: Category.DisasterManagement,
         title: "Differenz zwischen Gelände und Erdgeschossboden (in Zentimetern)",
         tooltip: "Wie groß ist die Differenz zwischen der Höhe des umliegenden Geländes und dem Erdgeschossboden? (immer positive Distanz eintragen)",
         example: 1
@@ -1501,7 +3180,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
 
     rain_flood_preventive_measures1: {
         /* perUser: true, */
-        category: Category.Resilience,
+        category: Category.DisasterManagement,
         /* title: 'Wurden bereits Vorsorgemaßnahmen getroffen? (Mehrfachauswahl möglich)', */
         title: 'Vorsorgemaßnahmen Strategie Ausweichen',
         fields: {
@@ -1525,7 +3204,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
 
     rain_flood_preventive_measures2: {
         /* perUser: true, */
-        category: Category.Resilience,
+        category: Category.DisasterManagement,
         /* title: 'Wurden bereits Vorsorgemaßnahmen getroffen? (Mehrfachauswahl möglich)', */
         title: 'Vorsorgemaßnahmen Strategie Widerstehen',
         fields: {
@@ -1554,7 +3233,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
 
     rain_flood_preventive_measures3: {
         /* perUser: true, */
-        category: Category.Resilience,
+        category: Category.DisasterManagement,
         /* title: 'Wurden bereits Vorsorgemaßnahmen getroffen? (Mehrfachauswahl möglich)', */
         title: 'Vorsorgemaßnahmen Strategie Nachgeben',
         fields: {
@@ -1583,7 +3262,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
 
 
     rain_flood_historic_incidents: {
-        category: Category.Resilience,
+        category: Category.DisasterManagement,
         title: 'War das Gebäude bereits von folgenden Risiken betroffen?',
         items: {
             incident: {
@@ -1632,7 +3311,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
 
 
     heat_adaption_measure_source: {
-        category: Category.Resilience,
+        category: Category.DisasterManagement,
         title: "Datenquelle Anpassungsmassnahmen Hitze",
         tooltip: "Art der Datenquelle",
         example: "",
@@ -1651,7 +3330,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
 
 
     terrain_connection_difference_source: {
-        category: Category.Resilience,
+        category: Category.DisasterManagement,
         title: "Art der Erhebung Differenz Erdgeschossboden zu Geländehöhe",
         tooltip: "Art der Erhebung",
         example: "",
@@ -1662,7 +3341,7 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
     },
 
     rain_flood_preventive_measures_source: {
-        category: Category.Resilience,
+        category: Category.DisasterManagement,
         title: "Datenquelle Vorsorgemaßnahmen Starkregen/Hochwasser",
         tooltip: "Art der Datenquelle",
         example: "",
@@ -1708,7 +3387,6 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
         tooltip: "Link Wikipedia",
         example: "",
     },
-
 };
 
-export const allFieldsConfig = {...dataFields, ...buildingUserFields};
+export const allFieldsConfig = { ...dataFields, ...buildingUserFields };

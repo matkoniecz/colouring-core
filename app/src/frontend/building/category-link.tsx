@@ -9,23 +9,20 @@ interface CategoryLinkProps {
     slug: string;
     title: string;
     help: string;
-    inactive: boolean;
 }
 
 const CategoryLink: React.FC<CategoryLinkProps> = (props) => {
     let categoryLink = `/${props.mode}/${props.slug}`;
     if (props.building_id != undefined) categoryLink += `/${props.building_id}`;
 
+    let className = "category-title";
+
     return (
         <NavLink
             className={`category-link background-${props.slug}`}
             to={categoryLink}
-            title={
-                (props.inactive)?
-                    'Coming soon… Click more info for details.'
-                    : 'View/Edit Map'
-            }>
-                <h3 className="category-title">{props.title}</h3>
+            title='View/Edit Map'>
+                <h3 className={className}>{props.title}</h3>
         </NavLink>
     );
 };

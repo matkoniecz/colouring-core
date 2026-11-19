@@ -7,6 +7,8 @@ import { stitchTile } from "./renderers/stitchTile";
 import { TileCache } from "./tileCache";
 import { BoundingBox, Tile, TileParams } from "./types";
 import { isOutsideExtent } from "./util";
+import { CCConfig } from '../cc-config';
+let config: CCConfig = require('../cc-config.json')
 
 /**
  * A list of all tilesets handled by the tile server
@@ -21,9 +23,8 @@ const STITCH_THRESHOLD = 12;
 
 /**
  * Hard-code extent so we can short-circuit rendering and return empty/transparent tiles outside the area of interest
- * bbox in CRS epsg:3857 in form: [w, s, e, n]
  */
-const EXTENT_BBOX: BoundingBox = [1511646.6817115154117346, 6616860.7975331945344806, 1554695.3975527205038816, 6652785.4298729784786701];
+const EXTENT_BBOX: BoundingBox = config.bbox;
 
 const allLayersCacheSwitch = parseBooleanExact(process.env.CACHE_TILES) ?? true;
 const dataLayersCacheSwitch = parseBooleanExact(process.env.CACHE_DATA_TILES) ?? true;
@@ -38,12 +39,20 @@ if(!allLayersCacheSwitch) {
         ['base_light', 'base_night', 'base_night_outlines', 'base_boroughs'].includes(tileset) && z <= 18;
 }
 
+const MIN_ZOOM_FOR_RENDERING_TILES = 9
+const MAX_ZOOM_FOR_RENDERING_TILES = 19
+
+const tileCachePath = process.env.TILECACHE_PATH;
+if (tileCachePath == undefined) {
+    throw new Error('TILECACHE_PATH is not set');
+}
+
 const tileCache = new TileCache(
-    process.env.TILECACHE_PATH,
+    tileCachePath,
     {
         tilesets: getBuildingLayerNames(),
-        minZoom: 9,
-        maxZoom: 19,
+        minZoom: MIN_ZOOM_FOR_RENDERING_TILES,
+        maxZoom: MAX_ZOOM_FOR_RENDERING_TILES,
         scales: [1, 2]
     },
     shouldCacheFn,
@@ -68,7 +77,15 @@ function stitchOrRenderBuildingTile(tileParams: TileParams, dataParams: any): Pr
 }
 
 function renderTile(tileParams: TileParams, dataParams: any): Promise<Tile> {
-    if (isOutsideExtent(tileParams, EXTENT_BBOX)) {
+    if (isOutsideExtent(tileParams, EXTENT_BBOX) 
+        || tileParams.z < MIN_ZOOM_FOR_RENDERING_TILES
+        || tileParams.z > MAX_ZOOM_FOR_RENDERING_TILES
+        ) {
+        // if tiles are outside cache zoom level then producing/caching is expected
+        // then we should short-circuit tile generation
+        // otherwise tile would be generated and not cached
+
+        // also, tiles outside EXTENT_BBOX are not to be produced
         return createBlankTile();
     }
 

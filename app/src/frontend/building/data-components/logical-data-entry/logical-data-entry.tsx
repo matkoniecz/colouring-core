@@ -1,12 +1,14 @@
 import React from 'react';
 
+import './logical-data-entry.css';
+
 import { BaseDataEntryProps } from '../data-entry';
 import { DataTitleCopyable } from '../data-title';
 
 interface ToggleButtonProps {
     value: string;
     checked: boolean;
-    disabled: boolean;
+    disabled?: boolean;
     onChange: React.ChangeEventHandler<HTMLInputElement>;
     checkedClassName: string;
     uncheckedClassName: string;
@@ -33,12 +35,14 @@ const ToggleButton: React.FC<ToggleButtonProps> = ({
                 style: { cursor: 'default'}
             }}
         >
-            <input type="radio" name="options" value={value + ''}
-                autoComplete="off"
-                checked={checked}
-                onChange={onChange}
-                disabled={disabled}
-            />
+            <div className="boolean">
+                <input type="radio" name="options" value={value + ''}
+                    autoComplete="off"
+                    checked={checked}
+                    onChange={onChange}
+                    disabled={disabled}
+                />
+            </div>
             {children}
         </label>
     );

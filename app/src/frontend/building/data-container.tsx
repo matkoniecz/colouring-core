@@ -36,7 +36,6 @@ interface DataContainerProps {
     cat: string;
     intro: string;
     help: string;
-    inactive?: boolean;
 
     user?: User;
     mode: 'view' | 'edit';
@@ -50,11 +49,11 @@ interface DataContainerProps {
 }
 
 interface DataContainerState {
-    error: string;
+    error: string | undefined;
     copying: boolean;
     keys_to_copy: {[key: string]: boolean};
-    currentBuildingId: number;
-    currentBuildingRevisionId: number;
+    currentBuildingId: number | undefined;
+    currentBuildingRevisionId: number | undefined;
     buildingEdits: BuildingEdits;
     mapColourScale: BuildingMapTileset;
     onMapColourScale: (x: BuildingMapTileset) => void;
@@ -99,7 +98,7 @@ const withCopyEdit: (wc: React.ComponentType<CategoryViewProps>) => DataContaine
             this.toggleCopyAttribute = this.toggleCopyAttribute.bind(this);
         }
 
-        static getDerivedStateFromProps(props, state): DataContainerState {
+        static getDerivedStateFromProps(props, state): DataContainerState | null {
             const newBuildingId = props.building == undefined ? undefined : props.building.building_id;
             const newBuildingRevisionId = props.building == undefined ? undefined : props.building.revision_id;
 
@@ -130,7 +129,9 @@ const withCopyEdit: (wc: React.ComponentType<CategoryViewProps>) => DataContaine
                                      'ref_land_parcel',
                                      'location_latitude',
                                      'location_longitude',
-                                     'planning_data'
+                                     'planning_data',
+                                     'typology_original_use',
+                                     'typology_original_use_verified'
                                     ]
             for (let key in dataFields) {  
                 let fieldName = props.building == undefined ? undefined : props.building[key];    
@@ -369,6 +370,13 @@ const withCopyEdit: (wc: React.ComponentType<CategoryViewProps>) => DataContaine
 
                 this.doSubmit(edits);
             }
+            if (slug == 'typology_original_use'){
+                const edits = {
+                    'typology_original_use_verified': true
+                };
+
+                this.doSubmit(edits);
+            }
             console.log(slug + " verify button clicked")
         }
 
@@ -424,7 +432,7 @@ const withCopyEdit: (wc: React.ComponentType<CategoryViewProps>) => DataContaine
                     : null
                 }
                 {
-                    this.props.building != undefined && !this.props.inactive ?
+                    this.props.building != undefined ?
                         <>
                             <CopyControl
                                 cat={this.props.cat}
@@ -453,27 +461,18 @@ const withCopyEdit: (wc: React.ComponentType<CategoryViewProps>) => DataContaine
                 }
                 </ContainerHeader>
                 <div className="section-body">
+                <InfoBox>
+                    {this.props.intro}&nbsp;
+                    {(this.props.title !== "Community") ? 
+                        "Can you help us capture and verify this information?" 
+                        : 
+                        "" 
+                    }
+                </InfoBox>
                 <EditHistoryLatest
                     building={this.props.building}
                 />
                 {
-                    this.props.inactive ?
-                        <Fragment>
-                            <WrappedComponent
-                                intro={this.props.intro}
-                                building={this.props.building}
-                                mode={this.props.mode}
-                                edited={false}
-                                copy={copy}
-                                onChange={undefined}
-                                onVerify={undefined}
-                                onSaveAdd={undefined}
-                                onSaveChange={undefined}
-                                user_verified={[]}
-                                mapColourScale={undefined}
-                                onMapColourScale={undefined}
-                            />
-                        </Fragment> :
                         this.props.building != undefined ?
                             <form
                                 action={`/edit/${this.props.cat}/${this.props.building.building_id}`}
@@ -482,9 +481,9 @@ const withCopyEdit: (wc: React.ComponentType<CategoryViewProps>) => DataContaine
                                     {/* this disabled button prevents form submission on enter - see https://stackoverflow.com/a/51507806/1478817 */}
                                     <button type="submit" disabled style={{display: 'none'}}></button>
                                 {
-                                    (this.props.mode === 'edit' && !this.props.inactive) ?
+                                    this.props.mode === 'edit' ?
                                         <div className='edit-bar'>
-                                            <ErrorBox msg={this.state.error} />
+                                            {this.state.error && <ErrorBox msg={this.state.error} />}
                                             {
                                                 this.props.cat !== 'like' && // special-case for likes
                                                     <div className="buttons-container with-space">
@@ -508,10 +507,12 @@ const withCopyEdit: (wc: React.ComponentType<CategoryViewProps>) => DataContaine
                                                                 null
                                                         }
                                                     </div>
+                                                    
                                             }
                                         </div>
                                         : null
                                 }
+                                <hr/>
                                 <WrappedComponent
                                     intro={this.props.intro}
                                     building={currentBuilding}
@@ -530,6 +531,7 @@ const withCopyEdit: (wc: React.ComponentType<CategoryViewProps>) => DataContaine
                             </form> :
                             <InfoBox msg="Wählen Sie ein Gebäude aus um die Daten zu sehen."></InfoBox>
                 }
+                <hr/>
                 </div>
 
 

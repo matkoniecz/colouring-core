@@ -104,7 +104,7 @@ class TileCache {
         try {
             await unlink(location.fname);
         } catch(err) {}
-        console.log(`Expire cache ${formatParams(tileParams)}`);
+        //console.log(`Expire cache ${formatParams(tileParams)}`);
     }
 
     async removeAllAtBbox(bbox: BoundingBox): Promise<void[]> {
@@ -143,7 +143,7 @@ class TileCache {
     }
 
     private shouldBulkClearTileset(tileset: string): boolean {
-        return this.shouldCacheFn == undefined || this.shouldBulkClearTilesetFn(tileset);
+        return this.shouldBulkClearTilesetFn == undefined || this.shouldBulkClearTilesetFn(tileset);
     }
 }
 

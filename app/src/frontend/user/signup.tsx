@@ -43,7 +43,7 @@ export const SignUp: React.FC = () => {
                 <p>
                     Einen neuen Account anlegen. Let´s colour {config.cityName}!
                 </p>
-                <ErrorBox msg={error} />
+                {error && <ErrorBox msg={error} />}
                 <InfoBox>
                     <b>Hinweise zum Benutzername:</b>
                     <ul>
@@ -123,7 +123,7 @@ export const SignUp: React.FC = () => {
                         {isLoading && <span><SpinnerIcon/>Sende Daten für die Registrierung...</span>}
                     </div>
                     <InfoBox msg="">
-                        Lesen Sie bitte auch unsere <a href="https://www.pages.colouring.london/data-ethics">Grundsätze zur Datenethik</a> bevor Sie unsere Daten nutzen oder verbreiten.
+                        Lesen Sie bitte auch unsere <a href="https://github.com/colouring-cities/manual/wiki/ETHICAL-FRAMEWORK#ccrp-data-ethics-policies">Grundsätze zur Datenethik</a> bevor Sie unsere Daten nutzen oder verbreiten.
                     </InfoBox>
 
                     Haben Sie bereits einen Account?

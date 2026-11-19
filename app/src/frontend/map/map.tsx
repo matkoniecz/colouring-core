@@ -15,8 +15,10 @@ import { BoroughBoundaryLayer } from './layers/borough-boundary-layer';
 import { BoroughLabelLayer } from './layers/borough-label-layer';
 import { ParcelBoundaryLayer } from './layers/parcel-boundary-layer';
 import { HistoricDataLayer } from './layers/historic-data-layer';
+import { HistoricMapLayer } from './layers/historic-map-layer';
 import { FloodBoundaryLayer } from './layers/flood-boundary-layer';
 import { ConservationAreaBoundaryLayer } from './layers/conservation-boundary-layer';
+import { WorldHeritageSitesLayer } from './layers/world-heritage-sites-layer';
 import { VistaBoundaryLayer } from './layers/vista-boundary-layer';
 import { HousingBoundaryLayer } from './layers/housing-boundary-layer';
 import { CreativeBoundaryLayer } from './layers/creative-boundary-layer';
@@ -37,10 +39,13 @@ import { BoroughSwitcher } from './borough-switcher';
 import { ParcelSwitcher } from './parcel-switcher';
 import { FloodSwitcher } from './flood-switcher';
 import { ConservationAreaSwitcher } from './conservation-switcher';
+import { WorldHeritageSitesSwitcher } from './world-heritage-sites-switcher';
 import { HistoricDataSwitcher } from './historic-data-switcher';
+import { HistoricMapSwitcher } from './historic-map-switcher';
 import { VistaSwitcher } from './vista-switcher';
 import { CreativeSwitcher } from './creative-switcher';
 import { HousingSwitcher } from './housing-switcher';
+import { EditableBuildingsSwitcher } from './editable-buildings-switcher';
 import { BuildingMapTileset } from '../config/tileserver-config';
 import { useDisplayPreferences } from '../displayPreferences-context';
 import { CategoryMapDefinition } from '../config/category-maps-config';
@@ -52,7 +57,7 @@ import { Historic_1945_DataSwitcher } from './historic-1945-data-switcher';
 /* import Geolocation_Button from './geolocation'; */
 
 interface ColouringMapProps {
-    selectedBuildingId: number;
+    selectedBuildingId?: number;
     mode: 'basic' | 'view' | 'edit' | 'multi-edit';
     revisionId: string;
     onBuildingAction: (building: Building) => void;
@@ -123,6 +128,7 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                     style={{zIndex: 199}}
                 >
                     <ConservationAreaBoundaryLayer/>
+                    <WorldHeritageSitesLayer/>
                 </Pane>
 
                 {
@@ -138,7 +144,8 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                     style={{zIndex: 300}}
                 >
                     <CityBoundaryLayer/>
-                    <HistoricDataLayer/>
+                    <HistoricDataLayer revisionId={revisionId} />
+                    <HistoricMapLayer revisionId={revisionId} />
                     <Historic_1880_DataLayer/>
                     <Historic_1911_DataLayer/>
                     <Historic_1945_DataLayer/>
@@ -173,31 +180,33 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                 mode !== 'basic' &&
                 <>
                     <Legend mapColourScaleDefinitions={categoryMapDefinitions} mapColourScale={mapColourScale} onMapColourScale={onMapColourScale}/>
-                    <ThemeSwitcher onSubmit={darkLightThemeSwitch} currentTheme={darkLightTheme} />
-                    <DataLayerSwitcher />
-                    {
-                        (showLayerSelection == "enabled") ?
-                        <>
-                            <BoroughSwitcher/>
-                            {/* <ParcelSwitcher/> */}
-                            {/* <FloodSwitcher/> */}
-                            {/* <ConservationAreaSwitcher/> */}
-                            <HistoricDataSwitcher/>
-                            {/* <VistaSwitcher /> */}
-                            {/* <HousingSwitcher /> */}
-                            {/* <CreativeSwitcher /> */}
-                            <Historic_1911_DataSwitcher/>
-                            <Historic_1945_DataSwitcher/>                            
-                            <Historic_1880_DataSwitcher/>
-
-
-                        </>
-                        : <></>
-                    }
-                    {/* TODO change remaining ones*/}
-                    {/* <SearchBox onLocate={handleLocate} /> */}
                 </>
             }
+            <div className="switchers-of-layers-map-menu">
+                <ThemeSwitcher onSubmit={darkLightThemeSwitch} currentTheme={darkLightTheme} />
+                <DataLayerSwitcher />
+                {
+                    (showLayerSelection == "enabled") ?
+                    <>
+                        <BoroughSwitcher/>
+                        {/* <ParcelSwitcher/> */}
+                        {/* <FloodSwitcher/> */}
+                        {/* <ConservationAreaSwitcher/> */}
+                        {/* <WorldHeritageSitesSwitcher/> */}
+                        { /* <HistoricMapSwitcher/> */ }
+                        <HistoricDataSwitcher/>
+                        {/* <VistaSwitcher /> */}
+                        {/* <HousingSwitcher /> */}
+                        {/* <CreativeSwitcher /> */}
+                        <Historic_1911_DataSwitcher/>
+                        <Historic_1945_DataSwitcher/>
+                        <Historic_1880_DataSwitcher/>
+                        <EditableBuildingsSwitcher />
+                    </>
+                    : <></>
+                }
+            </div>
+            {/* <SearchBox onLocate={handleLocate} /> */}
         </div>
     );
 }

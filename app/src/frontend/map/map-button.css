@@ -8,11 +8,13 @@
 
 .map-button {
     z-index: 1000;
-    position: absolute;
+    position: relative;
+    clear: both;
     right: 10px;
     float: right;
     background: white;
     border-radius: 4px;
+    margin-bottom: 5px;
 }
 .map-button .btn {
     margin: 0;
@@ -37,12 +39,12 @@
 .map-switcher-inline.disabled-state,
 .map-button.disabled-state,
 .map-button.disabled-state .btn{
-    background-color: #df7474;
+    background-color: #8c8fd9;
 }
 .map-switcher-inline.night.disabled-state,
 .map-button.night.disabled-state,
 .map-button.night.disabled-state .btn{
-    background-color: #b03f3f;
+    background-color: #333699;
 }
 .map-button.enabled-state {
     color: #75e775;
@@ -72,77 +74,29 @@
     }
 }
 
-.theme-switcher {
-    top: 77px;
-}
 .theme-switcher .btn {
     min-width: 340px;
 }
 
-.data-switcher {
-    top: 117px;
-}
 .data-switcher .btn {
     min-width: 340px;
 }
 
-.borough-switcher {
-    top: 157px;
-}
-
-.housing-switcher {
-    top: 197px;
-}
-
-.creative-switcher {
-    top: 237px;
-}
-
-.flood-switcher {
-    top: 277px;
-}
-
-.vista-switcher {
-    top: 317px;
-}
-
-.conservation-switcher {
-    top: 357px;
-}
-
-.historic-data-switcher {
-    /* top: 397px; */
-    top: 237px;
-}
-
-.historic-1911-data-switcher {
-    top: 277px;
-}
-
-.historic-1945-data-switcher {
-    top: 317px;
-}
-
-
-.historic-1880-data-switcher {
-    top: 357px;
-}
-
-
-
-
-
-
-.parcel-switcher {
-    top: 437px;
+.switchers-of-layers-map-menu {
+    position: absolute;
+    top: 77px;
+    right: 0px;
 }
 
 .map-switcher-inline {
     border-radius: 4px;
     /*background: #FFC0CB;*/
-    margin: 12px;
-    width: 400px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    width: 412px;
     color: #343a40;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 .map-switcher-inline.night {
     color: #fff;
@@ -152,4 +106,22 @@
     background-color: transparent;
     background-image: none;
     border-color: #ff6065;
+}
+
+.key-button {
+    color: #141619;
+    background-color: paleturquoise !important;
+}
+
+.key-button:hover, .key-button-disabled:hover {
+    color: #141619;
+}
+
+.key-button-disabled {
+    color: #141619;
+    background-color: lightgrey !important;
+}
+
+.sub-subcategory-button {
+    width: 395px;
 }
