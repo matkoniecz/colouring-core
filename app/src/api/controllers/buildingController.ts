@@ -125,6 +125,26 @@ const getBuildingUPRNsById = asyncController(async (req: express.Request, res: e
     }
 });
 
+// GET bounding box of building geometry
+const getBuildingBoundsById = asyncController(async (req: express.Request, res: express.Response) => {
+    const buildingId = processParam(req.params, 'building_id', parsePositiveIntParam, true);
+
+    try {
+        const result = await buildingService.queryBuildingBoundsById(buildingId);
+
+        if (typeof (result) === 'undefined') {
+            return res.send({ error: 'Database error' });
+        }
+        if (result === null) {
+            return res.status(404).send({ error: 'Building not found' });
+        }
+        res.send({bounds: result});
+    } catch(error) {
+        console.error(error);
+        res.send({ error: 'Database error' });
+    }
+});
+
 // GET building planning data
 const getBuildingPlanningDataById = asyncController(async (req: express.Request, res: express.Response) => {
     const buildingId = processParam(req.params, 'building_id', parsePositiveIntParam, true);
@@ -228,6 +248,7 @@ export default {
     getBuildingById,
     updateBuildingById,
     getBuildingUPRNsById,
+    getBuildingBoundsById,
     getBuildingPlanningDataById,
     getUserVerifiedAttributes,
     verifyBuildingAttributes,

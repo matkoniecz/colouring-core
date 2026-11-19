@@ -62,3 +62,33 @@ export async function queryBuildingsByReference(key: string, ref: string) {
         return undefined;
     }
 }
+
+/**
+ * Bounding box of building geometry, in WGS84 (EPSG:4326).
+ * Returns null if building does not exist, undefined on database error.
+ */
+export async function queryBuildingBoundsById(buildingId: number) {
+    try {
+        return await db.oneOrNone(
+            `SELECT
+                ST_XMin(bbox) AS min_lng,
+                ST_YMin(bbox) AS min_lat,
+                ST_XMax(bbox) AS max_lng,
+                ST_YMax(bbox) AS max_lat
+            FROM (
+                SELECT
+                    ST_Transform(ST_Envelope(g.geometry_geom), 4326) AS bbox
+                FROM buildings AS b, geometries AS g
+                WHERE
+                    b.geometry_id = g.geometry_id
+                AND
+                    b.building_id = $1
+            ) AS envelope
+            `,
+            [buildingId]
+        );
+    } catch(error) {
+        console.error(error);
+        return undefined;
+    }
+}

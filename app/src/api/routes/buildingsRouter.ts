@@ -26,6 +26,9 @@ router.route('/:building_id.json')
 // GET building UPRNs
 router.get('/:building_id/uprns.json', buildingController.getBuildingUPRNsById);
 
+// GET bounding box of building geometry
+router.get('/:building_id/bounds.json', buildingController.getBuildingBoundsById);
+
 router.get('/:building_id/planning_data.json', buildingController.getBuildingPlanningDataById);
 
 // POST verify building attribute
