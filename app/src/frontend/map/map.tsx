@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
+import React, { FC, MutableRefObject, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { AttributionControl, MapContainer, ZoomControl, useMapEvent, Pane, useMap } from 'react-leaflet';
 
 import 'leaflet/dist/leaflet.css';
@@ -80,6 +80,13 @@ export const ColouringMap : FC<ColouringMapProps> = ({
     const [position, setPosition] = useState(initialMapViewport.position);
     const [zoom, setZoom] = useState(initialMapViewport.zoom);
 
+    /**
+     * ID of building most recently selected by clicking on the map.
+     * Such selection should not move the map - only selection coming
+     * from elsewhere (URL, history navigation) zooms to the building.
+     */
+    const clickedBuildingId = useRef<number>();
+
 
     const handleLocate = useCallback(
         (lat: number, lng: number, zoom: number) => {
@@ -94,6 +101,7 @@ export const ColouringMap : FC<ColouringMapProps> = ({
             const {lat, lng} = e.latlng;
             const data = await apiGet(`/api/buildings/locate?lat=${lat}&lng=${lng}`);
             const building = data?.[0];
+            clickedBuildingId.current = building?.building_id;
             onBuildingAction(building);
         },
         [onBuildingAction],
@@ -113,6 +121,10 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                 <ClickHandler onClick={handleClick} />
                 <MapBackgroundColor theme={darkLightTheme} />
                 <MapViewport position={position} zoom={zoom} />
+                <ZoomToSelectedBuilding
+                    selectedBuildingId={selectedBuildingId}
+                    clickedBuildingId={clickedBuildingId}
+                />
 
                 <Pane
                     key={darkLightTheme}
@@ -265,3 +277,50 @@ function GeolocationButton() {
 
 
 
+
+/**
+ * Zooms map to the selected building, unless it was selected by clicking on the map
+ */
+function ZoomToSelectedBuilding({
+    selectedBuildingId,
+    clickedBuildingId
+}: {
+    selectedBuildingId: number;
+    clickedBuildingId: MutableRefObject<number>;
+}) {
+    const map = useMap();
+
+    useEffect(() => {
+        if(selectedBuildingId == undefined) {
+            return;
+        }
+        if(selectedBuildingId === clickedBuildingId.current) {
+            // consume, so that later navigation back to this building zooms to it
+            clickedBuildingId.current = undefined;
+            return;
+        }
+        let cancelled = false;
+        (async () => {
+            try {
+                const { bounds, error } = await apiGet(`/api/buildings/${selectedBuildingId}/bounds.json`);
+                if(cancelled) {
+                    return;
+                }
+                if(bounds == undefined) {
+                    console.error(error);
+                    return;
+                }
+                map.fitBounds(
+                    [[bounds.min_lat, bounds.min_lng], [bounds.max_lat, bounds.max_lng]],
+                    { maxZoom: 18, padding: [50, 50] }
+                );
+            } catch(error) {
+                console.error(error);
+            }
+        })();
+
+        return () => { cancelled = true; };
+    }, [selectedBuildingId]);
+
+    return null;
+}
