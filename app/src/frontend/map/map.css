@@ -70,3 +70,13 @@
     object-fit: contain;
 
 }
+
+.map-location-error {
+    position: absolute;
+    top: 3.5rem;
+    left: 0.5rem;
+    right: 3.5rem; /* keep clear of zoom control */
+    max-width: 30rem;
+    z-index: 1001;
+    overflow-wrap: anywhere;
+}

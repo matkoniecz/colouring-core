@@ -21,6 +21,7 @@ import { Category } from './config/categories-config';
 import { BuildingMapTileset } from './config/tileserver-config';
 import { defaultMapCategory, categoryMapsConfig } from './config/category-maps-config';
 import { useMultiEditData } from './hooks/use-multi-edit-data';
+import { useUrlLocationQuery } from './hooks/use-url-location-query';
 import { useAuth } from './auth-context';
 import { sendBuildingUpdate } from './api-data/building-update';
 
@@ -80,6 +81,8 @@ export const MapApp: React.FC<MapAppProps> = props => {
     
     const [selectedBuildingId, setSelectedBuildingId] = useUrlBuildingParam('view', displayCategory);
     
+    const [requestedViewport, locationError, dismissLocationError] = useUrlLocationQuery();
+
     const [building, updateBuilding, reloadBuilding] = useBuildingData(selectedBuildingId, props.building, user != undefined);
     const [userVerified, updateUserVerified, reloadUserVerified] = useUserVerifiedData(selectedBuildingId, props.user_verified);
     
@@ -180,6 +183,9 @@ export const MapApp: React.FC<MapAppProps> = props => {
                 mapColourScale={mapColourScale}
                 onMapColourScale={setMapColourScale}
                 categoryMapDefinitions={categoryMapDefinitions}
+                requestedViewport={requestedViewport}
+                locationError={locationError}
+                onDismissLocationError={dismissLocationError}
             />
         </>
     );

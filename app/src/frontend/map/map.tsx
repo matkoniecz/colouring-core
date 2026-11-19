@@ -49,6 +49,7 @@ import { EditableBuildingsSwitcher } from './editable-buildings-switcher';
 import { BuildingMapTileset } from '../config/tileserver-config';
 import { useDisplayPreferences } from '../displayPreferences-context';
 import { CategoryMapDefinition } from '../config/category-maps-config';
+import { RequestedViewport } from '../hooks/use-url-location-query';
 
 import { Historic_1880_DataSwitcher } from './historic-1880-data-switcher';
 import { Historic_1911_DataSwitcher } from './historic-1911-data-switcher';
@@ -63,7 +64,10 @@ interface ColouringMapProps {
     onBuildingAction: (building: Building) => void;
     mapColourScale: BuildingMapTileset;
     onMapColourScale: (x: BuildingMapTileset) => void;
-    categoryMapDefinitions: CategoryMapDefinition[]
+    categoryMapDefinitions: CategoryMapDefinition[];
+    requestedViewport?: RequestedViewport;
+    locationError?: string;
+    onDismissLocationError?: () => void;
 }
 
 export const ColouringMap : FC<ColouringMapProps> = ({
@@ -74,11 +78,21 @@ export const ColouringMap : FC<ColouringMapProps> = ({
     mapColourScale,
     onMapColourScale,
     categoryMapDefinitions,
+    requestedViewport,
+    locationError,
+    onDismissLocationError,
     children
 }) => {
     const { darkLightTheme, darkLightThemeSwitch, showLayerSelection } = useDisplayPreferences();
-    const [position, setPosition] = useState(initialMapViewport.position);
-    const [zoom, setZoom] = useState(initialMapViewport.zoom);
+    const [position, setPosition] = useState(requestedViewport?.position ?? initialMapViewport.position);
+    const [zoom, setZoom] = useState(requestedViewport?.zoom ?? initialMapViewport.zoom);
+
+    useEffect(() => {
+        if(requestedViewport != undefined) {
+            setPosition(requestedViewport.position);
+            setZoom(requestedViewport.zoom);
+        }
+    }, [requestedViewport]);
 
     /**
      * ID of building most recently selected by clicking on the map.
@@ -124,6 +138,7 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                 <ZoomToSelectedBuilding
                     selectedBuildingId={selectedBuildingId}
                     clickedBuildingId={clickedBuildingId}
+                    skip={requestedViewport != undefined}
                 />
 
                 <Pane
@@ -219,6 +234,18 @@ export const ColouringMap : FC<ColouringMapProps> = ({
                 }
             </div>
             {/* <SearchBox onLocate={handleLocate} /> */}
+            {
+                locationError &&
+                <div className="map-location-error alert alert-danger alert-dismissible" role="alert">
+                    {locationError}
+                    <button
+                        type="button"
+                        className="btn-close"
+                        aria-label="Close"
+                        onClick={onDismissLocationError}
+                    />
+                </div>
+            }
         </div>
     );
 }
@@ -280,13 +307,16 @@ function GeolocationButton() {
 
 /**
  * Zooms map to the selected building, unless it was selected by clicking on the map
+ * (or `skip` is set, for example because URL explicitly requested a different location)
  */
 function ZoomToSelectedBuilding({
     selectedBuildingId,
-    clickedBuildingId
+    clickedBuildingId,
+    skip
 }: {
     selectedBuildingId: number;
     clickedBuildingId: MutableRefObject<number>;
+    skip: boolean;
 }) {
     const map = useMap();
 
@@ -299,6 +329,10 @@ function ZoomToSelectedBuilding({
             clickedBuildingId.current = undefined;
             return;
         }
+        if(skip) {
+            return;
+        }
+
         let cancelled = false;
         (async () => {
             try {
