@@ -84,6 +84,35 @@ interface ColouringMapProps {
     currentCategory: Category;
 }
 
+function ObtainLocation(): [[number, number], number] {
+    const queryParameters = new URLSearchParams(window.location.search);
+    const token = queryParameters.get('location');
+    if(token == null) {
+        return [initialMapViewport.position, initialMapViewport.zoom] as [[number, number], number];
+    }
+    apiGet(`/api/search?q=${token}`)
+    .then((data) => {
+        if (data && data.results){
+            return [data.results[0].geometry.coordinates, data.results[0].attributes.zoom] as [[number, number], number];
+        } else {
+            console.error(data);
+
+            this.setState({
+                results: [],
+                fetching: false
+            });
+        }
+    }).catch((err) => {
+        console.error(err);
+
+        this.setState({
+            results: [],
+            fetching: false
+        });
+    });
+    console.info("URL requested to search for location, search failed, using default location");
+    return [initialMapViewport.position, initialMapViewport.zoom] as [[number, number], number];
+}
 
 export const ColouringMap : FC<ColouringMapProps> = ({
     mode,
@@ -97,6 +126,7 @@ export const ColouringMap : FC<ColouringMapProps> = ({
     children
 }) => {
     const { darkLightTheme, darkLightThemeSwitch, showLayerSelection } = useDisplayPreferences();
+    const location = ObtainLocation();
     const [position, setPosition] = useState(initialMapViewport.position);
     const [zoom, setZoom] = useState(initialMapViewport.zoom);
     const showButtonOnlyIfLayerOn = !(
