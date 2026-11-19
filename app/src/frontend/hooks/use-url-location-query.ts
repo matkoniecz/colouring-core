@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 
+import { apiGet } from '../apiHelpers';
 import { useQuery } from './use-query';
 
 export interface RequestedViewport {
@@ -19,14 +20,17 @@ function singleValue(value: string | string[] | null | undefined): string | unde
 /**
  * Reads location-related query parameters:
  * - `lat` + `lon` (and optional `zoom`) - map is centered at this location
+ * - `toid` - building with this TOID gets selected (and therefore zoomed to)
  *
+ * @param onBuildingFound called with building ID of building matching `toid`
  * @returns requested viewport (if valid `lat`/`lon` were given) and error message (if any)
  */
-export function useUrlLocationQuery(): [RequestedViewport, string, () => void] {
+export function useUrlLocationQuery(onBuildingFound: (buildingId: number) => void): [RequestedViewport, string, () => void] {
     const query = useQuery();
     const lat = singleValue(query.lat);
     const lon = singleValue(query.lon);
     const zoom = singleValue(query.zoom);
+    const toid = singleValue(query.toid);
 
     const [error, setError] = useState<string>();
 
@@ -49,6 +53,36 @@ export function useUrlLocationQuery(): [RequestedViewport, string, () => void] {
     }, [lat, lon, zoom]);
 
     useEffect(() => setError(viewportError), [viewportError]);
+
+    useEffect(() => {
+        if(toid == undefined) {
+            return;
+        }
+        let cancelled = false;
+        (async () => {
+            try {
+                const buildings = await apiGet(`/api/buildings/reference?key=toid&id=${encodeURIComponent(toid)}`);
+                if(cancelled) {
+                    return;
+                }
+                if(Array.isArray(buildings) && buildings.length > 0) {
+                    setError(undefined);
+                    onBuildingFound(buildings[0].building_id);
+                } else if(Array.isArray(buildings)) {
+                    setError(`No building found with TOID ${toid}`);
+                } else {
+                    setError(`Failed to look up building with TOID ${toid}`);
+                }
+            } catch(err) {
+                console.error(err);
+                if(!cancelled) {
+                    setError(`Failed to look up building with TOID ${toid}`);
+                }
+            }
+        })();
+        return () => { cancelled = true; };
+    // onBuildingFound is intentionally not a dependency - lookup should run only when TOID changes
+    }, [toid]);
 
     return [requestedViewport, error, () => setError(undefined)];
 }

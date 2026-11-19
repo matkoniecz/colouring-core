@@ -97,7 +97,7 @@ export const ColouringMap : FC<ColouringMapProps> = ({
     /**
      * ID of building most recently selected by clicking on the map.
      * Such selection should not move the map - only selection coming
-     * from elsewhere (URL, history navigation) zooms to the building.
+     * from elsewhere (URL, TOID lookup, history navigation) zooms to the building.
      */
     const clickedBuildingId = useRef<number>();
 

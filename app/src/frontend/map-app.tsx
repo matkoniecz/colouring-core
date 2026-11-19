@@ -81,7 +81,7 @@ export const MapApp: React.FC<MapAppProps> = props => {
     
     const [selectedBuildingId, setSelectedBuildingId] = useUrlBuildingParam('view', displayCategory);
     
-    const [requestedViewport, locationError, dismissLocationError] = useUrlLocationQuery();
+    const [requestedViewport, locationError, dismissLocationError] = useUrlLocationQuery(setSelectedBuildingId);
 
     const [building, updateBuilding, reloadBuilding] = useBuildingData(selectedBuildingId, props.building, user != undefined);
     const [userVerified, updateUserVerified, reloadUserVerified] = useUserVerifiedData(selectedBuildingId, props.user_verified);
