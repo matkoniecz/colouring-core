@@ -5,7 +5,7 @@ import { useDisplayPreferences } from '../displayPreferences-context';
 
 export function HistoricMapLeicestershireSwitcher({showButtonOnlyIfLayerOn}: {showButtonOnlyIfLayerOn: boolean}) {
     const { historicMapLeicestershire, historicMapLeicestershireSwitch, darkLightTheme } = useDisplayPreferences();
-    const enabled = streetLights === 'enabled';
+    const enabled = historicMapLeicestershire === 'enabled';
     if (showButtonOnlyIfLayerOn && enabled === false) {
         return <></>
     }

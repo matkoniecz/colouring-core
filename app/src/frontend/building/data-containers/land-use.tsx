@@ -216,14 +216,9 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     classDescription={landuseCodesData[item].UK_SIC.description}
                     tooltipText = { "[UK SIC: The UK Standard Industrial Classification of economic activities](https://www.ons.gov.uk/methodology/classificationsandstandards/ukstandardindustrialclassificationofeconomicactivities)"
                     }>
-                    {(props.mapColourScale != "xxxxxxxxxxxxxxxxxxxxxx") ?
-                        <button className={`map-switcher-inline button-not-implemented btn btn-outline btn-outline-dark key-button-disabled`} /* onClick={switchToUKStandardIndustrialClassificationMapStyle} */ >
-                            {"Map not yet available."/* "Click to see UK Standard Industrial Classification codes on map." */}
-                        </button>
-                        : <button className={`map-switcher-inline btn btn-outline btn-outline-dark key-button active-button`} >
-                        {"Now showing UK Standard Industrial Classification codes on map."}
+                    <button className={`map-switcher-inline button-not-implemented btn btn-outline btn-outline-dark key-button-disabled`} /* onClick={switchToUKStandardIndustrialClassificationMapStyle} */ >
+                        {"Map not yet available."/* "Click to see UK Standard Industrial Classification codes on map." */}
                     </button>
-                    }
                 </ClasssificationSystemEntry>
                 <ClasssificationSystemEntry
                     classificationSystem="ISIC level 1"
@@ -251,14 +246,9 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     code={landuseCodesData[item].NACE_level_1.code}
                     classDescription={landuseCodesData[item].NACE_level_1.description}
                     tooltipText = { "[NACE: The Statistical Classification of Economic Activities in the European Community]( https://ec.europa.eu/eurostat/web/nace)"}>
-                    {(props.mapColourScale != "xxxxxxxxxxxxxxxxxxxxxx") ?
-                        <button className={`map-switcher-inline button-not-implemented btn btn-outline btn-outline-dark key-button-disabled`} /* onClick={switchToNaceMapStyle} */ >
-                            {"Map not yet available."/* "Click to see NACE codes on map." */}
-                        </button>
-                        : <button className={`map-switcher-inline btn btn-outline btn-outline-dark key-button active-button`} >
-                        {"Now showing NACE codes on map."}
+                    <button className={`map-switcher-inline button-not-implemented btn btn-outline btn-outline-dark key-button-disabled`} /* onClick={switchToNaceMapStyle} */ >
+                        {"Map not yet available."/* "Click to see NACE codes on map." */}
                     </button>
-                    }
                     </ClasssificationSystemEntry>
                 : <></>
                 }
@@ -282,14 +272,9 @@ const LandUseView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     code={landuseCodesData[item].CPA.code}
                     classDescription={landuseCodesData[item].CPA.description}
                     tooltipText = { "[CPA: The Statistical Classification of Products by Activity](https://ec.europa.eu/eurostat/web/cpa)"}>
-                    {(props.mapColourScale != "xxxxxxxxxxxxxxxxxxxxxx") ?
-                        <button className={`map-switcher-inline button-not-implemented btn btn-outline btn-outline-dark key-button-disabled`} /* onClick={switchToCpaMapStyle} */ >
-                            {"Map not yet available."/* "Click to see CPA codes on map." */}
-                        </button>
-                        : <button className={`map-switcher-inline btn btn-outline btn-outline-dark key-button active-button`} >
-                        {"Now showing CPA codes on map."}
+                    <button className={`map-switcher-inline button-not-implemented btn btn-outline btn-outline-dark key-button-disabled`} /* onClick={switchToCpaMapStyle} */ >
+                        {"Map not yet available."/* "Click to see CPA codes on map." */}
                     </button>
-                    }
                 </ClasssificationSystemEntry>
 
             </div>
