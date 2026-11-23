@@ -111,8 +111,14 @@ export const ColouringMap : FC<ColouringMapProps> = ({
     );
 
     useEffect(() => {
-        const requestedLocation = new URLSearchParams(window.location.search).get('location');
+        const queryParameters = new URLSearchParams(window.location.search);
+        const requestedLocation = queryParameters.get('location');
         if (requestedLocation == null) {
+            return;
+        }
+        if (requestedViewport != undefined || selectedBuildingId != undefined || queryParameters.has('toid')) {
+            // explicit coordinates or selected building take priority over place name search
+            console.info(`URL requested location "${requestedLocation}", ignored as URL also specifies coordinates or building`);
             return;
         }
         apiGet(`/api/search?q=${encodeURIComponent(requestedLocation)}`)
