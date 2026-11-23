@@ -144,67 +144,6 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
                 ]
             },
         },
-        {
-            mapStyle: 'age_inferred',
-            legend: {
-                disclaimer: 'This map shows age data that has been automatically inferred from other kinds of data. For example, for London, historical street networks data are used.',
-                title: 'Age (Automatically inferred)',
-                elements: ageLegend,
-            },
-        },
-        {
-            mapStyle: 'typology_style_period',
-            legend: {
-                disclaimer: 'This shows data automatically derived from our "Age (Amalgamated methods)" map, and grouped into historical periods. Contributors can also directly choose an historical period to represent the age of a given building if the exact date is not known.',
-                title: 'Historical Period',
-                elements: [
-                    { color: '#fae269', text: '2000-2025 (Early C21)' },
-                    { color: '#fbaf27', text: '1980-1999 (Late C20)' },
-                    { color: '#cc1212', text: '1946-1979 (Post war)' },
-                    { color: '#8f5385', text: '1914-1945 (WWI-WWII)' },
-                    { color: '#c3e1eb', text: '1901-1914 (Edwardian)' },
-                    { color: '#6a9dba', text: '1837-1901 (Victorian)' },
-                    { color: '#acc98f', text: '1714-1837 (Georgian)' },
-                    { color: '#6d8a51', text: '1603-1714 (Stuart)' },
-                    { color: '#d0c291', text: '1485-1603 (Tudor)' },
-                    { color: '#a9a695', text: '410-1485 (Medieval)' },
-                    { color: '#dadada', text: '43AD-410 (Roman)' },
-                ]
-            }
-        },
-        {
-            mapStyle: 'cladding_year',
-            legend: {
-                title: 'Cladding Date',
-                elements: ageLegend,
-            },
-        },
-        {
-            mapStyle: 'extension_year',
-            legend: {
-                title: 'Extension Date',
-                elements: ageLegend,
-            },
-        },
-        {
-            mapStyle: 'retrofit_year',
-            legend: {
-                title: 'Retrofit Date',
-                elements: ageLegend,
-            },
-        },
-        {
-            mapStyle: 'survival_status',
-            legend: {
-                title: 'Survival status',
-                elements: [
-                    { color: '#6ded45', text: 'Same as Historical Map (Unchanged)' },
-                    { color: '#f7c725', text: 'Similar to Historical Map (Some Changes)' },
-                    { color: '#ff2121', text: 'Historical Building(s) Demolished' },
-                    { color: '#CF26DF', text: 'Current Building on Previous Green Space' },
-                ]
-            }
-        },
     ],
     [Category.ConstructionDesign]: [
         {
