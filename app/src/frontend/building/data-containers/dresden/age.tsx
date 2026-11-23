@@ -282,17 +282,17 @@ const AgeView: React.FunctionComponent<CategoryViewProps> = (props) => {
             
             <AgeDataSourceGroup
                 {...props}
-                name='Baujahr (Denkmaldaten)'
+                name='Baujahr (Denkmalliste)'
                 field='heritage_age_data'
             />
             <AgeDataSourceGroup
                 {...props}
-                name='Expertenbasiertes Baujahr'
+                name='Baujahr (Fachkartierung)'
                 field='expert_age_data'
             />
             <AgeDataSourceGroup
                 {...props}
-                name='Baualtersmodell Baujahr'
+                name='Baujahr (maschinelles Lernen)'
                 field='digital_twin_model_age_data'
             />
 {/*             <DataEntryGroup name="Lebenszyklus und Standortgeschichte" collapsed={true} >

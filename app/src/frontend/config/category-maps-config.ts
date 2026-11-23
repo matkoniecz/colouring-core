@@ -46,7 +46,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         {
             mapStyle: 'age_amalgamated',
             legend: {
-                disclaimer: 'Diese Karte zeigt vorrangig das von Nutzern erfasste Baujahr. Lücken werden in dieser Reihenfolge gefüllt: Baujahr (Denkmaldaten), Expertenbasiertes Baujahr, Baualtersmodell Baujahr.',
+                disclaimer: 'Diese Karte zeigt vorrangig das von Nutzern erfasste Baujahr. Lücken werden in dieser Reihenfolge gefüllt: Baujahr (Denkmalliste), Baujahr (Fachkartierung), Baujahr (maschinelles Lernen).',
                 title: 'Baujahr (kombiniert)',
                 elements: ageLegend,
             },
@@ -54,7 +54,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         {
             mapStyle: 'date_year',
             legend: {
-                title: 'Baujahr',
+                title: 'Baujahr (Crowdsourcing)',
                 elements: [
                     { color: '#fff9b8', text: '>2020' },
                     { color: '#fae269', text: '2000-2019' },
@@ -78,7 +78,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
             mapStyle: 'heritage_age_data',
             legend: {
                 disclaimer: 'Diese Karte zeigt das Baujahr laut Denkmaldaten.',
-                title: 'Baujahr (Denkmaldaten)',
+                title: 'Baujahr (Denkmalliste)',
                 elements: ageLegend,
             },
         },
@@ -86,7 +86,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
             mapStyle: 'expert_age_data',
             legend: {
                 disclaimer: 'Diese Karte zeigt das von Experten geschätzte Baujahr.',
-                title: 'Expertenbasiertes Baujahr',
+                title: 'Baujahr (Fachkartierung)',
                 elements: ageLegend,
             },
         },
@@ -94,7 +94,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
             mapStyle: 'digital_twin_model_age_data',
             legend: {
                 disclaimer: 'Diese Karte zeigt das Baujahr laut Baualtersmodell des digitalen Zwillings.',
-                title: 'Baualtersmodell Baujahr',
+                title: 'Baujahr (maschinelles Lernen)',
                 elements: ageLegend,
             },
         },
