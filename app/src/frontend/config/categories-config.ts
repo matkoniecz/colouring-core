@@ -65,7 +65,7 @@ export const categoriesConfig: {[key in Category]: CategoryDefinition} = {
     },
     [Category.WaterGreenInfrastructure]: {
         slug: 'water-green-infrastructure',
-        name: 'Grün- & Wasserinfrastruktur',
+        name: 'Grün- & Wasser- infrastruktur',
         aboutUrl: 'https://github.com/colouring-cities/manual/wiki/E1.--DATA#10-energy-performance',
         intro: 'Daten zur Wasserversorgung und zur grünen Infrastruktur des Gebäudes.',
     },
