@@ -98,6 +98,27 @@ const AgeView: React.FunctionComponent<CategoryViewProps> = (props) => {
        ){ */
       return (
           <Fragment>
+            {/* crowdsourced age repeated at the top for visibility, also present in "Gebäudealter" below */}
+            <NumericDataEntry
+                title={dataFields.date_year.title}
+                slug="date_year"
+                value={props.building.date_year}
+                mode={props.mode}
+                copy={props.copy}
+                onChange={props.onChange}
+                step={1}
+                min={1}
+                max={currentYear}
+                tooltip={dataFields.date_year.tooltip}
+                />
+            <Verification
+                slug="date_year"
+                allow_verify={props.user !== undefined && props.building.date_year !== null && !props.edited}
+                onVerify={props.onVerify}
+                user_verified={props.user_verified.hasOwnProperty("date_year")}
+                user_verified_as={props.user_verified.date_year}
+                verified_count={props.building.verified.date_year}
+                />
 
         {(props.building.location_latitude !== null) ?
 
