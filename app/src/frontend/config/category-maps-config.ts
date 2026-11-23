@@ -44,6 +44,14 @@ export const ageLegend = [
 export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = {
     [Category.AgeHistory]: [
         {
+            mapStyle: 'age_amalgamated',
+            legend: {
+                disclaimer: 'Diese Karte zeigt vorrangig das von Nutzern erfasste Baujahr. Lücken werden in dieser Reihenfolge gefüllt: Baujahr (Denkmaldaten), Expertenbasiertes Baujahr, Baualtersmodell Baujahr.',
+                title: 'Baujahr (kombiniert)',
+                elements: ageLegend,
+            },
+        },
+        {
             mapStyle: 'date_year',
             legend: {
                 title: 'Baujahr',
@@ -64,6 +72,30 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
                     { color: '#6d8a51', text: '1700-1749' },
                     { color: '#d0c291', text: '<1700' },
                 ]
+            },
+        },
+        {
+            mapStyle: 'heritage_age_data',
+            legend: {
+                disclaimer: 'Diese Karte zeigt das Baujahr laut Denkmaldaten.',
+                title: 'Baujahr (Denkmaldaten)',
+                elements: ageLegend,
+            },
+        },
+        {
+            mapStyle: 'expert_age_data',
+            legend: {
+                disclaimer: 'Diese Karte zeigt das von Experten geschätzte Baujahr.',
+                title: 'Expertenbasiertes Baujahr',
+                elements: ageLegend,
+            },
+        },
+        {
+            mapStyle: 'digital_twin_model_age_data',
+            legend: {
+                disclaimer: 'Diese Karte zeigt das Baujahr laut Baualtersmodell des digitalen Zwillings.',
+                title: 'Baualtersmodell Baujahr',
+                elements: ageLegend,
             },
         },
         {
@@ -110,14 +142,6 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
                     { color: '#6d8a51', text: '1700-1749' },
                     { color: '#d0c291', text: '<1700' },
                 ]
-            },
-        },
-        {
-            mapStyle: 'age_amalgamated',
-            legend: {
-                disclaimer: 'This map prioritises crowdsourced age data, provided mainly by local historians. It also uses automatically inferred data, and official data to fill in gaps.',
-                title: 'Age (Amalgamated methods)',
-                elements: ageLegend,
             },
         },
         {

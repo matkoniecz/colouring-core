@@ -1,0 +1,9 @@
+ALTER TABLE buildings DROP COLUMN IF EXISTS heritage_age_data;
+ALTER TABLE buildings DROP COLUMN IF EXISTS heritage_age_data_lower;
+ALTER TABLE buildings DROP COLUMN IF EXISTS heritage_age_data_upper;
+ALTER TABLE buildings DROP COLUMN IF EXISTS expert_age_data;
+ALTER TABLE buildings DROP COLUMN IF EXISTS expert_age_data_lower;
+ALTER TABLE buildings DROP COLUMN IF EXISTS expert_age_data_upper;
+ALTER TABLE buildings DROP COLUMN IF EXISTS digital_twin_model_age_data;
+ALTER TABLE buildings DROP COLUMN IF EXISTS digital_twin_model_age_data_lower;
+ALTER TABLE buildings DROP COLUMN IF EXISTS digital_twin_model_age_data_upper;

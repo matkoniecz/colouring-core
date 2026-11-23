@@ -39,10 +39,31 @@ const LAYER_QUERIES = {
     age_amalgamated: `
         SELECT
             geometry_id,
-            COALESCE(date_year, date_year_inferred, (date_year_inferred_upper + date_year_inferred_lower)/2) AS date_year
+            COALESCE(date_year, heritage_age_data, (heritage_age_data_upper + heritage_age_data_lower)/2, expert_age_data, (expert_age_data_upper + expert_age_data_lower)/2, digital_twin_model_age_data, (digital_twin_model_age_data_upper + digital_twin_model_age_data_lower)/2) AS date_year
         FROM
             buildings
-        WHERE COALESCE(date_year, date_year_inferred, date_year_inferred_upper + date_year_inferred_lower) IS NOT NULL`,
+        WHERE COALESCE(date_year, heritage_age_data, heritage_age_data_upper + heritage_age_data_lower, expert_age_data, expert_age_data_upper + expert_age_data_lower, digital_twin_model_age_data, digital_twin_model_age_data_upper + digital_twin_model_age_data_lower) IS NOT NULL`,
+    heritage_age_data: `
+        SELECT
+            geometry_id,
+            COALESCE(heritage_age_data, (heritage_age_data_upper + heritage_age_data_lower)/2) AS date_year
+        FROM
+            buildings
+        WHERE COALESCE(heritage_age_data, heritage_age_data_upper + heritage_age_data_lower) IS NOT NULL`,
+    expert_age_data: `
+        SELECT
+            geometry_id,
+            COALESCE(expert_age_data, (expert_age_data_upper + expert_age_data_lower)/2) AS date_year
+        FROM
+            buildings
+        WHERE COALESCE(expert_age_data, expert_age_data_upper + expert_age_data_lower) IS NOT NULL`,
+    digital_twin_model_age_data: `
+        SELECT
+            geometry_id,
+            COALESCE(digital_twin_model_age_data, (digital_twin_model_age_data_upper + digital_twin_model_age_data_lower)/2) AS date_year
+        FROM
+            buildings
+        WHERE COALESCE(digital_twin_model_age_data, digital_twin_model_age_data_upper + digital_twin_model_age_data_lower) IS NOT NULL`,
     date_year: `
         SELECT
             geometry_id,

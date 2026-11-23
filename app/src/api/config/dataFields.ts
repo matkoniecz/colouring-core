@@ -159,6 +159,42 @@ export const buildingAttributesConfig = valueType<DataFieldConfig>()({ /* eslint
         edit: true,
         verify: true,
     },
+    heritage_age_data: {
+        edit: true,
+        verify: true,
+    },
+    heritage_age_data_lower: {
+        edit: true,
+        verify: true,
+    },
+    heritage_age_data_upper: {
+        edit: true,
+        verify: true,
+    },
+    expert_age_data: {
+        edit: true,
+        verify: true,
+    },
+    expert_age_data_lower: {
+        edit: true,
+        verify: true,
+    },
+    expert_age_data_upper: {
+        edit: true,
+        verify: true,
+    },
+    digital_twin_model_age_data: {
+        edit: true,
+        verify: true,
+    },
+    digital_twin_model_age_data_lower: {
+        edit: true,
+        verify: true,
+    },
+    digital_twin_model_age_data_upper: {
+        edit: true,
+        verify: true,
+    },
     date_source_type: {
         edit: true,
         verify: true,
