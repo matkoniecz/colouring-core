@@ -66,36 +66,6 @@ interface ColouringMapProps {
     categoryMapDefinitions: CategoryMapDefinition[]
 }
 
-function ObtainLocation(): [[number, number], number] {
-    const queryParameters = new URLSearchParams(window.location.search);
-    const token = queryParameters.get('location');
-    if(token == null) {
-        return [initialMapViewport.position, initialMapViewport.zoom] as [[number, number], number];
-    }
-    apiGet(`/api/search?q=${token}`)
-    .then((data) => {
-        if (data && data.results){
-            return [data.results[0].geometry.coordinates, data.results[0].attributes.zoom] as [[number, number], number];
-        } else {
-            console.error(data);
-
-            this.setState({
-                results: [],
-                fetching: false
-            });
-        }
-    }).catch((err) => {
-        console.error(err);
-
-        this.setState({
-            results: [],
-            fetching: false
-        });
-    });
-    console.info("URL requested to search for location, search failed, using default location");
-    return [initialMapViewport.position, initialMapViewport.zoom] as [[number, number], number];
-}
-
 export const ColouringMap : FC<ColouringMapProps> = ({
     mode,
     revisionId,
@@ -107,9 +77,8 @@ export const ColouringMap : FC<ColouringMapProps> = ({
     children
 }) => {
     const { darkLightTheme, darkLightThemeSwitch, showLayerSelection } = useDisplayPreferences();
-    const location = ObtainLocation();
-    const [position, setPosition] = useState(location[0]);
-    const [zoom, setZoom] = useState(location[1]);
+    const [position, setPosition] = useState(initialMapViewport.position);
+    const [zoom, setZoom] = useState(initialMapViewport.zoom);
 
 
     const handleLocate = useCallback(
@@ -119,6 +88,25 @@ export const ColouringMap : FC<ColouringMapProps> = ({
         },
         []
     );
+
+    useEffect(() => {
+        const requestedLocation = new URLSearchParams(window.location.search).get('location');
+        if (requestedLocation == null) {
+            return;
+        }
+        apiGet(`/api/search?q=${encodeURIComponent(requestedLocation)}`)
+        .then((data) => {
+            const result = data?.results?.[0];
+            if (result) {
+                const [lng, lat] = result.geometry.coordinates;
+                handleLocate(lat, lng, result.attributes.zoom);
+            } else {
+                console.info(`URL requested location "${requestedLocation}", search found nothing, using default location`);
+            }
+        }).catch((err) => {
+            console.error(err);
+        });
+    }, [handleLocate]);
 
     const handleClick = useCallback(
         async (e) => {
