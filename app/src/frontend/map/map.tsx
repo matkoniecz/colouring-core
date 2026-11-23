@@ -110,6 +110,25 @@ export const ColouringMap : FC<ColouringMapProps> = ({
         []
     );
 
+    useEffect(() => {
+        const requestedLocation = new URLSearchParams(window.location.search).get('location');
+        if (requestedLocation == null) {
+            return;
+        }
+        apiGet(`/api/search?q=${encodeURIComponent(requestedLocation)}`)
+        .then((data) => {
+            const result = data?.results?.[0];
+            if (result) {
+                const [lng, lat] = result.geometry.coordinates;
+                handleLocate(lat, lng, result.attributes.zoom);
+            } else {
+                console.info(`URL requested location "${requestedLocation}", search found nothing, using default location`);
+            }
+        }).catch((err) => {
+            console.error(err);
+        });
+    }, [handleLocate]);
+
     const handleClick = useCallback(
         async (e) => {
             const {lat, lng} = e.latlng;
