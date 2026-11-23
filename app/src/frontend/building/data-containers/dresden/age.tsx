@@ -28,6 +28,56 @@ const HistoricalStatusOptions = [
 function generate_virtual_map_forum_link(lat, lon) {
     return "https://kartenforum.slub-dresden.de/?b=slub-osm&c=" + lon + "," + lat + "&r=0&re=1.0252&v=0&z=17.2203";
     }
+
+type AgeDataSourceField = 'heritage_age_data' | 'expert_age_data' | 'digital_twin_model_age_data';
+type AgeDataSourceSlug = AgeDataSourceField | `${AgeDataSourceField}_lower` | `${AgeDataSourceField}_upper`;
+
+/**
+ * Read-only age data from an additional source, as year with optional range
+ */
+const AgeDataSourceGroup: React.FunctionComponent<CategoryViewProps & {name: string, field: AgeDataSourceField}> = (props) => {
+    const switchToMapStyle = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        event.preventDefault();
+        props.onMapColourScale(props.field);
+    };
+    const slugs: AgeDataSourceSlug[] = [props.field, `${props.field}_lower`, `${props.field}_upper`];
+
+    return (
+        <DataEntryGroup name={props.name} collapsed={true}>
+            {(props.mapColourScale != props.field) ?
+                <button className={`map-switcher-inline enabled-state btn btn-outline btn-outline-dark key-button`} onClick={switchToMapStyle}>
+                    Karte anzeigen: {props.name}
+                </button>
+                :
+                <></>
+            }
+            {slugs.map(slug =>
+                <Fragment key={slug}>
+                    <NumericDataEntry
+                        title={dataFields[slug].title}
+                        slug={slug}
+                        value={props.building[slug] as number}
+                        mode={props.mode}
+                        copy={props.copy}
+                        onChange={props.onChange}
+                        step={1}
+                        tooltip={dataFields[slug].tooltip}
+                        disabled={true}
+                        />
+                    <Verification
+                        slug={slug}
+                        allow_verify={props.user !== undefined && props.building[slug] !== null && !props.edited}
+                        onVerify={props.onVerify}
+                        user_verified={props.user_verified.hasOwnProperty(slug)}
+                        user_verified_as={props.user_verified[slug]}
+                        verified_count={props.building.verified[slug]}
+                        />
+                </Fragment>
+            )}
+        </DataEntryGroup>
+    );
+};
+
 /**
 * Age view/edit section
 */
@@ -209,6 +259,21 @@ const AgeView: React.FunctionComponent<CategoryViewProps> = (props) => {
             </DataEntryGroup>
 
             
+            <AgeDataSourceGroup
+                {...props}
+                name='Baujahr (Denkmaldaten)'
+                field='heritage_age_data'
+            />
+            <AgeDataSourceGroup
+                {...props}
+                name='Expertenbasierte Baujahr'
+                field='expert_age_data'
+            />
+            <AgeDataSourceGroup
+                {...props}
+                name='Baualtersmodell Baujahr'
+                field='digital_twin_model_age_data'
+            />
 {/*             <DataEntryGroup name="Lebenszyklus und Standortgeschichte" collapsed={true} >
                 <button className={`map-switcher-inline ${historicData}-state btn btn-outline btn-outline-dark ${darkLightTheme}`} onClick={historicDataSwitchOnClick}> 
                     {(historicData === 'enabled')?'Click here to hide historical maps':'Click here to show historical maps'}

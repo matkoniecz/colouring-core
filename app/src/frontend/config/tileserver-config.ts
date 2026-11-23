@@ -11,6 +11,9 @@ export type BuildingMapTileset =
     'size_storeys_attic' |
     'age_amalgamated' |
     'age_inferred' |
+    'heritage_age_data' |
+    'expert_age_data' |
+    'digital_twin_model_age_data' |
     'cladding_year' |
     'extension_year' |
     'retrofit_year' |

@@ -115,8 +115,32 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         {
             mapStyle: 'age_amalgamated',
             legend: {
-                disclaimer: 'This map prioritises crowdsourced age data, provided mainly by local historians. It also uses automatically inferred data, and official data to fill in gaps.',
-                title: 'Age (Amalgamated methods)',
+                disclaimer: 'Diese Karte zeigt vorrangig das von Nutzern erfasste Baujahr. Lücken werden in dieser Reihenfolge gefüllt: Baujahr (Denkmaldaten), Expertenbasierte Baujahr, Baualtersmodell Baujahr.',
+                title: 'Baujahr (kombiniert)',
+                elements: ageLegend,
+            },
+        },
+        {
+            mapStyle: 'heritage_age_data',
+            legend: {
+                disclaimer: 'Diese Karte zeigt das Baujahr laut Denkmaldaten.',
+                title: 'Baujahr (Denkmaldaten)',
+                elements: ageLegend,
+            },
+        },
+        {
+            mapStyle: 'expert_age_data',
+            legend: {
+                disclaimer: 'Diese Karte zeigt das von Experten geschätzte Baujahr.',
+                title: 'Expertenbasierte Baujahr',
+                elements: ageLegend,
+            },
+        },
+        {
+            mapStyle: 'digital_twin_model_age_data',
+            legend: {
+                disclaimer: 'Diese Karte zeigt das Baujahr laut Baualtersmodell des digitalen Zwillings.',
+                title: 'Baualtersmodell Baujahr',
                 elements: ageLegend,
             },
         },

@@ -1,0 +1,9 @@
+ALTER TABLE buildings ADD COLUMN IF NOT EXISTS heritage_age_data integer NULL;
+ALTER TABLE buildings ADD COLUMN IF NOT EXISTS heritage_age_data_lower integer NULL;
+ALTER TABLE buildings ADD COLUMN IF NOT EXISTS heritage_age_data_upper integer NULL;
+ALTER TABLE buildings ADD COLUMN IF NOT EXISTS expert_age_data integer NULL;
+ALTER TABLE buildings ADD COLUMN IF NOT EXISTS expert_age_data_lower integer NULL;
+ALTER TABLE buildings ADD COLUMN IF NOT EXISTS expert_age_data_upper integer NULL;
+ALTER TABLE buildings ADD COLUMN IF NOT EXISTS digital_twin_model_age_data integer NULL;
+ALTER TABLE buildings ADD COLUMN IF NOT EXISTS digital_twin_model_age_data_lower integer NULL;
+ALTER TABLE buildings ADD COLUMN IF NOT EXISTS digital_twin_model_age_data_upper integer NULL;
