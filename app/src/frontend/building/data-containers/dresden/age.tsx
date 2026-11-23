@@ -266,7 +266,7 @@ const AgeView: React.FunctionComponent<CategoryViewProps> = (props) => {
             />
             <AgeDataSourceGroup
                 {...props}
-                name='Expertenbasierte Baujahr'
+                name='Expertenbasiertes Baujahr'
                 field='expert_age_data'
             />
             <AgeDataSourceGroup

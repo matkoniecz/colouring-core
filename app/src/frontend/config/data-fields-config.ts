@@ -631,19 +631,19 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
     },
     expert_age_data: {
         category: Category.AgeHistory,
-        title: "Expertenbasierte Baujahr",
+        title: "Expertenbasiertes Baujahr",
         tooltip: undefined,
         example: 1924,
     },
     expert_age_data_lower: {
         category: Category.AgeHistory,
-        title: "Expertenbasierte Baujahr (frühest mögliches Jahr)",
+        title: "Expertenbasiertes Baujahr (frühest mögliches Jahr)",
         tooltip: undefined,
         example: 1920,
     },
     expert_age_data_upper: {
         category: Category.AgeHistory,
-        title: "Expertenbasierte Baujahr (spätest mögliches Jahr)",
+        title: "Expertenbasiertes Baujahr (spätest mögliches Jahr)",
         tooltip: undefined,
         example: 1935,
     },

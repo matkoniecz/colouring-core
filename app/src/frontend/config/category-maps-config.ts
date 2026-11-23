@@ -115,7 +115,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         {
             mapStyle: 'age_amalgamated',
             legend: {
-                disclaimer: 'Diese Karte zeigt vorrangig das von Nutzern erfasste Baujahr. Lücken werden in dieser Reihenfolge gefüllt: Baujahr (Denkmaldaten), Expertenbasierte Baujahr, Baualtersmodell Baujahr.',
+                disclaimer: 'Diese Karte zeigt vorrangig das von Nutzern erfasste Baujahr. Lücken werden in dieser Reihenfolge gefüllt: Baujahr (Denkmaldaten), Expertenbasiertes Baujahr, Baualtersmodell Baujahr.',
                 title: 'Baujahr (kombiniert)',
                 elements: ageLegend,
             },
@@ -132,7 +132,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
             mapStyle: 'expert_age_data',
             legend: {
                 disclaimer: 'Diese Karte zeigt das von Experten geschätzte Baujahr.',
-                title: 'Expertenbasierte Baujahr',
+                title: 'Expertenbasiertes Baujahr',
                 elements: ageLegend,
             },
         },
