@@ -23,9 +23,10 @@ function singleValue(value: string | string[] | null | undefined): string | unde
  * - `objekt_id` - building with this TOID gets selected (and therefore zoomed to)
  *
  * @param onBuildingFound called with building ID of building matching `objekt_id`
- * @returns requested viewport (if valid `lat`/`lon` were given) and error message (if any)
+ * @returns requested viewport (if valid `lat`/`lon` were given), error message (if any)
+ * and whether `objekt_id` lookup is still in progress
  */
-export function useUrlLocationQuery(onBuildingFound: (buildingId: number) => void): [RequestedViewport, string, () => void] {
+export function useUrlLocationQuery(onBuildingFound: (buildingId: number) => void): [RequestedViewport, string, () => void, boolean] {
     const query = useQuery();
     const lat = singleValue(query.lat);
     const lon = singleValue(query.lon);
@@ -33,6 +34,8 @@ export function useUrlLocationQuery(onBuildingFound: (buildingId: number) => voi
     const objektId = singleValue(query.objekt_id);
 
     const [error, setError] = useState<string>();
+    // initialised from objektId so that lookup is reported as pending already on the first render
+    const [isLookingUpBuilding, setIsLookingUpBuilding] = useState(() => objektId != undefined);
 
     const [requestedViewport, viewportError] = useMemo((): [RequestedViewport, string] => {
         if(lat == undefined && lon == undefined) {
@@ -56,9 +59,11 @@ export function useUrlLocationQuery(onBuildingFound: (buildingId: number) => voi
 
     useEffect(() => {
         if(objektId == undefined) {
+            setIsLookingUpBuilding(false);
             return;
         }
         let cancelled = false;
+        setIsLookingUpBuilding(true);
         (async () => {
             try {
                 const buildings = await apiGet(`/api/buildings/reference?key=toid&id=${encodeURIComponent(objektId)}`);
@@ -78,11 +83,15 @@ export function useUrlLocationQuery(onBuildingFound: (buildingId: number) => voi
                 if(!cancelled) {
                     setError(`Failed to look up building with objekt_id ${objektId}`);
                 }
+            } finally {
+                if(!cancelled) {
+                    setIsLookingUpBuilding(false);
+                }
             }
         })();
         return () => { cancelled = true; };
     // onBuildingFound is intentionally not a dependency - lookup should run only when objekt_id changes
     }, [objektId]);
 
-    return [requestedViewport, error, () => setError(undefined)];
+    return [requestedViewport, error, () => setError(undefined), isLookingUpBuilding];
 }

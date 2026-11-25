@@ -83,7 +83,7 @@ export const MapApp: React.FC<MapAppProps> = props => {
     
     const [selectedBuildingId, setSelectedBuildingId] = useUrlBuildingParam('view', displayCategory);
     
-    const [requestedViewport, locationError, dismissLocationError] = useUrlLocationQuery(setSelectedBuildingId);
+    const [requestedViewport, locationError, dismissLocationError, isLookingUpBuilding] = useUrlLocationQuery(setSelectedBuildingId);
 
     // read once on load - query string is dropped when the building gets selected
     const query = useQuery();
@@ -197,6 +197,7 @@ export const MapApp: React.FC<MapAppProps> = props => {
                 showAgeTutorial &&
                     <AgeCrowdsourcedTutorial
                         buildingId={selectedBuildingId}
+                        isLookingUpBuilding={isLookingUpBuilding}
                         isLoggedIn={user != undefined}
                         onClose={() => setShowAgeTutorial(false)}
                     />

@@ -8,6 +8,8 @@ import './age-crowdsourced-tutorial.css';
 interface AgeCrowdsourcedTutorialProps {
     /** building selected via external link, may be undefined while it is still being looked up */
     buildingId?: number;
+    /** building from `objekt_id` is still being looked up - edit/login/signup should wait for it */
+    isLookingUpBuilding: boolean;
     isLoggedIn: boolean;
     onClose: () => void;
 }
@@ -16,7 +18,7 @@ interface AgeCrowdsourcedTutorialProps {
  * Introduction shown to users arriving via external link with `show_tutorial=age_crowdsourced`,
  * explaining what Colouring Dresden is and how to review and correct building age.
  */
-export const AgeCrowdsourcedTutorial: React.FC<AgeCrowdsourcedTutorialProps> = ({ buildingId, isLoggedIn, onClose }) => {
+export const AgeCrowdsourcedTutorial: React.FC<AgeCrowdsourcedTutorialProps> = ({ buildingId, isLookingUpBuilding, isLoggedIn, onClose }) => {
     const editPath = buildingId == undefined
         ? `/edit/${Category.AgeHistory}`
         : `/edit/${Category.AgeHistory}/${buildingId}`;
@@ -55,7 +57,15 @@ export const AgeCrowdsourcedTutorial: React.FC<AgeCrowdsourcedTutorialProps> = (
                     </div>
                     <div className="modal-footer">
                         {
-                            isLoggedIn
+                            isLookingUpBuilding
+                                // links cannot be disabled, so show disabled buttons until target building is known
+                                ? (isLoggedIn
+                                    ? <button type="button" className="btn btn-primary" disabled>Baujahr bearbeiten</button>
+                                    : <>
+                                        <button type="button" className="btn btn-primary" disabled>Registrieren</button>
+                                        <button type="button" className="btn btn-outline-primary" disabled>Anmelden</button>
+                                    </>)
+                            : isLoggedIn
                                 ? <Link to={editPath} className="btn btn-primary" onClick={onClose}>Baujahr bearbeiten</Link>
                                 : <>
                                     <Link to={{ pathname: '/sign-up.html', state: returnState }} className="btn btn-primary" onClick={onClose}>Registrieren</Link>

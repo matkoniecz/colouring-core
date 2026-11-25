@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import { useAuth } from '../auth-context';
 import ErrorBox from '../components/error-box';
@@ -11,6 +11,8 @@ import { CCConfig } from '../../cc-config';
 let config: CCConfig = require('../../cc-config.json')
 
 export const Login: React.FC = () => {
+    // forwarded so that redirect after login/signup (see AuthRoute) still works after switching between these pages
+    const location = useLocation();
     const {isLoading, login } = useAuth();
 
     const [username, setUsername] = useState('');
@@ -73,7 +75,7 @@ export const Login: React.FC = () => {
                     Möchten Sie stattdessen einen neuen Benutzeraccount anlegen?
 
                     <div className="buttons-container with-space">
-                        <Link to="sign-up.html" className="btn btn-outline-dark">Registrieren</Link>
+                        <Link to={{ pathname: "/sign-up.html", state: location.state }} className="btn btn-outline-dark">Registrieren</Link>
                     </div>
                 </form>
             </section>
