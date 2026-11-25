@@ -13,6 +13,8 @@ interface YearDataEntryProps {
     copy?: CopyProps;
     mode?: 'view' | 'edit' | 'multi-edit';
     onChange?: (key: string, value: any) => void;
+    /** date_year is derived from date_lower and date_upper, so it may be shown as not directly editable */
+    yearDisabled?: boolean;
 
     onVerify: (slug: string, verify: boolean, x: number, y: number) => void;
     user_verified: boolean;
@@ -64,6 +66,7 @@ class YearDataEntry extends Component<YearDataEntryProps, any> {
                     min={1}
                     max={currentYear}
                     tooltip={dataFields.date_year.tooltip}
+                    disabled={props.yearDisabled}
                     // "type": "year_estimator"
                     />
                 <Verification

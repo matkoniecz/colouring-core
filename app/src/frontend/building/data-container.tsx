@@ -205,12 +205,15 @@ const withCopyEdit: (wc: React.ComponentType<CategoryViewProps>) => DataContaine
         }
 
         updateBuildingState(key: string, value: any) {
-            const newBuilding = this.getEditedBuilding();
-            newBuilding[key] = value;
-            const [forwardPatch] = compareObjects(this.props.building, newBuilding);
-
-            this.setState({
-                buildingEdits: forwardPatch
+            // functional update, so that several changes made in one event handler
+            // (for example date_lower, date_upper and derived date_year) are all kept
+            this.setState((prevState: any) => {
+                const newBuilding = Object.assign({}, this.props.building, prevState.buildingEdits);
+                newBuilding[key] = value;
+                const [forwardPatch] = compareObjects(this.props.building, newBuilding);
+                return {
+                    buildingEdits: forwardPatch
+                };
             });
         }
 

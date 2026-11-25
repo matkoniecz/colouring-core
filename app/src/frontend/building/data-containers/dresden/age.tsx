@@ -78,6 +78,68 @@ const AgeDataSourceGroup: React.FunctionComponent<CategoryViewProps & {name: str
     );
 };
 
+interface AgeRange {
+    lower: number | null;
+    upper: number | null;
+    /** name of the non-crowdsourced source used as fallback, null when crowdsourced data is shown */
+    fallbackSourceName: string | null;
+}
+
+/** in the same order as COALESCE in age_amalgamated map style */
+const amalgamatedAgeFallbackSources: {field: AgeDataSourceField, name: string}[] = [
+    {field: 'heritage_age_data', name: 'Baujahr (Denkmalliste)'},
+    {field: 'expert_age_data', name: 'Baujahr (Fachkartierung)'},
+    {field: 'digital_twin_model_age_data', name: 'Baujahr (maschinelles Lernen)'},
+];
+
+function isPresent(value: number | null | undefined): boolean {
+    return value !== null && value !== undefined;
+}
+
+/**
+ * Construction year range to display: crowdsourced if any crowdsourced value is present,
+ * otherwise the first other source which would be used by the amalgamated map
+ */
+function getDisplayedAgeRange(building): AgeRange {
+    if (isPresent(building.date_year) || isPresent(building.date_lower) || isPresent(building.date_upper)) {
+        return {
+            lower: isPresent(building.date_lower) ? building.date_lower : (building.date_year ?? null),
+            upper: isPresent(building.date_upper) ? building.date_upper : (building.date_year ?? null),
+            fallbackSourceName: null,
+        };
+    }
+    for (const source of amalgamatedAgeFallbackSources) {
+        const value = building[source.field];
+        const lower = building[`${source.field}_lower`];
+        const upper = building[`${source.field}_upper`];
+        if (isPresent(value)) {
+            return {
+                lower: isPresent(lower) ? lower : value,
+                upper: isPresent(upper) ? upper : value,
+                fallbackSourceName: source.name,
+            };
+        }
+        if (isPresent(lower) && isPresent(upper)) {
+            return {lower: lower, upper: upper, fallbackSourceName: source.name};
+        }
+    }
+    return {lower: null, upper: null, fallbackSourceName: null};
+}
+
+/** single year used for visualisation, average of the range */
+function averageYear(lower: number | null, upper: number | null): number | null {
+    if (isPresent(lower) && isPresent(upper)) {
+        return Math.round((lower + upper) / 2);
+    }
+    if (isPresent(lower)) {
+        return lower;
+    }
+    if (isPresent(upper)) {
+        return upper;
+    }
+    return null;
+}
+
 /**
 * Age view/edit section
 */
@@ -92,33 +154,84 @@ const AgeView: React.FunctionComponent<CategoryViewProps> = (props) => {
 
     const { historicData, historicDataSwitchOnClick, darkLightTheme } = useDisplayPreferences();
 
+    const displayedAgeRange = getDisplayedAgeRange(props.building);
+
+    /**
+     * Crowdsourced age is entered as range. Editing one end stores both ends
+     * (the other one taken from what is currently displayed, possibly from fallback source)
+     * and date_year as their average, used for map rendering.
+     */
+    const handleAgeRangeChange = (key: string, value: any) => {
+        let lower = displayedAgeRange.lower;
+        let upper = displayedAgeRange.upper;
+        if (key === 'date_lower') {
+            lower = value;
+        } else if (key === 'date_upper') {
+            upper = value;
+        } else {
+            props.onChange(key, value);
+            return;
+        }
+        props.onChange('date_lower', lower);
+        props.onChange('date_upper', upper);
+        props.onChange('date_year', averageYear(lower, upper));
+    };
+
 /*     if (props.building.date_source == "Expert knowledge of building" ||
         props.building.date_source == "Expert estimate from image" ||
         props.building.date_source == null
        ){ */
       return (
           <Fragment>
-            {/* crowdsourced age repeated at the top for visibility, also present in "Gebäudealter" below */}
+            {/* crowdsourced age range repeated at the top for visibility, also present in "Gebäudealter" below */}
+            {/* falls back to the data shown by amalgamated map when there is no crowdsourced data */}
             <NumericDataEntry
-                title={dataFields.date_year.title}
-                slug="date_year"
-                value={props.building.date_year}
+                title={dataFields.date_lower.title}
+                slug="date_lower"
+                value={displayedAgeRange.lower}
                 mode={props.mode}
                 copy={props.copy}
-                onChange={props.onChange}
+                onChange={handleAgeRangeChange}
                 step={1}
                 min={1}
                 max={currentYear}
-                tooltip={dataFields.date_year.tooltip}
+                tooltip={dataFields.date_lower.tooltip}
                 />
             <Verification
-                slug="date_year"
-                allow_verify={props.user !== undefined && props.building.date_year !== null && !props.edited}
+                slug="date_lower"
+                allow_verify={props.user !== undefined && props.building.date_lower !== null && !props.edited}
                 onVerify={props.onVerify}
-                user_verified={props.user_verified.hasOwnProperty("date_year")}
-                user_verified_as={props.user_verified.date_year}
-                verified_count={props.building.verified.date_year}
+                user_verified={props.user_verified.hasOwnProperty("date_lower")}
+                user_verified_as={props.user_verified.date_lower}
+                verified_count={props.building.verified.date_lower}
                 />
+            <NumericDataEntry
+                title={dataFields.date_upper.title}
+                slug="date_upper"
+                value={displayedAgeRange.upper}
+                mode={props.mode}
+                copy={props.copy}
+                onChange={handleAgeRangeChange}
+                step={1}
+                min={1}
+                max={currentYear}
+                tooltip={dataFields.date_upper.tooltip}
+                />
+            <Verification
+                slug="date_upper"
+                allow_verify={props.user !== undefined && props.building.date_upper !== null && !props.edited}
+                onVerify={props.onVerify}
+                user_verified={props.user_verified.hasOwnProperty("date_upper")}
+                user_verified_as={props.user_verified.date_upper}
+                verified_count={props.building.verified.date_upper}
+                />
+            {(displayedAgeRange.fallbackSourceName !== null) ?
+                <p>
+                    Noch keine Angabe der Nutzer:innen, angezeigt wird: {displayedAgeRange.fallbackSourceName}
+                </p>
+                :
+                <></>
+            }
 
         {(props.building.location_latitude !== null) ?
 
@@ -196,7 +309,8 @@ const AgeView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     lower={props.building.date_lower}
                     mode={props.mode}
                     copy={props.copy}
-                    onChange={props.onChange}
+                    onChange={handleAgeRangeChange}
+                    yearDisabled={true}
 
                     allow_verify={props.user !== undefined && props.building.date_year !== null && !props.edited}
                     onVerify={props.onVerify}
@@ -421,7 +535,8 @@ const AgeView: React.FunctionComponent<CategoryViewProps> = (props) => {
                     lower={props.building.date_lower}
                     mode={props.mode}
                     copy={props.copy}
-                    onChange={props.onChange}
+                    onChange={handleAgeRangeChange}
+                    yearDisabled={true}
 
                     allow_verify={props.user !== undefined && props.building.date_year !== null && !props.edited}
                     onVerify={props.onVerify}

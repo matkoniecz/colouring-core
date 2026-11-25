@@ -39,10 +39,10 @@ const LAYER_QUERIES = {
     age_amalgamated: `
         SELECT
             geometry_id,
-            COALESCE(date_year, heritage_age_data, (heritage_age_data_upper + heritage_age_data_lower)/2, expert_age_data, (expert_age_data_upper + expert_age_data_lower)/2, digital_twin_model_age_data, (digital_twin_model_age_data_upper + digital_twin_model_age_data_lower)/2) AS date_year
+            COALESCE(date_year, (date_upper + date_lower)/2, heritage_age_data, (heritage_age_data_upper + heritage_age_data_lower)/2, expert_age_data, (expert_age_data_upper + expert_age_data_lower)/2, digital_twin_model_age_data, (digital_twin_model_age_data_upper + digital_twin_model_age_data_lower)/2) AS date_year
         FROM
             buildings
-        WHERE COALESCE(date_year, heritage_age_data, heritage_age_data_upper + heritage_age_data_lower, expert_age_data, expert_age_data_upper + expert_age_data_lower, digital_twin_model_age_data, digital_twin_model_age_data_upper + digital_twin_model_age_data_lower) IS NOT NULL`,
+        WHERE COALESCE(date_year, date_upper + date_lower, heritage_age_data, heritage_age_data_upper + heritage_age_data_lower, expert_age_data, expert_age_data_upper + expert_age_data_lower, digital_twin_model_age_data, digital_twin_model_age_data_upper + digital_twin_model_age_data_lower) IS NOT NULL`,
     heritage_age_data: `
         SELECT
             geometry_id,
@@ -67,10 +67,10 @@ const LAYER_QUERIES = {
     date_year: `
         SELECT
             geometry_id,
-            date_year
+            COALESCE(date_year, (date_upper + date_lower)/2) AS date_year
         FROM
             buildings
-        WHERE date_year IS NOT NULL`,
+        WHERE COALESCE(date_year, date_upper + date_lower) IS NOT NULL`,
     age_inferred: `
         SELECT
             geometry_id,
