@@ -46,7 +46,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         {
             mapStyle: 'age_amalgamated',
             legend: {
-                disclaimer: 'Diese Karte zeigt vorrangig das von Nutzern erfasste Baujahr. Lücken werden in dieser Reihenfolge gefüllt: Baujahr (Denkmalliste), Baujahr (Fachkartierung), Baujahr (maschinelles Lernen).',
+                disclaimer: 'Diese Karte zeigt die jeweils beste verfügbare Baujahresangabe. Die Datenquellen werden in folgender Reihenfolge priorisiert: Bürgerwissen, Denkmalliste, Fachkartierung und maschinelles Lernen.',
                 title: 'Baujahr (kombiniert)',
                 elements: ageLegend,
             },
