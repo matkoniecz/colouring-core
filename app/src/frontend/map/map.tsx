@@ -116,7 +116,7 @@ export const ColouringMap : FC<ColouringMapProps> = ({
         if (requestedLocation == null) {
             return;
         }
-        if (requestedViewport != undefined || selectedBuildingId != undefined || queryParameters.has('toid')) {
+        if (requestedViewport != undefined || selectedBuildingId != undefined || queryParameters.has('objekt_id')) {
             // explicit coordinates or selected building take priority over place name search
             console.info(`URL requested location "${requestedLocation}", ignored as URL also specifies coordinates or building`);
             return;
