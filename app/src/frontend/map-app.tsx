@@ -22,6 +22,8 @@ import { BuildingMapTileset } from './config/tileserver-config';
 import { defaultMapCategory, categoryMapsConfig } from './config/category-maps-config';
 import { useMultiEditData } from './hooks/use-multi-edit-data';
 import { useUrlLocationQuery } from './hooks/use-url-location-query';
+import { useQuery } from './hooks/use-query';
+import { AgeCrowdsourcedTutorial } from './tutorials/age-crowdsourced-tutorial';
 import { useAuth } from './auth-context';
 import { sendBuildingUpdate } from './api-data/building-update';
 
@@ -82,6 +84,10 @@ export const MapApp: React.FC<MapAppProps> = props => {
     const [selectedBuildingId, setSelectedBuildingId] = useUrlBuildingParam('view', displayCategory);
     
     const [requestedViewport, locationError, dismissLocationError] = useUrlLocationQuery(setSelectedBuildingId);
+
+    // read once on load - query string is dropped when the building gets selected
+    const query = useQuery();
+    const [showAgeTutorial, setShowAgeTutorial] = useState(() => query.show_tutorial === 'age_crowdsourced');
 
     const [building, updateBuilding, reloadBuilding] = useBuildingData(selectedBuildingId, props.building, user != undefined);
     const [userVerified, updateUserVerified, reloadUserVerified] = useUserVerifiedData(selectedBuildingId, props.user_verified);
@@ -187,6 +193,14 @@ export const MapApp: React.FC<MapAppProps> = props => {
                 locationError={locationError}
                 onDismissLocationError={dismissLocationError}
             />
+            {
+                showAgeTutorial &&
+                    <AgeCrowdsourcedTutorial
+                        buildingId={selectedBuildingId}
+                        isLoggedIn={user != undefined}
+                        onClose={() => setShowAgeTutorial(false)}
+                    />
+            }
         </>
     );
 };
