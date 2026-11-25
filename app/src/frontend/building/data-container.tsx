@@ -467,7 +467,7 @@ const withCopyEdit: (wc: React.ComponentType<CategoryViewProps>) => DataContaine
                 <InfoBox>
                     {this.props.intro}&nbsp;
                     {(this.props.title !== "Community") ? 
-                        "Can you help us capture and verify this information?" 
+                        "" 
                         : 
                         "" 
                     }
