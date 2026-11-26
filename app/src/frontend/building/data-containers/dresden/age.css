@@ -16,3 +16,26 @@
 .construction-year-group-subheading {
     margin-bottom: 0.75rem;
 }
+
+.construction-year-call-to-action {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    background-color: #f9dbe5;
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.construction-year-call-to-action-icon {
+    color: #a0195a;
+    font-size: 1.75rem;
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+}
+
+.construction-year-call-to-action-title {
+    color: #a0195a;
+    font-weight: bold;
+    font-size: 1.15rem;
+}

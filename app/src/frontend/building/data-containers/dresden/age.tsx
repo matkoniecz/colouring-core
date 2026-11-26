@@ -15,6 +15,7 @@ import Verification from '../../data-components/verification';
 import YearDataEntry from '../../data-components/year-data-entry';
 import DataEntry from '../../data-components/data-entry';
 import InfoBox from '../../../components/info-box';
+import { UsersIcon } from '../../../components/icons';
 
 import { CategoryViewProps } from '../category-view-props';
 import { LogicalDataEntry } from '../../data-components/logical-data-entry/logical-data-entry';
@@ -189,6 +190,13 @@ const AgeView: React.FunctionComponent<CategoryViewProps> = (props) => {
             <div className="construction-year-group">
                 <h3 className="construction-year-group-heading">Baujahr (kombiniert)</h3>
                 <p className="construction-year-group-subheading">Die beste verfügbare Angabe aus verschiedenen Datenquellen.</p>
+                <div className="construction-year-call-to-action">
+                    <span className="construction-year-call-to-action-icon"><UsersIcon /></span>
+                    <div>
+                        <div className="construction-year-call-to-action-title">Wissen Sie es genauer?</div>
+                        <div>Grenzen Sie den Bauzeitraum ein, korrigieren oder bestätigen Sie die Angabe.</div>
+                    </div>
+                </div>
                 <NumericDataEntry
                     title={dataFields.date_lower.title}
                     slug="date_lower"
