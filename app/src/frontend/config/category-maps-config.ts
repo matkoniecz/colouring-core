@@ -55,6 +55,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
             mapStyle: 'date_year',
             legend: {
                 title: 'Baujahr (Bürgerwissen)',
+                disclaimer: 'Diese Karte zeigt die von Bürgerinnen und Bürgern eingetragenen Baujahresangaben.',
                 elements: [
                     { color: '#fff9b8', text: '>2020' },
                     { color: '#fae269', text: '2000-2019' },
