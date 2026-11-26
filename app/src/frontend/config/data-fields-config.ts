@@ -583,13 +583,13 @@ export const dataFields = { /* eslint-disable @typescript-eslint/camelcase */
     },
     date_lower: {
         category: Category.AgeHistory,
-        title: "Baujahr (frühest mögliches Jahr)",
+        title: "Frühestmögliches Baujahr",
         tooltip: "Das früheste Jahr, in dem das Gebäude fertiggestellt worden sein könnte.",
         example: 1900,
     },
     date_upper: {
         category: Category.AgeHistory,
-        title: "Baujahr (spätest mögliches Jahr)",
+        title: "Spätestmögliches Baujahr",
         tooltip: "Das späteste Jahr, in dem das Gebäude fertiggestellt worden sein könnte.",
         example: 2000,
     },
