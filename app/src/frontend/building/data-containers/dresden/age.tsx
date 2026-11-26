@@ -187,6 +187,8 @@ const AgeView: React.FunctionComponent<CategoryViewProps> = (props) => {
             {/* crowdsourced age range repeated at the top for visibility, also present in "Gebäudealter" below */}
             {/* falls back to the data shown by amalgamated map when there is no crowdsourced data */}
             <div className="construction-year-group">
+                <h3 className="construction-year-group-heading">Baujahr (kombiniert)</h3>
+                <p className="construction-year-group-subheading">Die beste verfügbare Angabe aus verschiedenen Datenquellen.</p>
                 <NumericDataEntry
                     title={dataFields.date_lower.title}
                     slug="date_lower"
