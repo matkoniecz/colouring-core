@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 
 import '../../../map/map-button.css';
+import './age.css';
 import { dataFields } from '../../../config/data-fields-config';
 import { MultiDataEntry } from '../../data-components/multi-data-entry/multi-data-entry';
 import { DataEntryGroup } from '../../data-components/data-entry-group';
@@ -185,46 +186,48 @@ const AgeView: React.FunctionComponent<CategoryViewProps> = (props) => {
           <Fragment>
             {/* crowdsourced age range repeated at the top for visibility, also present in "Gebäudealter" below */}
             {/* falls back to the data shown by amalgamated map when there is no crowdsourced data */}
-            <NumericDataEntry
-                title={dataFields.date_lower.title}
-                slug="date_lower"
-                value={displayedAgeRange.lower}
-                mode={props.mode}
-                copy={props.copy}
-                onChange={handleAgeRangeChange}
-                step={1}
-                min={1}
-                max={currentYear}
-                tooltip={dataFields.date_lower.tooltip}
-                />
-            <Verification
-                slug="date_lower"
-                allow_verify={props.user !== undefined && props.building.date_lower !== null && !props.edited}
-                onVerify={props.onVerify}
-                user_verified={props.user_verified.hasOwnProperty("date_lower")}
-                user_verified_as={props.user_verified.date_lower}
-                verified_count={props.building.verified.date_lower}
-                />
-            <NumericDataEntry
-                title={dataFields.date_upper.title}
-                slug="date_upper"
-                value={displayedAgeRange.upper}
-                mode={props.mode}
-                copy={props.copy}
-                onChange={handleAgeRangeChange}
-                step={1}
-                min={1}
-                max={currentYear}
-                tooltip={dataFields.date_upper.tooltip}
-                />
-            <Verification
-                slug="date_upper"
-                allow_verify={props.user !== undefined && props.building.date_upper !== null && !props.edited}
-                onVerify={props.onVerify}
-                user_verified={props.user_verified.hasOwnProperty("date_upper")}
-                user_verified_as={props.user_verified.date_upper}
-                verified_count={props.building.verified.date_upper}
-                />
+            <div className="construction-year-group">
+                <NumericDataEntry
+                    title={dataFields.date_lower.title}
+                    slug="date_lower"
+                    value={displayedAgeRange.lower}
+                    mode={props.mode}
+                    copy={props.copy}
+                    onChange={handleAgeRangeChange}
+                    step={1}
+                    min={1}
+                    max={currentYear}
+                    tooltip={dataFields.date_lower.tooltip}
+                    />
+                <Verification
+                    slug="date_lower"
+                    allow_verify={props.user !== undefined && props.building.date_lower !== null && !props.edited}
+                    onVerify={props.onVerify}
+                    user_verified={props.user_verified.hasOwnProperty("date_lower")}
+                    user_verified_as={props.user_verified.date_lower}
+                    verified_count={props.building.verified.date_lower}
+                    />
+                <NumericDataEntry
+                    title={dataFields.date_upper.title}
+                    slug="date_upper"
+                    value={displayedAgeRange.upper}
+                    mode={props.mode}
+                    copy={props.copy}
+                    onChange={handleAgeRangeChange}
+                    step={1}
+                    min={1}
+                    max={currentYear}
+                    tooltip={dataFields.date_upper.tooltip}
+                    />
+                <Verification
+                    slug="date_upper"
+                    allow_verify={props.user !== undefined && props.building.date_upper !== null && !props.edited}
+                    onVerify={props.onVerify}
+                    user_verified={props.user_verified.hasOwnProperty("date_upper")}
+                    user_verified_as={props.user_verified.date_upper}
+                    verified_count={props.building.verified.date_upper}
+                    />
+            </div>
             {(displayedAgeRange.fallbackSourceName !== null) ?
                 <p>
                     Noch keine Angabe der Nutzer:innen, angezeigt wird: {displayedAgeRange.fallbackSourceName}
