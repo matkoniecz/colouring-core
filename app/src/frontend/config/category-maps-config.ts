@@ -86,7 +86,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         {
             mapStyle: 'expert_age_data',
             legend: {
-                disclaimer: 'Diese Karte zeigt das von Experten geschätzte Baujahr.',
+                disclaimer: 'Diese Karte zeigt die durch eine Fachkartierung ermittelten Baujahre und Bauzeitintervalle.',
                 title: 'Baujahr (Fachkartierung)',
                 elements: ageLegend,
             },
