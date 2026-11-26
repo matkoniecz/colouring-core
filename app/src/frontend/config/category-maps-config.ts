@@ -54,7 +54,7 @@ export const categoryMapsConfig: {[key in Category]: CategoryMapDefinition[]} = 
         {
             mapStyle: 'date_year',
             legend: {
-                title: 'Baujahr (Crowdsourcing)',
+                title: 'Baujahr (Bürgerwissen)',
                 elements: [
                     { color: '#fff9b8', text: '>2020' },
                     { color: '#fae269', text: '2000-2019' },
